@@ -8,7 +8,7 @@
 
 1. Clone the repository
 2. Install dependencies:
-   ```bash
+   ```
    npm install
    ```
 3. Create a `.env` file with the following variables:
@@ -25,4 +25,8 @@ PDF_LOGO_PATH=src/assets/logo.png
 PDF_HEADER_PATH=src/assets/header.png
 PDF_FOOTER_PATH=src/assets/footer.png
 STUDENT_JWT_SECRET=STUDENT_SECRET_KEY
+   ```
+2. Start server:
+   ```
+   npm run dev
    ```

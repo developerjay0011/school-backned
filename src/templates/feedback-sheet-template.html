@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Feedback Evaluation Sheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .info-section {
+            margin-bottom: 20px;
+        }
+        .info-row {
+            margin-bottom: 10px;
+        }
+        .label {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            page-break-inside: auto;
+        }
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+        .rating {
+            text-align: center;
+            font-weight: bold;
+            background-color: #f8f9fa;
+        }
+        .comments {
+            white-space: pre-wrap;
+            max-width: 400px;
+            font-size: 0.9em;
+        }
+        .info-section {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Feedback Evaluation Sheet</h1>
+    </div>
+
+    <div class="info-section">
+        <div class="info-row">
+            <span class="label">Measure Number:</span>
+            <span>{{measureNumber}}</span>
+        </div>
+        <div class="info-row">
+            <span class="label">Measure Title:</span>
+            <span>{{measureTitle}}</span>
+        </div>
+        <div class="info-row">
+            <span class="label">Period:</span>
+            <span>{{dateFrom}} - {{dateUntil}}</span>
+        </div>
+        <div class="info-row">
+            <span class="label">Total Feedbacks:</span>
+            <span>{{totalFeedbacks}}</span>
+        </div>
+        <div class="info-row">
+            <span class="label">Average Rating:</span>
+            <span>{{averageRating}}</span>
+        </div>
+        <div class="info-row">
+            <span class="label">Average Attendance:</span>
+            <span>{{averageAttendance}}</span>
+        </div>
+        <div class="info-row">
+            <span class="label">Average Participation:</span>
+            <span>{{averageParticipation}}</span>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Student</th>
+                <th style="width: 10%">Rating</th>
+                <th style="width: 10%">Attendance</th>
+                <th style="width: 10%">Participation</th>
+                <th style="width: 35%">Comments</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each feedbacks}}
+            <tr>
+                <td>{{date}}</td>
+                <td>{{student}} ({{studentId}})</td>
+                <td class="rating">{{rating}}</td>
+                <td class="rating">{{attendance}}%</td>
+                <td class="rating">{{participation}}%</td>
+                <td class="comments">{{comments}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</body>
+</html>

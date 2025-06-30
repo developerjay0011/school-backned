@@ -1,0 +1,206 @@
+const db = require('../config/database');
+const fs = require('fs').promises;
+const path = require('path');
+
+// Get backend URL from environment variable
+const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3000';
+
+// Helper function to format exam data with full URLs
+const formatExamData = (exam) => {
+    if (!exam) return null;
+    return {
+        ...exam,
+        certificate_url: exam.certificate_url ? `${BACKEND_URL}/uploads/${exam.certificate_url}` : null
+    };
+};
+
+class Exam {
+    static async updateDoneOn(examId, done_on) {
+        const connection = await db.getConnection();
+        try {
+            await connection.beginTransaction();
+
+            await connection.execute(
+                'UPDATE student_exam_dates SET done_on = ? WHERE id = ?',
+                [done_on, examId]
+            );
+
+            await connection.commit();
+            return true;
+        } catch (error) {
+            await connection.rollback();
+            throw error;
+        } finally {
+            connection.release();
+        }
+    }
+    static async updateCertificate(examId, certificateFile) {
+        const connection = await db.getConnection();
+        try {
+            await connection.beginTransaction();
+
+            // First, get the existing certificate URL if any
+            const [exam] = await connection.execute(
+                'SELECT certificate_url FROM student_exam_dates WHERE id = ?',
+                [examId]
+            );
+
+            if (exam.length === 0) {
+                throw new Error('Exam not found');
+            }
+
+            // If there's an existing certificate, delete it
+            if (exam[0].certificate_url) {
+                const oldFilePath = path.join(__dirname, '../../uploads', exam[0].certificate_url);
+                try {
+                    await fs.unlink(oldFilePath);
+                } catch (error) {
+                    console.warn('Could not delete old certificate:', error.message);
+                }
+            }
+
+            // Update the certificate URL in the database
+            await connection.execute(
+                'UPDATE student_exam_dates SET certificate_url = ? WHERE id = ?',
+                [certificateFile.filename, examId]
+            );
+
+            await connection.commit();
+            return true;
+        } catch (error) {
+            await connection.rollback();
+            throw error;
+        } finally {
+            connection.release();
+        }
+    }
+
+    static async updateExamResult(examId, exam_result) {
+        const connection = await db.getConnection();
+        try {
+            await connection.beginTransaction();
+
+            await connection.execute(
+                'UPDATE student_exam_dates SET exam_result = ? WHERE id = ?',
+                [exam_result, examId]
+            );
+
+            await connection.commit();
+            return true;
+        } catch (error) {
+            await connection.rollback();
+            throw error;
+        } finally {
+            connection.release();
+        }
+    }
+    static async create(studentId, examData) {
+        const connection = await db.getConnection();
+        try {
+            await connection.beginTransaction();
+
+            // Insert exam date
+            const [result] = await connection.execute(
+                `INSERT INTO student_exam_dates (
+                    student_id, exam_from, exam_to, exam_type,
+                    exam_result
+                ) VALUES (?, ?, ?, ?, ?)`,
+                [
+                    studentId,
+                    examData.exam_from,
+                    examData.exam_to,
+                    examData.exam_type,
+                    examData.exam_result || null
+                ]
+            );
+
+            await connection.commit();
+            return result.insertId;
+        } catch (error) {
+            await connection.rollback();
+            throw error;
+        } finally {
+            connection.release();
+        }
+    }
+
+    static async update(examId, examData) {
+        const connection = await db.getConnection();
+        try {
+            await connection.beginTransaction();
+
+            const updateFields = [];
+            const updateValues = [];
+
+            Object.entries(examData).forEach(([key, value]) => {
+                if (value !== undefined) {
+                    updateFields.push(`${key} = ?`);
+                    updateValues.push(value);
+                }
+            });
+
+            if (updateFields.length > 0) {
+                await connection.execute(
+                    `UPDATE student_exam_dates SET ${updateFields.join(', ')} WHERE id = ?`,
+                    [...updateValues, examId]
+                );
+            }
+
+            await connection.commit();
+            return true;
+        } catch (error) {
+            await connection.rollback();
+            throw error;
+        } finally {
+            connection.release();
+        }
+    }
+
+    static async delete(examId) {
+        const connection = await db.getConnection();
+        try {
+            await connection.beginTransaction();
+
+            await connection.execute(
+                'DELETE FROM student_exam_dates WHERE id = ?',
+                [examId]
+            );
+
+            await connection.commit();
+            return true;
+        } catch (error) {
+            await connection.rollback();
+            throw error;
+        } finally {
+            connection.release();
+        }
+    }
+
+    static async getByStudent(studentId) {
+        const connection = await db.getConnection();
+        try {
+            const [rows] = await connection.execute(
+                'SELECT * FROM student_exam_dates WHERE student_id = ? ORDER BY created_at DESC',
+                [studentId]
+            );
+            return rows.map(formatExamData);
+        } finally {
+            connection.release();
+        }
+    }
+
+    static async getById(examId) {
+        const connection = await db.getConnection();
+        try {
+            const [rows] = await connection.execute(
+                'SELECT * FROM student_exam_dates WHERE id = ?',
+                [examId]
+            );
+            return formatExamData(rows[0]);
+        } finally {
+            connection.release();
+        }
+    }
+}
+
+module.exports = Exam;

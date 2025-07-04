@@ -22,7 +22,8 @@ const allowedOrigins = [
   'https://student.meteorinfotech.com',
   'http://192.168.31.110:3000',
   'http://192.168.31.110:3001',
-  'http://192.168.31.19:3002'
+  'http://192.168.31.19:3002',
+  'http://145.223.102.131:5001'
 ];
 
 // CORS configuration

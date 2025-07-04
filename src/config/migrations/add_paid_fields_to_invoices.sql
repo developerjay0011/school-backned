@@ -1,0 +1,5 @@
+USE schooldb;
+
+ALTER TABLE student_invoices
+ADD COLUMN paid BOOLEAN DEFAULT FALSE,
+ADD COLUMN paid_date DATE DEFAULT NULL;

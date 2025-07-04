@@ -7,18 +7,20 @@ class DashboardModel {
             const [studentRows] = await db.query(`
                 SELECT
                     COUNT(*) as total,
-                    SUM(CASE 
+                    CAST(SUM(CASE
                         WHEN NOT EXISTS (SELECT 1 FROM student_reports sr WHERE sr.student_id = s.student_id AND sr.report_type IN ('termination', 'discharge'))
                             AND (s.date_of_exit IS NULL OR s.date_of_exit > CURDATE())
+                            AND (s.date_of_entry IS NOT NULL AND s.date_of_entry <= CURDATE())
                             THEN 1
                         ELSE 0
-                    END) as active,
-                    COUNT(*) - SUM(CASE 
-                        WHEN NOT EXISTS (SELECT 1 FROM student_reports sr WHERE sr.student_id = s.student_id AND sr.report_type IN ('termination', 'discharge'))
-                            AND (s.date_of_exit IS NULL OR s.date_of_exit > CURDATE())
+                    END) AS SIGNED) as active,
+                    CAST(SUM(CASE
+                        WHEN EXISTS (SELECT 1 FROM student_reports sr WHERE sr.student_id = s.student_id AND sr.report_type IN ('termination', 'discharge'))
+                            OR (s.date_of_exit IS NOT NULL AND s.date_of_exit <= CURDATE() AND s.deleted_at IS NULL)
+                            OR (s.date_of_entry IS NULL OR s.date_of_entry > CURDATE())
                             THEN 1
                         ELSE 0
-                    END) as inactive
+                    END) AS SIGNED) as inactive
                 FROM student s
                 WHERE s.deleted_at IS NULL
             `);

@@ -6,17 +6,19 @@ const LecturerModel = require('../../models/lecturerModel');
 class AdminAuthController {
     static async login(req, res) {
         try {
-            const { username, password } = req.body;
+            const { email, username, password } = req.body;
+            // Support both email and username fields for backward compatibility
+            const userEmail = email || username;
 
-            if (!username || !password) {
+            if (!userEmail || !password) {
                 return res.status(400).json({
                     success: false,
-                    message: 'Email/username and password are required'
+                    message: 'Email and password are required'
                 });
             }
 
-            // First try admin login (using email)
-            const admin = await AdminModel.getByEmail(username);
+            // Try admin login
+            const admin = await AdminModel.getByEmail(userEmail);
             if (admin && admin.password) {
                 const isPasswordValid = await bcrypt.compare(password, admin.password);
                 if (isPasswordValid) {
@@ -39,7 +41,7 @@ class AdminAuthController {
                                 id: admin.id || 0,
                                 email: admin.email || '',
                                 role: 'admin',
-                                username: admin.username || '',
+
                                 firstName: admin.first_name || '',
                                 lastName: admin.last_name || '',
                                 status: admin.status || '',
@@ -50,8 +52,8 @@ class AdminAuthController {
             }
 
             // If admin login fails, try lecturer login
-            console.log('Attempting lecturer login with username:', username);
-            const lecturer = await LecturerModel.getByLecturerId(username);
+            console.log('Attempting lecturer login with email:', userEmail);
+            const lecturer = await LecturerModel.getByLecturerId(userEmail);
             console.log('Found lecturer:', lecturer);
             if (lecturer && lecturer.password) {
                 // Compare hashed password
@@ -97,7 +99,7 @@ class AdminAuthController {
             // If both fail, return error
             res.status(401).json({
                 success: false,
-                message: 'Invalid username or password'
+                message: 'Invalid email or password'
             });
         } catch (error) {
             console.error('Login error:', error);

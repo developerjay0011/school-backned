@@ -48,6 +48,7 @@ class StudentController {
                     measures_title: result.measures_title,
                     intermediary_internal: studentData.intermediary_internal,
                     lecturer: studentData.lecturer,
+                    lecturer_remark: studentData.lecturer_remark,
                     street: studentData.street,
                     house_number: studentData.house_number,
                     postal_code: studentData.postal_code,
@@ -182,6 +183,7 @@ class StudentController {
                 measures_title: updatedStudent[0].measures_title,
                 intermediary_internal: updatedStudent[0].intermediary_internal,
                 lecturer: updatedStudent[0].lecturer,
+                lecturer_remark: updatedStudent[0].lecturer_remark,
                 contact_details: {
                     street_name: updatedStudent[0].street_name,
                     postal_code: updatedStudent[0].postal_code,
@@ -274,6 +276,7 @@ class StudentController {
                 measures_title: student.measures_title,
                 intermediary_internal: student.intermediary_internal,
                 lecturer: student.lecturer,
+                lecturer_remark: student.lecturer_remark,
                 status: student.status,
                 contact_details: {
                     street_name: student.contact_details.street_name || '',

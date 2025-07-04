@@ -3,7 +3,7 @@ const Joi = require('joi');
 const studentValidation = {
     create: Joi.object({
         // Student Data
-        voucher_type: Joi.string().valid('BGS', 'AVGS').required(),
+        voucher_type: Joi.string().valid('BGS', 'AVGS','PRIVAT').required(),
         salutation: Joi.string().valid('Herr', 'Frau', 'Drivers').required(),
         first_name: Joi.string().required(),
         last_name: Joi.string().required(),
@@ -41,7 +41,7 @@ const studentValidation = {
 
     update: Joi.object({
         // Student Data
-        voucher_type: Joi.string().valid('BGS', 'AVGS'),
+        voucher_type: Joi.string().valid('BGS', 'AVGS','PRIVAT'),
         salutation: Joi.string().valid('Herr', 'Frau', 'Drivers'),
         first_name: Joi.string(),
         last_name: Joi.string(),
@@ -67,7 +67,7 @@ const studentValidation = {
             name: Joi.string(),
             bg_number: Joi.string(),
             team: Joi.string().allow('', null),
-            contact_person: Joi.string(),
+            contact_person: Joi.string().allow('', null),
             routing_id: Joi.number().allow(null),
             email: Joi.string().email().allow('', null),
             tel: Joi.string().allow('',null),

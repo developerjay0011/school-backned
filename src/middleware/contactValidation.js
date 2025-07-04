@@ -2,16 +2,19 @@ const Joi = require('joi');
 
 const contactValidation = {
     update: Joi.object({
-        street_name: Joi.string(),
-        postal_code: Joi.string(),
-        city: Joi.string(),
-        birth_date: Joi.date().allow(null),
-        place_of_birth: Joi.string().allow('', null),
-        country_of_birth: Joi.string().allow('', null),
-        phone: Joi.string().pattern(/^\+?[1-9]\d{1,14}$/).allow('', null),
-        email: Joi.string().email(),
-        street_number: Joi.string().allow('', null),
-        remarks: Joi.string().allow('', null)
+        street_name: Joi.string().allow(null, '').optional(),
+        postal_code: Joi.string().allow(null, '').optional(),
+        city: Joi.string().allow(null, '').optional(),
+        birth_date: Joi.alternatives().try(
+            Joi.date(),
+            Joi.string().allow(null, '', 'Invalid Date')
+        ).optional(),
+        place_of_birth: Joi.string().allow(null, '').optional(),
+        country_of_birth: Joi.string().allow(null, '').optional(),
+        phone: Joi.string().allow(null, '').optional(),
+        email: Joi.string().email().allow(null, '').optional(),
+        street_number: Joi.string().allow(null, '').optional(),
+        remarks: Joi.string().allow(null, '').optional()
     })
 };
 

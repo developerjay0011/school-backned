@@ -2,7 +2,7 @@ const Joi = require('joi');
 
 const userValidation = {
   create: Joi.object({
-    username: Joi.string().required(),
+
     firstName: Joi.string().required(),
     lastName: Joi.string().required(),
     phoneNumber: Joi.string().required(),
@@ -13,7 +13,7 @@ const userValidation = {
   }),
 
   update: Joi.object({
-    username: Joi.string(),
+
     firstName: Joi.string(),
     lastName: Joi.string(),
     phoneNumber: Joi.string(),

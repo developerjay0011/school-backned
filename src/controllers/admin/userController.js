@@ -53,14 +53,9 @@ class UserController {
             await connection.beginTransaction();
 
             // Extract and validate required fields
-            const username = req.body.username ? 
-                req.body.username.toLowerCase().replace(/\s+/g, '.') : 
-                `${req.body.first_name.toLowerCase()}.${req.body.last_name.toLowerCase()}${Date.now()}`;
-
             const userData = {
                 first_name: req.body.first_name,
                 last_name: req.body.last_name,
-                username: username,
                 password: req.body.password || Math.random().toString(36).slice(-8),
                 email: req.body.email || null,
                 phone_number: req.body.phone_number || null,
@@ -121,7 +116,7 @@ class UserController {
             if (error.code === 'ER_DUP_ENTRY') {
                 return res.status(400).json({
                     success: false,
-                    message: 'Username or email already exists'
+                    message: 'Email already exists'
                 });
             }
             res.status(500).json({
@@ -175,7 +170,7 @@ class UserController {
                     token,
                     user: {
                         id: user.id,
-                        username: user.username,
+
                         first_name: user.first_name,
                         last_name: user.last_name,
                         email: user.email,

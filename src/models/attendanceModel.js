@@ -77,9 +77,11 @@ class Attendance {
             ),
             active_students AS (
                 SELECT COUNT(*) as total_students
-                FROM student
-                WHERE (date_of_exit IS NULL OR date_of_exit >= ?)
-                    AND date_of_entry <= ?
+                FROM student s
+                WHERE NOT EXISTS (SELECT 1 FROM student_reports sr WHERE sr.student_id = s.student_id AND sr.report_type IN ('termination', 'discharge'))
+                    AND (s.date_of_exit IS NULL OR s.date_of_exit > ?)
+                    AND s.date_of_entry IS NOT NULL AND s.date_of_entry <= ?
+                    AND s.deleted_at IS NULL
             ),
             daily_stats AS (
                 SELECT 

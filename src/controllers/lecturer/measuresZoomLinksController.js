@@ -1,0 +1,169 @@
+const MeasuresZoomLinksModel = require('../../models/measuresZoomLinksModel');
+
+class MeasuresZoomLinksController {
+    static async create(req, res) {
+        try {
+            const lecturerId = req.user.lecturer_id;
+            const { measures_id, zoom_link, start_date, end_date } = req.body;
+
+            // Validate required fields
+            if (!measures_id || !zoom_link || !start_date || !end_date) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Missing required fields'
+                });
+            }
+
+            // Validate dates
+            const startDate = new Date(start_date);
+            const endDate = new Date(end_date);
+
+            if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Invalid date format'
+                });
+            }
+
+            if (endDate < startDate) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'End date must be after start date'
+                });
+            }
+
+            const id = await MeasuresZoomLinksModel.create({
+                measures_id,
+                lecturer_id: lecturerId,
+                zoom_link,
+                start_date,
+                end_date
+            });
+
+            return res.json({
+                success: true,
+                message: 'Zoom link created successfully',
+                data: { id }
+            });
+        } catch (error) {
+            console.error('Error creating zoom link:', error);
+            return res.status(500).json({
+                success: false,
+                message: 'Error creating zoom link',
+                error: error.message
+            });
+        }
+    }
+
+    static async update(req, res) {
+        try {
+            const lecturerId = req.user.lecturer_id;
+            const { id } = req.params;
+            const { zoom_link, start_date, end_date } = req.body;
+
+            // Validate required fields
+            if (!zoom_link || !start_date || !end_date) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Missing required fields'
+                });
+            }
+
+            // Validate dates
+            const startDate = new Date(start_date);
+            const endDate = new Date(end_date);
+
+            if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Invalid date format'
+                });
+            }
+
+            if (endDate < startDate) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'End date must be after start date'
+                });
+            }
+
+            const success = await MeasuresZoomLinksModel.update(id, {
+                zoom_link,
+                start_date,
+                end_date
+            });
+
+            if (!success) {
+                return res.status(404).json({
+                    success: false,
+                    message: 'Zoom link not found or not authorized'
+                });
+            }
+
+            return res.json({
+                success: true,
+                message: 'Zoom link updated successfully'
+            });
+        } catch (error) {
+            console.error('Error updating zoom link:', error);
+            return res.status(500).json({
+                success: false,
+                message: 'Error updating zoom link',
+                error: error.message
+            });
+        }
+    }
+
+    static async getByLecturer(req, res) {
+        try {
+            const lecturerId = req.user.lecturer_id;
+            const zoomLinks = await MeasuresZoomLinksModel.getByLecturerId(lecturerId);
+
+            return res.json({
+                success: true,
+                data: zoomLinks.map(link => ({
+                    ...link,
+                    start_date: new Date(link.start_date).toISOString().split('T')[0],
+                    end_date: new Date(link.end_date).toISOString().split('T')[0]
+                }))
+            });
+        } catch (error) {
+            console.error('Error getting zoom links:', error);
+            return res.status(500).json({
+                success: false,
+                message: 'Error getting zoom links',
+                error: error.message
+            });
+        }
+    }
+
+    static async delete(req, res) {
+        try {
+            const lecturerId = req.user.lecturer_id;
+            const { id } = req.params;
+
+            const success = await MeasuresZoomLinksModel.delete(id, lecturerId);
+
+            if (!success) {
+                return res.status(404).json({
+                    success: false,
+                    message: 'Zoom link not found or not authorized'
+                });
+            }
+
+            return res.json({
+                success: true,
+                message: 'Zoom link deleted successfully'
+            });
+        } catch (error) {
+            console.error('Error deleting zoom link:', error);
+            return res.status(500).json({
+                success: false,
+                message: 'Error deleting zoom link',
+                error: error.message
+            });
+        }
+    }
+}
+
+module.exports = MeasuresZoomLinksController;

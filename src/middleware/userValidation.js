@@ -8,7 +8,7 @@ const userValidation = {
             internal_external: Joi.string().valid('Internal', 'External', 'internal', 'external').insensitive().default('internal'),
             hierarchically_assigned_to: Joi.number().allow(null)
         }).required(),
-        username: Joi.string().required().min(3).max(255),
+
         first_name: Joi.string().required().min(2).max(255),
         last_name: Joi.string().required().min(2).max(255),
         phone_number: Joi.string().required(),
@@ -43,7 +43,7 @@ const userValidation = {
             effectiveness: Joi.string().allow(null, ''),
             feedback_assessment: Joi.string().allow(null, '')
         }),
-        username: Joi.string().min(3).max(255),
+
         first_name: Joi.string().min(2).max(255),
         last_name: Joi.string().min(2).max(255),
         phone_number: Joi.string().required(),

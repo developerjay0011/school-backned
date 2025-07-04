@@ -59,6 +59,7 @@ class Student {
                     ir.routing_id as invoice_routing_id, ir.email as invoice_email,
                     ir.street as invoice_street, ir.postal_code as invoice_postal_code,
                     s.deleted_at,
+                    s.lecturer_remark,
                     ir.city as invoice_city,
                     ss.permission_to_sign_retroactively, ss.receive_teaching_materials,
                     ss.face_to_face_instruction, ss.online_instruction,
@@ -87,7 +88,7 @@ class Student {
 
             if (!rows[0]) return null;
             const data = rows[0];
-
+           
             // Format the complete response
             return {
                 student_id: data.student_id,
@@ -101,6 +102,7 @@ class Student {
                 measures_id: data.measures_id,
                 measures_number: data.measures_number,
                 measures_title: data.measures_title,
+                lecturer_remark: data.lecturer_remark || '',
                 status: data.status,
                 intermediary_internal: data.intermediary_internal || '',
                 lecturer: data.lecturer ? {
@@ -473,6 +475,7 @@ class Student {
             const [students] = await connection.execute(
                 `SELECT 
                     s.*,
+                    s.lecturer_remark,
                     cd.street_name, cd.postal_code, cd.city, cd.birth_date,
                     cd.place_of_birth, cd.country_of_birth, cd.phone, cd.email,
                     a.name as authority_name, a.bg_number, a.team as authority_team,
@@ -489,8 +492,8 @@ class Student {
                     m.id as measures_id, m.measures_number as measures_number, m.measures_title as measures_title,
                     CASE
                         WHEN EXISTS (SELECT 1 FROM student_reports sr WHERE sr.student_id = s.student_id AND sr.report_type IN ('termination', 'discharge')) THEN 'inactive'
-                        WHEN s.date_of_exit IS NOT NULL AND s.date_of_exit <= CURDATE() THEN 'inactive'
-                        WHEN s.date_of_entry IS NULL OR s.date_of_entry > CURDATE() THEN 'pending'
+                        WHEN s.date_of_exit IS NOT NULL AND s.date_of_exit <= CURDATE() AND s.deleted_at IS NULL THEN 'inactive'
+                        WHEN s.date_of_entry IS NULL OR s.date_of_entry > CURDATE() THEN 'inactive'
                         ELSE 'active'
                     END as status
                 FROM student s
@@ -519,6 +522,7 @@ class Student {
                 measures_title: student.measures_title,
                 intermediary_internal: student.intermediary_internal,
                 lecturer: student.lecturer || null,
+                lecturer_remark: student.lecturer_remark,
                 contact_details: {
                     street_name: student.street_name,
                     postal_code: student.postal_code,

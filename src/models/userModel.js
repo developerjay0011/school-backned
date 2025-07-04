@@ -9,21 +9,9 @@ class User {
 
     static async create(data) {
         try {
-            // Add timestamp to username and email if they already exist
+            // Add timestamp to email if it already exists
             const timestamp = Date.now();
-            const username = data.username;
             const email = data.email;
-
-            // Check if username exists
-            const [existingUsername] = await db.execute(
-                'SELECT id FROM admin_users WHERE username = ?',
-                [username]
-            );
-
-            // If username exists, append timestamp
-            if (existingUsername.length > 0) {
-                data.username = `${username}_${timestamp}`;
-            }
 
             // Check if email exists
             const [existingEmail] = await db.execute(
@@ -40,12 +28,12 @@ class User {
             const hashedPassword = await bcrypt.hash(data.password, 10);
             const [result] = await db.execute(
                 `INSERT INTO admin_users (
-                    username, first_name, last_name, phone_number, 
+                    first_name, last_name, phone_number, 
                     email, street, pincode, city, country,
                     password, role, status, reason_non_participation
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
                 [
-                    data.username, data.first_name, data.last_name, 
+                    data.first_name, data.last_name, 
                     data.phone_number, data.email, data.street,
                     data.pincode, data.city, data.country,
                     hashedPassword, data.role || 'admin', 
@@ -61,18 +49,8 @@ class User {
 
     static async createMinimal(data) {
         try {
-            if (!data.username || !data.first_name || !data.last_name || !data.password) {
-                throw new Error('Username, first name, last name, and password are required');
-            }
-
-            // Check if username exists
-            const [existingUsername] = await db.execute(
-                'SELECT id FROM admin_users WHERE username = ?',
-                [data.username]
-            );
-
-            if (existingUsername.length > 0) {
-                throw new Error('Username already exists');
+            if (!data.first_name || !data.last_name || !data.password) {
+                throw new Error('First name, last name, and password are required');
             }
 
             // Check if email exists
@@ -91,7 +69,6 @@ class User {
             
             // Prepare insert data with proper null handling
             const params = [
-                data.username,
                 data.first_name,
                 data.last_name,
                 hashedPassword,
@@ -108,7 +85,7 @@ class User {
 
             const [result] = await db.query(
                 `INSERT INTO admin_users (
-                    username, first_name, last_name, password,
+                    first_name, last_name, password,
                     role, status, phone_number, email, street,
                     pincode, city, country, reason_non_participation
                 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
@@ -123,7 +100,7 @@ class User {
     static async getAll() {
         try {
             const [rows] = await db.execute(
-                `SELECT id, username, first_name, last_name, 
+                `SELECT id, first_name, last_name, 
                 phone_number, email, street, pincode, city, 
                 country, role, status, reason_non_participation,
                 created_at, updated_at 
@@ -143,7 +120,7 @@ class User {
     static async getById(id) {
         try {
             const [rows] = await db.execute(
-                `SELECT id, username, first_name, last_name, 
+                `SELECT id, first_name, last_name, 
                 phone_number, email, street, pincode, city, 
                 country, role, status, created_at, updated_at 
                 FROM admin_users WHERE id = ? AND deleted_at IS NULL`,
@@ -167,10 +144,7 @@ class User {
             const values = [];
             
             // Build dynamic update query
-            if (data.username) {
-                updates.push('username = ?');
-                values.push(data.username);
-            }
+          
             if (data.first_name) {
                 updates.push('first_name = ?');
                 values.push(data.first_name);

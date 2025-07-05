@@ -26,7 +26,9 @@ const allowedOrigins = [
   'http://145.223.102.131:3000',
   'http://145.223.102.131:3001',
   'http://teilnehmerportal.bad-kursmanager.de',
-  'http://verwaltung.bad-kursmanager.de'
+  'http://verwaltung.bad-kursmanager.de',
+  'https://teilnehmerportal.bad-kursmanager.de',
+  'https://verwaltung.bad-kursmanager.de'
 ];
 
 // CORS configuration

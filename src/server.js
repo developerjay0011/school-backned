@@ -105,10 +105,10 @@ const sslOptions = {
     cert: fs.readFileSync('/var/www/sslcertificate/fullchain.pem')
 }
 
-// Create both HTTP and HTTPS servers
-app.listen(PORT, () => {
-    console.log(`HTTP Server is running on port ${PORT}`);
-});
+ // Create both HTTP and HTTPS servers
+// app.listen(PORT, () => {
+//     console.log(`HTTP Server is running on port ${PORT}`);
+// });
 
 https.createServer(sslOptions, app).listen(5001, () => {
     console.log('HTTPS Server running on https://145.223.102.131:5001');

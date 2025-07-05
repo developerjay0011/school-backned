@@ -2,8 +2,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
-const https = require('https');
-const fs = require('fs');
+
 const adminRoutes = require('./routes/admin');
 const studentRoutes = require('./routes/student');
 const lecturerRoutes = require('./routes/lecturer');
@@ -93,24 +92,9 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: 'Something went wrong!' });
 });
 
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-//   console.log('BACKEND_URL:', process.env.BACKEND_URL);
-// });
-
 const PORT = process.env.PORT || 3000;
-const sslOptions = {
-    key: fs.readFileSync('/var/www/sslcertificate/www.bad-kursmanager.de_private_key.key'),
-    cert: fs.readFileSync('/var/www/sslcertificate/fullchain.pem')
-}
-
- // Create both HTTP and HTTPS servers
-// app.listen(PORT, () => {
-//     console.log(`HTTP Server is running on port ${PORT}`);
-// });
-
-https.createServer(sslOptions, app).listen(5001, () => {
-    console.log('HTTPS Server running on https://145.223.102.131:5001');
-    console.log('BACKEND_URL:', process.env.BACKEND_URL);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+  console.log('BACKEND_URL:', process.env.BACKEND_URL);
 });
+

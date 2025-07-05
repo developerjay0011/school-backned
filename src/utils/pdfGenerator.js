@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const pdf = require("pdf-creator-node");
 const { PDFDocument, PDFName } = require('pdf-lib');
+const puppeteer = require('puppeteer');
 const SuccessPlacementStatisticsModel = require('../models/successPlacementStatisticsModel');
 const questions = [
     {
@@ -47,79 +48,7 @@ const questions = [
     }
 ]
 class PDFGenerator {
-    // static async generateFeedbackSheetPDF(data, feedbacks, measureInfo) {
-    //     try {
-    //         const template = fs.readFileSync(
-    //             path.join(__dirname, '../templates/feedback-sheet-template.html'),
-    //             'utf8'
-    //         );
 
-    //         const filename = `feedback-sheet-${Date.now()}.pdf`;
-    //         const outputPath = path.join(__dirname, '../../uploads/feedback-sheets', filename);
-
-    //         // Ensure directory exists
-    //         const dir = path.dirname(outputPath);
-    //         if (!fs.existsSync(dir)) {
-    //             fs.mkdirSync(dir, { recursive: true });
-    //         }
-
-    //         // Format feedbacks for template
-    //         const formattedFeedbacks = feedbacks.map(feedback => {
-    //             const responses = JSON.parse(feedback.responses);
-    //             return {
-    //                 date: new Date(feedback.feedback_date).toLocaleDateString('de-DE'),
-    //                 student: `${feedback.first_name} ${feedback.last_name}`,
-    //                 studentId: feedback.student_id,
-    //                 rating: responses.rating || 0,
-    //                 attendance: responses.attendance || 0,
-    //                 participation: responses.participation || 0,
-    //                 comments: feedback.remarks || '-'
-    //             };
-    //         });
-
-    //         // Calculate averages
-    //         const avgAttendance = formattedFeedbacks.length > 0
-    //             ? Math.round(formattedFeedbacks.reduce((sum, f) => sum + (f.attendance || 0), 0) / formattedFeedbacks.length)
-    //             : 0;
-
-    //         const avgParticipation = formattedFeedbacks.length > 0
-    //             ? Math.round(formattedFeedbacks.reduce((sum, f) => sum + (f.participation || 0), 0) / formattedFeedbacks.length)
-    //             : 0;
-
-    //         const document = {
-    //             html: template,
-    //             data: {
-    //                 dateFrom: new Date(data.dateFrom).toLocaleDateString('de-DE'),
-    //                 dateUntil: new Date(data.dateUntil).toLocaleDateString('de-DE'),
-    //                 measureNumber: measureInfo.measures_number,
-    //                 measureTitle: measureInfo.measures_title,
-    //                 feedbacks: formattedFeedbacks,
-    //                 totalFeedbacks: formattedFeedbacks.length,
-    //                 averageRating: formattedFeedbacks.length > 0 
-    //                     ? (formattedFeedbacks.reduce((sum, f) => sum + f.rating, 0) / formattedFeedbacks.length).toFixed(2)
-    //                     : 'N/A',
-    //                 averageAttendance: `${avgAttendance}%`,
-    //                 averageParticipation: `${avgParticipation}%`
-    //             },
-    //             path: outputPath,
-    //             type: 'pdf'
-    //         };
-
-    //         await pdf.create(document, {
-    //             format: 'A4',
-    //             orientation: 'portrait',
-    //             border: '10mm'
-    //         });
-
-    //         return {
-    //             url: `/uploads/feedback-sheets/${filename}`,
-    //             filename
-    //         };
-    //     } catch (error) {
-    //         console.error('Error generating feedback sheet PDF:', error);
-    //         throw error;
-    //     }
-    // }
 
     static async generateTrainingReport(data) {
         const formatdate = (date) => {
@@ -266,44 +195,27 @@ class PDFGenerator {
         const filename = `schulungsreport_${timestamp}.pdf`;
         const outputPath = path.join(__dirname, '../../uploads/schulungsreport', filename);
 
-        const file = {
-            html: htmlContent,
-            data: data,
-            path: outputPath
-
-        };
-
-        const options = {
-            format: "A4",
-            orientation: "portrait",
-            border: "10mm",
-            padding: "10mm",
-            footer: {
-                height: "10mm",
-                contents: "<p class='page'>Seite {{page}}/{{pages}}</p>"
-            },
-            childProcessOptions: {
-                env: {
-                    OPENSSL_CONF: '/dev/null',
-                },
-            },
-            renderDelay: 20,
-            timeout: 180000,
-            printBackground: true,
-            height: "11.69in",
-            width: "8.27in"
-        };
-
-
-
+    
         // Ensure uploads directory exists
         const uploadsDir = path.dirname(outputPath);
         if (!fs.existsSync(uploadsDir)) {
             fs.mkdirSync(uploadsDir, { recursive: true });
         }
         try {
-            const result = await pdf.create(file, options);
-            console.log("PDF generated:", result.filename);
+            const browser = await puppeteer.launch({
+                headless: "new",
+                args: ['--no-sandbox'], // Required on VPS hosting like Hostinger
+              });
+              const page = await browser.newPage();
+              await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+              await page.pdf({
+                path: outputPath,
+                format: 'A4',
+                printBackground: true,
+                margin: { top: '10mm', bottom: '10mm', left: '10mm', right: '10mm' }
+              });
+        
+              await browser.close();
             return {
                 filename,
                 path: `/uploads/schulungsreport/${filename}`,
@@ -773,33 +685,7 @@ class PDFGenerator {
         const filename = `attendance_${timestamp}.pdf`;
         const outputPath = path.join(__dirname, '../../uploads/attendance', filename);
 
-        const file = {
-            html: htmlContent,
-            data: data,
-            path: outputPath
-
-        };
-
-        const options = {
-            format: "A4",
-            orientation: "portrait",
-            border: "10mm",
-            padding: "10mm",
-            footer: {
-                height: "10mm",
-                contents: "<p class='page' style='  padding-left: 6pt;margin-top: 10pt;font: 8pt Arial, sans-serif;text-align: right;'>Seite {{page}}/{{pages}}</p>"
-            },
-            childProcessOptions: {
-                env: {
-                    OPENSSL_CONF: '/dev/null',
-                },
-            },
-            renderDelay: 20,
-            timeout: 180000,
-            printBackground: true,
-            height: "11.69in",
-            width: "8.27in"
-        };
+      
 
 
 
@@ -809,8 +695,29 @@ class PDFGenerator {
             fs.mkdirSync(uploadsDir, { recursive: true });
         }
         try {
-            const result = await pdf.create(file, options);
-            console.log("PDF generated:", result.filename);
+            const browser = await puppeteer.launch({
+                headless: "new",
+                args: ['--no-sandbox'], // Required on VPS hosting like Hostinger
+              });
+        
+              const page = await browser.newPage();
+        
+              // ✅ Load HTML content
+              await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+        
+              // ✅ Generate PDF
+              await page.pdf({
+                path: outputPath,
+                format: 'A4',
+                printBackground: true,
+                margin: { top: '10mm', bottom: '10mm', left: '10mm', right: '10mm' },
+                footer: {
+                    height: '10mm',
+                    contents: '<p class="page" style="padding-left: 6pt;margin-top: 10pt;font: 8pt Arial, sans-serif;text-align: right;">Seite {{page}}/{{pages}}</p>'
+                },
+              });
+        
+              await browser.close();
             return {
                 filename,
                 path: `/uploads/attendance/${filename}`,
@@ -953,45 +860,40 @@ class PDFGenerator {
         const timestamp = Math.floor(Date.now() / 1000);
         const filename = `qualifizierungsmatrix_${timestamp}.pdf`;
         const outputPath = path.join(__dirname, '../../uploads/qualifizierungsmatrix', filename);
-
-        const file = {
-            html: htmlContent,
-            data: data,
-            path: outputPath
-
-        };
-
-        const options = {
-            format: "A4",
-            orientation: "landscape",
-            border: "10mm",
-            padding: "10mm",
-            footer: {
-                height: "10mm",
-                contents: "<p class='page'>Seite {{page}}/{{pages}}</p>"
-            },
-            childProcessOptions: {
-                env: {
-                    OPENSSL_CONF: '/dev/null',
-                },
-            },
-            renderDelay: 20,
-            timeout: 180000,
-            printBackground: true,
-            height: "8.27in",
-            width: "11.69in"
-        };
-
-
-
         // Ensure uploads directory exists
         const uploadsDir = path.dirname(outputPath);
         if (!fs.existsSync(uploadsDir)) {
             fs.mkdirSync(uploadsDir, { recursive: true });
         }
         try {
-            const result = await pdf.create(file, options);
-            console.log("PDF generated:", result.filename);
+            const browser = await puppeteer.launch({
+                headless: "new",
+                args: ['--no-sandbox'], // Required on VPS hosting like Hostinger
+              });
+        
+              const page = await browser.newPage();
+        
+              // ✅ Load HTML content
+              await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+        
+              // ✅ Generate PDF
+              await page.pdf({
+                path: outputPath,
+                format: 'A4',
+                printBackground: true,
+                landscape: true,
+                displayHeaderFooter: true,
+                footerTemplate: '<div style="font-size:10px;text-align:center;width:100%;">Seite <span class="pageNumber"></span> von <span class="totalPages"></span></div>',
+                headerTemplate: '<div></div>', 
+                margin: {
+                    top: '10mm',
+                    bottom: '20mm',
+                    left: '10mm',
+                    right: '10mm'
+                  }
+              });
+        
+              await browser.close();
             return {
                 filename,
                 path: `/uploads/qualifizierungsmatrix/${filename}`,
@@ -1465,39 +1367,40 @@ class PDFGenerator {
         const filename = `feedbackbogen-auswertung_${timestamp}.pdf`;
         const outputPath = path.join(__dirname, '../../uploads', filename);
 
-        const file = {
-            html: htmlContent,
-            data: data,
-            path: outputPath
-
-        };
-
-        const options = {
-            format: "A4",
-            orientation: "landscape",
-            border: "10mm",
-            childProcessOptions: {
-                env: {
-                    OPENSSL_CONF: '/dev/null',
-                },
-            },
-            renderDelay: 20,
-            timeout: 180000,
-            printBackground: true,
-            height: "8.27in",
-            width: "11.69in"
-        };
-
-
-
         // Ensure uploads directory exists
         const uploadsDir = path.dirname(outputPath);
         if (!fs.existsSync(uploadsDir)) {
             fs.mkdirSync(uploadsDir, { recursive: true });
         }
         try {
-            const result = await pdf.create(file, options);
-            console.log("PDF generated:", result.filename);
+            const browser = await puppeteer.launch({
+                headless: "new",
+                args: ['--no-sandbox'], // Required on VPS hosting like Hostinger
+              });
+        
+              const page = await browser.newPage();
+        
+              // ✅ Load HTML content
+              await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+        
+              // ✅ Generate PDF
+              await page.pdf({
+                path: outputPath,
+                format: 'A4',
+                printBackground: true,
+                landscape: true,
+                displayHeaderFooter: true,
+                footerTemplate: '<div style="font-size:10px;text-align:center;width:100%;">Seite <span class="pageNumber"></span> von <span class="totalPages"></span></div>',
+                headerTemplate: '<div></div>', // required if footerTemplate is used
+                margin: {
+                  top: '10mm',
+                  bottom: '20mm',
+                  left: '10mm',
+                  right: '10mm'
+                }
+              });
+        
+              await browser.close();
             return {
                 filename,
                 path: `/uploads/${filename}`,
@@ -1527,7 +1430,7 @@ class PDFGenerator {
 
         // Get statistics data
         const stats = await SuccessPlacementStatisticsModel.getStatisticsData(data.measureInfo.id, data.year);
-console.log("stats",stats);
+
         // Generate rows for quarterly data
         let questionHtml = '';
         stats.quarterlyData.forEach((row, index) => {
@@ -1650,31 +1553,28 @@ console.log("stats",stats);
         //     throw new Error('BACKEND_URL environment variable is not set');
         // }
 
-        const file = {
-            html: htmlContent,
-            data: data,
-            path: outputPath
-        };
-
-        const options = {
-            format: "A4",
-            orientation: "landscape",
-            border: "10mm",
-            padding: "10mm",
-            childProcessOptions: {
-                env: {
-                    OPENSSL_CONF: '/dev/null',
-                },
-            },
-            renderDelay: 20,
-            timeout: 180000,
-            printBackground: true,
-            height: "8.27in",
-            width: "11.69in"
-        };
+       
         try {
-            const result = await pdf.create(file, options);
-            console.log("PDF generated:", result.filename);
+            const browser = await puppeteer.launch({
+                headless: "new",
+                args: ['--no-sandbox'], // Required on VPS hosting like Hostinger
+              });
+        
+              const page = await browser.newPage();
+        
+              // ✅ Load HTML content
+              await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+        
+              // ✅ Generate PDF
+              await page.pdf({
+                path: outputPath,
+                format: 'A4',
+                printBackground: true,
+                landscape: true,
+                margin: { top: '10mm', bottom: '10mm', left: '10mm', right: '10mm' }
+              });
+        
+              await browser.close();
             return {
                 filename,
                 path: `/uploads/${filename}`,
@@ -1833,8 +1733,29 @@ console.log("stats",stats);
             fs.mkdirSync(uploadsDir, { recursive: true });
         }
         try {
-            const result = await pdf.create(file, options);
-            console.log("PDF generated:", result.filename);
+            const browser = await puppeteer.launch({
+                headless: "new",
+                args: ['--no-sandbox'], // Required on VPS hosting like Hostinger
+              });
+        
+              const page = await browser.newPage();
+        
+              // ✅ Load HTML content
+              await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+        
+              // ✅ Generate PDF
+              await page.pdf({
+                path: outputPath,
+                format: 'A4',
+                printBackground: true,
+                landscape: true,
+                displayHeaderFooter: true,
+                footerTemplate: '<div style="font-size:10px;text-align:center;width:100%;">Seite <span class="pageNumber"></span> von <span class="totalPages"></span></div>',
+                headerTemplate: '<div></div>', // required if footerTemplate is used
+                margin: { top: '10mm', bottom: '10mm', left: '10mm', right: '10mm' }
+              });
+        
+              await browser.close();
             return {
                 filename,
                 path: `/uploads/${filename}`,
@@ -1844,15 +1765,6 @@ console.log("stats",stats);
             console.error("Error generating PDF:", error);
             throw error;
         }
-
-
-
-
-        return {
-            filename,
-            path: outputPath,
-            url: process.env.BACKEND_URL + `/uploads/${filename}`
-        };
     }
 
     static async generateResultSheetPDF(data) {
@@ -2230,39 +2142,32 @@ console.log("stats",stats);
         const filename = `eignungsfeststellung_${timestamp}.pdf`;
         const outputPath = path.join(__dirname, '../../uploads', filename);
 
-        const file = {
-            html: htmlContent,
-            data: data,
-            path: outputPath
-
-        };
-
-        const options = {
-            format: "A4",
-            orientation: "portrait",
-            border: "10mm",
-            childProcessOptions: {
-                env: {
-                    OPENSSL_CONF: '/dev/null',
-                },
-            },
-            renderDelay: 20,
-            timeout: 180000,
-            printBackground: true,
-            height: "11.69in",
-            width: "8.27in"
-        };
-
-
-
+        
         // Ensure uploads directory exists
         const uploadsDir = path.dirname(outputPath);
         if (!fs.existsSync(uploadsDir)) {
             fs.mkdirSync(uploadsDir, { recursive: true });
         }
         try {
-            const result = await pdf.create(file, options);
-            console.log("PDF generated:", result.filename);
+            const browser = await puppeteer.launch({
+                headless: "new",
+                args: ['--no-sandbox'], // Required on VPS hosting like Hostinger
+              });
+        
+              const page = await browser.newPage();
+        
+              // ✅ Load HTML content
+              await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+        
+              // ✅ Generate PDF
+              await page.pdf({
+                path: outputPath,
+                format: 'A4',
+                printBackground: true,
+                margin: { top: '10mm', bottom: '10mm', left: '10mm', right: '10mm' }
+              });
+        
+              await browser.close();
             return {
                 filename,
                 path: `/uploads/${filename}`,
@@ -2272,15 +2177,6 @@ console.log("stats",stats);
             console.error("Error generating PDF:", error);
             throw error;
         }
-
-
-
-
-        return {
-            filename,
-            path: outputPath,
-            url: `/uploads/${filename}`
-        };
     }
 
     static async generateDataCollectionPDF(data) {
@@ -2482,44 +2378,30 @@ console.log("stats",stats);
         const filename = `erfassungsbogen_${timestamp}.pdf`;
         const outputPath = path.join(__dirname, '../../uploads', filename);
 
-        const file = {
-            html: htmlContent,
-            data: data,
-            path: outputPath
-
-        };
-
-        const options = {
-            format: "A4",
-            orientation: "portrait",
-            border: "10mm",
-            childProcessOptions: {
-                env: {
-                    OPENSSL_CONF: '/dev/null',
-                },
-            },
-            renderDelay: 20,
-            timeout: 180000,
-            printBackground: true,
-            height: "11.69in",
-            width: "8.27in"
-        };
-
-
-
         // Ensure uploads directory exists
         const uploadsDir = path.dirname(outputPath);
         if (!fs.existsSync(uploadsDir)) {
             fs.mkdirSync(uploadsDir, { recursive: true });
         }
-        pdf.create(file, options)
-            .then(res => {
-                console.log("PDF generated:", res.filename);
-            })
-            .catch(error => {
-                console.error("Error generating PDF:", error);
-            });
-
+        const browser = await puppeteer.launch({
+            headless: "new",
+            args: ['--no-sandbox'], // Required on VPS hosting like Hostinger
+          });
+    
+          const page = await browser.newPage();
+    
+          // ✅ Load HTML content
+          await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+    
+          // ✅ Generate PDF
+          await page.pdf({
+            path: outputPath,
+            format: 'A4',
+            printBackground: true,
+            margin: { top: '10mm', bottom: '10mm', left: '10mm', right: '10mm' }
+          });
+    
+          await browser.close();
 
 
 

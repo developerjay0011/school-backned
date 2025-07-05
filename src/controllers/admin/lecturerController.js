@@ -69,12 +69,10 @@ class LecturerController {
 
     static async createLecturer(req, res) {
         try {
-            // Convert time to datetime
-            const today = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
             const lecturerData = {
                 ...req.body,
-                start_time: `${today} ${req.body.start_time}:00`,  // Add current date and seconds
-                end_time: `${today} ${req.body.end_time}:00`,      // Add current date and seconds
+                start_time: req.body.start_time,  // Store just the time
+                end_time: req.body.end_time,     // Store just the time
                 joining_date: req.body.joining_date,
                 photo: req.files['photo'] ? '/uploads/photos/' + req.files['photo'][0].filename : '',
                 certificates: req.files['certificates'] ? req.files['certificates'].map(file => '/uploads/certificates/' + file.filename) : [],
@@ -102,13 +100,12 @@ class LecturerController {
                 return res.status(404).json({ success: false, message: 'Lecturer not found' });
             }
 
-            // Convert time to datetime if time fields are provided
-            const today = new Date().toISOString().split('T')[0];
+            // Use time fields as is
             if (req.body.start_time) {
-                req.body.start_time = `${today} ${req.body.start_time}:00`;
+                req.body.start_time = req.body.start_time;
             }
             if (req.body.end_time) {
-                req.body.end_time = `${today} ${req.body.end_time}:00`;
+                req.body.end_time = req.body.end_time;
             }
 
             let updatedCertificates = existingLecturer.certificates;
@@ -147,7 +144,7 @@ class LecturerController {
                 ...req.body,
                 photo: req.files && req.files['photo'] 
                     ? '/uploads/photos/' + req.files['photo'][0].filename 
-                    : (existingLecturer.photo || ''),
+                    : (existingLecturer.photo.replace(process.env.BACKEND_URL, '')) || '',
                 certificates: updatedCertificates
             };
 

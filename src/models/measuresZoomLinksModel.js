@@ -71,6 +71,62 @@ class MeasuresZoomLinksModel {
             throw error;
         }
     }
+
+    static async getByStudentDetails(studentId) {
+        try {
+            // First get student details
+            const [studentRows] = await db.execute(
+                `SELECT 
+                    s.student_id,
+                    s.measures_id,
+                    s.lecturer as lecturer_id,
+                    s.date_of_entry,
+                    s.date_of_exit
+                FROM student s
+                WHERE s.student_id = ?
+                AND s.deleted_at IS NULL
+                AND NOT EXISTS (
+                    SELECT 1 FROM student_reports sr 
+                    WHERE sr.student_id = s.student_id 
+                    AND sr.report_type IN ('termination', 'discharge')
+                )`,
+                [studentId]
+            );
+
+            if (!studentRows || studentRows.length === 0) {
+                return [];
+            }
+
+            const student = studentRows[0];
+
+            // Then get zoom links based on student details
+            const [rows] = await db.execute(
+                `SELECT mzl.*, 
+                    m.measures_number, m.measures_title,
+                    l.first_name as lecturer_first_name, 
+                    l.last_name as lecturer_last_name,
+                    l.photo as lecturer_photo
+                FROM measures_zoom_links mzl
+                INNER JOIN measurements m ON m.id = mzl.measures_id
+                INNER JOIN lecturers l ON l.lecturer_id = mzl.lecturer_id
+                WHERE mzl.measures_id = ?
+                    AND mzl.lecturer_id = ?
+                    AND mzl.deleted_at IS NULL
+                    AND mzl.start_date = ?
+                    AND mzl.end_date = ?
+                ORDER BY mzl.start_date DESC`,
+                [student.measures_id, student.lecturer_id, student.date_of_entry, student.date_of_exit]
+            );
+            rows.map((row) => {
+                row.lecturer_photo= process.env.BACKEND_URL + row.lecturer_photo;
+            });
+
+            return rows;
+        } catch (error) {
+            console.error('Error getting zoom links for student:', error);
+            throw error;
+        }
+    }
 }
 
 module.exports = MeasuresZoomLinksModel;

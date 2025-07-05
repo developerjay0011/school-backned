@@ -13,6 +13,8 @@ class LecturerModel {
             `);
             return rows.map(row => ({
                 ...row,
+                start_time: row.start_time,
+                end_time: row.end_time,
                 lecturer_id: String(row.lecturer_id).padStart(7, '0'),
                 photo: row?.photo ? process.env.BACKEND_URL + row.photo : '',
                 certificates: JSON.parse(row.certificates || '[]').map(cert => process.env.BACKEND_URL + cert)

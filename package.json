@@ -17,9 +17,12 @@
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.2",
     "mysql2": "^3.2.0",
+    "node-cron": "^4.2.0",
+    "nodemailer": "^7.0.5",
     "pdf-creator-node": "^2.3.5",
     "pdf-lib": "^1.17.1",
-    "pm2": "^6.0.8"
+    "pm2": "^6.0.8",
+    "puppeteer": "^24.11.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"

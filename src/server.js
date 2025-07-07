@@ -5,6 +5,7 @@ require('dotenv').config();
 
 const adminRoutes = require('./routes/admin');
 const studentRoutes = require('./routes/student');
+const AttendanceCronService = require('./services/attendanceCronService');
 const lecturerRoutes = require('./routes/lecturer');
 const passwordRoutes = require('./routes/admin/passwordRoutes');
 const feedbackEvaluationRoutes = require('./routes/admin/feedbackEvaluationRoutes');
@@ -96,5 +97,9 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
   console.log('BACKEND_URL:', process.env.BACKEND_URL);
+  
+  // Initialize cron jobs
+  AttendanceCronService.initializeCronJobs();
+  console.log('Attendance cron jobs initialized');
 });
 

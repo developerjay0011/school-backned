@@ -324,13 +324,13 @@ class Attendance {
         const morningEnd = 12 * 60 + 30; // 12:30
         const afternoonStart = 13 * 60;   // 13:00
         const afternoonEnd = 16 * 60 + 30; // 16:30
-
+        console.log(currentTime);
         // Check if current time is within valid slots
         const isMorningSlot = currentTime >= morningStart && currentTime <= morningEnd;
         const isAfternoonSlot = currentTime >= afternoonStart && currentTime <= afternoonEnd;
 
         if (!isMorningSlot && !isAfternoonSlot) {
-            throw new Error('Attendance can only be marked between 08:00-12:30 or 13:00-16:15');
+            throw new Error('Attendance can only be marked between 08:00-12:30 or 13:00-16:30');
         }
 
         const connection = await db.getConnection();

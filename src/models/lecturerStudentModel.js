@@ -17,10 +17,12 @@ class LecturerStudentModel {
                     s.salutation,
                     s.intermediary_internal,
                     m.measures_number,
-                    m.measures_title
+                    m.measures_title,
+                    c.phone
                 FROM student s
                 INNER JOIN lecturers l ON l.lecturer_id = ?
                 INNER JOIN measurements m ON m.id = s.measures_id
+                INNER JOIN student_contact_details c ON c.student_id = s.student_id
                 WHERE s.lecturer = l.lecturer_id
                     AND s.deleted_at IS NULL
                 ORDER BY s.date_of_entry, s.date_of_exit, s.student_id
@@ -73,7 +75,7 @@ class LecturerStudentModel {
                     lecturer_remark: student.lecturer_remark,
                     voucher_type: student.voucher_type,
                     salutation: student.salutation,
-
+                    phone: student.phone
                 });
             }
 

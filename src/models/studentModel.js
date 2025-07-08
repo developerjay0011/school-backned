@@ -73,7 +73,32 @@ class Student {
                         WHEN s.date_of_exit IS NOT NULL AND s.date_of_exit <= CURDATE() THEN 'inactive'
                         WHEN s.date_of_entry IS NULL OR s.date_of_entry > CURDATE() THEN 'pending'
                         ELSE 'active'
-                    END as status
+                    END as status,
+                    (
+                        WITH RECURSIVE date_series AS (
+                            -- Initial row from student's entry date
+                            SELECT s.student_id, s.date_of_entry as date
+                            FROM student s2
+                            WHERE s2.student_id = s.student_id 
+                            AND s2.date_of_entry <= CURDATE()
+                            
+                            UNION ALL
+                            
+                            -- Generate subsequent dates
+                            SELECT d.student_id, DATE_ADD(d.date, INTERVAL 1 DAY)
+                            FROM date_series d
+                            WHERE d.date < CURDATE()
+                        )
+                        SELECT COUNT(*)
+                        FROM date_series d
+                        LEFT JOIN student_attendance sa ON sa.student_id = d.student_id AND sa.attendance_date = d.date
+                        LEFT JOIN bridge_days bd ON d.date = bd.date
+                        WHERE DAYOFWEEK(d.date) NOT IN (1, 7) -- Exclude weekends
+                        AND bd.date IS NULL -- Exclude bridge days
+                        AND d.date <= CURDATE() -- Ensure no future dates
+                        AND (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
+                        AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
+                    ) as full_day_absences
                 FROM student s
                 LEFT JOIN student_contact_details cd ON s.student_id = cd.student_id
                 LEFT JOIN authorities a ON s.student_id = a.student_id
@@ -88,6 +113,25 @@ class Student {
 
             if (!rows[0]) return null;
             const data = rows[0];
+            
+            // Debug logging
+            console.log('Student entry date:', data.date_of_entry);
+            console.log('Full day absences count:', data.full_day_absences);
+            
+            // Check raw attendance records
+            const [attendanceRecords] = await db.query(
+                `SELECT 
+                    attendance_date,
+                    morning_attendance,
+                    afternoon_attendance
+                 FROM student_attendance 
+                 WHERE student_id = ?
+                 AND attendance_date >= ?
+                 AND attendance_date <= CURDATE()
+                 ORDER BY attendance_date DESC`,
+                [studentId, data.date_of_entry]
+            );
+            console.log('Raw attendance records:', attendanceRecords);
            
             // Format the complete response
             return {
@@ -104,6 +148,7 @@ class Student {
                 measures_title: data.measures_title,
                 lecturer_remark: data.lecturer_remark || '',
                 status: data.status,
+                full_day_absences: data.full_day_absences || 0,
                 intermediary_internal: data.intermediary_internal || '',
                 lecturer: data.lecturer ? {
                     lecturer_id: data.lecturer_id,

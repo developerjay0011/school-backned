@@ -74,7 +74,7 @@ class PDFGenerator {
                         <p class="s1">${formatdate(q.created_at)} ${getDayName(q.created_at)}</p>
                     </td>
                     <td style="width: 37pt; border-left: none; border-right: none;">
-                        <p class="s1">Nr: </p>
+                        <p class="s1">Thema: </p>
                         <p class="s1" style="margin-top: 5pt;">${q.nr}</p>
                     </td>
                     <td style="width: 262pt; border-left: none; border-right: none;">

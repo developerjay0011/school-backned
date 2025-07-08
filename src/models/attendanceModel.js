@@ -168,12 +168,12 @@ class Attendance {
         }
     }
     // Default time slots
-    static MORNING_START = '09:00:00';
-    static ADMIN_MORNING_START_MARK = '09:01:00';
-    static MORNING_END = '12:30:00';
-    static ADMIN_MORNING_END_MARK = '12:31:00';
+    static MORNING_START = '08:00:00';
+    static ADMIN_MORNING_START_MARK = '08:01:00';
+    static MORNING_END = '12:00:00';
+    static ADMIN_MORNING_END_MARK = '12:01:00';
     static AFTERNOON_START = '13:00:00';
-    static AFTERNOON_END = '16:15:00';
+    static AFTERNOON_END = '16:30:00';
 
     static async markAdminAttendance(studentId, date, slots) {
         const connection = await db.getConnection();
@@ -314,23 +314,23 @@ class Attendance {
     static async markAttendance(studentId) {
         // Get current time in German timezone (UTC+2 in summer, UTC+1 in winter)
         const now = new Date();
-        const germanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Berlin' }));
+        const germanTime = new Date(now);
         const currentHour = germanTime.getHours();
         const currentMinutes = germanTime.getMinutes();
         const currentTime = currentHour * 60 + currentMinutes;
 
         // Define time slots
-        const morningStart = 9 * 60;     // 09:00
+        const morningStart = 8 * 60;     // 08:00
         const morningEnd = 12 * 60 + 30; // 12:30
         const afternoonStart = 13 * 60;   // 13:00
-        const afternoonEnd = 16 * 60 + 15; // 16:15
+        const afternoonEnd = 16 * 60 + 30; // 16:30
 
         // Check if current time is within valid slots
         const isMorningSlot = currentTime >= morningStart && currentTime <= morningEnd;
         const isAfternoonSlot = currentTime >= afternoonStart && currentTime <= afternoonEnd;
 
         if (!isMorningSlot && !isAfternoonSlot) {
-            throw new Error('Attendance can only be marked between 09:00-12:30 or 13:00-16:15');
+            throw new Error('Attendance can only be marked between 08:00-12:30 or 13:00-16:15');
         }
 
         const connection = await db.getConnection();

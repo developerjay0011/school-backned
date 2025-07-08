@@ -508,16 +508,16 @@ class Student {
     static async getAll(page = 1, limit = 10) {
         const connection = await db.getConnection();
         try {
-            // const offset = (page - 1) * limit;
+            const offset = (page - 1) * limit;
 
             // Get total count
-            // const [countResult] = await connection.execute(
-            //     'SELECT COUNT(*) as total FROM student'
-            // );
-            // const totalStudents = countResult[0].total;
+            const [countResult] = await connection.query(
+                'SELECT COUNT(*) as total FROM student WHERE deleted_at IS NULL'
+            );
+            const totalStudents = countResult[0].total;
 
             // Get paginated students with their contact details and authority info
-            const [students] = await connection.execute(
+            const [students] = await connection.query(
                 `SELECT 
                     s.*,
                     s.lecturer_remark,
@@ -540,7 +540,32 @@ class Student {
                         WHEN s.date_of_exit IS NOT NULL AND s.date_of_exit <= CURDATE() AND s.deleted_at IS NULL THEN 'inactive'
                         WHEN s.date_of_entry IS NULL OR s.date_of_entry > CURDATE() THEN 'inactive'
                         ELSE 'active'
-                    END as status
+                    END as status,
+                    (
+                        WITH RECURSIVE date_series AS (
+                            -- Initial row from student's entry date
+                            SELECT s.student_id, s.date_of_entry as date
+                            FROM student s2
+                            WHERE s2.student_id = s.student_id 
+                            AND s2.date_of_entry <= CURDATE()
+                            
+                            UNION ALL
+                            
+                            -- Generate subsequent dates
+                            SELECT d.student_id, DATE_ADD(d.date, INTERVAL 1 DAY)
+                            FROM date_series d
+                            WHERE d.date < CURDATE()
+                        )
+                        SELECT COUNT(*)
+                        FROM date_series d
+                        LEFT JOIN student_attendance sa ON sa.student_id = d.student_id AND sa.attendance_date = d.date
+                        LEFT JOIN bridge_days bd ON d.date = bd.date
+                        WHERE DAYOFWEEK(d.date) NOT IN (1, 7) -- Exclude weekends
+                        AND bd.date IS NULL -- Exclude bridge days
+                        AND d.date <= CURDATE() -- Ensure no future dates
+                        AND (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
+                        AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
+                    ) as full_day_absences
                 FROM student s
                 LEFT JOIN student_contact_details cd ON s.student_id = cd.student_id
                 LEFT JOIN authorities a ON s.student_id = a.student_id
@@ -548,7 +573,8 @@ class Student {
                 LEFT JOIN invoice_recipients ir ON s.student_id = ir.student_id
                 LEFT JOIN measurements m ON s.measures_id = m.id
                 WHERE s.deleted_at IS NULL
-                ORDER BY s.date_of_entry DESC`
+                ORDER BY s.date_of_entry DESC
+                `
             );
             console.log("studentsstudents",students)
             // Transform the results to include nested objects
@@ -568,6 +594,7 @@ class Student {
                 intermediary_internal: student.intermediary_internal,
                 lecturer: student.lecturer || null,
                 lecturer_remark: student.lecturer_remark,
+                full_day_absences: student.full_day_absences,
                 contact_details: {
                     street_name: student.street_name,
                     postal_code: student.postal_code,
@@ -609,8 +636,15 @@ class Student {
                 }
             }));
 
+            // Return the transformed results with pagination info
             return {
-                students: transformedStudents
+                students: transformedStudents,
+                pagination: {
+                    total: totalStudents,
+                    page: page,
+                    limit: limit,
+                    totalPages: Math.ceil(totalStudents / limit)
+                }
             };
         } finally {
             connection.release();

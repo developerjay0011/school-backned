@@ -79,8 +79,8 @@ class Attendance {
                 SELECT COUNT(*) as total_students
                 FROM student s
                 WHERE NOT EXISTS (SELECT 1 FROM student_reports sr WHERE sr.student_id = s.student_id AND sr.report_type IN ('termination', 'discharge'))
-                    AND (s.date_of_exit IS NULL OR s.date_of_exit > ?)
-                    AND s.date_of_entry IS NOT NULL AND s.date_of_entry <= ?
+                    AND (s.date_of_exit IS NULL OR s.date_of_exit > CURDATE())
+                    AND s.date_of_entry IS NOT NULL AND s.date_of_entry <= CURDATE()
                     AND s.deleted_at IS NULL
             ),
             daily_stats AS (
@@ -133,7 +133,8 @@ class Attendance {
         `;
 
         try {
-            const [results] = await db.query(query, [startDate, endDate, startDate, endDate]);
+            const [results] = await db.query(query, [startDate, endDate]);
+            if (!results.length) return null;
             // First row contains the summary data
             const summary = results[0];
             // Rest of the rows contain daily data
@@ -170,8 +171,8 @@ class Attendance {
     // Default time slots
     static MORNING_START = '08:00:00';
     static ADMIN_MORNING_START_MARK = '08:01:00';
-    static MORNING_END = '12:00:00';
-    static ADMIN_MORNING_END_MARK = '12:01:00';
+    static MORNING_END = '12:30:00';
+    static ADMIN_MORNING_END_MARK = '12:31:00';
     static AFTERNOON_START = '13:00:00';
     static AFTERNOON_END = '16:30:00';
 

@@ -277,6 +277,7 @@ class StudentController {
                 intermediary_internal: student.intermediary_internal,
                 lecturer: student.lecturer,
                 lecturer_remark: student.lecturer_remark,
+                full_day_absences: student.full_day_absences,
                 status: student.status,
                 contact_details: {
                     street_name: student.contact_details.street_name || '',

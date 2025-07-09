@@ -30,24 +30,29 @@ class DateTimeUtils {
     }
 
     static formatToSQLDate(dateTime) {
-        return dateTime.toLocaleString('en-US', {
+        const berlinDate = dateTime.toLocaleString('en-US', {
             timeZone: 'Europe/Berlin',
             year: 'numeric',
             month: '2-digit',
             day: '2-digit'
-        }).split('/').reverse().join('-');
+        });
+        // US format is MM/DD/YYYY, we need YYYY-MM-DD
+        const [month, day, year] = berlinDate.split('/');
+        return `${year}-${month}-${day}`;
     }
 
     static formatToSQLDateTime(dateTime) {
         const date = this.formatToSQLDate(dateTime);
-        const time = dateTime.toLocaleString('en-US', {
+        const timeStr = dateTime.toLocaleString('en-US', {
             timeZone: 'Europe/Berlin',
             hour: '2-digit',
             minute: '2-digit',
             second: '2-digit',
             hour12: false
         });
-        console.log("time",time);
+        // Extract just the time part (HH:mm:ss)
+        const time = timeStr.split(', ')[1];
+        console.log('Date:', date, 'Time:', time);
         return `${date} ${time}`;
     }
 

@@ -99,7 +99,7 @@ app.listen(PORT, () => {
   console.log('BACKEND_URL:', process.env.BACKEND_URL);
   
   // Initialize cron jobs
-  // AttendanceCronService.initializeCronJobs();
-  // console.log('Attendance cron jobs initialized');
+  AttendanceCronService.initializeCronJobs();
+  console.log('Attendance cron jobs initialized');
 });
 

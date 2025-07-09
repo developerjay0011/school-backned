@@ -1,12 +1,13 @@
 const db = require('../config/database');
 const bcrypt = require('bcrypt');
+const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class Student {
     static async delete(id) {
         try {
             const rows = await db.query(
-                'UPDATE student SET deleted_at = NOW() WHERE student_id = ?',
-                [id]
+                'UPDATE student SET deleted_at = ? WHERE student_id = ?',
+                [DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime()),id]
             );
             console.log("rows", rows);
             return rows;

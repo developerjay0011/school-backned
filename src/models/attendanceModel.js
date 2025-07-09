@@ -430,13 +430,15 @@ class Attendance {
                     : [startDate, endDate, startDate, endDate, startDate, endDate, startDate, endDate]
             );
 
-            // Generate all dates between start and end date
+            // Generate all dates between start and end
             const allDates = [];
-            const currentDate = new Date(startDate);
-            const end = new Date(endDate);
+            const start = DateTimeUtils.parseToDateTime(startDate);
+            const end = DateTimeUtils.parseToDateTime(endDate);
+            let currentDate = start.clone();
+
             while (currentDate <= end) {
-                allDates.push(currentDate.toISOString().split('T')[0]);
-                currentDate.setDate(currentDate.getDate() + 1);
+                allDates.push(DateTimeUtils.formatToSQLDate(currentDate));
+                currentDate = currentDate.add(1, 'day');
             }
 
             // Group by student and include all dates
@@ -447,8 +449,8 @@ class Attendance {
                 const studentKey = row.student_id;
                 const key = `${row.student_id}_${row.attendance_date}`;
                 if (!attendanceMap.has(key)) {
-                    const dateObj = new Date(row.attendance_date);
-                    const isWeekend = dateObj.getDay() === 0 || dateObj.getDay() === 6; // Sunday = 0, Saturday = 6
+                    const dateObj = DateTimeUtils.parseToDateTime(row.attendance_date);
+                    const isWeekend = dateObj.weekday() === 7 || dateObj.weekday() === 6; // Sunday = 7, Saturday = 6
                     const isHoliday = holidaySet.has(row.attendance_date);
                     
                     attendanceMap.set(key, {

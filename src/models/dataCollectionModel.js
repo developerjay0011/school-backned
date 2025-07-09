@@ -1,6 +1,7 @@
 const db = require('../config/database');
 const crypto = require('crypto');
 const PDFGenerator = require('../utils/pdfGenerator');
+const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class DataCollection {
     static async getAllForms() {
@@ -60,8 +61,8 @@ class DataCollection {
             const [rows] = await connection.execute(
                 `SELECT id, expiry_date
                  FROM form_links
-                 WHERE token = ? AND expiry_date > NOW()`,
-                [token]
+                 WHERE token = ? AND expiry_date > ?`,
+                [token,DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime())]
             );
 
             return rows[0] || null;
@@ -200,8 +201,8 @@ class DataCollection {
 
             // Expire the token by setting expiry_date to now
             await connection.execute(
-                'UPDATE form_links SET expiry_date = NOW() WHERE id = ?',
-                [formId]
+                'UPDATE form_links SET expiry_date = ? WHERE id = ?',
+                [DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime()),formId]
             );
 
             const [result] = await connection.execute(

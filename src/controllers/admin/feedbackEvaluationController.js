@@ -2,6 +2,7 @@ const FeedbackEvaluationModel = require('../../models/feedbackEvaluationModel');
 const FeedbackModel = require('../../models/feedbackModel');
 const MeasurementModel = require('../../models/measurementModel');
 const PDFGenerator = require('../../utils/pdfGenerator');
+const DateTimeUtils = require('../../utils/dateTimeUtils');
 const path = require('path');
 const fs = require('fs');
 
@@ -18,13 +19,20 @@ class FeedbackEvaluationController {
                 });
             }
 
-            // Parse dates and create Date objects
-            const fromDate = new Date(dateFrom);
-            const untilDate = new Date(dateUntil);
+            // Parse dates using DateTimeUtils
+            const fromDate = DateTimeUtils.parseToDateTime(dateFrom);
+            const untilDate = DateTimeUtils.parseToDateTime(dateUntil);
+
+            if (!fromDate.isValid() || !untilDate.isValid()) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Invalid date format. Please use YYYY-MM-DD format'
+                });
+            }
 
             // Convert to YYYY-MM format for PDF generation
-            const monthFrom = fromDate.toISOString().slice(0, 7);  // YYYY-MM format
-            const monthUntil = untilDate.toISOString().slice(0, 7);  // YYYY-MM format
+            const monthFrom = fromDate.format('YYYY-MM');  // YYYY-MM format
+            const monthUntil = untilDate.format('YYYY-MM');  // YYYY-MM format
 
             // Get measure info by course number
             const measureInfo = await MeasurementModel.findById(courseId);
@@ -59,8 +67,8 @@ class FeedbackEvaluationController {
             
             // Save to database
             const data = {
-                dateFrom: fromDate.toISOString().split('T')[0],
-                dateUntil: untilDate.toISOString().split('T')[0],
+                dateFrom: DateTimeUtils.formatToSQLDate(fromDate),
+                dateUntil: DateTimeUtils.formatToSQLDate(untilDate),
                 measures_id: measureInfo.id,
                 pdfUrl: pdfResult.url,
                 description: `3 Monatige Maßnahmen ${measureInfo.measures_title} Unterricht 09:00 bis 16:15 Uhr`

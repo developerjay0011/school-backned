@@ -1,4 +1,5 @@
 const db = require('../config/database');
+const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class FeedbackEvaluationModel {
     static async create(data) {
@@ -6,8 +7,8 @@ class FeedbackEvaluationModel {
             const [result] = await db.query(
                 `INSERT INTO feedback_evaluations 
                 (date_from, date_until, measures_id, pdf_url, description, created_at) 
-                VALUES (?, ?, ?, ?, ?, NOW())`,
-                [data.dateFrom, data.dateUntil, data.measures_id, data.pdfUrl, data.description || null]
+                VALUES (?, ?, ?, ?, ?, ?)`,
+                [data.dateFrom, data.dateUntil, data.measures_id, data.pdfUrl, data.description || null,DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime())]
             );
             return result.insertId;
         } catch (error) {

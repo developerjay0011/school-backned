@@ -1,4 +1,5 @@
 const db = require('../config/database');
+const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class QualifizierungsplanModel {
     static async create(data) {
@@ -6,8 +7,8 @@ class QualifizierungsplanModel {
             const [result] = await db.query(
                 `INSERT INTO qualifizierungsplan 
                 (start_date, end_date, description, pdf_url, created_at) 
-                VALUES (?, ?, ?, ?, NOW())`,
-                [data.start_date, data.end_date, data.description, data.pdf_url?.url]
+                VALUES (?, ?, ?, ?, ?)`,
+                [data.start_date, data.end_date, data.description, data.pdf_url?.url,DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime())]
             );
             return result.insertId;
         } catch (error) {

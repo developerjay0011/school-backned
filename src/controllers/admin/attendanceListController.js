@@ -2,6 +2,7 @@ const AttendanceList = require('../../models/attendanceListModel');
 const PDFGenerator = require('../../utils/pdfGenerator');
 const AttendanceModel = require('../../models/attendanceModel');
 const EmailService = require('../../utils/emailService');
+const DateTimeUtils = require('../../utils/dateTimeUtils');
 
 class AttendanceListController {
     static async generateList(req, res) {
@@ -9,10 +10,10 @@ class AttendanceListController {
 
         try {
             // Validate dates
-            const startDate = new Date(start_date);
-            const endDate = new Date(end_date);
+            const startDate = DateTimeUtils.parseToDateTime(start_date);
+            const endDate = DateTimeUtils.parseToDateTime(end_date);
 
-            if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+            if (!startDate.isValid || !endDate.isValid) {
                 return res.status(400).json({
                     success: false,
                     message: 'Invalid date format. Please use YYYY-MM-DD format'
@@ -42,9 +43,9 @@ class AttendanceListController {
 
             // Store in database
             const attendanceData = {
-                datetime: new Date(),
-                start_date: startDate,
-                end_date: endDate,
+                datetime: DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime()),
+                start_date: DateTimeUtils.formatToSQLDate(startDate),
+                end_date: DateTimeUtils.formatToSQLDate(endDate),
                 student_id,
                 pdf_url: pdfResult.url
             };

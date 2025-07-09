@@ -1,4 +1,5 @@
 const db = require('../config/database');
+const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class SuccessPlacementStatisticsModel {
     static async getAll() {
@@ -21,8 +22,8 @@ class SuccessPlacementStatisticsModel {
             const [result] = await db.query(
                 `INSERT INTO success_placement_statistics 
                 (year, measures_id, pdf_url, description, created_at) 
-                VALUES (?, ?, ?, ?, NOW())`,
-                [data.year, data.measures_id, data.pdf_url, data.description || null]
+                VALUES (?, ?, ?, ?, ?)`,
+                [data.year, data.measures_id, data.pdf_url, data.description || null,DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime())]
             );
             return result.insertId;
         } catch (error) {

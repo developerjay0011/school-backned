@@ -1,4 +1,5 @@
 const db = require('../config/database');
+const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class ResultSheetPdfModel {
     static async create(data) {
@@ -40,8 +41,8 @@ class ResultSheetPdfModel {
     static async updateSentInfo(id, email) {
         try {
             const [result] = await db.query(
-                'UPDATE result_sheet_pdf SET sent_to = ?, sent_on = NOW() WHERE id = ?',
-                [email, id]
+                'UPDATE result_sheet_pdf SET sent_to = ?, sent_on = ? WHERE id = ?',
+                [email,DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime()), id]
             );
             return result.affectedRows > 0;
         } catch (error) {

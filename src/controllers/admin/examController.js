@@ -3,6 +3,7 @@ const Student = require('../../models/studentModel');
 const db = require('../../config/database');
 const path = require('path');
 const fs = require('fs').promises;
+const DateTimeUtils = require('../../utils/dateTimeUtils');
 
 // Get backend URL from environment variable
 const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3000';
@@ -14,8 +15,8 @@ class ExamController {
             const done_on = req.params.done_on;
 
             // Validate date format
-            const date = new Date(done_on);
-            if (isNaN(date.getTime())) {
+            const date = DateTimeUtils.parseToDateTime(done_on);
+            if (!date.isValid()) {
                 return res.status(400).json({
                     success: false,
                     message: 'Invalid date format. Please use ISO format (YYYY-MM-DD or YYYY-MM-DDTHH:mm:ss)'
@@ -31,7 +32,7 @@ class ExamController {
                 });
             }
 
-            await Exam.updateDoneOn(examId, done_on);
+            await Exam.updateDoneOn(examId, DateTimeUtils.formatToSQLDate(date));
             const updatedExam = await Exam.getById(examId);
 
             res.json({

@@ -1,4 +1,5 @@
 const db = require('../config/database');
+const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class Attendance {
     static getDateRangeForPeriod(period) {
@@ -313,23 +314,23 @@ class Attendance {
         }
     }
     static async markAttendance(studentId) {
-        // Get current time in German timezone (UTC+2 in summer, UTC+1 in winter)
-        const now = new Date();
-        const germanTime = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Berlin' }));
-        console.log("germanTime", germanTime);
-        const currentHour = germanTime.getHours();
-        const currentMinutes = germanTime.getMinutes();
-        const currentTime = currentHour * 60 + currentMinutes;
+        // Get current time in German timezone
+        const berlinTime = DateTimeUtils.getBerlinDateTime();
+        console.log("Berlin Time:", berlinTime.toISO());
+        
+        const { totalMinutes } = DateTimeUtils.getHourMinutes(berlinTime);
 
         // Define time slots
         const morningStart = 8 * 60;     // 08:00
         const morningEnd = 12 * 60 + 30; // 12:30
         const afternoonStart = 13 * 60;   // 13:00
         const afternoonEnd = 16 * 60 + 30; // 16:30
-        console.log("currentTime", currentTime);
+        
+        console.log("Current minutes since midnight:", totalMinutes);
+        
         // Check if current time is within valid slots
-        const isMorningSlot = currentTime >= morningStart && currentTime <= morningEnd;
-        const isAfternoonSlot = currentTime >= afternoonStart && currentTime <= afternoonEnd;
+        const isMorningSlot = totalMinutes >= morningStart && totalMinutes <= morningEnd;
+        const isAfternoonSlot = totalMinutes >= afternoonStart && totalMinutes <= afternoonEnd;
 
         if (!isMorningSlot && !isAfternoonSlot) {
             throw new Error('Attendance can only be marked between 08:00-12:30 or 13:00-16:30');
@@ -339,7 +340,7 @@ class Attendance {
         try {
             await connection.beginTransaction();
 
-            const today = now.toISOString().split('T')[0];
+            const today = DateTimeUtils.formatToSQLDate(berlinTime);
 
             // Check if attendance record exists for today
             const [existingRows] = await connection.execute(
@@ -371,7 +372,7 @@ class Attendance {
             return {
                 date: today,
                 period: isMorningSlot ? 'morning' : 'afternoon',
-                marked_at: now
+                marked_at: DateTimeUtils.formatToSQLDateTime(berlinTime)
             };
         } catch (error) {
             await connection.rollback();
@@ -421,6 +422,9 @@ class Attendance {
                     s.measures,
                     s.date_of_entry,
                     s.date_of_exit,
+                    a.email,
+                    m.measures_number,
+                    m.measures_title,
                     COALESCE(sa.attendance_date, dates.date) as attendance_date,
                     sa.morning_attendance,
                     DATE_FORMAT(sa.morning_attendance_time, '%Y-%m-%d %H:%i:%s') as morning_attendance_time,
@@ -436,13 +440,14 @@ class Attendance {
                 LEFT JOIN student_attendance sa ON s.student_id = sa.student_id
                     AND sa.attendance_date = dates.date
                 LEFT JOIN authorities a ON s.student_id = a.student_id
+                LEFT JOIN measurements m ON s.measures_id = m.id
                 LEFT JOIN student_sick_leave sl ON s.student_id = sl.student_id
                     AND (
                         (sl.date_from BETWEEN ? AND ?) OR
                         (sl.date_until BETWEEN ? AND ?) OR
                         (sl.date_from <= ? AND sl.date_until >= ?)
                     )
-                WHERE
+                    WHERE
                     -- Exclude deleted students
                     s.deleted_at IS NULL
                     -- Exclude students with termination/discharge reports
@@ -470,6 +475,7 @@ class Attendance {
             // Group by student and include all dates
             const attendanceMap = new Map();
             // Process each student
+            console.log("Rows", rows)
             rows.forEach(row => {
                 const studentKey = row.student_id;
                 const key = `${row.student_id}_${row.attendance_date}`;
@@ -493,7 +499,10 @@ class Attendance {
                         is_weekend: isWeekend,
                         is_holiday: isHoliday,
                         sick_leave: null,
-                        bg_number: row.bg_number
+                        bg_number: row.bg_number,
+                        authority_email: row.email,
+                        measures_number: row.measures_number,
+                        measures_title: row.measures_title
                     });
                 }
 

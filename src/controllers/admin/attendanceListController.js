@@ -1,6 +1,7 @@
 const AttendanceList = require('../../models/attendanceListModel');
 const PDFGenerator = require('../../utils/pdfGenerator');
 const AttendanceModel = require('../../models/attendanceModel');
+const EmailService = require('../../utils/emailService');
 
 class AttendanceListController {
     static async generateList(req, res) {
@@ -39,7 +40,6 @@ class AttendanceListController {
                {data: attendanceList, start_date, end_date}
             );
 
-      
             // Store in database
             const attendanceData = {
                 datetime: new Date(),
@@ -48,8 +48,25 @@ class AttendanceListController {
                 student_id,
                 pdf_url: pdfResult.url
             };
-
+            console.log("Attendance Data", attendanceData)
             await AttendanceList.create(attendanceData);
+
+            // Send email to authority
+            const { authority_email, bg_number, first_name, last_name, measures_number, measures_title } = attendanceList;
+            console.log("Authority Email1", authority_email)
+            if (authority_email) {
+                console.log("Authority Email", authority_email)
+                await EmailService.sendAttendanceListEmail({
+                    email: authority_email,
+                    bgNumber: bg_number,
+                    studentName: `${first_name} ${last_name}`,
+                    startDate: start_date,
+                    endDate: end_date,
+                    measureNumber: measures_number,
+                    measureTitle: measures_title,
+                    pdfPath: pdfResult.path
+                });
+            }
 
             res.status(200).json({
                 success: true,

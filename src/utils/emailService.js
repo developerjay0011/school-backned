@@ -53,6 +53,60 @@ info@bildungsakademie-deutschland.com`
             }
         }
     }
+
+    static async sendAttendanceListEmail(data) {
+        const { 
+            email, 
+            bgNumber, 
+            studentName,
+            startDate,
+            endDate,
+            measureNumber,
+            measureTitle,
+            pdfPath
+        } = data;
+
+        if (!email) {
+            console.log('No email address provided');
+            return;
+        }
+
+        const month = new Date(startDate).toLocaleDateString('de-DE', { month: '2-digit', year: 'numeric' });
+
+        const mailOptions = {
+            from: process.env.SMTP_USER,
+            to: email,
+            subject: `Anwesenheitsliste: ${month}, BG-Nummer: ${bgNumber} - ${studentName}`,
+            text: `Sehr geehrte Damen und Herren!
+
+Hier ist die Anwesenheitliste von:
+BG-Nummer: ${bgNumber}
+Vor- und Nachname: ${studentName}
+Datum von: ${startDate} bis: ${endDate}
+Maßnahme: ${measureNumber} - ${measureTitle}
+
+Die Anwesenheitsliste ist als PDF-Datei im Anhang abrufbar.
+
+Mit freundlichen Grüßen
+BAD Bildungsakademie Deutschland GmbH
+Neue Hochstraße 50, 13347 Berlin
+Handelsregisternummer: HRB 251635B
+Tel.: +49 151 433 69879
+info@bildungsakademie-deutschland.com`,
+            attachments: [{
+                filename: `Anwesenheitsliste_${bgNumber}_${month}.pdf`,
+                path: pdfPath
+            }]
+        };
+
+        try {
+            await EmailService.transporter.sendMail(mailOptions);
+            console.log(`Attendance list email sent for BG Number: ${bgNumber}`);
+        } catch (error) {
+            console.error('Error sending attendance list email:', error);
+            throw error;
+        }
+    }
 }
 
 module.exports = EmailService;

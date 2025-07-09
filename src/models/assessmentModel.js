@@ -1,5 +1,6 @@
 const db = require('../config/database');
 const crypto = require('crypto');
+const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class Assessment {
     static async generateLink() {
@@ -39,8 +40,8 @@ class Assessment {
         try {
             const [links] = await connection.execute(
                 `SELECT * FROM assessment_links 
-                 WHERE token = ? AND expiry_date > NOW() AND is_completed = FALSE`,
-                [token]
+                 WHERE token = ? AND expiry_date > ? AND is_completed = FALSE`,
+                [token,DateTimeUtils.getBerlinDateTime().toFormat('yyyy-MM-dd HH:mm:ss')]
             );
             return links[0];
         } finally {

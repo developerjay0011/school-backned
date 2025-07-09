@@ -321,17 +321,17 @@ class Attendance {
                     `INSERT INTO student_attendance 
                     (student_id, attendance_date, 
                      ${isMorningSlot ? 'morning_attendance, morning_attendance_time' : 'afternoon_attendance, afternoon_attendance_time'})
-                    VALUES (?, ?, TRUE, ?)`,
+                    VALUES (?, ?, 1, ?)`,
                     [studentId, today, DateTimeUtils.formatToSQLDateTime(berlinTime)]
                 );
             } else {
                 // Update existing attendance record
                 await connection.execute(
                     `UPDATE student_attendance 
-                     SET ${isMorningSlot ? 'morning_attendance = TRUE, morning_attendance_time = ?' 
-                                       : 'afternoon_attendance = TRUE, afternoon_attendance_time = ?'}
+                     SET ${isMorningSlot ? 'morning_attendance = 1, morning_attendance_time = ?' 
+                                       : 'afternoon_attendance = 1, afternoon_attendance_time = ?'}
                      WHERE student_id = ? AND attendance_date = ?`,
-                    [studentId, today, DateTimeUtils.formatToSQLDateTime(berlinTime), studentId, today]
+                    [DateTimeUtils.formatToSQLDateTime(berlinTime), studentId, today]
                 );
             }
 

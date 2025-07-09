@@ -316,8 +316,6 @@ class Attendance {
     static async markAttendance(studentId) {
         // Get current time in German timezone
         const berlinTime = DateTimeUtils.getBerlinDateTime();
-        console.log("Berlin Time:", berlinTime.toISO());
-        
         const { totalMinutes } = DateTimeUtils.getHourMinutes(berlinTime);
 
         // Define time slots
@@ -326,7 +324,7 @@ class Attendance {
         const afternoonStart = 13 * 60;   // 13:00
         const afternoonEnd = 16 * 60 + 30; // 16:30
         
-        console.log("Current minutes since midnight:", totalMinutes);
+        
         
         // Check if current time is within valid slots
         const isMorningSlot = totalMinutes >= morningStart && totalMinutes <= morningEnd;

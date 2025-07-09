@@ -50,12 +50,12 @@ class Student {
                     m.measures_number,
                     cd.street_name, cd.postal_code, cd.city, cd.birth_date, 
                     cd.place_of_birth, cd.country_of_birth, cd.phone, cd.email,
-                    a.name as authority_name, a.bg_number, a.team, 
-                    a.contact_person as authority_contact_person,
-                    a.email as authority_email, a.tel as authority_tel, 
-                    a.routing_id as authority_routing_id,
-                    a.street as authority_street, a.postal_code as authority_postal_code, 
-                    a.city as authority_city,
+                    auth.name as authority_name, auth.bg_number, auth.team, 
+                    auth.contact_person as authority_contact_person,
+                    auth.email as authority_email, auth.tel as authority_tel, 
+                    auth.routing_id as authority_routing_id,
+                    auth.street as authority_street, auth.postal_code as authority_postal_code, 
+                    auth.city as authority_city,
                     ir.company, ir.contact_person as invoice_contact_person,
                     ir.routing_id as invoice_routing_id, ir.email as invoice_email,
                     ir.street as invoice_street, ir.postal_code as invoice_postal_code,
@@ -102,10 +102,11 @@ class Student {
                     ) as full_day_absences
                 FROM student s
                 LEFT JOIN student_contact_details cd ON s.student_id = cd.student_id
-                LEFT JOIN authorities a ON s.student_id = a.student_id
+                LEFT JOIN authorities auth ON s.student_id = auth.student_id
                 LEFT JOIN invoice_recipients ir ON s.student_id = ir.student_id
                 LEFT JOIN student_settings ss ON s.student_id = ss.student_id
-                LEFT JOIN lecturers l ON s.lecturer = l.lecturer_id
+                LEFT JOIN lecturer_students ls ON s.student_id = ls.student_id
+                LEFT JOIN lecturers l ON ls.lecturer_id = l.lecturer_id
                 LEFT JOIN measurements m ON s.measures_id = m.id
 
                 WHERE s.student_id = ?`,

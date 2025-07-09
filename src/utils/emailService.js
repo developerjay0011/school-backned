@@ -107,6 +107,47 @@ info@bildungsakademie-deutschland.com`,
             throw error;
         }
     }
+
+    static async sendExamCompletionEmail({ email, bgNumber, measureTitle, measureNumber, completionDate }) {
+        if (!email) {
+            console.log('No email address provided');
+            return;
+        }
+
+        const formattedDate = new Date(completionDate).toLocaleDateString('de-DE', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        });
+
+        const mailOptions = {
+            from: process.env.SMTP_USER,
+            to: email,
+            subject: `Maßnahme beendet, BG-Nr: ${bgNumber}`,
+            text: `Sehr geehrte Damen und Herren,
+
+Hiermit Informieren wir Sie, dass die Maßnahme:
+${measureTitle}
+mit der Nummer: ${measureNumber}
+ihres Kunden mit der BG-Nummer: ${bgNumber}
+am ${formattedDate} beendet ist.
+
+Mit freundlichen Grüßen
+BAD Bildungsakademie Deutschland GmbH
+Neue Hochstraße 50, 13347 Berlin
+Handelsregisternummer: HRB 251635B
+Tel.: +49 151 433 69879
+info@bildungsakademie-deutschland.com`
+        };
+
+        try {
+            await EmailService.transporter.sendMail(mailOptions);
+            console.log(`Exam completion email sent for BG Number: ${bgNumber}`);
+        } catch (error) {
+            console.error('Error sending exam completion email:', error);
+            throw error;
+        }
+    }
 }
 
 module.exports = EmailService;

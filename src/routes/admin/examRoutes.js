@@ -50,4 +50,7 @@ router.put('/exams/:examId/done/:done_on', ExamController.updateDoneOn);
 // Certificate upload route
 router.post('/exams/:examId/certificate', upload.single('certificate'), ExamController.uploadCertificate);
 
+// Send completion email to authority
+router.post('/exams/:examId/send-completion-email', ExamController.sendCompletionEmail);
+
 module.exports = router;

@@ -193,7 +193,17 @@ class Exam {
         const connection = await db.getConnection();
         try {
             const [rows] = await connection.execute(
-                'SELECT * FROM student_exam_dates WHERE id = ?',
+                `SELECT 
+                    e.*,
+                    a.bg_number,
+                    a.email as authority_email,
+                    m.measures_number,
+                    m.measures_title
+                FROM student_exam_dates e
+                JOIN student s ON e.student_id = s.student_id
+                JOIN measurements m ON s.measures_id = m.id
+                JOIN authorities a ON e.student_id = a.student_id
+                WHERE e.id = ?`,
                 [examId]
             );
             return formatExamData(rows[0]);

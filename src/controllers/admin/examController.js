@@ -4,6 +4,7 @@ const db = require('../../config/database');
 const path = require('path');
 const fs = require('fs').promises;
 const DateTimeUtils = require('../../utils/dateTimeUtils');
+const EmailService = require('../../utils/emailService');
 
 // Get backend URL from environment variable
 const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3000';
@@ -250,6 +251,74 @@ class ExamController {
             res.status(500).json({
                 success: false,
                 message: 'Error fetching exams',
+                error: error.message
+            });
+        }
+    }
+
+    static async sendCompletionEmail(req, res) {
+        try {
+            const examId = req.params.examId;
+            const { completion_date } = req.body;
+
+            if (!completion_date) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Completion date is required'
+                });
+            }
+
+            // Validate date format
+            const date = DateTimeUtils.parseToDateTime(completion_date);
+            if (!date.isValid()) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Invalid date format. Please use ISO format (YYYY-MM-DD)'
+                });
+            }
+
+            // Get exam details including student and measures info
+            const exam = await Exam.getById(examId);
+            if (!exam) {
+                return res.status(404).json({
+                    success: false,
+                    message: 'Exam not found'
+                });
+            }
+
+            // Update exam completion date
+            await Exam.updateDoneOn(examId, DateTimeUtils.formatToSQLDate(date));
+            
+            // Get updated exam data
+            const updatedExam = await Exam.getById(examId);
+            console.log("updatedExam", updatedExam);
+            if (!updatedExam.authority_email) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Authority email not found for student'
+                });
+            }
+
+            // Send email
+            await EmailService.sendExamCompletionEmail({
+                email: updatedExam.authority_email,
+                bgNumber: updatedExam.bg_number,
+                measureTitle: updatedExam.measures_title,
+                measureNumber: updatedExam.measures_number,
+                completionDate: updatedExam.done_on
+            });
+
+            res.json({
+                success: true,
+                message: 'Exam completion date updated and email sent successfully',
+                data: updatedExam
+            });
+
+        } catch (error) {
+            console.error('Error sending exam completion email:', error);
+            res.status(500).json({
+                success: false,
+                message: 'Error sending exam completion email',
                 error: error.message
             });
         }

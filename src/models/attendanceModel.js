@@ -353,7 +353,7 @@ class Attendance {
                     (student_id, attendance_date, 
                      ${isMorningSlot ? 'morning_attendance, morning_attendance_time' : 'afternoon_attendance, afternoon_attendance_time'})
                     VALUES (?, ?, TRUE, ?)`,
-                    [studentId, today, berlinTime]
+                    [studentId, today, DateTimeUtils.formatToSQLDateTime(berlinTime)]
                 );
             } else {
                 // Update existing attendance record
@@ -362,7 +362,7 @@ class Attendance {
                      SET ${isMorningSlot ? 'morning_attendance = TRUE, morning_attendance_time = ?' 
                                        : 'afternoon_attendance = TRUE, afternoon_attendance_time = ?'}
                      WHERE student_id = ? AND attendance_date = ?`,
-                    [studentId, today, berlinTime]
+                    [DateTimeUtils.formatToSQLDateTime(berlinTime), studentId, today]
                 );
             }
 

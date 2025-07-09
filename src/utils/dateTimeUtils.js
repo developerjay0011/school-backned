@@ -4,46 +4,64 @@ class DateTimeUtils {
     static getBerlinDateTime() {
         // Create in system timezone then convert to Berlin
         const now = new Date();
-        const berlin = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Berlin' }));
+        const berlinStr = now.toLocaleString('en-US', { timeZone: 'Europe/Berlin' });
+        const berlin = new Date(berlinStr);
         console.log('System time:', now.toString());
         console.log('Berlin time:', berlin.toString());
         return berlin;
     }
 
-    static formatToSQLDate(dateTime) {
-        // Ensure we're in Berlin timezone
-        const berlin = dateTime.toLocaleString('en-US', { timeZone: 'Europe/Berlin' });
-        return berlin.toFormat('yyyy-MM-dd');
-    }
-
-    static formatToSQLDateTime(dateTime) {
-        // Ensure we're in Berlin timezone
-        const berlin = dateTime.toLocaleString('en-US', { timeZone: 'Europe/Berlin' });
-        return berlin.toFormat('yyyy-MM-dd HH:mm:ss');
-    }
-
     static getHourMinutes(dateTime) {
-        // Convert to Berlin time and get hours/minutes
-        const berlin = dateTime.toLocaleString('en-US', { timeZone: 'Europe/Berlin' });
-        console.log('System time:', DateTime.local().toString());
-        console.log('Input time:', dateTime.toString());
-        console.log('Berlin time:', berlin.toString());
+        // Get hours and minutes in Berlin timezone
+        const berlinTime = dateTime.toLocaleString('en-US', { 
+            timeZone: 'Europe/Berlin',
+            hour: 'numeric',
+            minute: 'numeric',
+            hour12: false
+        });
+        const [hours, minutes] = berlinTime.split(':').map(Number);
+        console.log('Berlin time components:', hours, ':', minutes);
+        
         return {
-            hours: berlin.hour,
-            minutes: berlin.minute,
-            totalMinutes: berlin.hour * 60 + berlin.minute
+            hours,
+            minutes,
+            totalMinutes: hours * 60 + minutes
         };
     }
 
+    static formatToSQLDate(dateTime) {
+        return dateTime.toLocaleString('en-US', {
+            timeZone: 'Europe/Berlin',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        }).split('/').reverse().join('-');
+    }
+
+    static formatToSQLDateTime(dateTime) {
+        const date = this.formatToSQLDate(dateTime);
+        const time = dateTime.toLocaleString('en-US', {
+            timeZone: 'Europe/Berlin',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+        return `${date} ${time}`;
+    }
+
     static parseToDateTime(dateStr, format = 'yyyy-MM-dd') {
-        // Parse date string assuming it's in Berlin timezone
-        return DateTime.fromFormat(dateStr, format, { zone: 'Europe/Berlin' });
+        const [year, month, day] = dateStr.split('-').map(Number);
+        return new Date(year, month - 1, day);
     }
 
     static formatToGermanDate(dateTime) {
-        // Ensure we're in Berlin timezone
-        const berlin = dateTime.toLocaleString('en-US', { timeZone: 'Europe/Berlin' });
-        return berlin.toFormat('dd.MM.yyyy');
+        return dateTime.toLocaleString('de-DE', {
+            timeZone: 'Europe/Berlin',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        });
     }
 }
 

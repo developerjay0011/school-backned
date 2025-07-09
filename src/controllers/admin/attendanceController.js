@@ -1,5 +1,4 @@
 const AttendanceModel = require('../../models/attendanceModel');
-const DateTimeUtils = require('../../utils/dateTimeUtils');
 
 const AdminAttendanceController = {
     getAttendanceStats: async function(req, res) {
@@ -68,11 +67,9 @@ const AdminAttendanceController = {
                 });
             }
 
-            // Parse date in Berlin timezone and check if it's a weekend
-            const berlinDate = DateTimeUtils.parseToDateTime(date);
-            const dayOfWeek = berlinDate.weekday; // 1-7, where 1 is Monday
-            
-            if (dayOfWeek === 6 || dayOfWeek === 7) {
+            // Check if date is a weekend
+            const dayOfWeek = new Date(date).getDay();
+            if (dayOfWeek === 0 || dayOfWeek === 6) {
                 return res.status(400).json({
                     success: false,
                     message: 'Cannot mark attendance on weekends'
@@ -131,9 +128,9 @@ const AdminAttendanceController = {
         try {
             let { start_date, end_date, student_id } = req.query;
 
-            // If no dates provided, use current date in Berlin timezone
+            // If no dates provided, use current date
             if (!start_date && !end_date) {
-                const today = DateTimeUtils.formatToSQLDate(DateTimeUtils.getBerlinDateTime());
+                const today = new Date().toISOString().split('T')[0];
                 start_date = today;
                 end_date = today;
             } 
@@ -145,11 +142,11 @@ const AdminAttendanceController = {
                 });
             }
 
-            // Parse and validate dates in Berlin timezone
-            const startDate = DateTimeUtils.parseToDateTime(start_date);
-            const endDate = DateTimeUtils.parseToDateTime(end_date);
+            // Validate date format
+            const startDate = new Date(start_date);
+            const endDate = new Date(end_date);
 
-            if (!startDate.isValid || !endDate.isValid) {
+            if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
                 return res.status(400).json({
                     success: false,
                     message: 'Invalid date format. Use YYYY-MM-DD'

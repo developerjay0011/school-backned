@@ -3,65 +3,32 @@ const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class Attendance {
     static getDateRangeForPeriod(period) {
-        const now = new Date();
+        const now = DateTimeUtils.getBerlinDateTime();
         let startDate, endDate;
-
-        const getMondayOfWeek = (date) => {
-            const d = new Date(date);
-            const day = d.getDay();
-            const diff = d.getDate() - day + (day === 0 ? -6 : 1); // adjust when day is sunday
-            return new Date(d.setDate(diff));
-        };
-
-        const getFridayOfWeek = (monday) => {
-            const friday = new Date(monday);
-            friday.setDate(monday.getDate() + 4);
-            return friday;
-        };
 
         switch (period) {
             case 'this_week':
-                startDate = getMondayOfWeek(now);
-                endDate = getFridayOfWeek(startDate);
+                startDate = now.clone().startOf('isoWeek'); // Monday
+                endDate = startDate.clone().add(4, 'days'); // Friday
                 break;
 
             case 'last_week':
-                const lastWeek = new Date(now);
-                lastWeek.setDate(now.getDate() - 7);
-                startDate = getMondayOfWeek(lastWeek);
-                endDate = getFridayOfWeek(startDate);
+                startDate = now.clone().subtract(1, 'week').startOf('isoWeek');
+                endDate = startDate.clone().add(4, 'days');
                 break;
 
             case 'this_month':
-                // Set to first day of current month at 00:00:00
-                startDate = new Date(now.getFullYear(), now.getMonth(), 1);
-                startDate.setHours(0, 0, 0, 0);
-                
-                // Set to last day of current month at 23:59:59
-                endDate = new Date(now.getFullYear(), now.getMonth() + 1, 0);
-                endDate.setHours(23, 59, 59, 999);
+                startDate = now.clone().startOf('month');
+                endDate = now.clone().endOf('month');
                 break;
 
             default:
                 throw new Error('Invalid period');
         }
 
-        // Ensure endDate doesn't exceed current date
-        // if (endDate > now) {
-        //     endDate = now;
-        // }
-
-        // Format dates to YYYY-MM-DD
-        const formatDate = (date) => {
-            const year = date.getFullYear();
-            const month = String(date.getMonth() + 1).padStart(2, '0');
-            const day = String(date.getDate()).padStart(2, '0');
-            return `${year}-${month}-${day}`;
-        };
-
         return {
-            startDate: formatDate(startDate),
-            endDate: formatDate(endDate)
+            startDate: DateTimeUtils.formatToSQLDate(startDate),
+            endDate: DateTimeUtils.formatToSQLDate(endDate)
         };
     }
 
@@ -316,6 +283,8 @@ class Attendance {
     static async markAttendance(studentId) {
         // Get current time in German timezone
         const berlinTime = DateTimeUtils.getBerlinDateTime();
+        console.log("Berlin Time:", berlinTime.format());
+        
         const { totalMinutes } = DateTimeUtils.getHourMinutes(berlinTime);
 
         // Define time slots
@@ -324,7 +293,7 @@ class Attendance {
         const afternoonStart = 13 * 60;   // 13:00
         const afternoonEnd = 16 * 60 + 30; // 16:30
         
-        
+        console.log("Current minutes since midnight:", totalMinutes);
         
         // Check if current time is within valid slots
         const isMorningSlot = totalMinutes >= morningStart && totalMinutes <= morningEnd;
@@ -350,23 +319,19 @@ class Attendance {
                 // Create new attendance record
                 await connection.execute(
                     `INSERT INTO student_attendance 
-                    (student_id, attendance_date, morning_attendance, morning_attendance_time, afternoon_attendance, afternoon_attendance_time)
-                    VALUES (?, ?, ?, ?, ?, ?)`,
-                    [studentId, today, 
-                     isMorningSlot ? 1 : 0, isMorningSlot ? DateTimeUtils.formatToSQLDateTime(berlinTime) : null,
-                     isMorningSlot ? 0 : 1, isMorningSlot ? null : DateTimeUtils.formatToSQLDateTime(berlinTime)]
+                    (student_id, attendance_date, 
+                     ${isMorningSlot ? 'morning_attendance, morning_attendance_time' : 'afternoon_attendance, afternoon_attendance_time'})
+                    VALUES (?, ?, TRUE, NOW())`,
+                    [studentId, today]
                 );
             } else {
                 // Update existing attendance record
-                console.log("DateTimeUtils.formatToSQLDateTime(berlinTime)",DateTimeUtils.formatToSQLDateTime(berlinTime));
                 await connection.execute(
                     `UPDATE student_attendance 
-                     SET morning_attendance = ?, morning_attendance_time = ?,
-                         afternoon_attendance = ?, afternoon_attendance_time = ?
+                     SET ${isMorningSlot ? 'morning_attendance = TRUE, morning_attendance_time = NOW()' 
+                                       : 'afternoon_attendance = TRUE, afternoon_attendance_time = NOW()'}
                      WHERE student_id = ? AND attendance_date = ?`,
-                    [isMorningSlot ? 1 : 0, isMorningSlot ? DateTimeUtils.formatToSQLDateTime(berlinTime) : null,
-                     isMorningSlot ? 0 : 1, isMorningSlot ? null : DateTimeUtils.formatToSQLDateTime(berlinTime),
-                     studentId, today]
+                    [studentId, today]
                 );
             }
 
@@ -374,7 +339,7 @@ class Attendance {
             return {
                 date: today,
                 period: isMorningSlot ? 'morning' : 'afternoon',
-                marked_at: DateTimeUtils.formatToSQLDateTime(berlinTime)
+                marked_at: now
             };
         } catch (error) {
             await connection.rollback();

@@ -2,31 +2,35 @@ const { DateTime } = require('luxon');
 
 class DateTimeUtils {
     static getBerlinDateTime() {
-        return DateTime.now().setZone('Europe/Berlin').toLocal();
+        return DateTime.local().setZone('Europe/Berlin', { keepLocalTime: true });
     }
 
     static formatToSQLDate(dateTime) {
-        return dateTime.toFormat('yyyy-MM-dd').toLocal();
+        const berlinTime = dateTime.setZone('Europe/Berlin', { keepLocalTime: true });
+        return berlinTime.toFormat('yyyy-MM-dd');
     }
 
     static formatToSQLDateTime(dateTime) {
-        return dateTime.toFormat('yyyy-MM-dd HH:mm:ss').toLocal();
+        const berlinTime = dateTime.setZone('Europe/Berlin', { keepLocalTime: true });
+        return berlinTime.toFormat('yyyy-MM-dd HH:mm:ss');
     }
 
     static getHourMinutes(dateTime) {
+        const berlinTime = dateTime.setZone('Europe/Berlin', { keepLocalTime: true });
         return {
-            hours: dateTime.hour,
-            minutes: dateTime.minute,
-            totalMinutes: dateTime.hour * 60 + dateTime.minute
+            hours: berlinTime.hour,
+            minutes: berlinTime.minute,
+            totalMinutes: berlinTime.hour * 60 + berlinTime.minute
         };
     }
 
     static parseToDateTime(dateStr, format = 'yyyy-MM-dd') {
-        return DateTime.fromFormat(dateStr, format, { zone: 'Europe/Berlin' }).toLocal();
+        return DateTime.fromFormat(dateStr, format, { zone: 'Europe/Berlin' });
     }
 
     static formatToGermanDate(dateTime) {
-        return dateTime.toFormat('dd.MM.yyyy').toLocal();
+        const berlinTime = dateTime.setZone('Europe/Berlin', { keepLocalTime: true });
+        return berlinTime.toFormat('dd.MM.yyyy');
     }
 }
 

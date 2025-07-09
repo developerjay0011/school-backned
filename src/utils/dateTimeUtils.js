@@ -3,28 +3,28 @@ const { DateTime } = require('luxon');
 class DateTimeUtils {
     static getBerlinDateTime() {
         // Create in system timezone then convert to Berlin
-        const now = DateTime.local();
-        console.log('Local time:', now.toString());
-        const berlin = now.setZone('Europe/Berlin');
+        const now = new Date();
+        const berlin = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Berlin' }));
+        console.log('System time:', now.toString());
         console.log('Berlin time:', berlin.toString());
         return berlin;
     }
 
     static formatToSQLDate(dateTime) {
         // Ensure we're in Berlin timezone
-        const berlin = dateTime.setZone('Europe/Berlin');
+        const berlin = dateTime.toLocaleString('en-US', { timeZone: 'Europe/Berlin' });
         return berlin.toFormat('yyyy-MM-dd');
     }
 
     static formatToSQLDateTime(dateTime) {
         // Ensure we're in Berlin timezone
-        const berlin = dateTime.setZone('Europe/Berlin');
+        const berlin = dateTime.toLocaleString('en-US', { timeZone: 'Europe/Berlin' });
         return berlin.toFormat('yyyy-MM-dd HH:mm:ss');
     }
 
     static getHourMinutes(dateTime) {
         // Convert to Berlin time and get hours/minutes
-        const berlin = dateTime.setZone('Europe/Berlin');
+        const berlin = dateTime.toLocaleString('en-US', { timeZone: 'Europe/Berlin' });
         console.log('System time:', DateTime.local().toString());
         console.log('Input time:', dateTime.toString());
         console.log('Berlin time:', berlin.toString());
@@ -42,7 +42,7 @@ class DateTimeUtils {
 
     static formatToGermanDate(dateTime) {
         // Ensure we're in Berlin timezone
-        const berlin = dateTime.setZone('Europe/Berlin');
+        const berlin = dateTime.toLocaleString('en-US', { timeZone: 'Europe/Berlin' });
         return berlin.toFormat('dd.MM.yyyy');
     }
 }

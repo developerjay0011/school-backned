@@ -2,38 +2,48 @@ const { DateTime } = require('luxon');
 
 class DateTimeUtils {
     static getBerlinDateTime() {
-        return DateTime.now().setZone('CEST', { keepLocalTime: false });
+        // Create in system timezone then convert to Berlin
+        const now = DateTime.local();
+        console.log('Local time:', now.toString());
+        const berlin = now.setZone('Europe/Berlin');
+        console.log('Berlin time:', berlin.toString());
+        return berlin;
     }
 
     static formatToSQLDate(dateTime) {
-        const cestTime = dateTime.setZone('CEST', { keepLocalTime: false });
-        return cestTime.toFormat('yyyy-MM-dd');
+        // Ensure we're in Berlin timezone
+        const berlin = dateTime.setZone('Europe/Berlin');
+        return berlin.toFormat('yyyy-MM-dd');
     }
 
     static formatToSQLDateTime(dateTime) {
-        const cestTime = dateTime.setZone('CEST', { keepLocalTime: false });
-        return cestTime.toFormat('yyyy-MM-dd HH:mm:ss');
+        // Ensure we're in Berlin timezone
+        const berlin = dateTime.setZone('Europe/Berlin');
+        return berlin.toFormat('yyyy-MM-dd HH:mm:ss');
     }
 
     static getHourMinutes(dateTime) {
-        const cestTime = dateTime.setZone('CEST', { keepLocalTime: false });
-        console.log('Original time:', dateTime.toISO());
-        console.log('CEST time:', cestTime.toISO());
-        console.log('CEST hour:', cestTime.hour);
+        // Convert to Berlin time and get hours/minutes
+        const berlin = dateTime.setZone('Europe/Berlin');
+        console.log('System time:', DateTime.local().toString());
+        console.log('Input time:', dateTime.toString());
+        console.log('Berlin time:', berlin.toString());
         return {
-            hours: cestTime.hour,
-            minutes: cestTime.minute,
-            totalMinutes: cestTime.hour * 60 + cestTime.minute
+            hours: berlin.hour,
+            minutes: berlin.minute,
+            totalMinutes: berlin.hour * 60 + berlin.minute
         };
     }
 
     static parseToDateTime(dateStr, format = 'yyyy-MM-dd') {
-        return DateTime.fromFormat(dateStr, format, { zone: 'CEST' });
+        // Parse date string assuming it's in Berlin timezone
+        return DateTime.fromFormat(dateStr, format, { zone: 'Europe/Berlin' });
     }
 
     static formatToGermanDate(dateTime) {
-        const cestTime = dateTime.setZone('CEST', { keepLocalTime: false });
-        return cestTime.toFormat('dd.MM.yyyy');
+        // Ensure we're in Berlin timezone
+        const berlin = dateTime.setZone('Europe/Berlin');
+        return berlin.toFormat('dd.MM.yyyy');
     }
 }
 

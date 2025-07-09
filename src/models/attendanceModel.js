@@ -155,8 +155,8 @@ class Attendance {
                 [studentId, date]
             );
 
-            const now = new Date();
-            const currentTime = now.toTimeString().split(' ')[0];
+            const berlinTime = DateTimeUtils.getBerlinDateTime();
+            const currentTime = berlinTime.format('HH:mm:ss');
 
             if (existingRows.length === 0) {
                 // Create new attendance record
@@ -174,8 +174,8 @@ class Attendance {
                         slots.includes('morning') ? `${date} ${this.ADMIN_MORNING_START_MARK}` : null,
                         slots.includes('afternoon') ? 1 : 0,
                         slots.includes('afternoon') ? `${date} ${this.ADMIN_MORNING_END_MARK}` : null,
-                        now,
-                        now
+                        DateTimeUtils.formatToSQLDateTime(berlinTime),
+                        DateTimeUtils.formatToSQLDateTime(berlinTime)
                     ]
                 );
             } else {
@@ -193,7 +193,7 @@ class Attendance {
                         slots.includes('morning') ? `${date} ${this.MORNING_START}` : existingRows[0].morning_attendance_time,
                         slots.includes('afternoon') ? 1 : existingRows[0].afternoon_attendance,
                         slots.includes('afternoon') ? `${date} ${this.AFTERNOON_START}` : existingRows[0].afternoon_attendance_time,
-                        now,
+                        DateTimeUtils.formatToSQLDateTime(berlinTime),
                         studentId,
                         date
                     ]

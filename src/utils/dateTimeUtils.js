@@ -2,17 +2,11 @@ const { DateTime } = require('luxon');
 
 class DateTimeUtils {
     static getBerlinDateTime() {
-        // Create in system timezone then convert to Berlin
         const now = new Date();
-        const berlinStr = now.toLocaleString('en-US', { timeZone: 'Europe/Berlin' });
-        const berlin = new Date(berlinStr);
-        console.log('System time:', now.toString());
-        console.log('Berlin time:', berlin.toString());
-        return berlin;
+        return now;
     }
 
     static getHourMinutes(dateTime) {
-        // Get hours and minutes in Berlin timezone
         const berlinTime = dateTime.toLocaleString('en-US', { 
             timeZone: 'Europe/Berlin',
             hour: 'numeric',
@@ -30,30 +24,39 @@ class DateTimeUtils {
     }
 
     static formatToSQLDate(dateTime) {
-        const berlinDate = dateTime.toLocaleString('en-US', {
+        const berlinDate = new Date(dateTime).toLocaleString('en-US', {
             timeZone: 'Europe/Berlin',
             year: 'numeric',
             month: '2-digit',
             day: '2-digit'
         });
-        // US format is MM/DD/YYYY, we need YYYY-MM-DD
         const [month, day, year] = berlinDate.split('/');
         return `${year}-${month}-${day}`;
     }
 
     static formatToSQLDateTime(dateTime) {
-        const date = this.formatToSQLDate(dateTime);
-        const timeStr = dateTime.toLocaleString('en-US', {
+        // Get date components
+        const berlinDate = new Date(dateTime).toLocaleString('en-US', {
+            timeZone: 'Europe/Berlin',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        });
+        const [month, day, year] = berlinDate.split('/');
+
+        // Get time components
+        const berlinTime = new Date(dateTime).toLocaleString('en-US', {
             timeZone: 'Europe/Berlin',
             hour: '2-digit',
             minute: '2-digit',
             second: '2-digit',
             hour12: false
-        });
-        // Extract just the time part (HH:mm:ss)
-        const time = timeStr.split(', ')[1];
-        console.log('Date:', date, 'Time:', time);
-        return `${date} ${time}`;
+        }).split(', ')[1];
+        
+        // Format as YYYY-MM-DD HH:mm:ss
+        const formattedDateTime = `${year}-${month}-${day} ${berlinTime}`;
+        console.log('Formatted DateTime:', formattedDateTime);
+        return formattedDateTime;
     }
 
     static parseToDateTime(dateStr, format = 'yyyy-MM-dd') {

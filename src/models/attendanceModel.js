@@ -401,7 +401,8 @@ class Attendance {
                     sl.date_until as sick_leave_end,
                     sl.status as sick_leave_status,
                     sl.description as sick_leave_description,
-                    a.bg_number
+                    a.bg_number,
+                    a.email as authority_email
                 FROM student s
                 CROSS JOIN dates
                 LEFT JOIN student_attendance sa ON s.student_id = sa.student_id
@@ -469,7 +470,7 @@ class Attendance {
                         is_holiday: isHoliday,
                         sick_leave: null,
                         bg_number: row.bg_number,
-                        authority_email: row.email,
+                        authority_email: row.authority_email,
                         measures_number: row.measures_number,
                         measures_title: row.measures_title
                     });

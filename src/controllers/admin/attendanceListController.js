@@ -53,18 +53,20 @@ class AttendanceListController {
             await AttendanceList.create(attendanceData);
 
             // Send email to authority
-            const { authority_email, bg_number, first_name, last_name, measures_number, measures_title } = attendanceList;
-            console.log("Authority Email1", authority_email)
-            if (authority_email) {
-                console.log("Authority Email", authority_email)
+            // Get the first attendance record for student details
+            const studentRecord = attendanceList.length > 0 ? attendanceList[0] : null;
+            console.log("Student Record", studentRecord);
+            
+            if (studentRecord && studentRecord.authority_email) {
+                console.log("Authority Email", studentRecord.authority_email);
                 await EmailService.sendAttendanceListEmail({
-                    email: authority_email,
-                    bgNumber: bg_number,
-                    studentName: `${first_name} ${last_name}`,
+                    email: studentRecord.authority_email,
+                    bgNumber: studentRecord.bg_number,
+                    studentName: `${studentRecord.first_name} ${studentRecord.last_name}`,
                     startDate: start_date,
                     endDate: end_date,
-                    measureNumber: measures_number,
-                    measureTitle: measures_title,
+                    measureNumber: studentRecord.measures_number,
+                    measureTitle: studentRecord.measures_title,
                     pdfPath: pdfResult.path
                 });
             }

@@ -683,7 +683,7 @@ class PDFGenerator {
 
         const timestamp = Math.floor(Date.now() / 1000);
         const filename = `attendance_${timestamp}.pdf`;
-        const outputPath = path.join(__dirname, '../../uploads/attendance', filename);
+        const outputPath = path.join(process.cwd(), 'uploads/attendance', filename);
 
       
 
@@ -720,7 +720,7 @@ class PDFGenerator {
               await browser.close();
             return {
                 filename,
-                path: `/uploads/attendance/${filename}`,
+                path: outputPath,
                 url: process.env.BACKEND_URL + `/uploads/attendance/${filename}`
             };
         } catch (error) {

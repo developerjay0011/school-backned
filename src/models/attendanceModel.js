@@ -358,6 +358,7 @@ class Attendance {
                 );
             } else {
                 // Update existing attendance record
+                console.log("DateTimeUtils.formatToSQLDateTime(berlinTime)",DateTimeUtils.formatToSQLDateTime(berlinTime));
                 await connection.execute(
                     `UPDATE student_attendance 
                      SET morning_attendance = ?, morning_attendance_time = ?,

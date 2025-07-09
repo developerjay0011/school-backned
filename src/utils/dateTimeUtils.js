@@ -47,6 +47,7 @@ class DateTimeUtils {
             second: '2-digit',
             hour12: false
         });
+        console.log("time",time);
         return `${date} ${time}`;
     }
 

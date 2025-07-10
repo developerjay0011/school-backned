@@ -1,4 +1,5 @@
 const MeasuresZoomLinksModel = require('../../models/measuresZoomLinksModel');
+const DateTimeUtils = require('../../utils/dateTimeUtils');
 
 class MeasuresZoomLinksController {
     static async create(req, res) {
@@ -15,8 +16,8 @@ class MeasuresZoomLinksController {
             }
 
             // Validate dates
-            const startDate = new Date(start_date);
-            const endDate = new Date(end_date);
+            const startDate = DateTimeUtils.formatToSQLDate(start_date);
+            const endDate = DateTimeUtils.formatToSQLDate(end_date);
 
             if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
                 return res.status(400).json({
@@ -70,8 +71,8 @@ class MeasuresZoomLinksController {
             }
 
             // Validate dates
-            const startDate = new Date(start_date);
-            const endDate = new Date(end_date);
+            const startDate = DateTimeUtils.formatToSQLDate(start_date);
+            const endDate = DateTimeUtils.formatToSQLDate(end_date);
 
             if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
                 return res.status(400).json({
@@ -123,8 +124,8 @@ class MeasuresZoomLinksController {
                 success: true,
                 data: zoomLinks.map(link => ({
                     ...link,
-                    start_date: new Date(link.start_date).toISOString().split('T')[0],
-                    end_date: new Date(link.end_date).toISOString().split('T')[0]
+                    start_date: DateTimeUtils.formatToSQLDate(link.start_date),
+                    end_date: DateTimeUtils.formatToSQLDate(link.end_date)
                 }))
             });
         } catch (error) {

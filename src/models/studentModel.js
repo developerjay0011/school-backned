@@ -105,8 +105,7 @@ class Student {
                 LEFT JOIN authorities auth ON s.student_id = auth.student_id
                 LEFT JOIN invoice_recipients ir ON s.student_id = ir.student_id
                 LEFT JOIN student_settings ss ON s.student_id = ss.student_id
-                LEFT JOIN lecturer_students ls ON s.student_id = ls.student_id
-                LEFT JOIN lecturers l ON ls.lecturer_id = l.lecturer_id
+                LEFT JOIN lecturers l ON s.lecturer = l.lecturer_id
                 LEFT JOIN measurements m ON s.measures_id = m.id
 
                 WHERE s.student_id = ?`,

@@ -122,11 +122,7 @@ class MeasuresZoomLinksController {
 
             return res.json({
                 success: true,
-                data: zoomLinks.map(link => ({
-                    ...link,
-                    start_date: DateTimeUtils.formatToSQLDate(link.start_date),
-                    end_date: DateTimeUtils.formatToSQLDate(link.end_date)
-                }))
+                data: zoomLinks
             });
         } catch (error) {
             console.error('Error getting zoom links:', error);

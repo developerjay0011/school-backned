@@ -15,30 +15,34 @@ class MeasuresZoomLinksController {
                 });
             }
 
-            // Validate dates
-            const startDate = DateTimeUtils.formatToSQLDate(start_date);
-            const endDate = DateTimeUtils.formatToSQLDate(end_date);
+            // Parse and validate dates
+            const parsedStartDate = DateTimeUtils.parseToDateTime(start_date);
+            const parsedEndDate = DateTimeUtils.parseToDateTime(end_date);
 
-            if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+            if (!parsedStartDate.isValid() || !parsedEndDate.isValid()) {
                 return res.status(400).json({
                     success: false,
                     message: 'Invalid date format'
                 });
             }
 
-            if (endDate < startDate) {
+            if (parsedEndDate.isBefore(parsedStartDate)) {
                 return res.status(400).json({
                     success: false,
                     message: 'End date must be after start date'
                 });
             }
 
+            // Format dates for database
+            const formattedStartDate = parsedStartDate.format('YYYY-MM-DD');
+            const formattedEndDate = parsedEndDate.format('YYYY-MM-DD');
+
             const id = await MeasuresZoomLinksModel.create({
                 measures_id,
                 lecturer_id: lecturerId,
                 zoom_link,
-                start_date,
-                end_date
+                start_date: formattedStartDate,
+                end_date: formattedEndDate
             });
 
             return res.json({
@@ -70,28 +74,32 @@ class MeasuresZoomLinksController {
                 });
             }
 
-            // Validate dates
-            const startDate = DateTimeUtils.formatToSQLDate(start_date);
-            const endDate = DateTimeUtils.formatToSQLDate(end_date);
+            // Parse and validate dates
+            const parsedStartDate = DateTimeUtils.parseToDateTime(start_date);
+            const parsedEndDate = DateTimeUtils.parseToDateTime(end_date);
 
-            if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+            if (!parsedStartDate.isValid() || !parsedEndDate.isValid()) {
                 return res.status(400).json({
                     success: false,
                     message: 'Invalid date format'
                 });
             }
 
-            if (endDate < startDate) {
+            if (parsedEndDate.isBefore(parsedStartDate)) {
                 return res.status(400).json({
                     success: false,
                     message: 'End date must be after start date'
                 });
             }
 
+            // Format dates for database
+            const formattedStartDate = parsedStartDate.format('YYYY-MM-DD');
+            const formattedEndDate = parsedEndDate.format('YYYY-MM-DD');
+
             const success = await MeasuresZoomLinksModel.update(id, {
                 zoom_link,
-                start_date,
-                end_date
+                start_date: formattedStartDate,
+                end_date: formattedEndDate
             });
 
             if (!success) {

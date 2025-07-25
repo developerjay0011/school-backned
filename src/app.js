@@ -1,6 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const CronService = require('./services/cronService');
+
+// Initialize cron jobs
+CronService.initialize();
 
 // Import routes
 const monthlyReportRoutes = require('./routes/lecturer/monthlyReportRoutes');

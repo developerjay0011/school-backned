@@ -254,6 +254,7 @@ class Attendance {
             AND bd.date IS NULL -- Exclude bridge days
             AND d.date <= CURDATE() -- Ensure no future dates
             AND (sa.morning_attendance = 0 OR sa.afternoon_attendance = 0 OR sa.morning_attendance IS NULL)
+            AND sl.student_id IS NULL -- Exclude any dates that have a sick leave record
             ORDER BY d.date DESC
         `;
 

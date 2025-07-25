@@ -2,7 +2,133 @@ const db = require('../config/database');
 const bcrypt = require('bcrypt');
 const DateTimeUtils = require('../utils/dateTimeUtils');
 
+// Common SQL for calculating full day absences excluding sick leave days
+const FULL_DAY_ABSENCES_SQL = `
+    WITH RECURSIVE date_series AS (
+        -- Initial row from student's entry date
+        SELECT student_id, date_of_entry as date
+        FROM student
+        WHERE student_id = ? 
+        AND date_of_entry <= CURDATE()
+        
+        UNION ALL
+        
+        -- Generate subsequent dates
+        SELECT student_id, DATE_ADD(date, INTERVAL 1 DAY)
+        FROM date_series
+        WHERE date < CURDATE()
+    ),
+    -- Calculate workdays (excluding weekends and bridge days)
+    workdays AS (
+        SELECT d.student_id, d.date
+        FROM date_series d
+        LEFT JOIN bridge_days bd ON d.date = bd.date
+        WHERE DAYOFWEEK(d.date) NOT IN (1, 7) -- Exclude weekends
+        AND bd.date IS NULL -- Exclude bridge days
+        AND d.date <= CURDATE() -- Ensure no future dates
+    ),
+    -- Calculate absences
+    absences AS (
+        SELECT COUNT(*) as absence_count
+        FROM workdays w
+        LEFT JOIN student_attendance sa ON sa.student_id = w.student_id AND sa.attendance_date = w.date
+        WHERE (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
+        AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
+    ),
+    -- Calculate sick leave days (only counting workdays)
+    sick_leave AS (
+        SELECT COUNT(DISTINCT w.date) as sick_days
+        FROM workdays w
+        INNER JOIN student_sick_leave sl ON w.student_id = sl.student_id
+        WHERE w.date BETWEEN sl.date_from AND sl.date_until
+        AND sl.status = 'K' -- Only count illness-related leaves
+    )
+    -- Subtract sick leave days from absences
+    SELECT GREATEST(0, a.absence_count - COALESCE(sl.sick_days, 0))
+    FROM absences a
+    LEFT JOIN sick_leave sl ON 1=1
+`;
+
 class Student {
+    static async getFullDayAbsences(studentId, dateOfEntry) {
+        try {
+            // First get total absences
+            const absenceQuery = `WITH RECURSIVE date_series AS (
+                -- Initial row from student's entry date
+                SELECT ? as student_id, ? as date
+                
+                UNION ALL
+                
+                -- Generate subsequent dates
+                SELECT student_id, DATE_ADD(date, INTERVAL 1 DAY)
+                FROM date_series
+                WHERE date < CURDATE()
+            ),
+            -- Get workdays first (excluding weekends and bridge days)
+            workdays AS (
+                SELECT d.student_id, d.date
+                FROM date_series d
+                LEFT JOIN bridge_days bd ON d.date = bd.date
+                WHERE DAYOFWEEK(d.date) NOT IN (1, 7) -- Exclude weekends
+                AND bd.date IS NULL -- Exclude bridge days
+                AND d.date <= CURDATE() -- Ensure no future dates
+            ),
+            -- Calculate absences from workdays
+            absences AS (
+                SELECT w.date
+                FROM workdays w
+                LEFT JOIN student_attendance sa ON sa.student_id = w.student_id AND sa.attendance_date = w.date
+                WHERE (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
+                AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
+            )
+            SELECT COUNT(*) as total_absences
+            FROM absences`;
+
+            const [absenceResult] = await db.query(absenceQuery, [studentId, dateOfEntry]);
+
+            // Then get sick leave days
+            const sickLeaveQuery = `WITH RECURSIVE date_series AS (
+                -- Initial row from student's entry date
+                SELECT ? as student_id, ? as date
+                
+                UNION ALL
+                
+                -- Generate subsequent dates
+                SELECT student_id, DATE_ADD(date, INTERVAL 1 DAY)
+                FROM date_series
+                WHERE date < CURDATE()
+            ),
+            -- Get workdays first (excluding weekends and bridge days)
+            workdays AS (
+                SELECT d.student_id, d.date
+                FROM date_series d
+                LEFT JOIN bridge_days bd ON d.date = bd.date
+                WHERE DAYOFWEEK(d.date) NOT IN (1, 7) -- Exclude weekends
+                AND bd.date IS NULL -- Exclude bridge days
+                AND d.date <= CURDATE() -- Ensure no future dates
+            ),
+            -- Then get sick leave days that overlap with workdays
+            sick_leave_days AS (
+                SELECT DISTINCT w.date
+                FROM workdays w
+                INNER JOIN student_sick_leave sl ON w.student_id = sl.student_id
+                WHERE w.date BETWEEN sl.date_from AND sl.date_until
+            ) -- Get all days that fall within any sick leave period
+            SELECT COUNT(*) as sick_days
+            FROM sick_leave_days`;
+
+            const [sickLeaveResult] = await db.query(sickLeaveQuery, [studentId, dateOfEntry]);
+
+            const totalAbsences = absenceResult[0].total_absences || 0;
+            const sickDays = sickLeaveResult[0].sick_days || 0;
+
+            return Math.max(0, totalAbsences - sickDays);
+        } catch (error) {
+            console.error('Error calculating full day absences:', error);
+            throw error;
+        }
+    }
+
     static async delete(id) {
         try {
             const rows = await db.query(
@@ -134,6 +260,9 @@ class Student {
             );
             console.log('Raw attendance records:', attendanceRecords);
            
+            // Calculate full day absences
+            const absences = await Student.getFullDayAbsences(data.student_id, data.date_of_entry);
+
             // Format the complete response
             return {
                 student_id: data.student_id,
@@ -578,8 +707,14 @@ class Student {
                 `
             );
             console.log("studentsstudents",students)
+            // Calculate full day absences for each student
+            const studentsWithAbsences = await Promise.all(students.map(async student => {
+                const absences = await Student.getFullDayAbsences(student.student_id, student.date_of_entry);
+                return { ...student, full_day_absences: absences };
+            }));
+
             // Transform the results to include nested objects
-            const transformedStudents = students.map(student => ({
+            const transformedStudents = studentsWithAbsences.map(student => ({
                 student_id: student.student_id,
                 voucher_type: student.voucher_type,
                 salutation: student.salutation,

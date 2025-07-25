@@ -323,6 +323,42 @@ class ExamController {
             });
         }
     }
+
+    // Update exam remark
+    static async updateRemark(req, res) {
+        try {
+            const examId = parseInt(req.params.examId, 10);
+            const { remark } = req.body;
+
+            if (!examId || isNaN(examId) || !remark) {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Exam ID and remark are required'
+                });
+            }
+
+            const success = await Exam.updateRemark(examId, remark);
+
+            if (!success) {
+                return res.status(404).json({
+                    success: false,
+                    message: 'Exam not found'
+                });
+            }
+
+            res.status(200).json({
+                success: true,
+                message: 'Exam remark updated successfully'
+            });
+        } catch (error) {
+            console.error('Error updating exam remark:', error);
+            res.status(500).json({
+                success: false,
+                message: 'Error updating exam remark',
+                error: error.message
+            });
+        }
+    }
 }
 
 module.exports = ExamController;

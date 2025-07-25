@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
-
+const CronService = require('./services/cronService');
 const adminRoutes = require('./routes/admin');
 const studentRoutes = require('./routes/student');
 const AttendanceCronService = require('./services/attendanceCronService');
@@ -100,6 +100,8 @@ app.listen(PORT, () => {
   
   // Initialize cron jobs
   AttendanceCronService.initializeCronJobs();
+  CronService.initialize();
+  // CronService.sendMonthlyAttendanceLists();
   console.log('Attendance cron jobs initialized');
 });
 

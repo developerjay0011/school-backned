@@ -529,14 +529,15 @@ class PDFGenerator {
             try {
                 // Convert forEach to map to get array of promises
                 const promises = data.map(async (q, questionIndex) => {
+                    console.log("Q", q)
                     const morningStatus = q.is_weekend ? getDayName(q.date) :
                         q.is_holiday ? "Feiertag" :
-                            q.sick_leave ? await getLeaveStatus(q.sick_leave.status) :
+                            q.sick_leave ? await getLeaveStatus(q.sick_leave.status) + " " + q.sick_leave.description :
                                 q.morning_attendance ? `Teilnahme am Onlinekurs <img class="signature" src="data:image/jpeg;base64,${stempelBase64}"/>` : "";
 
-                    const afternoonStatus = q.is_weekend ? "" :
-                        q.is_holiday ? "" :
-                            q.sick_leave ? "" :
+                    const afternoonStatus = q.is_weekend ? getDayName(q.date) :
+                        q.is_holiday ? "Feiertag" :
+                            q.sick_leave ? await getLeaveStatus(q.sick_leave.status) + " " + q.sick_leave.description :
                                 q.afternoon_attendance ? `Teilnahme am Onlinekurs <img class="signature" src="data:image/jpeg;base64,${stempelBase64}"/>` : "";
 
                     return `

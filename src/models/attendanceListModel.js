@@ -63,6 +63,40 @@ class AttendanceList {
             throw error;
         }
     }
+
+    static async getByStudentAndDateRange(studentId, startDate, endDate) {
+        const query = `
+            SELECT a.*, s.first_name, s.last_name, s.bg_number, s.authority_email,
+                   m.title as measures_title, m.number as measures_number
+            FROM attendance a
+            JOIN student s ON a.student_id = s.student_id
+            LEFT JOIN measures m ON s.measures_id = m.id
+            WHERE a.student_id = ?
+            AND a.date BETWEEN ? AND ?
+            ORDER BY a.date ASC
+        `;
+
+        try {
+            const [results] = await db.query(query, [studentId, startDate, endDate]);
+            return results.map(row => ({
+                id: row.id,
+                date: row.date,
+                status: row.status,
+                student: {
+                    id: row.student_id,
+                    first_name: row.first_name,
+                    last_name: row.last_name,
+                    bg_number: row.bg_number,
+                    authority_email: row.authority_email,
+                    measures_title: row.measures_title,
+                    measures_number: row.measures_number
+                }
+            }));
+        } catch (error) {
+            console.error('Error fetching attendance by student and date range:', error);
+            throw error;
+        }
+    }
 }
 
 module.exports = AttendanceList;

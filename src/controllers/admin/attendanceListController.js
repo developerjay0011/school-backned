@@ -57,19 +57,19 @@ class AttendanceListController {
             const studentRecord = attendanceList.length > 0 ? attendanceList[0] : null;
             console.log("Student Record", studentRecord);
             
-            if (studentRecord && studentRecord.authority_email) {
-                console.log("Authority Email", studentRecord.authority_email);
-                await EmailService.sendAttendanceListEmail({
-                    email: studentRecord.authority_email,
-                    bgNumber: studentRecord.bg_number,
-                    studentName: `${studentRecord.first_name} ${studentRecord.last_name}`,
-                    startDate: start_date,
-                    endDate: end_date,
-                    measureNumber: studentRecord.measures_number,
-                    measureTitle: studentRecord.measures_title,
-                    pdfPath: pdfResult.path
-                });
-            }
+            // if (studentRecord && studentRecord.authority_email) {
+            //     console.log("Authority Email", studentRecord.authority_email);
+            //     await EmailService.sendAttendanceListEmail({
+            //         email: studentRecord.authority_email,
+            //         bgNumber: studentRecord.bg_number,
+            //         studentName: `${studentRecord.first_name} ${studentRecord.last_name}`,
+            //         startDate: start_date,
+            //         endDate: end_date,
+            //         measureNumber: studentRecord.measures_number,
+            //         measureTitle: studentRecord.measures_title,
+            //         pdfPath: pdfResult.path
+            //     });
+            // }
 
             res.status(200).json({
                 success: true,

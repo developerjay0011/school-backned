@@ -94,6 +94,50 @@ class Exam {
             connection.release();
         }
     }
+    static async updateRemark(examId, remark) {
+        // Validate parameters
+        if (!examId || isNaN(parseInt(examId, 10))) {
+            throw new Error('Invalid exam ID');
+        }
+        if (!remark || typeof remark !== 'string') {
+            throw new Error('Invalid remark');
+        }
+
+        let connection;
+        try {
+            connection = await db.getConnection();
+            await connection.beginTransaction();
+
+            // Update exam remark
+            const [result] = await connection.execute(
+                `UPDATE student_exam_dates 
+                SET remark = ?
+                WHERE id = ?`,
+                [remark, parseInt(examId, 10)]
+            );
+
+            await connection.commit();
+            return result.affectedRows > 0;
+        } catch (error) {
+            if (connection) {
+                try {
+                    await connection.rollback();
+                } catch (rollbackError) {
+                    console.error('Error rolling back:', rollbackError);
+                }
+            }
+            throw error;
+        } finally {
+            if (connection) {
+                try {
+                    connection.release();
+                } catch (releaseError) {
+                    console.error('Error releasing connection:', releaseError);
+                }
+            }
+        }
+    }
+
     static async create(studentId, examData) {
         const connection = await db.getConnection();
         try {

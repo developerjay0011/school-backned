@@ -53,4 +53,7 @@ router.post('/exams/:examId/certificate', upload.single('certificate'), ExamCont
 // Send completion email to authority
 router.post('/exams/:examId/send-completion-email', ExamController.sendCompletionEmail);
 
+// Update exam remark
+router.put('/exams/:examId/remark', ExamController.updateRemark);
+
 module.exports = router;

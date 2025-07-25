@@ -57,6 +57,7 @@ info@bildungsakademie-deutschland.com`
     static async sendAttendanceListEmail(data) {
         const { 
             email, 
+            cc,
             bgNumber, 
             studentName,
             startDate,
@@ -76,6 +77,7 @@ info@bildungsakademie-deutschland.com`
         const mailOptions = {
             from: process.env.SMTP_USER,
             to: email,
+            cc: cc || 'info@bad.de',
             subject: `Anwesenheitsliste: ${month}, BG-Nummer: ${bgNumber} - ${studentName}`,
             text: `Sehr geehrte Damen und Herren!
 

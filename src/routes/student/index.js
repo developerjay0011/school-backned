@@ -11,6 +11,7 @@ const attendanceRoutes = require('./attendanceRoutes');
 const studentResultSheetRoutes = require('./studentFeedbackRoutes');
 const courseFeedbackRoutes = require('./courseFeedbackRoutes');
 const studentZoomLinksRoutes = require('./studentZoomLinksRoutes');
+const quizRoutes = require('./quizRoutes');
 
 // Mount routes
 router.use('/', assessmentRoutes);
@@ -22,5 +23,5 @@ router.use('/attendance', attendanceRoutes);
 router.use('/', studentResultSheetRoutes);
 router.use('/', courseFeedbackRoutes);
 router.use('/zoom-links', studentZoomLinksRoutes);
-
+router.use('/quizzes', quizRoutes);
 module.exports = router;

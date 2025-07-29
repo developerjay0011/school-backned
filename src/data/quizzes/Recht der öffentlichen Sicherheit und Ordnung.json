@@ -1,0 +1,510 @@
+{
+  "quiz_title": "Recht der öffentlichen Sicherheit und Ordnung",
+  "total_questions": 42,
+  "questions": [
+    {
+      "id": "ROSO_001",
+      "question": "In wie viele Gewalten ist die Staatsgewalt aufgeteilt?",
+      "options": [
+        "A) 2 Gewalten",
+        "B) 3 Gewalten",
+        "C) 4 Gewalten",
+        "D) 5 Gewalten"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Legislative (Gesetzgebung), Exekutive (Vollziehung), Judikative (Rechtsprechung)"
+    },
+    {
+      "id": "ROSO_002",
+      "question": "Was ist die Polizei?",
+      "options": [
+        "A) Eine private Sicherheitsfirma",
+        "B) Ein Teil der Exekutive",
+        "C) Ein Teil der Legislative",
+        "D) Ein Teil der Judikative"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Die Polizei gehört zur vollziehenden Gewalt (Exekutive)"
+    },
+    {
+      "id": "ROSO_003",
+      "question": "Warum ist die Staatsgewalt aufgeteilt?",
+      "options": [
+        "A) Zur besseren Verwaltung",
+        "B) Zur Gewaltenteilung und Kontrolle",
+        "C) Aus historischen Gründen",
+        "D) Wegen der Größe des Staates"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Gewaltenteilung verhindert Machtmissbrauch und sorgt für gegenseitige Kontrolle"
+    },
+    {
+      "id": "ROSO_004",
+      "question": "Welche Aussagen zu privaten Sicherheitsdiensten sind korrekt?",
+      "options": [
+        "A) Sicherheitspersonal hat nur Jedermann-Rechte",
+        "B) Private Sicherheit kann polizeiliche Aufgaben übernehmen",
+        "C) Sicherheitspersonal darf bei Gefahr im Verzug handeln",
+        "D) Sicherheitspersonal kann Bußgelder verhängen"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Sicherheitspersonal hat nur Jedermann-Rechte und darf bei Gefahr im Verzug handeln"
+    },
+    {
+      "id": "ROSO_005",
+      "question": "Welche Grundrechte sind für das Bewachungsgewerbe von Bedeutung?",
+      "options": [
+        "A) Menschenwürde (Art. 1 GG)",
+        "B) Eigentumsrecht (Art. 14 GG)",
+        "C) Wahlrecht (Art. 38 GG)",
+        "D) Unverletzlichkeit der Wohnung (Art. 13 GG)"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Mehrere Grundrechte sind relevant für die Sicherheitsbranche, besonders Menschenwürde und Eigentumsrecht"
+    },
+    {
+      "id": "ROSO_006",
+      "question": "Muss der Sicherheitsmitarbeiter die Grundrechte beachten?",
+      "options": [
+        "A) Nein, nur der Staat muss das",
+        "B) Ja, aber nur teilweise",
+        "C) Ja, vollumfänglich",
+        "D) Nur bei deutschen Staatsbürgern"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Grundrechte gelten für alle und müssen von jedem beachtet werden"
+    },
+    {
+      "id": "ROSO_007",
+      "question": "Wer ist für die Aufrechterhaltung der öffentlichen Sicherheit und Ordnung zuständig?",
+      "options": [
+        "A) Nur private Sicherheitsdienste",
+        "B) Primär die Polizei",
+        "C) Nur die Bundeswehr",
+        "D) Nur die Feuerwehr"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Die Polizei hat den staatlichen Auftrag zur Aufrechterhaltung von Sicherheit und Ordnung"
+    },
+    {
+      "id": "ROSO_008",
+      "question": "Welche Aussage zum Thema 'Gewaltmonopol' ist korrekt?",
+      "options": [
+        "A) Jeder darf Gewalt anwenden",
+        "B) Nur der Staat hat das Gewaltmonopol",
+        "C) Private Sicherheitsdienste haben ein Gewaltmonopol",
+        "D) Das Gewaltmonopol gilt nur nachts"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Der Staat hat das Monopol auf die Ausübung physischer Gewalt"
+    },
+    {
+      "id": "ROSO_009",
+      "question": "Wann ist unter Umständen ein Eingriff in das staatliche Gewaltmonopol möglich?",
+      "options": [
+        "A) Niemals",
+        "B) Bei Notwehr und Nothilfe",
+        "C) Nur bei Verbrechen",
+        "D) Nur mit Genehmigung"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Notwehr und Nothilfe sind gesetzlich erlaubte Ausnahmen"
+    },
+    {
+      "id": "ROSO_010",
+      "question": "Welche dieser Prinzipien sind Verfassungsprinzipien nach Art. 20 GG?",
+      "options": [
+        "A) Demokratieprinzip",
+        "B) Rechtsstaatsprinzip",
+        "C) Monarchieprinzip",
+        "D) Bundesstaatsprinzip"
+      ],
+      "correct_answers": ["A", "B", "D"],
+      "explanation": "Alle außer Monarchieprinzip sind Verfassungsprinzipien nach Art. 20 GG"
+    },
+    {
+      "id": "ROSO_011",
+      "question": "Was besagt das Demokratieprinzip?",
+      "options": [
+        "A) Alle Macht geht vom König aus",
+        "B) Alle Staatsgewalt geht vom Volke aus",
+        "C) Alle Macht liegt bei der Regierung",
+        "D) Alle Macht liegt beim Parlament"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Art. 20 Abs. 2 GG: 'Alle Staatsgewalt geht vom Volke aus'"
+    },
+    {
+      "id": "ROSO_012",
+      "question": "Was besagt das Sozialstaatsprinzip?",
+      "options": [
+        "A) Der Staat muss für soziale Gerechtigkeit sorgen",
+        "B) Nur reiche Menschen haben Rechte",
+        "C) Soziale Hilfe ist verboten",
+        "D) Private Vorsorge ist ausgeschlossen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Der Sozialstaat soll für sozialen Ausgleich und Gerechtigkeit sorgen"
+    },
+    {
+      "id": "ROSO_013",
+      "question": "Was besagt das Rechtsstaatsprinzip?",
+      "options": [
+        "A) Nur Juristen dürfen regieren",
+        "B) Alles staatliche Handeln muss rechtmäßig sein",
+        "C) Gesetze gelten nur für Bürger",
+        "D) Richter sind über dem Gesetz"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Rechtsstaatsprinzip bedeutet Bindung aller staatlichen Gewalt an Recht und Gesetz"
+    },
+    {
+      "id": "ROSO_014",
+      "question": "Wie viele wesentliche Staatsprinzipien gibt es?",
+      "options": [
+        "A) 3",
+        "B) 4",
+        "C) 5",
+        "D) 6"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Demokratie, Rechtsstaat, Sozialstaat, Bundesstaat, Republik"
+    },
+    {
+      "id": "ROSO_015",
+      "question": "In welche Rechtsarten kann man das aktuelle Recht unterscheiden?",
+      "options": [
+        "A) Nur öffentliches Recht",
+        "B) Öffentliches Recht und Privatrecht",
+        "C) Nur Privatrecht",
+        "D) Strafrecht und Zivilrecht"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Grundlegende Unterscheidung zwischen öffentlichem Recht und Privatrecht"
+    },
+    {
+      "id": "ROSO_016",
+      "question": "Aus welchen Bestandteilen besteht ein Staat?",
+      "options": [
+        "A) Nur Regierung",
+        "B) Staatsgebiet, Staatsvolk, Staatsgewalt",
+        "C) Nur Staatsvolk",
+        "D) Nur Staatsgebiet"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Die Drei-Elemente-Lehre nach Georg Jellinek"
+    },
+    {
+      "id": "ROSO_017",
+      "question": "Wer ist u.a. Inhaber der Staatsgewalt?",
+      "options": [
+        "A) Nur der Bundespräsident",
+        "B) Das Volk",
+        "C) Nur die Regierung",
+        "D) Nur das Parlament"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Art. 20 Abs. 2 GG: Alle Staatsgewalt geht vom Volke aus"
+    },
+    {
+      "id": "ROSO_018",
+      "question": "In welchem Artikel sind die Verfassungsprinzipien erfasst?",
+      "options": [
+        "A) Art. 1 GG",
+        "B) Art. 20 GG",
+        "C) Art. 3 GG",
+        "D) Art. 5 GG"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Art. 20 GG enthält die Staatsprinzipien"
+    },
+    {
+      "id": "ROSO_019",
+      "question": "In welchem Artikel ist die Menschenwürde festgehalten?",
+      "options": [
+        "A) Art. 1 GG",
+        "B) Art. 2 GG",
+        "C) Art. 3 GG",
+        "D) Art. 4 GG"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Art. 1 Abs. 1 GG: 'Die Würde des Menschen ist unantastbar'"
+    },
+    {
+      "id": "ROSO_020",
+      "question": "In welchem Artikel ist Recht auf Freiheit und Recht auf Leben festgehalten?",
+      "options": [
+        "A) Art. 1 GG",
+        "B) Art. 2 GG",
+        "C) Art. 3 GG",
+        "D) Art. 4 GG"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Art. 2 GG schützt Leben und körperliche Unversehrtheit sowie die Handlungsfreiheit"
+    },
+    {
+      "id": "ROSO_021",
+      "question": "In welchem Artikel ist der Gleichheitsgrundsatz festgehalten?",
+      "options": [
+        "A) Art. 1 GG",
+        "B) Art. 2 GG",
+        "C) Art. 3 GG",
+        "D) Art. 4 GG"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Art. 3 GG: 'Alle Menschen sind vor dem Gesetz gleich'"
+    },
+    {
+      "id": "ROSO_022",
+      "question": "In welchem Artikel ist die Meinungsfreiheit festgehalten?",
+      "options": [
+        "A) Art. 4 GG",
+        "B) Art. 5 GG",
+        "C) Art. 6 GG",
+        "D) Art. 7 GG"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Art. 5 GG schützt Meinungs-, Informations- und Pressefreiheit"
+    },
+    {
+      "id": "ROSO_023",
+      "question": "In welchem Artikel ist das Brief- Post- und Fernmeldegeheimnis festgehalten?",
+      "options": [
+        "A) Art. 8 GG",
+        "B) Art. 9 GG",
+        "C) Art. 10 GG",
+        "D) Art. 11 GG"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Art. 10 GG schützt das Brief-, Post- und Fernmeldegeheimnis"
+    },
+    {
+      "id": "ROSO_024",
+      "question": "In welchem Artikel ist die Unverletzlichkeit der Wohnung festgehalten?",
+      "options": [
+        "A) Art. 11 GG",
+        "B) Art. 12 GG",
+        "C) Art. 13 GG",
+        "D) Art. 14 GG"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Art. 13 GG: 'Die Wohnung ist unverletzlich'"
+    },
+    {
+      "id": "ROSO_025",
+      "question": "In welchem Artikel ist das Recht auf Eigentum festgehalten?",
+      "options": [
+        "A) Art. 12 GG",
+        "B) Art. 13 GG",
+        "C) Art. 14 GG",
+        "D) Art. 15 GG"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Art. 14 GG schützt das Eigentum und das Erbrecht"
+    },
+    {
+      "id": "ROSO_026",
+      "question": "Besitzen Sicherheitsmitarbeiter hoheitliche Rechte?",
+      "options": [
+        "A) Ja, alle hoheitlichen Rechte",
+        "B) Nein, nur Jedermann-Rechte",
+        "C) Nur bei Nacht",
+        "D) Nur auf privatem Gelände"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Sicherheitsmitarbeiter haben keine hoheitlichen Befugnisse, nur Jedermann-Rechte"
+    },
+    {
+      "id": "ROSO_027",
+      "question": "Bei welchen Institutionen kann ein Bürger eine Strafanzeige erstatten?",
+      "options": [
+        "A) Polizei",
+        "B) Staatsanwaltschaft",
+        "C) Private Sicherheitsdienste",
+        "D) Bundespolizei"
+      ],
+      "correct_answers": ["A", "B", "D"],
+      "explanation": "Strafanzeigen können bei Polizei, Staatsanwaltschaft und Bundespolizei erstattet werden"
+    },
+    {
+      "id": "ROSO_028",
+      "question": "Was sind hoheitliche Rechte? Welche Aussagen sind korrekt?",
+      "options": [
+        "A) Besondere staatliche Befugnisse",
+        "B) Recht zur Anwendung unmittelbaren Zwangs",
+        "C) Rechte, die jeder Bürger hat",
+        "D) Recht zum Erlass von Bußgeldern"
+      ],
+      "correct_answers": ["A", "B", "D"],
+      "explanation": "Hoheitliche Rechte sind staatliche Zwangsbefugnisse wie Zwang, Identitätsfeststellung, Bußgelder"
+    },
+    {
+      "id": "ROSO_029",
+      "question": "Welche Aussagen zum Privat- und öffentlichen Recht sind korrekt?",
+      "options": [
+        "A) Öffentliches Recht regelt das Staat-Bürger-Verhältnis",
+        "B) Privatrecht regelt Beziehungen zwischen gleichgestellten Personen",
+        "C) Beide Rechtsgebiete sind identisch",
+        "D) Im öffentlichen Recht herrscht das Subordinationsprinzip"
+      ],
+      "correct_answers": ["A", "B", "D"],
+      "explanation": "Alle Aussagen außer C sind korrekt - die Rechtsgebiete unterscheiden sich grundlegend"
+    },
+    {
+      "id": "ROSO_030",
+      "question": "Welches Recht ist bei Schadensersatzforderungen anzuwenden?",
+      "options": [
+        "A) Öffentliches Recht",
+        "B) Privatrecht (BGB)",
+        "C) Strafrecht",
+        "D) Verfassungsrecht"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Schadensersatz ist privatrechtlich im BGB geregelt"
+    },
+    {
+      "id": "ROSO_031",
+      "question": "Wofür steht die Abkürzung PPP?",
+      "options": [
+        "A) Private Public Partnership",
+        "B) Personal Protection Police",
+        "C) Public Private Partnership",
+        "D) Police Protection Program"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Public Private Partnership = Öffentlich-Private Partnerschaft"
+    },
+    {
+      "id": "ROSO_032",
+      "question": "Welche Aussagen zum Privatrecht sind korrekt?",
+      "options": [
+        "A) Gleichberechtigung der Vertragspartner",
+        "B) Vertragsfreiheit",
+        "C) Nur für Unternehmen gültig",
+        "D) Enthält das Bürgerliche Gesetzbuch (BGB)"
+      ],
+      "correct_answers": ["A", "B", "D"],
+      "explanation": "Privatrecht gilt für alle Personen, nicht nur Unternehmen - alle anderen Aussagen sind korrekt"
+    },
+    {
+      "id": "ROSO_033",
+      "question": "Welche Aussagen zum öffentlichen Recht sind korrekt?",
+      "options": [
+        "A) Über-/Unterordnungsverhältnis (Subordination)",
+        "B) Beinhaltet Strafrecht",
+        "C) Gleichberechtigung aller Beteiligten",
+        "D) Staat hat besondere Machtbefugnisse"
+      ],
+      "correct_answers": ["A", "B", "D"],
+      "explanation": "Öffentliches Recht ist durch Subordination geprägt, nicht durch Gleichberechtigung"
+    },
+    {
+      "id": "ROSO_034",
+      "question": "Dürfen Privatpersonen jederzeit Gewalt anwenden?",
+      "options": [
+        "A) Ja, immer",
+        "B) Nein, niemals",
+        "C) Nur in Notwehr/Nothilfe",
+        "D) Nur nachts"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Gewalt ist nur in Notwehr, Nothilfe und anderen gesetzlichen Fällen erlaubt"
+    },
+    {
+      "id": "ROSO_035",
+      "question": "Was besagt das Republikprinzip?",
+      "options": [
+        "A) Deutschland ist eine Monarchie",
+        "B) Deutschland ist eine Republik",
+        "C) Es gibt einen König",
+        "D) Adel regiert das Land"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Deutschland ist eine demokratische Republik ohne Monarchen"
+    },
+    {
+      "id": "ROSO_036",
+      "question": "Was bedeutet das Bundesstaatprinzip?",
+      "options": [
+        "A) Es gibt nur eine Regierung",
+        "B) Aufteilung in Länder mit eigenen Kompetenzen",
+        "C) Zentralstaat ohne Länder",
+        "D) Nur der Bund hat Macht"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Deutschland ist ein Bundesstaat mit 16 Ländern"
+    },
+    {
+      "id": "ROSO_037",
+      "question": "Wo findet das Subordinationsprinzip seine Anwendung?",
+      "options": [
+        "A) Im Privatrecht",
+        "B) Im öffentlichen Recht",
+        "C) Nur im Strafrecht",
+        "D) Nur im Zivilrecht"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Subordination (Über-/Unterordnung) kennzeichnet das öffentliche Recht"
+    },
+    {
+      "id": "ROSO_038",
+      "question": "Wo findet das Koordinationsprinzip seine Anwendung?",
+      "options": [
+        "A) Im öffentlichen Recht",
+        "B) Im Privatrecht",
+        "C) Nur im Verfassungsrecht",
+        "D) Nur im Verwaltungsrecht"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Koordination (Gleichordnung) kennzeichnet das Privatrecht"
+    },
+    {
+      "id": "ROSO_039",
+      "question": "Was bedeutet Subordinationsprinzip?",
+      "options": [
+        "A) Alle sind gleichberechtigt",
+        "B) Über- und Unterordnungsverhältnis",
+        "C) Nur Vertragsfreiheit",
+        "D) Keine Hierarchien"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Subordination bedeutet hierarchisches Über-/Unterordnungsverhältnis"
+    },
+    {
+      "id": "ROSO_040",
+      "question": "Was bedeutet Koordinationsprinzip?",
+      "options": [
+        "A) Hierarchische Ordnung",
+        "B) Gleichordnung/Gleichberechtigung",
+        "C) Staatliche Zwangsgewalt",
+        "D) Einseitige Anordnungen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Koordination bedeutet Gleichordnung und Gleichberechtigung der Beteiligten"
+    },
+    {
+      "id": "ROSO_041",
+      "question": "Welche Bereiche können dem öffentlichen Recht zugeordnet werden?",
+      "options": [
+        "A) Polizeirecht",
+        "B) Strafrecht",
+        "C) Kaufverträge",
+        "D) Steuerrecht"
+      ],
+      "correct_answers": ["A", "B", "D"],
+      "explanation": "Kauf- und Mietverträge gehören zum Privatrecht, die anderen zum öffentlichen Recht"
+    },
+    {
+      "id": "ROSO_042",
+      "question": "Welche Bereiche können dem privaten Recht zugeordnet werden?",
+      "options": [
+        "A) Bürgerliches Recht (BGB)",
+        "B) Kaufverträge",
+        "C) Strafrecht",
+        "D) Familienrecht"
+      ],
+      "correct_answers": ["A", "B", "D"],
+      "explanation": "Strafrecht gehört zum öffentlichen Recht, alle anderen Bereiche zum Privatrecht"
+    }
+  ]
+}

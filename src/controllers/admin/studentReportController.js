@@ -4,6 +4,7 @@ const PDFGenerator = require('../../utils/pdfGenerator');
 const path = require('path');
 const fs = require('fs');
 const db = require('../../config/database');
+const EmailService = require('../../utils/emailService');
 
 class StudentReportController {
     static async createDischargeReport(req, res) {
@@ -43,7 +44,7 @@ class StudentReportController {
                 ...req.body,
                 first_name: student.first_name ? `${student.first_name} ${student.last_name || ''}` : '',
                 birth_date: student?.birth_date || null,
-                bg_number: student?.bg_number || '',
+                bg_number: student?.authority.bg_number || '',
                 type: 'discharge',
                 measures_name: student?.measures_title,
                 measures: student?.measures_number,
@@ -73,6 +74,25 @@ class StudentReportController {
             
             const report = await StudentReport.getById(reportId);
             console.log('Saved report:', report);
+
+            // Send discharge report email
+            if (authorityEmail) {
+                try {
+                    await EmailService.sendDischargeReportEmail({
+                        email: authorityEmail,
+                        bgNumber: student.authority.bg_number,
+                        measureTitle: student.measures_title,
+                        measureNumber: student.measures_number,
+                        pdfPath: pdfResult.path
+                    });
+                    console.log('Discharge report email sent successfully');
+                } catch (emailError) {
+                    console.error('Error sending discharge report email:', emailError);
+                    // Don't fail the request if email fails
+                }
+            } else {
+                console.log('No authority email found, skipping discharge report email');
+            }
             
             res.status(201).json({
                 success: true,
@@ -124,7 +144,7 @@ class StudentReportController {
                 ...req.body,
                 first_name: student?.first_name ? `${student.first_name} ${student.last_name || ''}` : '',
                 birth_date: student?.birth_date || null,
-                bg_number: student?.bg_number || '',
+                bg_number: student?.authority.bg_number || '',
                 type: 'termination',
                 measures_name: student?.measures_title,
                 measures: student?.measures_number,
@@ -154,6 +174,25 @@ class StudentReportController {
             
             const report = await StudentReport.getById(reportId);
             console.log('Saved report:', report);
+
+            // Send termination report email
+            if (authorityEmail) {
+                try {
+                    await EmailService.sendTerminationReportEmail({
+                        email: authorityEmail,
+                        bgNumber: student.authority.bg_number,
+                        measureTitle: student.measures_title,
+                        measureNumber: student.measures_number,
+                        pdfPath: pdfResult.path
+                    });
+                    console.log('Termination report email sent successfully');
+                } catch (emailError) {
+                    console.error('Error sending termination report email:', emailError);
+                    // Don't fail the request if email fails
+                }
+            } else {
+                console.log('No authority email found, skipping termination report email');
+            }
             
             res.status(201).json({
                 success: true,

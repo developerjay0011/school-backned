@@ -1,0 +1,666 @@
+{
+  "quiz_title": "Gewerberecht Fragenkatalog - Bewachungsgewerbe",
+  "total_questions": 55,
+  "questions": [
+    {
+      "id": "GEW_001",
+      "question": "Wer muss die Ordnungswidrigkeiten, die als Verstöße gegen die BewachV begangen werden, gegen sich gelten lassen?",
+      "options": [
+        "A) Immer nur der Mitarbeiter",
+        "B) Mitarbeiter und Unternehmer haften beide zu gleichen Teilen für Ordnungswidrigkeiten",
+        "C) Je nachdem welche Ordnungswidrigkeit von wem begangen wird, entweder der Mitarbeiter oder der Unternehmer",
+        "D) Immer nur der Unternehmer"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Die Haftung richtet sich nach dem jeweiligen Verstoß und dem Verursacher"
+    },
+    {
+      "id": "GEW_002",
+      "question": "Was besagt §20 BewachV?",
+      "options": [
+        "A) Dienstkleidung",
+        "B) Haftpflichtversicherung",
+        "C) Aushändigung der berufsgenossenschaftlichen Vorschriften",
+        "D) Behandlung von Waffen und Anzeigepflicht nach Waffengebrauch"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "§20 BewachV regelt den Umgang mit Waffen und die Meldepflicht nach Waffengebrauch"
+    },
+    {
+      "id": "GEW_003",
+      "question": "Was besagt §16 BewachV?",
+      "options": [
+        "A) Dienstanweisung",
+        "B) An- und Abmeldung von Wachpersonal",
+        "C) Voraussetzungen für Beschäftigte",
+        "D) Dienstkleidung"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "§16 BewachV behandelt sowohl die Meldepflichten als auch die Voraussetzungen für Beschäftigte"
+    },
+    {
+      "id": "GEW_004",
+      "question": "Welche Aussage/n zu §18 BewachV sind korrekt?",
+      "options": [
+        "A) Jedem Bewachungsmitarbeiter ist ein Dienstausweis auszustellen",
+        "B) Auf dem Dienstausweis muss das Logo des Sicherheitsunternehmens klar erkennbar sein",
+        "C) Der Dienstausweis darf einem Dienstausweis einer Behörde nicht ähneln",
+        "D) Der Mitarbeiter muss den Dienstausweis nur bei Aufgaben, die im öffentlichen Bereich ausgeführt werden, führen"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Dienstausweis ist für alle Mitarbeiter Pflicht und darf nicht behördlichen Ausweisen ähneln"
+    },
+    {
+      "id": "GEW_005",
+      "question": "Aufgrund des § 34a Abs. 2 der Gewerbeordnung, hat das Bundesministerium für Wirtschaft und Energie die Bewachungsverordnung erlassen. Überprüfen Sie die nachfolgenden Aussagen und kreuzen Sie diejenigen an, welche in der Bewachungsverordnung geregelt sind.",
+      "options": [
+        "A) Aufzeichnung aller Bewachungsverträge in deutscher Sprache",
+        "B) Ausstattung mit bestimmten Ausrüstungsgegenständen",
+        "C) Ausstellen von Dienstausweisen",
+        "D) Festlegung einer Bekleidungsordnung"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "BewachV regelt u.a. Vertragsaufzeichnungen und Dienstausweise"
+    },
+    {
+      "id": "GEW_006",
+      "question": "Was ist der Sinn der Gewerbeordnung (GewO)?",
+      "options": [
+        "A) Regelt Rechtsbeziehungen zwischen Unternehmen",
+        "B) Gilt nur für Handwerksgewerbe",
+        "C) Enthält Vorschriften und Verordnungen für diverse Gewerbearten",
+        "D) Regelt auch Grundlagen für das Wachgewerbe"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "GewO ist das zentrale Gesetz für gewerbliche Tätigkeiten, einschließlich Bewachungsgewerbe"
+    },
+    {
+      "id": "GEW_007",
+      "question": "Ein Bewachungsgewerbe führt...",
+      "options": [
+        "A) Wer fremdes Leben oder Eigentum schützt, ohne dabei Rechnungen zu schreiben",
+        "B) Wer gewerbsmäßig fremdes Leben oder Eigentum schützt",
+        "C) Wer als Privatdetektiv arbeitet",
+        "D) Wer ausschließlich Objektbewachungen für Fremde durchführt"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Bewachungsgewerbe erfordert gewerbsmäßige Tätigkeit zum Schutz fremden Eigentums"
+    },
+    {
+      "id": "GEW_008",
+      "question": "Welche Aussage/n zu §22 BewachV sind korrekt?",
+      "options": [
+        "A) Bei Begehung einer Ordnungswidrigkeit muss der Mitarbeiter unverzüglich seinen Dienst abbrechen und der Unternehmer muss für Ersatz sorgen",
+        "B) Die Kosten für Ordnungswidrigkeiten hat immer der Unternehmer zu tragen",
+        "C) Begeht der Mitarbeiter einen Verstoß gegen die Bewachungsverordnung, wird ihm die Ausübung seines Dienstes im Sicherheitsbereich versagt",
+        "D) Verstöße gegen die Bewachungsverordnung werden mit Geldbuße geahndet"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "§22 BewachV regelt die Ahndung von Ordnungswidrigkeiten mit Geldbußen"
+    },
+    {
+      "id": "GEW_009",
+      "question": "Wann benötigt man keine Sachkundeprüfung nach §34a GewO, wenn man als Türsteher in einer Diskothek arbeitet?",
+      "options": [
+        "A) Wenn man bei der Diskothek selbst angestellt ist",
+        "B) Wenn man schon mind. 3 Jahre im Sicherheitsgewerbe arbeitet",
+        "C) Wenn man die Ausbildung im mittleren Dienst beim Zoll absolviert hat",
+        "D) Wenn man den ersten Teil der Abschlussprüfung zur Fachkraft für Schutz und Sicherheit absolviert hat"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Eigene Angestellte der Diskothek und Zollbeamte sind von der Sachkundeprüfung befreit"
+    },
+    {
+      "id": "GEW_010",
+      "question": "Was muss eine Person unternehmen, wenn sie ein Sicherheitsunternehmen gründet?",
+      "options": [
+        "A) Eine entsprechende Haftpflichtversicherung abschließen",
+        "B) Bei einem Steuerberater die Erstellung der buchhalterischen Unterlagen veranlassen",
+        "C) Der zuständigen Behörde ein Dienstausweismuster vorlegen",
+        "D) Bei der zuständigen Behörde eine Anzeige machen"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Haftpflichtversicherung und behördliche Anzeige sind Grundvoraussetzungen"
+    },
+    {
+      "id": "GEW_011",
+      "question": "Was ist ein Bewachungsgewerbe nach §34a GewO?",
+      "options": [
+        "A) Wer gewerbsmäßig Ermittlungen für Fremde ausführt",
+        "B) Wer gewerbsmäßig fremdes Leben oder Eigentum schützt",
+        "C) Wer gewerbsmäßig das eigene Leben oder Eigentum schützt",
+        "D) Wer fremdes Leben oder Eigentum schützt"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Bewachungsgewerbe ist die gewerbsmäßige Bewachung fremden Lebens oder Eigentums"
+    },
+    {
+      "id": "GEW_012",
+      "question": "Was ist keine Bewachungstätigkeit nach §34a GewO?",
+      "options": [
+        "A) Ein Mitarbeiter in einer Notruf- und Serviceleitstelle bearbeitet einen Einbruchsalarm",
+        "B) Angestellte einer Chemiefirma bewachen die Einfahrt zum Werk",
+        "C) Die Mitarbeiter eines Sicherheitsdienstes führen Einlasskontrollen an einer Diskothek durch",
+        "D) Ein Privatdetektiv ermittelt für seine Kundin"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Eigenes Personal und Detektivtätigkeiten fallen nicht unter Bewachungsgewerbe"
+    },
+    {
+      "id": "GEW_013",
+      "question": "Was besagt §22 BewachV?",
+      "options": [
+        "A) Dienstkleidung",
+        "B) Dienstanweisung",
+        "C) Ordnungswidrigkeiten",
+        "D) Haftpflichtversicherung"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§22 BewachV regelt die Ahndung von Ordnungswidrigkeiten"
+    },
+    {
+      "id": "GEW_014",
+      "question": "Welche dieser Tätigkeiten fallen nicht unter eine Bewachungstätigkeit nach der GewO?",
+      "options": [
+        "A) Parkplatzordner",
+        "B) Geld- und Werttransport",
+        "C) Personenschutz",
+        "D) Arbeiten in einer Notruf- und Serviceleitstelle"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Parkplatzordner und Leitstellentätigkeiten sind keine klassischen Bewachungstätigkeiten"
+    },
+    {
+      "id": "GEW_015",
+      "question": "Welche Aussage/n zur Dienstkleidung ist/sind zutreffend?",
+      "options": [
+        "A) Bei sicherheitsrelevanten Tätigkeiten im sog. befriedeten Besitztum, muss zwingend die vom Arbeitgeber gestellte Dienstkleidung getragen werden",
+        "B) Bei sicherheitsrelevanten Tätigkeiten im öffentlichen Verkehrsraum muss zwingend die vom Arbeitgeber gestellte Dienstkleidung getragen werden",
+        "C) Bei sicherheitsrelevanten Tätigkeiten in privaten Hausrechtsbereichen mit tatsächlich öffentlichem (Publikums-) Verkehr muss zwingend die vom Arbeitgeber gestellte Dienstkleidung getragen werden",
+        "D) Bei sicherheitsrelevanten Tätigkeiten den präventiven Schutz vor Ladendiebstahl gewährleisten sollen (z.B. sog. Doorman) muss zwingend die vom Arbeitgeber gestellte Dienstkleidung getragen werden"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Dienstkleidungspflicht gilt beim Betreten befriedeten Besitztums"
+    },
+    {
+      "id": "GEW_016",
+      "question": "Was besagt §17 BewachV?",
+      "options": [
+        "A) Wahrung von Geschäftsgeheimnissen",
+        "B) Haftpflichtversicherung",
+        "C) Dienstkleidung",
+        "D) Dienstanweisung"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "§17 BewachV regelt Dienstanweisungen und Geheimhaltungspflichten"
+    },
+    {
+      "id": "GEW_017",
+      "question": "Was ist nach dem Waffengebrauch im Dienst, nach §20 BewachV zu veranlassen?",
+      "options": [
+        "A) Waffe der zuständigen Behörde überlassen",
+        "B) Strafantrag bei der zuständigen Behörde",
+        "C) Waffe dem Sicherheitsunternehmer überlassen",
+        "D) Anzeige bei der zuständigen Behörde"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Waffengebrauch muss der zuständigen Behörde angezeigt werden"
+    },
+    {
+      "id": "GEW_018",
+      "question": "Welche Aussage/n zu §19 BewachV sind korrekt?",
+      "options": [
+        "A) Die Dienstkleidung muss am Einstellungstag durch den Unternehmer ausgehändigt werden",
+        "B) Die Dienstkleidung darf den Uniformen von Streitkräften oder Behörden nicht ähneln",
+        "C) Der Unternehmer hat dafür zu sorgen, dass seine Mitarbeiter geeignete Sommer- als auch Winterbekleidung bekommen",
+        "D) Der Mitarbeiter muss die Dienstkleidung tragen, wenn er zur Ausübung des Dienstes ein befriedetes Besitztum betritt"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Dienstkleidung darf nicht behördlichen Uniformen ähneln und ist im befriedeten Besitztum zu tragen"
+    },
+    {
+      "id": "GEW_019",
+      "question": "Für welche Tätigkeiten im Bewachungsgewerbe ist die erfolgreich abgelegte Sachkundeprüfung nach § 34a GewO zwingend erforderlich?",
+      "options": [
+        "A) Gewerbetreibende im privaten Bewachungsgewerbe",
+        "B) Sog. Türsteher im Einlassbereich gastgewerblicher Diskotheken",
+        "C) Sicherheitskräfte die im Bereich des Personen- und Begleitschutzes tätig sind",
+        "D) Sicherheitskräfte im Bereich von Geld- und Werttransportdienstleistungen",
+        "E) Sicherheitskräfte im Revier- und Interventionsdienst"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Sachkundeprüfung ist für Gewerbetreibende und Türsteher zwingend erforderlich"
+    },
+    {
+      "id": "GEW_020",
+      "question": "Wie können Verstöße gegen die Bewachungsverordnung geahndet werden?",
+      "options": [
+        "A) Freiheitsstrafe",
+        "B) Geldbuße",
+        "C) Entzug der Erlaubnis ein Bewachungsunternehmen zu führen",
+        "D) Geldstrafe"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Verstöße können mit Geldbuße oder Erlaubnisentzug geahndet werden"
+    },
+    {
+      "id": "GEW_021",
+      "question": "Welche Aussage/n zu §21 BewachV sind korrekt?",
+      "options": [
+        "A) Der Unternehmer muss bestimmte Unterlagen so lange aufheben, wie er das Unternehmen führt",
+        "B) Die Frist für die Aufbewahrung von Unterlagen beträgt in der Regel 3 Jahre bis zum Ende des Kalenderjahres",
+        "C) Bewachungsverträge müssen nicht aufbewahrt werden, wenn nur Landfahrzeuge bewacht werden",
+        "D) Die Unterlagen können auch in anderer Sprache als Deutsch geführt werden"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Aufbewahrungsfrist beträgt 3 Jahre, Landfahrzeugbewachung ist ausgenommen"
+    },
+    {
+      "id": "GEW_022",
+      "question": "Welche Aussage/n zu §17 BewachV sind korrekt?",
+      "options": [
+        "A) Der Unternehmer muss für sein Unternehmen und die Beschäftigten eine Dienstanweisung erstellen",
+        "B) Der Unternehmer muss dem Mitarbeiter einen Abdruck der Datenschutzbestimmungen des jeweiligen Betriebes aushändigen",
+        "C) Der Unternehmer muss seine Mitarbeiter schriftlich dazu verpflichten, die bekanntgewordenen Informationen und Geheimnisse Dritter, auch nach dem Ausscheiden aus dem Dienst, nicht unbefugt zu offenbaren",
+        "D) Der Unternehmer hat den Mitarbeiter anhand des Bundesdatenschutzgesetzes zu unterweisen"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Dienstanweisung und schriftliche Geheimhaltungsverpflichtung sind erforderlich"
+    },
+    {
+      "id": "GEW_023",
+      "question": "Welcher dieser Personengruppen benötigt keinen Sachkundenachweis nach §34a GewO?",
+      "options": [
+        "A) Personen die seit 5 Jahren durchgehend im Sicherheitsbereich gearbeitet haben",
+        "B) Geprüfte Schutz- und Sicherheitskraft",
+        "C) Berufssoldat auf Zeit",
+        "D) Polizisten die mindestens die Ausbildung im mittleren Dienst absolviert haben"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Ausgebildete Fachkräfte und Polizeibeamte sind vom Sachkundenachweis befreit"
+    },
+    {
+      "id": "GEW_024",
+      "question": "Ein Sicherheitsmitarbeiter hat sein Reizstoffsprühgerät (RSG) gegen einen aggressiven Hund eingesetzt. Welche Pflichten sind nach dem Gebrauch gemäß der Bewachungsverordnung zu erfüllen?",
+      "options": [
+        "A) Keine. Entscheidend ist, dass der Einsatz des RSG notwehrrechtlich erforderlich war",
+        "B) Der Sicherheitsmitarbeiter muss den Einsatz des Gerätes seinem Arbeitgeber melden. An das Gewerbeamt muss nur der Gebrauch einer Schusswaffe angezeigt werden",
+        "C) Der Sicherheitsmitarbeiter muss den Gebrauch seinem Arbeitgeber, sowie der örtlich zuständigen Polizeidienststelle melden",
+        "D) Der Gebrauch des RSG muss vom Gewerbetreibenden, der örtlichen Polizeidienststelle gemeldet werden, bzw. ist dieser dazu verpflichtet"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "RSG-Gebrauch muss sowohl dem Arbeitgeber als auch der Polizei gemeldet werden"
+    },
+    {
+      "id": "GEW_025",
+      "question": "Welche Aussage/n zu §20 BewachV sind korrekt?",
+      "options": [
+        "A) Personen, die im Sicherheitsbereich arbeiten, können ihre Dienstwaffe auch während der Privatzeit tragen",
+        "B) Waffen können unter bestimmten Umständen während des Dienstes getragen werden",
+        "C) Waffen dürfen während der Ausübung des Dienstes nicht getragen werden",
+        "D) Der Mitarbeiter hat für die ordnungsgemäße Funktionsfähigkeit der Waffe zu sorgen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Waffen dürfen unter bestimmten Voraussetzungen im Dienst getragen werden"
+    },
+    {
+      "id": "GEW_026",
+      "question": "Welche Mindestvoraussetzungen müssen Personen erfüllen, die als Sicherheitskräfte für ein gewerbliches Wach- und Sicherheitsunternehmen tätig werden wollen?",
+      "options": [
+        "A) Das 18. Lebensjahr muss grundsätzlich vollendet worden sein und ein einwandfreier Leumund muss gegeben sein (eintragsfreies Führungszeugnis)",
+        "B) Es muss das 40-stündige Unterrichtsverfahren an einer Industrie- und/oder Handelskammer absolviert worden sein",
+        "C) Alle SMA müssen als Mindestqualifikation im Minimum über die erfolgreich abgelegte Sachkundeprüfung verfügen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Mindestalter 18 Jahre, einwandfreier Leumund und 40-stündige Unterrichtung sind erforderlich"
+    },
+    {
+      "id": "GEW_027",
+      "question": "Was besagt §18 BewachV?",
+      "options": [
+        "A) Dienstanweisung",
+        "B) Kennzeichnung von Wachpersonen",
+        "C) Haftpflichtversicherung",
+        "D) Dienstausweis"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "§18 BewachV regelt Kennzeichnung und Dienstausweise für Wachpersonen"
+    },
+    {
+      "id": "GEW_028",
+      "question": "Welche dieser Angaben muss eine allgemeine Dienstanweisung nach §17 BewachV zwingend aufweisen?",
+      "options": [
+        "A) Wachpersonen haben weder die Eigenschaften noch die Befugnisse eines Polizeibeamten, eines Hilfspolizeibeamten oder eines sonstigen Bediensteten einer Behörde",
+        "B) Wachpersonen haben auf Anweisung der zuständigen Behörden ihren Dienstausweis vorzuzeigen",
+        "C) Wachpersonen müssen im Dienst stets ihre Dienstkleidung tragen",
+        "D) Wachpersonen dürfen nur mit Zustimmung des Gewerbetreibenden Waffen im Dienst tragen"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Dienstanweisung muss Abgrenzung zu Behörden und Waffenregelung enthalten"
+    },
+    {
+      "id": "GEW_029",
+      "question": "Was besagt §21 BewachV?",
+      "options": [
+        "A) Haftpflichtversicherung",
+        "B) Dienstkleidung",
+        "C) Buchführung und Aufbewahrung",
+        "D) Dienstanweisung"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§21 BewachV regelt Buchführung und Aufbewahrung von Unterlagen"
+    },
+    {
+      "id": "GEW_030",
+      "question": "Was besagt §17 BewachV?",
+      "options": [
+        "A) Dienstkleidung",
+        "B) Dienstanweisung",
+        "C) Haftpflichtversicherung",
+        "D) Buchführung und Aufbewahrung"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "§17 BewachV regelt die Dienstanweisung"
+    },
+    {
+      "id": "GEW_031",
+      "question": "Welche dieser Personen dürfen ein Bewachungsgewerbe nach §34a GewO anmelden/führen?",
+      "options": [
+        "A) Sachkundenachweis vorhanden, 28 Jahre alt, vorbestraft wegen gefährlicher Körperverletzung, ausreichend Vermögen vorhanden",
+        "B) Ehemaliger Feldjäger, kein Sachkundenachweis vorliegend, 20 Jahre alt, keine Vorstrafen, Haftpflichtversicherung für ein Gewerbe bereits abgeschlossen",
+        "C) Fachkraft für Schutz und Sicherheit, 25 Jahre alt, keine Vorstrafen, Haftpflichtversicherung für ein Gewerbe bereits abgeschlossen",
+        "D) 40-stündige Unterrichtung, 32 Jahre alt, keine Vorstrafen, Haftpflichtversicherung für ein Gewerbe bereits abgeschlossen"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Feldjäger sind befreit, Fachkräfte erfüllen alle Voraussetzungen. Vorstrafen schließen aus"
+    },
+    {
+      "id": "GEW_032",
+      "question": "Was bedeutet Nachschau im Sinne des §29 GewO?",
+      "options": [
+        "A) Die zuständige Behörde kann während der üblichen Geschäftszeit, Grundstücke und Betriebsräume betreten, um die geschäftlichen Unterlagen zu prüfen",
+        "B) Die zuständige Behörde kann jederzeit eine Prüfung eines Sicherheitsunternehmens veranlassen",
+        "C) Der Mitarbeiter kann während der üblichen Geschäftszeit Grundstücke und Betriebsräume betreten, um seine Personalunterlagen anzuschauen",
+        "D) Der Unternehmer kann sich die für ihn geltenden Einträge, bei der zuständigen Behörde auf Anfrage anschauen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Nachschau ist das Recht der Behörde zur Betriebsprüfung während der Geschäftszeiten"
+    },
+    {
+      "id": "GEW_033",
+      "question": "Welche Angaben müssen auf einem Dienstausweis enthalten sein?",
+      "options": [
+        "A) Nur Name der Wachperson, Name des Unternehmens, Lichtbild der Wachperson, Unterschrift der Wachperson und des Gewerbetreibenden sowie eine fortlaufende Nummer",
+        "B) Nur Name der Wachperson, Name und Anschrift des Gewerbetreibenden, Unterschrift der Wachperson und des Gewerbetreibenden sowie die Bewacherregisteridentifikationsnummer der Wachperson und des Unternehmens",
+        "C) Nur Name der Wachperson, Name des Gewerbetreibenden, Lichtbild der Wachperson, Unterschrift der Wachperson und des Gewerbetreibenden sowie die Bewacherregisteridentifikationsnummer",
+        "D) Nur Name der Wachperson, Name des Gewerbetreibenden, Lichtbild der Wachperson, Unterschrift des Gewerbetreibenden sowie eine fortlaufende Nummer"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Dienstausweis muss Namen, Anschrift, Unterschriften und Bewacherregister-IDs enthalten"
+    },
+    {
+      "id": "GEW_034",
+      "question": "Welche Voraussetzungen muss ein Sicherheitsmitarbeiter der als Ladendetektiv arbeiten möchte, u.a. erfüllen?",
+      "options": [
+        "A) Sachkundenachweis",
+        "B) Haftpflichtversicherung gegenüber dem Gewerbeamt nachweisen",
+        "C) Zuverlässigkeit nachweisen",
+        "D) Teilnahme an einer 80-stündigen Unterrichtung einer IHK"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Ladendetektive benötigen Sachkundenachweis und müssen zuverlässig sein"
+    },
+    {
+      "id": "GEW_035",
+      "question": "Welche Personen/Personengruppen sind von der Sachkundeprüfung nach § 34a GewO befreit?",
+      "options": [
+        "A) Wer am 31.03.1996 in einem privaten Bewachungsunternehmen beschäftigt war",
+        "B) Alle ehemaligen Angehörigen einer Landespolizeibehörde",
+        "C) Ehemalige Angehörige der Bundeswehr",
+        "D) Wer am 01.01.2003 seit mindestens 3 Jahren befugt und ohne Unterbrechung im Bewachungsgewerbe tätig war"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Bestandsschutz für langjährig Tätige zum Stichtag 01.01.2003"
+    },
+    {
+      "id": "GEW_036",
+      "question": "Kann die zuständige Behörde beim Sicherheitsunternehmen eine Nachschau durchführen?",
+      "options": [
+        "A) Ja, dies ist aber nur während der üblichen Geschäftszeiten möglich",
+        "B) Ja, dies ist aber nur möglich, wenn der Verdacht auf eine Straftat (z.B. Betrug) vorliegt",
+        "C) Nein, dies ist nicht möglich. Die zuständige Behörde kann nur Informationen erfragen",
+        "D) Ja, die zuständige Behörde kann sich jederzeit Zutritt zu den Geschäftsräumen verschaffen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Nachschau ist nur während der üblichen Geschäftszeiten zulässig"
+    },
+    {
+      "id": "GEW_037",
+      "question": "Mit welcher/n Qualifikation/en kann ein Unternehmer im Kundenauftrag, fremde Objekte bewachen?",
+      "options": [
+        "A) Objektleiterlehrgang",
+        "B) Sachkundeprüfung nach §34a GewO",
+        "C) 40-stündige Unterrichtung",
+        "D) Fachkraft für Schutz und Sicherheit"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Unternehmer benötigen Sachkundeprüfung oder Fachkraftausbildung"
+    },
+    {
+      "id": "GEW_038",
+      "question": "Was beschreibt die Anzeigepflicht nach §14 GewO u.a.?",
+      "options": [
+        "A) Der Sicherheitsunternehmer muss eine Anzeige machen, wenn er das Unternehmen schließt",
+        "B) Der Sicherheitsunternehmer muss Straftaten unverzüglich bei der Polizei oder Staatsanwaltschaft anzeigen",
+        "C) Der Sicherheitsunternehmer muss eine Anzeige machen, wenn er seinen Betrieb verlegt",
+        "D) Der Sicherheitsunternehmer muss auf die Anzeige der Polizei sofort reagieren"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Anzeigepflicht bei Betriebsschließung und Verlegung"
+    },
+    {
+      "id": "GEW_039",
+      "question": "Was besagt §19 BewachV?",
+      "options": [
+        "A) Haftpflichtversicherung",
+        "B) Dienstkleidung",
+        "C) Kennzeichnung von Wachpersonen",
+        "D) Dienstausweis"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "§19 BewachV regelt die Dienstkleidung"
+    },
+    {
+      "id": "GEW_040",
+      "question": "Für welche dieser Tätigkeiten benötigt man die bestandene Sachkundeprüfung nach §34a GewO?",
+      "options": [
+        "A) In einer Diskothek ist der Mitarbeiter eines Sicherheitsunternehmens nur mit der Patrouille des Innenbereiches betraut",
+        "B) Ein Angestellter einer Diskothek arbeitet als Türsteher im Einlassbereich der gastgewerblichen Diskothek",
+        "C) Ein Mitarbeiter eines Sicherheitsunternehmens, der sonst als Revierfahrer arbeitet, wird als Doorman am Eingang eines Elektronikgeschäftes eingesetzt",
+        "D) Bewachung einer Asylunterkunft in leitender Funktion"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Doorman und leitende Funktionen in Asylunterkünften erfordern Sachkundeprüfung"
+    },
+    {
+      "id": "GEW_041",
+      "question": "Wie hoch müssen die Versicherungssummen einer Haftpflichtversicherung von einem Sicherheitsunternehmen mindestens sein?",
+      "options": [
+        "A) Mind. 1 Mio. € für Personenschäden / mind. 250.000 € für Sachschäden / mind. 15.000 € für das Abhandenkommen bewachter Sachen / mind. 12.500 € für reine Vermögensschäden",
+        "B) Mind. 1,2 Mio. € für Personenschäden / mind. 275.000 € für Sachschäden / mind. 17.500 € für das Abhandenkommen bewachter Sachen / mind. 10.500 € für reine Vermögensschäden",
+        "C) Mind. 2 Mio. € für Personenschäden / mind. 500.000 € für Sachschäden / mind. 30.000 € für das Abhandenkommen bewachter Sachen / mind. 25.000 € für reine Vermögensschäden",
+        "D) Mind. 1,5 Mio. € für Personenschäden / mind. 450.000 € für Sachschäden / mind. 25.000 € für das Abhandenkommen bewachter Sachen / mind. 13.500 € für reine Vermögensschäden"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Mindestversicherungssummen nach BewachV: 1 Mio. € Personen-, 250.000 € Sach-, 15.000 € Abhandenkommen, 12.500 € Vermögensschäden"
+    },
+    {
+      "id": "GEW_042",
+      "question": "Welche der folgenden Aussagen ist – im Rahmen des §16 BewachV – korrekt?",
+      "options": [
+        "A) Es müssen alle Mitarbeiter der zuständigen Behörde gemeldet werden, die Bewachungsaufgaben nach §34a GewO ausführen",
+        "B) Der Sicherheitsunternehmer muss nur Mitarbeiter anmelden die als Türsteher, Citystreife oder Ladendetektiv tätig sind",
+        "C) Mitarbeiter, die eine reine Bürotätigkeit ausüben, müssen nicht bei der zuständigen Behörde angemeldet werden",
+        "D) Der Sicherheitsunternehmer muss alle Mitarbeiter seines Unternehmens der zuständigen Behörde melden"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Meldepflicht für alle Bewachungstätigkeiten, nicht für Büropersonal"
+    },
+    {
+      "id": "GEW_043",
+      "question": "Welche Voraussetzungen muss eine Person erfüllen, die ein Sicherheitsgewerbe eröffnen möchte?",
+      "options": [
+        "A) Ausreichend Geld oder Vermögen für die ersten 6 Monate",
+        "B) Haftpflichtversicherung für das Gewerbe",
+        "C) Mindestalter von 21 Jahren",
+        "D) Zuverlässigkeit"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Haftpflichtversicherung und Zuverlässigkeit sind Grundvoraussetzungen"
+    },
+    {
+      "id": "GEW_044",
+      "question": "Was bedeutet Auskunft im Sinne des §29 GewO?",
+      "options": [
+        "A) Der Mitarbeiter muss seinem Geschäftsführer über alle relevanten Informationen, die seinen Dienst betreffen Auskunft erteilen",
+        "B) Der Unternehmer kann, über die bei seiner zuständigen Behörde gespeicherten Daten Auskunft verlangen",
+        "C) Der Unternehmer hat der zuständigen Behörde Auskunft über sein Sicherheitsunternehmen zu erteilen",
+        "D) Die zuständige Behörde kann sich beim Bundeszentralregister eine Auskunft über den Unternehmer einholen"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Auskunftspflicht des Unternehmers gegenüber der Behörde"
+    },
+    {
+      "id": "GEW_045",
+      "question": "Wozu berechtigt die 40-stündige Unterrichtung?",
+      "options": [
+        "A) Türsteher als Angestellter bei einer Diskothek",
+        "B) Nur die Bewachung von Objekten",
+        "C) Tätigkeit im Geld- und Werttransport",
+        "D) Alle Bewachungsaufgaben bis auf die Bewachung im Einlassbereich gastgewerblicher Diskotheken, Kontrollgänge im öffentlichen Bereich oder in Hausrechtsbereichen mit tatsächlich öffentlichem Verkehr, Schutz vor Ladendieben, Bewachung von Flüchtlingsunterkünften in leitender Position, sowie Bewachung von zugangsgeschützten Großveranstaltungen in leitender Funktion"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "40-stündige Unterrichtung berechtigt zu den meisten Bewachungstätigkeiten außer speziellen Bereichen"
+    },
+    {
+      "id": "GEW_046",
+      "question": "Wer ohne die erforderliche und gesetzlich vorgeschriebene Erlaubnis, das Leben oder das Eigentum fremder Personen bewacht...",
+      "options": [
+        "A) ...Begeht eine Ordnungswidrigkeit, Voraussetzung ist Vorsatz",
+        "B) ...Begeht eine Straftat, Voraussetzung ist Vorsatz",
+        "C) ...Begeht eine Straftat, möglich ist Vorsatz oder Fahrlässigkeit",
+        "D) ...Begeht eine Ordnungswidrigkeit, möglich ist hierbei Vorsatz oder Fahrlässigkeit"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Bewachen ohne Erlaubnis ist eine vorsätzliche Ordnungswidrigkeit"
+    },
+    {
+      "id": "GEW_047",
+      "question": "Die Sachkundeprüfung nach §34a GewO...",
+      "options": [
+        "A) Muss nicht zusätzlich abgelegt werden, wenn der Sicherheitsmitarbeiter bereits eine Ausbildung als Feldjäger absolviert hat",
+        "B) Ist Voraussetzung um als Privatdetektiv arbeiten zu dürfen",
+        "C) Erhält man nach einem Vorbereitungskurs mit mind. 80 Stunden",
+        "D) Ist Zugangsvoraussetzung für den Ausbildungsgang Fachkraft für Schutz und Sicherheit"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Feldjäger sind von der Sachkundeprüfung befreit"
+    },
+    {
+      "id": "GEW_048",
+      "question": "Was ist gemäß §19 BewachV bei der Dienstkleidung zu beachten?",
+      "options": [
+        "A) Die Dienstkleidung muss bei allen Mitarbeitern einheitlich sein",
+        "B) Die Dienstkleidung eines Mitarbeiters muss eine individuelle Kennung tragen, damit der Mitarbeiter für Behörden identifizierbar ist",
+        "C) Die Dienstkleidung darf nicht den Uniformen von Behörden ähnlich sein",
+        "D) Die Dienstkleidung muss bereits auf dem Weg zur Arbeit getragen werden"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Dienstkleidung darf nicht behördlichen Uniformen ähneln"
+    },
+    {
+      "id": "GEW_049",
+      "question": "Was muss ein Unternehmer beachten, wenn er ein Sicherheitsunternehmen eröffnen will?",
+      "options": [
+        "A) Prüfung durch das Bundeskriminalamt durchführen lassen (BKA)",
+        "B) Geordnete Vermögensverhältnisse",
+        "C) Ausreichende finanzielle Mittel für die ersten 12 Monate nachweisen",
+        "D) Haftpflichtversicherung abschließen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Geordnete Vermögensverhältnisse und Haftpflichtversicherung sind erforderlich"
+    },
+    {
+      "id": "GEW_050",
+      "question": "Welche Angabe muss auf einem Dienstausweis nicht enthalten sein?",
+      "options": [
+        "A) Name der Wachperson",
+        "B) Name und Anschrift des Gewerbetreibenden",
+        "C) Fortlaufende Nummer",
+        "D) Anschrift der Wachperson"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Fortlaufende Nummer und Anschrift der Wachperson sind nicht vorgeschrieben"
+    },
+    {
+      "id": "GEW_051",
+      "question": "Welche Aussage/n zu §16 BewachV sind korrekt?",
+      "options": [
+        "A) Beschäftigte müssen grundsätzlich mindestens 18 Jahre alt sein",
+        "B) Beschäftigte können unter bestimmten Umständen auch jünger sein",
+        "C) Beschäftigte dürfen keine körperlichen Behinderungen aufweisen",
+        "D) Beschäftigte müssen durch den Unternehmer unterwiesen werden"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Mindestalter 18 Jahre mit Ausnahmen möglich"
+    },
+    {
+      "id": "GEW_052",
+      "question": "Was müssen Sicherheitsmitarbeiter bei der Einstellung – vor Ausübung ihres ersten Dienstes erhalten?",
+      "options": [
+        "A) Abdruck des Dienstausweises",
+        "B) Abdruck der Dienstanweisung",
+        "C) Abdruck der Bewachungsverordnung",
+        "D) Abdruck der DGUV Vorschrift 23 inkl. der Durchführungsanweisungen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Dienstanweisung und DGUV-Vorschriften müssen ausgehändigt werden"
+    },
+    {
+      "id": "GEW_053",
+      "question": "Nach § 17 der Bewachungsverordnung muss der Sicherheitsdienstleister eine Dienstanweisung verfassen. Diese muss Hinweise darüber enthalten, dass...",
+      "options": [
+        "A) ...Die einschlägigen Unfallverhütungsmaßnahmen eingehalten werden müssen",
+        "B) ...Sicherheitsmitarbeiter während ihrer Tätigkeit nur mit Zustimmung vom Gewerbetreibenden eine Schuss-, Hieb- und/oder Stoßwaffe oder ein Reizstoffsprühgerät mit sich führen dürfen",
+        "C) ...Im Dienst, Dienstkleidung getragen werden muss",
+        "D) ...Sicherheitsmitarbeiter nicht die selben Eigenschaften und Befugnisse wie Polizeibeamte, Hilfspolizeibeamte oder andere Bedienstete einer Behörde besitzen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Dienstanweisung muss Waffenführung und Abgrenzung zu Behörden regeln"
+    },
+    {
+      "id": "GEW_054",
+      "question": "Mit welcher/n Qualifikation/en kann man als Angestellter einer Sicherheitsfirma in Einlassbereichen gastgewerblicher Diskotheken arbeiten?",
+      "options": [
+        "A) Sachkundenachweis nach §34a GewO",
+        "B) 80-stündige Unterrichtung",
+        "C) Erfolgreich abgeschlossene Berufsausbildung Fachkraft für Schutz und Sicherheit",
+        "D) 40-stündige Unterrichtung"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Türsteher in Diskotheken benötigen Sachkundenachweis oder Fachkraftausbildung"
+    },
+    {
+      "id": "GEW_055",
+      "question": "Wie nennt man die Zulassung eines Unternehmens, um im Sicherheitsbereich tätig werden zu dürfen?",
+      "options": [
+        "A) Bewachungserlaubnis",
+        "B) Sicherheitsdiensterlaubnis",
+        "C) Schutzerlaubnis",
+        "D) Wacherlaubnis"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Die offizielle Bezeichnung ist Bewachungserlaubnis nach §34a GewO"
+    }
+  ]
+}

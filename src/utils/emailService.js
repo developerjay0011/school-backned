@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 class EmailService {
     static transporter = nodemailer.createTransport({
@@ -106,6 +107,157 @@ info@bildungsakademie-deutschland.com`,
             console.log(`Attendance list email sent for BG Number: ${bgNumber}`);
         } catch (error) {
             console.error('Error sending attendance list email:', error);
+            throw error;
+        }
+    }
+
+    static async sendInvoiceReminderEmail({ email, invoiceNumber, bgNumber, invoiceDate, dueDate, amount, pdfPath }) {
+        if (!email) {
+            console.log('No email address provided');
+            return;
+        }
+
+        const mailOptions = {
+            from: process.env.SMTP_USER,
+            to: email,
+            cc: 'info@bad.de',
+            subject: `Mahnung für RN: ${invoiceNumber} für BG-Nummer: ${bgNumber}`,
+            text: `Sehr geehrte Damen und Herren,
+
+leider haben Sie die Rechnung mit der Nummer ${invoiceNumber} vom ${invoiceDate} noch nicht beglichen. Wir möchten Sie nun dringend bitten, die Zahlung der noch offenen Rechnung in Auftrag zu geben.
+
+Bitte achten Sie dringend auf die Einhaltung der Frist von 14 Tagen, da wir sonst gezwungen sind Verzugszinsen und Mahnkosten zu berechnen.
+
+Bitte überweisen Sie den fälligen Betrag von insgesamt ${amount} bis zum ${dueDate} auf unser Konto.
+
+Alle Einzelheiten finden Sie in der beigefügten PDF-Datei
+
+Haben Sie zwischenzeitlich die Rechnung beglichen, betrachten Sie dieses Schreiben als gegenstandslos.
+
+Mit freundlichen Grüßen
+
+BAD Bildungsakademie Deutschland GmbH
+Neue Hochstraße 50, 13347 Berlin
+Handelsregisternummer: HRB 251635B
+Tel.: +49 151 433 69879
+info@bildungsakademie-deutschland.com`,
+            attachments: [
+                {
+                    filename: `Mahnung_${invoiceNumber}.pdf`,
+                    path: pdfPath
+                },
+                {
+                    filename: 'logo.png',
+                    path: path.join(__dirname, '../assets/logo.png'),
+                    cid: 'company-logo'
+                }
+            ]
+        };
+
+        try {
+            await EmailService.transporter.sendMail(mailOptions);
+            console.log(`Invoice reminder email sent for Invoice Number: ${invoiceNumber}`);
+        } catch (error) {
+            console.error('Error sending invoice reminder email:', error);
+            throw error;
+        }
+    }
+
+    static async sendDischargeReportEmail({ email, bgNumber, measureTitle, measureNumber, pdfPath }) {
+        if (!email) {
+            console.log('No email address provided');
+            return;
+        }
+
+        const mailOptions = {
+            from: process.env.SMTP_USER,
+            to: email,
+            cc: 'info@bad.de',
+            subject: `Austrittsmeldung, BG-Nr: ${bgNumber}`,
+            text: `Sehr geehrte Damen und Herren,
+
+Ihr Kunde
+BG-Nummer: ${bgNumber}
+
+ist aus der Maßnahme:
+${measureTitle}
+mit der Maßnahme Nr: ${measureNumber}
+
+ausgetreten!
+
+Die Austrittsmeldung als PDF senden wir Ihnen als Anhang mit.
+
+Mit freundlichen Grüßen
+
+BAD Bildungsakademie Deutschland GmbH
+Neue Hochstraße 50, 13347 Berlin
+Handelsregisternummer: HRB 251635B
+Tel.: +49 151 433 69879
+info@bildungsakademie-deutschland.com`,
+            attachments: [
+                {
+                    filename: `Austrittsmeldung_${bgNumber}.pdf`,
+                    path: pdfPath
+                },
+                {
+                    filename: 'logo.png',
+                    path: path.join(__dirname, '../assets/logo.png'),
+                    cid: 'company-logo'
+                }
+            ]
+        };
+
+        try {
+            await EmailService.transporter.sendMail(mailOptions);
+            console.log(`Discharge report email sent for BG Number: ${bgNumber}`);
+        } catch (error) {
+            console.error('Error sending discharge report email:', error);
+            throw error;
+        }
+    }
+
+    static async sendTerminationReportEmail({ email, bgNumber, measureTitle, measureNumber, pdfPath }) {
+        if (!email) {
+            console.log('No email address provided');
+            return;
+        }
+
+        const mailOptions = {
+            from: process.env.SMTP_USER,
+            to: email,
+            cc: 'info@bad.de',
+            subject: `Abbruchsmeldung, BG-Nr: ${bgNumber}`,
+            text: `Sehr geehrte Damen und Herren,
+
+Ihr Kunde
+BG-Nummer: ${bgNumber}
+
+Hat die Maßnahme:
+${measureTitle}
+mit der Maßnahme Nr: ${measureNumber}
+
+abgebrochen!
+
+Die Abbruchsmeldung als PDF senden wir Ihnen als Anhang mit.
+
+Mit freundlichen Grüßen
+
+BAD Bildungsakademie Deutschland GmbH
+Neue Hochstraße 50, 13347 Berlin
+Handelsregisternummer: HRB 251635B
+Tel.: +49 151 433 69879
+info@bildungsakademie-deutschland.com`,
+            attachments: [{
+                filename: `Abbruchsmeldung_${bgNumber}.pdf`,
+                path: pdfPath
+            }]
+        };
+
+        try {
+            await EmailService.transporter.sendMail(mailOptions);
+            console.log(`Termination report email sent for BG Number: ${bgNumber}`);
+        } catch (error) {
+            console.error('Error sending termination report email:', error);
             throw error;
         }
     }

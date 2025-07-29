@@ -3,6 +3,7 @@ const db = require('../../config/database');
 const StudentModel = require('../../models/studentModel');
 const PDFGenerator = require('../../utils/pdfGenerator');
 const InvoiceReminderService = require('../../services/invoiceReminderService');
+const EmailService = require('../../utils/emailService');
 
 class StudentInvoiceController {
     static async toggleAutoDispatch(req, res) {
@@ -93,7 +94,31 @@ class StudentInvoiceController {
                 xml_url: pdfResult.xml.url
             });
             const createdInvoice = await StudentInvoice.getById(invoiceId);
-           
+
+            // Send invoice reminder email
+            if (studentData.authority.email) {
+                try {
+                    const dueDate = new Date(req.body.invoice_date);
+                    dueDate.setDate(dueDate.getDate() + 14); // Due date is 14 days after invoice date
+
+                    await EmailService.sendInvoiceReminderEmail({
+                        email: studentData.authority.email,
+                        invoiceNumber: req.body.invoice_number,
+                        bgNumber: studentData.authority.bg_number,
+                        invoiceDate: new Date(req.body.invoice_date).toLocaleDateString('de-DE'),
+                        dueDate: dueDate.toLocaleDateString('de-DE'),
+                        amount: new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(req.body.amount),
+                        pdfPath: pdfResult.pdf.path
+                    });
+                    console.log('Invoice reminder email sent successfully');
+                } catch (emailError) {
+                    console.error('Error sending invoice reminder email:', emailError);
+                    // Don't fail the request if email fails
+                }
+            } else {
+                console.log('No authority email found, skipping invoice reminder email');
+            }
+
             console.log("pdfResult",pdfResult);
             res.status(201).json({
                 success: true,
@@ -200,6 +225,28 @@ class StudentInvoiceController {
 
             await StudentInvoice.update(id, {...invoice,reminder_sent: 1});
             const updatedInvoice = await StudentInvoice.getById(id);
+
+            // Send invoice reminder email
+            console.log("studentData",studentData.authority_email);
+            if (studentData.authority_email) {
+                try {
+                    await EmailService.sendInvoiceReminderEmail({
+                        email: studentData.authority_email,
+                        invoiceNumber: invoice.invoice_number,
+                        bgNumber: studentData.bg_number,
+                        invoiceDate: invoice.invoice_date,
+                        dueDate: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toLocaleDateString('de-DE'),
+                        amount: invoice.amount.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }),
+                        pdfPath: path.join(__dirname, '../..', pdfResult.url)
+                    });
+                    console.log('Invoice reminder email sent successfully');
+                } catch (emailError) {
+                    console.error('Error sending invoice reminder email:', emailError);
+                    // Don't fail the request if email fails
+                }
+            } else {
+                console.log('No authority email found, skipping invoice reminder email');
+            }
 
             res.json({
                 success: true,

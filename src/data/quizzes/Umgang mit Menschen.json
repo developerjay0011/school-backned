@@ -1,0 +1,1246 @@
+{
+  "quiz_title": "Umgang mit Menschen",
+  "total_questions": 104,
+  "questions": [
+    {
+      "id": 1,
+      "question": "In der Psychologie versteht man unter \"Frustration\" ein negatives Gefühl, dass ggf. auch Aggressionen auslösen kann. Wodurch kann Frustration bei Menschen entstehen?",
+      "options": [
+        "A) Frustration entsteht, wenn eigene Interessen, Absichten, Bedürfnisse und / oder Ziele nicht erfüllt, bzw. erreicht werden können.",
+        "B) Frustration entsteht meist bei Jugendlichen aufgrund der pubertären Lebensphase.",
+        "C) Frustration entsteht auch, wenn Menschen unfair oder ungerecht behandelt werden.",
+        "D) Frustration entsteht durch Überkonzentration auf eine private oder dienstliche Aufgabe.",
+        "E) Frustration entsteht eher zufällig, meist ohne besonderen Grund oder Auslöser."
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Frustration entsteht hauptsächlich durch unerfüllte Bedürfnisse/Ziele und unfaire Behandlung"
+    },
+    {
+      "id": 2,
+      "question": "Welche Aussage/n zum \"Ersten Eindruck\" ist/sind richtig?",
+      "options": [
+        "A) Entsteht in den ersten ca. 20-30 Sekunden",
+        "B) Entsteht nur durch das Verhalten der anderen Person",
+        "C) Ist für Sicherheitsmitarbeiter nicht wichtig",
+        "D) Entsteht bewusst und unbewusst"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Der erste Eindruck bildet sich schnell und sowohl bewusst als auch unbewusst"
+    },
+    {
+      "id": 3,
+      "question": "Was sind Zeichen des \"aktiven Zuhörens\"?",
+      "options": [
+        "A) Augenkontakt",
+        "B) Geschlossene, hängende Körperhaltung",
+        "C) Den Gegenüber ständig unterbrechen",
+        "D) Kopfnicken"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Aktives Zuhören zeigt sich durch Aufmerksamkeit und positive Körpersprache"
+    },
+    {
+      "id": 4,
+      "question": "Merkmale einer formellen Gruppe sind?",
+      "options": [
+        "A) Feste Struktur",
+        "B) Mitglieder haben sich selbst zusammengefunden",
+        "C) Mitglieder wurden von außen zusammengesetzt",
+        "D) Mind. 10 Mitglieder"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Formelle Gruppen haben feste Strukturen und werden von außen zusammengesetzt"
+    },
+    {
+      "id": 5,
+      "question": "Wie viel Prozent der Kommunikation machen die verbalen Signale einer Kommunikation aus?",
+      "options": [
+        "A) Ca. 50 %",
+        "B) Ca. 10%",
+        "C) Ca. 30 %",
+        "D) Ca. 90 %"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Verbale Signale machen nur einen kleinen Teil der Kommunikation aus"
+    },
+    {
+      "id": 6,
+      "question": "Was für Stressarten gibt es?",
+      "options": [
+        "A) Positiven und negativen Stress",
+        "B) Es gibt nur negativen Stress",
+        "C) Plus-Stress und Minus-Stress",
+        "D) Dis-Stress und Eu-Stress"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Stress kann positiv (Eustress) oder negativ (Distress) sein"
+    },
+    {
+      "id": 7,
+      "question": "Menschenkenntnis...",
+      "options": [
+        "A) Muss ein Auszubildender als Fachkraft für Schutz und Sicherheit während der Ausbildung abschließend sammeln.",
+        "B) Wird im Laufe des Lebens erworben",
+        "C) Kann Sicherheitsmitarbeiter vor Fehlern im Umgang mit Menschen bewahren",
+        "D) Kann nur durch Gespräche mit anderen Personen erworben werden"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Menschenkenntnis entwickelt sich lebenslang und hilft bei professionellem Handeln"
+    },
+    {
+      "id": 8,
+      "question": "Welche der nachfolgend geschilderten Handlungen ist nicht als aggressives Verhalten zu bezeichnen?",
+      "options": [
+        "A) Das Schlagen einer Person.",
+        "B) Das Beleidigen eines Passanten.",
+        "C) Das bewusste Beschädigen eines parkenden Pkw.",
+        "D) Das Besprühen eines öffentlichen Verkehrsmittels.",
+        "E) Das fahrlässige Beschädigen eines parkenden Pkw beim einfahren in eine Parklücke."
+      ],
+      "correct_answers": ["E"],
+      "explanation": "Fahrlässige Handlungen sind nicht aggressiv, da sie nicht vorsätzlich erfolgen"
+    },
+    {
+      "id": 9,
+      "question": "Was sollte man beim ersten Kontakt mit fremden Personen beachten?",
+      "options": [
+        "A) Zur Begrüßung die Hände schütteln",
+        "B) Immer lachen",
+        "C) Ausreichend Abstand einhalten",
+        "D) Grundsätzlich mit \"Sie\" ansprechen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Respektvoller Abstand und höfliche Anrede sind wichtig"
+    },
+    {
+      "id": 10,
+      "question": "Zwischen wem findet eine Kommunikation statt?",
+      "options": [
+        "A) Übermittler",
+        "B) Sender",
+        "C) Transmitter",
+        "D) Empfänger"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Kommunikation findet zwischen Sender und Empfänger statt"
+    },
+    {
+      "id": 11,
+      "question": "Wie sollte Kritik geäußert werden?",
+      "options": [
+        "A) Harsch und autoritär",
+        "B) Unfair und rechthaberisch",
+        "C) Ruhig und sachlich",
+        "D) Respektvoll, mit Verständnis für andere Ansichten"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Konstruktive Kritik ist sachlich und respektvoll"
+    },
+    {
+      "id": 12,
+      "question": "Bei einer Zeugenbefragung stellt man immer wieder fest, dass die Zeugen abweichende Angaben machen. Die Zeugen sind aber von der Richtigkeit ihrer Beobachtungen überzeugt. Gründe dafür könnten sein:",
+      "options": [
+        "A) Gesundheitszustand, Alter und Abstammung.",
+        "B) Unterschiedliche Interessenlage und Aufmerksamkeitsrichtung.",
+        "C) Angst, Unsicherheit und Aberglaube.",
+        "D) Unterschiedliche Wahrnehmungs- und Erinnerungsfähigkeit."
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Verschiedene Perspektiven und individuelle Wahrnehmungsunterschiede führen zu abweichenden Aussagen"
+    },
+    {
+      "id": 13,
+      "question": "Mit welchem Verhalten muss man bei alkoholisierten Personen rechnen?",
+      "options": [
+        "A) Probleme mit der Motorik (Gehen, Stehen etc.)",
+        "B) Sind immer freundlich",
+        "C) Haben ein vermindertes Distanzverhalten",
+        "D) Haben ein erhöhtes Schmerzempfinden"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Alkohol beeinträchtigt Motorik und Distanzwahrnehmung"
+    },
+    {
+      "id": 14,
+      "question": "Kritik...",
+      "options": [
+        "A) ...Sollte offen und sachlich vorgetragen werden.",
+        "B) ...Bietet Chance zur Veränderung und sollte entsprechend offen aufgenommen werden.",
+        "C) ...Ist grundsätzlich eher unangebracht und schlecht für die Teambildung."
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Konstruktive Kritik ist wichtig für Entwicklung und Verbesserung"
+    },
+    {
+      "id": 15,
+      "question": "Frustration ...",
+      "options": [
+        "A) Ist ein rein äußerer Zustand",
+        "B) Bildet sich, wenn Erwartungen nicht erfüllt werden",
+        "C) Ist oft die Vorstufe von Aggression",
+        "D) Hilft Sicherheitsmitarbeiter im Umgang mit Personen"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Frustration entsteht durch unerfüllte Erwartungen und kann zu Aggression führen"
+    },
+    {
+      "id": 16,
+      "question": "Unter dem sog. \"Ersten Eindruck\" versteht man das Gesamtbild / den Gesamteindruck, dass man sich in den ersten 3 bis 30 Sekunden von einer Person, einer Personengruppe, einer Sache oder einer Situation macht. Welche der folgenden Aussagen zum ersten Eindruck trifft nicht zu?",
+      "options": [
+        "A) Der erste Eindruck entsteht unbewusst und beeinflusst uns im weiteren Verhalten der Person gegenüber.",
+        "B) Der erste Eindruck ist grundsätzlich falsch.",
+        "C) Der erste Eindruck ist in der Regel immer richtig und sollte somit als Maßstab für das weitere Verhalten und Auftreten der Person gegenüber genommen werden.",
+        "D) Der erste Eindruck wird in den ersten 3 bis 30 Sekunden einer Person gegenüber gebildet."
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Der erste Eindruck ist weder grundsätzlich falsch noch immer richtig"
+    },
+    {
+      "id": 17,
+      "question": "Welche Aussagen zur Panik sind korrekt?",
+      "options": [
+        "A) Panik beschreibt einen Zustand der intensiven Angst vor einer realen oder eingebildeten Bedrohung.",
+        "B) Panik äußert sich in Paniksturm oder Panikstarre.",
+        "C) Panik heißt, dass mehrere Menschen das gleiche tun.",
+        "D) Panik kann nur von einer Person ausgehen."
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Panik ist intensive Angst, die sich in Sturm oder Starre äußern kann"
+    },
+    {
+      "id": 18,
+      "question": "Vorurteile...",
+      "options": [
+        "A) Sind stets richtig.",
+        "B) Können für die erste Einschätzung fremder Personen hinderlich sein.",
+        "C) Werden durch Erfahrung oder der Übernahme ungeprüfter Meinungen anderer gebildet.",
+        "D) Können positiv als auch negativ sein."
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Vorurteile entstehen durch Erfahrungen oder übernommene Meinungen und können positiv oder negativ sein"
+    },
+    {
+      "id": 19,
+      "question": "Wie sollte man Kritik äußern?",
+      "options": [
+        "A) Seinen Emotionen freien Lauf lassen",
+        "B) Ruhig und sachlich",
+        "C) So, dass man sich immer durchsetzt",
+        "D) Lösungsvorschläge anbieten"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Kritik sollte sachlich und konstruktiv mit Lösungsvorschlägen geäußert werden"
+    },
+    {
+      "id": 20,
+      "question": "Sie bewachen ein Objekt und stellen bei einem Rundgang fest, dass eine Person am Haupteingang sitzt und gerade dabei ist, sich eine Spritze in die Armbeuge zu setzen. Wie verhalten Sie sich?",
+      "options": [
+        "A) Ich versuche der Person die Spritze zu entreißen, da dies einen Verstoß gegen das Betäubungsmittelgesetz (BtmG) darstellt.",
+        "B) Je nach Lage und Aggressivität der Person rufe ich Verstärkung - Polizei oder andere Sicherheitsmitarbeiter.",
+        "C) Ich störe die Person dabei und werfe sie direkt vom Gelände.",
+        "D) Ich lasse die Person zunächst in Ruhe ihre Rauschmittel konsumieren und spreche sie dann ruhig, im ausreichenden Abstand, an."
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Eigensicherung und deeskalierende Kommunikation sind wichtig"
+    },
+    {
+      "id": 21,
+      "question": "Ein neuer Mitarbeiter soll beurteilt werden. Woran könnte man erkennen, dass er ein geringes Selbstwertgefühl hat?",
+      "options": [
+        "A) Er ist von sich überzeugt und will überall im Mittelpunkt stehen.",
+        "B) Er ist ängstlich, konfliktscheu und kann sich nicht durchsetzen.",
+        "C) Er ist kontaktfreudig und hat keine Hemmungen.",
+        "D) Er ist zwar ängstlich, übernimmt aber gerne Aufgaben seiner Kollegen."
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Geringes Selbstwertgefühl zeigt sich in Ängstlichkeit und Konfliktscheu"
+    },
+    {
+      "id": 22,
+      "question": "Sie arbeiten an der Zufahrtskontrolle eines Parkplatzes. Ein Pressemitarbeiter kommt auf sie zugerast, hält an und schreit \"Ich darf hier durch\" – der Parkplatz ist jedoch voll – wie reagieren Sie?",
+      "options": [
+        "A) Ich bleibe besonnen und erkläre ihm ruhig und sachlich, dass das Parken hier nicht mehr möglich ist.",
+        "B) Ich öffne die Fahrertür und sage \"So Freundchen, aufstehen, Personenkontrolle\"",
+        "C) Falls der Fahrer doch an mir vorbeifahren sollte, informiere ich meinen Einsatzleiter und bespreche mit ihm weitere Maßnahmen - anstatt die Situation eskalieren zu lassen.",
+        "D) Ich sage ihm meine Meinung und beleidige ihn."
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Professionelle Deeskalation und sachliche Information sind richtig"
+    },
+    {
+      "id": 23,
+      "question": "Das Fahren eines luxuriösen Autos ist...",
+      "options": [
+        "A) Ein Grundbedürfnis",
+        "B) Ein sekundäres Motiv",
+        "C) Ein erworbenes Motiv",
+        "D) Ein primäres Motiv"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Luxusgüter sind sekundäre/erworbene Motive, keine Grundbedürfnisse"
+    },
+    {
+      "id": 24,
+      "question": "Eigensicherung...",
+      "options": [
+        "A) Ist das Absichern der eigenen Person gegen äußere Einflüsse",
+        "B) Kann durch Aufmerksamkeit erreicht werden",
+        "C) Kann nur durch Schutzausrüstung erreicht werden",
+        "D) Muss bei Gesprächen mit fremden Personen im Dienst nicht beachtet werden"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Eigensicherung schützt vor Gefahren und wird durch Aufmerksamkeit erreicht"
+    },
+    {
+      "id": 25,
+      "question": "Wie reagiert ein Sicherheitsmitarbeiter auf die Beleidigung eines Gastes am Einlass zu einer Veranstaltung?",
+      "options": [
+        "A) Emotional",
+        "B) Sachlich",
+        "C) Aggressiv",
+        "D) Ruhig"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Professionelle Reaktion ist sachlich und ruhig"
+    },
+    {
+      "id": 26,
+      "question": "Was versteht man unter dem Begriff \"Psychologie\"? Bzw. wie wird diese definiert?",
+      "options": [
+        "A) Psychologie ist die Wissenschaft, die sich ausschließlich mit dem Verhalten von Menschen und den daraus resultierenden Folgen beschäftigt.",
+        "B) Psychologie ist die Wissenschaft, die sich mit dem Erleben oder dem Verhalten von Menschen, sowie den Ursachen beschäftigt.",
+        "C) Psychologie ist die Wissenschaft, die sich mit dem Erleben und dem Verhalten von Menschen, sowie deren Ursachen, Folgen und Bedingungen beschäftigt."
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Psychologie umfasst Erleben, Verhalten und deren Bedingungen umfassend"
+    },
+    {
+      "id": 27,
+      "question": "Die Person reagiert unfreundlich auf Ihre Ansprache. Was können Sie noch tun, um die Situation deeskalierend zu lösen?",
+      "options": [
+        "A) Die Sachen wegnehmen damit die Person aufsteht",
+        "B) Mit Konsequenzen drohen",
+        "C) Die Person fixieren und rausbringen",
+        "D) Der Person beim Aufstehen helfen"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Hilfsbereitschaft wirkt deeskalierend"
+    },
+    {
+      "id": 28,
+      "question": "Auf welchen der folgenden Angaben beruht u.a. jegliches Verhalten von Menschen?",
+      "options": [
+        "A) Verstand",
+        "B) Geltung",
+        "C) Selbstachtung",
+        "D) Trieb"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Menschliches Verhalten basiert auf Verstand und Trieben"
+    },
+    {
+      "id": 29,
+      "question": "Welche Bedeutung hat die Menschenkenntnis für Sicherheitskräfte im Bewachungsgewerbe?",
+      "options": [
+        "A) Große Bedeutung.",
+        "B) Geringe Bedeutung.",
+        "C) Hat primär nur ausländischen Mitbürgern gegenüber Bedeutung.",
+        "D) Ohne eine gute Menschenkenntnis kann ich mein Gegenüber nicht, bzw. nur schlecht einschätzen."
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Menschenkenntnis ist essentiell für die Einschätzung von Personen"
+    },
+    {
+      "id": 30,
+      "question": "Was können \"Stressoren\" (Stressursachen) sein?",
+      "options": [
+        "A) Ein förderliches, innerbetriebliches Betriebsklima.",
+        "B) Negative und situative Einflüsse.",
+        "C) Dauerhafter Lärm."
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Stressoren sind negative Einflüsse wie Lärm"
+    },
+    {
+      "id": 31,
+      "question": "Wie viel Prozent der Kommunikation machen die nonverbalen Signale einer Kommunikation aus?",
+      "options": [
+        "A) Ca. 10 %",
+        "B) Ca. 60 %",
+        "C) Ca. 50 %",
+        "D) Ca. 90 %"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Nonverbale Signale dominieren die Kommunikation"
+    },
+    {
+      "id": 32,
+      "question": "Wie reagieren Menschen am häufigsten in Paniksituationen?",
+      "options": [
+        "A) Ruhelos.",
+        "B) Bewegungslos.",
+        "C) Unkontrolliert.",
+        "D) Resignierend.",
+        "E) Vorsichtig."
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Panik führt zu Starre oder unkontrollierten Reaktionen"
+    },
+    {
+      "id": 33,
+      "question": "Was signalisiert eine aufrechte Körperhaltung und gehaltener Blickkontakt?",
+      "options": [
+        "A) Überhöhtes Selbstwertgefühl",
+        "B) Geringes Selbstvertrauen",
+        "C) Gutes Selbstvertrauen",
+        "D) Interesse"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Positive Körpersprache zeigt Selbstvertrauen und Interesse"
+    },
+    {
+      "id": 34,
+      "question": "Was sind mögliche Faktoren für Eu-Stress?",
+      "options": [
+        "A) Gespräch mit der Geschäftsführung über wichtige, kommende Einsätze",
+        "B) Lärm und Gedränge auf einem Festival",
+        "C) Überarbeitung in der Weihnachtszeit",
+        "D) Stecken erreichbarer Ziele"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Eustress entsteht durch positive Herausforderungen und erreichbare Ziele"
+    },
+    {
+      "id": 35,
+      "question": "Was sind Suggestivfragen?",
+      "options": [
+        "A) Immer auch geschlossene Fragen",
+        "B) Eine Frage die eine Begründung als Antwort erfordert",
+        "C) Eine Frage die nur zwei Antwortmöglichkeiten bietet",
+        "D) Eine Frage bei der vom Fragesteller eine bestimmte Antwort forciert wird"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Suggestivfragen lenken zu einer bestimmten Antwort"
+    },
+    {
+      "id": 36,
+      "question": "Welche Fragearten sind bei der Befragung von Personen vorrangig nicht zu empfehlen?",
+      "options": [
+        "A) Suggestivfragen.",
+        "B) Geschlossene Fragen.",
+        "C) Offene Fragen."
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Suggestiv- und geschlossene Fragen schränken Antworten ein"
+    },
+    {
+      "id": 37,
+      "question": "An einer Diskothekentür wird durch den Sicherheitsmitarbeiter eine Gruppe Jugendlicher abgewiesen. Diese sind sehr verärgert darüber, verlassen aber den Bereich. 20 m weiter dreht sich ein Jugendlicher um und wirft eine Flasche auf die Sicherheitsmitarbeiter. Was für Gründe kann es für das Verhalten des Jugendlichen geben?",
+      "options": [
+        "A) Stärke vor seiner Gruppe zeigen",
+        "B) Den Gruppenmitgliedern Angst machen",
+        "C) Angriff auf unbeteiligte Personen",
+        "D) Rebellion gegen Erwachsene"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Jugendliche wollen oft Stärke zeigen und rebellieren gegen Autorität"
+    },
+    {
+      "id": 38,
+      "question": "Was ist Körpersprache?",
+      "options": [
+        "A) Äußere Erscheinung, Signale des Körpers",
+        "B) Lautstärke",
+        "C) Mimik und Gestik",
+        "D) Deutlichkeit der Aussprache"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Körpersprache umfasst alle nonverbalen Signale des Körpers"
+    },
+    {
+      "id": 39,
+      "question": "Die Vorverurteilung anderer Personen...",
+      "options": [
+        "A) Kann nur schwer rückgängig gemacht werden",
+        "B) Ist fördernd im Umgang mit fremden Personen",
+        "C) Ist wichtig um sich auf den Gegenüber einstellen zu können",
+        "D) Basiert auf Erfahrungen oder Meinung anderer"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Vorurteile sind schwer korrigierbar und basieren auf Erfahrungen/Meinungen"
+    },
+    {
+      "id": 40,
+      "question": "In Ihrer Tätigkeit kann es zu potentiell konfliktgeladenen Situationen kommen. Was sind korrekte und professionelle Verhaltensweisen um einer möglichen Eskalation schon im Vorfeld vorzubeugen?",
+      "options": [
+        "A) Bei einer Kontrollsituation bei der es zu einem Konflikt kommt, bleibe ich zwar in der Sache hart, aber trotzdem im Ton verbindlich und freundlich.",
+        "B) Ich mache meinem Gegenüber unter allen Umständen klar, warum er sich im Unrecht befindet.",
+        "C) Ich greife die Argumente meines Gegenübers auf und nehme Sie zur Kenntnis, mache aber mit deutlichen Worten klar, dass dieser sich im Unrecht befindet.",
+        "D) Ich unterschreite nicht die \"Intimzone\" meines Gegenübers und wahre somit sein Distanzbedürfnis."
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Freundlicher Ton und respektvoller Abstand wirken deeskalierend"
+    },
+    {
+      "id": 41,
+      "question": "Mit welchen Verhaltensweisen muss bei alkoholisierten Personen gerechnet werden?",
+      "options": [
+        "A) Alkoholisierte Personen zeigen in der Regel verzögerte Reaktionen und haben Schwierigkeiten sich koordiniert zu bewegen.",
+        "B) Alkoholisierte Personen haben häufig Schwierigkeiten eine angebrachte Distanz zu wahren.",
+        "C) Alkoholisierte Personen sind aufgrund des Alkoholkonsums in der Regel deutlich entspannter."
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Alkohol beeinträchtigt Koordination und Distanzverhalten"
+    },
+    {
+      "id": 42,
+      "question": "Jeder Mensch hat ein individuelles Distanzbedürfnis anderen Menschen gegenüber. Dementsprechend gilt es die entsprechenden Distanzzonen in der Umgebung des Menschen zu kennen und zu wahren. Insbesondere in der täglichen Arbeit als Sicherheitskraft. Welcher der folgenden Aussagen können Sie zustimmen?",
+      "options": [
+        "A) Im sog. \"erweiterten Nahbereich\" (auch \"persönliche Zone\" genannt) geht es um die möglichst zu wahrende Distanz zu Familienangehörigen, Freunden oder u.a. dem Partner.",
+        "B) In der sog. \"gesellschaftlichen Zone\" (auch \"soziale Zone\" genannt) geht es um die möglichst zu wahrende Distanz bei öffentlichen Reden oder dem Abstand einem Publikum gegenüber.",
+        "C) Im sog. \"erweiterten Nahbereich\" (auch \"persönliche Zone\" genannt) geht es um die möglichst zu wahrende Distanz zu Freunden, Gleichrangigen oder beispielsweise netten Kollegen."
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Die persönliche Zone gilt für Freunde und Kollegen"
+    },
+    {
+      "id": 43,
+      "question": "Ein geübter Sicherheitsmitarbeiter...",
+      "options": [
+        "A) Beeinflusst seinen Gegenüber so, dass dessen Erwartungen nicht erfüllt werden",
+        "B) Geht auf Vorschläge des Gegenüber ein",
+        "C) Setzt sich immer durch",
+        "D) Versucht den Gegenüber zu verstehen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Professionelle Kommunikation bedeutet Verständnis und Kompromissbereitschaft"
+    },
+    {
+      "id": 44,
+      "question": "Für die Tätigkeit als Mitarbeiter im Wach- und Sicherheitsgewerbe ist der Erwerb von Menschenkenntnis immens wichtig und für ein professionelles berufliches Handeln zwingend erforderlich. Wie kann entsprechende Menschenkenntnis erworben werden?",
+      "options": [
+        "A) Durch das Lesen entsprechender Fachliteratur.",
+        "B) Ausschließlich durch das Beobachten von Mitmenschen.",
+        "C) Durch das Aufnehmen der Bewertung Dritter über Personen und Situationen.",
+        "D) Durch Gespräche mit anderen Menschen."
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Menschenkenntnis wird durch Fachliteratur und Gespräche erworben"
+    },
+    {
+      "id": 45,
+      "question": "Unfälle und ähnliche Szenarien haben eine anziehende Wirkung auf Schaulustige deren Neugier geweckt wird. Mit welchen Verhaltensweisen sollte man Neugier (bzw. den Schaulustigen) entgegentreten?",
+      "options": [
+        "A) Sie um Verständnis und Mithilfe bitten.",
+        "B) Ihnen ihre Neugier vorwerfen und ihnen mit einer Anzeige wegen unterlassener Hilfeleistung drohen.",
+        "C) Neugierige Gaffer beschimpfen und provozieren.",
+        "D) Sachliche Informationen geben um die Menge zu zerstreuen."
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Höfliche Bitte um Verständnis und sachliche Information sind angemessen"
+    },
+    {
+      "id": 46,
+      "question": "Was ist das Fremdbild?",
+      "options": [
+        "A) Das Bild der eigenen Person für andere Menschen.",
+        "B) Das Bild, welches andere Personen von einem haben.",
+        "C) Ein Bild von fremden Personen welches man sich selbst bildet.",
+        "D) Das Bild, was man selbst von sich hat."
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Fremdbild ist wie andere uns sehen bzw. wie wir auf andere wirken"
+    },
+    {
+      "id": 47,
+      "question": "Was ist eine Gruppe?",
+      "options": [
+        "A) Eine Gruppe ist eine Ansammlung von einer begrenzten Anzahl an Personen die in einer gewissen Beziehung zueinander stehen.",
+        "B) Eine Gruppe ist eine Masse, die aber organisiert sein kann oder in der Personen ähnlich, oder sogar zusammen handeln.",
+        "C) Eine Gruppe ist eine lockere Ansammlung von Personen, die in keiner festen Beziehung zueinander stehen.",
+        "D) Eine Gruppe sind Personen die durch Angst, Schrecken oder ähnlichen Gefühlen in Bewegung gerät."
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Eine Gruppe besteht aus Personen mit Beziehung zueinander"
+    },
+    {
+      "id": 48,
+      "question": "Warum ist der gekonnte Umgang mit Menschen wichtig für Sicherheitsmitarbeiter?",
+      "options": [
+        "A) Sicherheitsmitarbeiter haben mit vielen unterschiedlichen Personen zu tun, der gekonnte Umgang mit verschiedenen Charakteren sollte geübt sein.",
+        "B) Sicherheitsmitarbeiter müssen wissen was jede Körperbewegung einer anderen Person zu bedeuten hat",
+        "C) Man muss immer die passende Antwort auf eine verbalen Angriff haben",
+        "D) Im Umgang mit Menschen und der richtigen Kommunikation kann man als Sicherheitsmitarbeiter oft mehr bewegen als mit körperlichen Zwangsmitteln"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Vielfältige Kontakte erfordern Menschenkenntnis, Kommunikation ist oft effektiver als Zwang"
+    },
+    {
+      "id": 49,
+      "question": "Essen und Sexualität gehören zu...",
+      "options": [
+        "A) Den physiologischen Bedürfnissen",
+        "B) Den Bedürfnissen nach Selbstverwirklichung",
+        "C) Den individuellen Bedürfnissen",
+        "D) Den sozialen Bedürfnissen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Grundbedürfnisse sind physiologische Bedürfnisse nach Maslow"
+    },
+    {
+      "id": 50,
+      "question": "Unter \"Aggressionsverschiebung\" versteht man...",
+      "options": [
+        "A) ...Das aggressive Handeln gegen den Auslöser dieser Aggression.",
+        "B) ...Das Verdrängen der eigenen Aggressionen.",
+        "C) ...Das aggressive Verhalten gegen schwächere Personen oder Sachen, wenn der Verursacher dieser Aggression als zu mächtig empfunden wird.",
+        "D) ...Das aggressive Handeln gegen sich selbst."
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Aggressionsverschiebung richtet sich gegen schwächere Ziele"
+    },
+    {
+      "id": 51,
+      "question": "Die These, dass Kommunikation zu ca. 10-20% bewusst und zu 80-90 % unbewusst abläuft wurde in einem Modell verdeutlicht. Wie nennt man dieses Modell?",
+      "options": [
+        "A) \"Maslowsche-Pyramide\"",
+        "B) \"Johari-Fenster\"",
+        "C) \"Eisberg-Modell\"",
+        "D) \"Vier-Ohren-Modell\""
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Das Eisberg-Modell zeigt bewusste und unbewusste Kommunikation"
+    },
+    {
+      "id": 52,
+      "question": "Wozu führen Vorurteile häufig?",
+      "options": [
+        "A) Der Gegenüber kann das Vorurteil immer ausräumen",
+        "B) Weniger Konflikte",
+        "C) Personen werden evtl. falschen sozialen Gruppen zugeordnet",
+        "D) Fehlverhalten gegenüber anderen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Vorurteile führen zu falschen Zuordnungen und Fehlverhalten"
+    },
+    {
+      "id": 53,
+      "question": "Was können Gründe für ein geringes Selbstwertgefühl sein?",
+      "options": [
+        "A) Äußerung positiver Kritik anderer",
+        "B) Zu wenig Motivation und positive Rückmeldung",
+        "C) Misshandlung und Beleidigung durch Eltern im Kindes- und Jugendalter",
+        "D) Häufiger Zuspruch durch Besucher und Gäste"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Mangelnde Bestätigung und negative Erfahrungen senken das Selbstwertgefühl"
+    },
+    {
+      "id": 54,
+      "question": "Welche Aussage/n zum \"Vier-Ohren-Modell\" ist/sind korrekt?",
+      "options": [
+        "A) Der Empfänger nimmt alle 4 Ebenen bewusst wahr",
+        "B) Der Sender sendet bewusst auf allen 4 Ebenen",
+        "C) Eine Nachricht hat 4 unterschiedliche Seiten",
+        "D) Alle Ebenen haben den gleichen Anteil an einer Nachricht"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Das Vier-Ohren-Modell besagt, dass Nachrichten vier Seiten haben"
+    },
+    {
+      "id": 55,
+      "question": "Wie nennt man nichtsprachliche Signale?",
+      "options": [
+        "A) Inverbale Signale",
+        "B) Nonverbale Signale",
+        "C) Reversible Signale",
+        "D) Verbale Signale"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Nichtsprachliche Signale heißen nonverbale Signale"
+    },
+    {
+      "id": 56,
+      "question": "Für wen ist die gesellschaftliche Zone gut geeignet?",
+      "options": [
+        "A) Unbekannte Personen",
+        "B) Personen mit privatem Umgang",
+        "C) Personen mit emotionaler Bindung",
+        "D) Unbekannte Personen deren Handlung nicht sicher ist"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Die gesellschaftliche Zone eignet sich für unbekannte Personen"
+    },
+    {
+      "id": 57,
+      "question": "Was sind die \"4-Ebenen\" einer Nachricht?",
+      "options": [
+        "A) Sachaussage, Körperaussage, Beziehungsebene, Appellaussage",
+        "B) Sachaussage, Selbstaussage, Beziehungsebene, Appellaussage",
+        "C) Sachaussage, Selbstaussage, Situationsaussage, Appellaussage",
+        "D) Selbstaussage, Beziehungsebene, Appellaussage, Du-Aussage"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Die vier Ebenen sind: Sach-, Selbst-, Beziehungs- und Appellaussage"
+    },
+    {
+      "id": 58,
+      "question": "Was sollte ein Sicherheitsmitarbeiter nicht haben?",
+      "options": [
+        "A) Argumente",
+        "B) Angst",
+        "C) Respekt",
+        "D) Übermotivation"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Angst und Übermotivation behindern professionelles Arbeiten"
+    },
+    {
+      "id": 59,
+      "question": "Eine formelle Gruppe ist...",
+      "options": [
+        "A) ...Eine Gruppe die sich aus sich selbst heraus zusammengefunden und zusammengesetzt hat.",
+        "B) ...Eine Gruppe die mit \"Klammerfunktion\" von \"außen\" zusammengesetzt wurde.",
+        "C) ...Eine Gruppe, die wie der Name schon sagt, rein aus formellen Gründen erstellt wurde, wobei es völlig unerheblich ist, ob diese sich selbst zusammengefunden hat oder zusammengesetzt wurde."
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Formelle Gruppen werden von außen zusammengesetzt"
+    },
+    {
+      "id": 60,
+      "question": "Bei Großveranstaltungen kann es aufgrund von Ereignissen zu panikartigen Reaktionen kommen, wie beispielsweise der \"Panikstarre\" und dem \"Paniksturm\". Wie kommt es zu dieser Reaktion? Bzw. was ist potentielle Ursache dafür?",
+      "options": [
+        "A) Bei einer Panikreaktion sind Verstandes- und Gefühlsschicht weitestgehend ausgeschaltet und werden von der Triebschicht dominiert.",
+        "B) Bei einer Panikreaktion werden die Gefühls- und die Triebschicht weitestgehend von der Verstandesschicht dominiert.",
+        "C) Bei einer Panikreaktion kommt es zu Handlungen, zu denen es im \"Normalfall\" i.d.R. nicht kommen würde, da die Triebschicht den Selbsterhaltungs- (Überlebens-) Trieb steuert / darstellt."
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "In Panik dominiert die Triebschicht über Verstand und Gefühle"
+    },
+    {
+      "id": 61,
+      "question": "Das Eisbergmodell besagt...",
+      "options": [
+        "A) Dass 80-90 % der Kommunikation auf der Beziehungs- und Gefühlsebene ablaufen",
+        "B) Dass 30-40% der Kommunikation auf der Appellebene ablaufen",
+        "C) Dass 50-60 % der Kommunikation auf der Ebene der Selbstaussage ablaufen",
+        "D) Dass 10-20% der Kommunikation auf der Sachebene ablaufen"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Eisbergmodell: 80-90% Beziehungs-/Gefühlsebene, 10-20% Sachebene"
+    },
+    {
+      "id": 62,
+      "question": "Das \"Hochschaukeln eines Konflikts\" bezeichnet man auch als...",
+      "options": [
+        "A) Eskalation",
+        "B) Frustration",
+        "C) Deeskalation",
+        "D) Sturheit"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Hochschaukeln eines Konflikts ist Eskalation"
+    },
+    {
+      "id": 63,
+      "question": "Was sind nonverbale Signale?",
+      "options": [
+        "A) Nichtsprachliche Signale",
+        "B) Mimik und Gestik",
+        "C) Gesprächsbegleiter wie (\"Hm\",\"Ahja\",\"Okay\")",
+        "D) Sprachliche Signale"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Nonverbale Signale sind nichtsprachlich und umfassen Mimik/Gestik"
+    },
+    {
+      "id": 64,
+      "question": "Durch Überheblichkeit, Unsachlichkeit oder Missachtung der Persönlichkeit des Anderen, können Konflikte ausgelöst werden. Wie sollte sich der SMA verhalten, um Konflikte und Spannungen zu vermeiden?",
+      "options": [
+        "A) Wenn er bei der Kontrolle von Mitarbeitern unfreundlich angesprochen wird, sollte er sich nichts gefallen lassen und genauso unfreundlich reagieren.",
+        "B) Raucher im Rauchverbot sollte er heftig zur Rede stellen und diesen Vorwürfe gegenüber äußern.",
+        "C) Bei einer Konfliktsituation dem anderen zuhören, ihn ausreden lassen und auch mal Verständnis zeigen.",
+        "D) Schwierigen Menschen sollte er zeigen, dass er zwar in der Sache hart, im Ton aber trotzdem verbindlich und freundlich sein kann."
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Zuhören, Verständnis und freundlicher Ton bei klarer Sache vermeiden Konflikte"
+    },
+    {
+      "id": 65,
+      "question": "Bei dem Umgang mit alkoholisierten Menschen müssen sie in Ihrer Tätigkeit als SMA mit folgenden Begebenheiten rechnen?",
+      "options": [
+        "A) Betrunkene sind i.d.R. lichtempfindlicher als nüchterne Personen.",
+        "B) Betrunkene reagieren ggf. impulsiv und sind schwer zu kontrollieren.",
+        "C) Man sollte sich von Betrunkenen nicht beleidigen lassen, da man ansonsten den Respekt seiner Kollegen verliert und darauf sofort reagieren.",
+        "D) Betrunkene sind zurückhaltend und folgen immer den Anweisungen des Sicherheitspersonals."
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Alkoholisierte sind lichtempfindlich und reagieren impulsiv"
+    },
+    {
+      "id": 66,
+      "question": "Als Sicherheitsmitarbeiter...",
+      "options": [
+        "A) Ist die Nutzung einer Standardgesprächsführung sinnvoll",
+        "B) Sollte man jeden Menschen individuell behandeln",
+        "C) Sollte man sich immer auf seinen ersten Eindruck verlassen",
+        "D) Muss man sich auf den Gegenüber einstellen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Individuelle Behandlung und Anpassung an das Gegenüber sind wichtig"
+    },
+    {
+      "id": 67,
+      "question": "Personen die scheinbar mehr als überzeugt von sich sind und ein entsprechendes Überwertigkeitsgefühl zu haben scheinen, legen häufig ein arrogantes und / oder überhebliches Verhalten an den Tag. Diese Personen sind...",
+      "options": [
+        "A) ...Selbstbewusst und verfügen über ein starkes und gesundes Selbstbewusstsein.",
+        "B) ...In aller Regel stark von sich selbst überzeugt und verfügen somit grundsätzlich über ein starkes Selbstbewusstsein.",
+        "C) ...Häufig von Minderwertigkeitsgefühlen betroffen, welche sie durch das benannte Auftreten versuchen zu kaschieren und zu kompensieren."
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Überheblichkeit kompensiert oft Minderwertigkeitsgefühle"
+    },
+    {
+      "id": 68,
+      "question": "In welchem Abstand sollte man mit fremden Personen bei einem Gespräch in normaler Geräuschkulisse möglichst stehen?",
+      "options": [
+        "A) Ca. 1m",
+        "B) Ca. 2 m",
+        "C) Ca. 0,5m",
+        "D) Ca. 5 m"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Bei Gesprächen mit Fremden ist ca. 2m Abstand angemessen"
+    },
+    {
+      "id": 69,
+      "question": "Sie sind als Kaufhausdetektiv beschäftigt. Im Rahmen dieser Tätigkeit wird es erforderlich, dass Sie den Beschuldigten zum Sachverhalt befragen müssen. Welche Frageart / en sollte man bei einer Befragung bevorzugt anwenden, um an die gewünschten, bzw. erforderlichen Informationen zu gelangen?",
+      "options": [
+        "A) Offene Fragen.",
+        "B) Suggestivfragen.",
+        "C) Geschlossene Fragen."
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Offene Fragen liefern mehr Informationen bei Befragungen"
+    },
+    {
+      "id": 70,
+      "question": "Wie können Konflikte provoziert werden?",
+      "options": [
+        "A) Durch nonverbales Verhalten (z.B. Anrempeln)",
+        "B) Durch verbale Äußerungen (z.B. Beleidigungen)",
+        "C) Nur durch nonverbales Verhalten",
+        "D) Durch das Anbringen sachlicher Argumente"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Konflikte können durch verbales und nonverbales Verhalten provoziert werden"
+    },
+    {
+      "id": 71,
+      "question": "Sicherheitsmitarbeiter werden fast täglich mit Konflikten konfrontiert. Wie sollte sich ein Mitarbeiter verhalten?",
+      "options": [
+        "A) Konflikte sollten schon im Kern erkannt und durch geschickte Gesprächsführung eine Eskalation verhindert werden.",
+        "B) Sollte sich der Aggressor bereits in der Stufe der körperlichen Aggression befinden so ist einer körperlichen Auseinandersetzung nicht mehr aus dem Weg zu gehen.",
+        "C) Um Konfrontationen vorzubeugen sollte ein Sicherheitsmitarbeiter auch mal von seiner Linie abweichen und auf Kompromisse eingehen, wenn diese dem dienstlichen Auftrag nicht widersprechen.",
+        "D) Es ist immer wichtig strikt den eigenen Auftrag umzusetzen."
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Früherkennung von Konflikten und angemessene Kompromisse sind wichtig"
+    },
+    {
+      "id": 72,
+      "question": "Wer erstellte das \"Vier-Ohren-Modell\"?",
+      "options": [
+        "A) Abraham Maslow",
+        "B) Schulz von Thun",
+        "C) Kurt Lang",
+        "D) Wulf D. Hund"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Schulz von Thun entwickelte das Vier-Ohren-Modell"
+    },
+    {
+      "id": 73,
+      "question": "Welche Signale gehören zu den nonverbalen Signalen?",
+      "options": [
+        "A) Text des Gesagten",
+        "B) Mimik und Gestik",
+        "C) Körperhaltung",
+        "D) Tonhöhe"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Mimik, Gestik und Körperhaltung sind nonverbale Signale"
+    },
+    {
+      "id": 74,
+      "question": "Warum, Wie und Weshalb sind...",
+      "options": [
+        "A) Begründungsfragen",
+        "B) Suggestivfragen",
+        "C) Geschlossene Fragen",
+        "D) Offene Fragen"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "W-Fragen sind offene Fragen und Begründungsfragen"
+    },
+    {
+      "id": 75,
+      "question": "Ihr Auszubildender als Fachkraft für Schutz und Sicherheit hatte auf der letzten Veranstaltung eine Auseinandersetzung mit einem Gast welche, aufgrund des Verhaltens des Azubis, in einer Schlägerei endete. Was sagen Sie zu Ihrem Auszubildenden um Ihn über den Sachverhalt, bezüglich des Umgangs mit Menschen, aufzuklären?",
+      "options": [
+        "A) \"Wir dürfen als Sicherheitsmitarbeiter für unsere Kunden keine Kompromisse eingehen. Daher haben Sie alles richtig gemacht.\"",
+        "B) \"Wichtig ist, dass man immer autoritär auftritt. Wer nicht hören kann, muss fühlen.\"",
+        "C) \"Als Sicherheitsmitarbeiter sollten wir uns auf Konflikte nicht einlassen, sondern diese versuchen zu deeskalieren.\"",
+        "D) \"Auch aggressive Besucher kann man mittels der richtigen Gesprächsführung zu einer friedlichen Lösung bringen.\""
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Deeskalation und professionelle Gesprächsführung sind wichtig"
+    },
+    {
+      "id": 76,
+      "question": "Vorurteile...",
+      "options": [
+        "A) ...Sind vorgefasste und nicht geprüfte Meinungen über Personen, Personengruppen, Sachen oder Situationen, welche ohne eigene Erfahrungen übernommen werden.",
+        "B) ...Sind subjektiv geprägte Meinungen und werden nicht immer, bzw. häufig nicht bestätigt, können uns aber helfen wachsamer gegenüber Dritten zu sein und sollten grundsätzlich überprüft werden.",
+        "C) Erziehung und Sozialisation sind kein prägender Einfluss auf die Bildung von Vorurteilen.",
+        "D) ...Sind vorgefasste und nicht geprüfte Meinungen über Personen, Personengruppen, Sachen oder Situationen, welche ohne eigene Erfahrungen übernommen werden und daher grundsätzlich schlecht."
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Vorurteile sind vorgefasste Meinungen, die überprüft werden sollten"
+    },
+    {
+      "id": 77,
+      "question": "Jugendliche...",
+      "options": [
+        "A) Sind immer bereit gegebene Anweisungen umzusetzen",
+        "B) Sollten mit \"Du\" angesprochen werden",
+        "C) Neigen dazu sich vor ihren Freunden beweisen zu müssen",
+        "D) Können ein unsicheres Auftreten zeigen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Jugendliche wollen sich oft beweisen und können unsicher auftreten"
+    },
+    {
+      "id": 78,
+      "question": "Wodurch kann Stress entstehen?",
+      "options": [
+        "A) Laute Musik und extremes Licht",
+        "B) Zu viele Arbeitsstunden pro Woche",
+        "C) Mehrere Pausen während der Arbeit",
+        "D) Ausführliche Einarbeitung durch einen Ausbilder"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Lärm, extremes Licht und Überarbeitung verursachen Stress"
+    },
+    {
+      "id": 79,
+      "question": "Ein Fremdbild...",
+      "options": [
+        "A) Ist das Bild was andere Personen von mir haben.",
+        "B) Ist das Bild was ich von mir selbst habe.",
+        "C) Ist das Bild welches sowohl mir als auch Fremden verborgen bleibt.",
+        "D) Ist das Bild was andere Personen über sich haben."
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Fremdbild ist die Sicht anderer auf mich"
+    },
+    {
+      "id": 80,
+      "question": "Was ist unter dem Begriff \"Psychologie\" zu verstehen?",
+      "options": [
+        "A) Die Lehre von der Seele des Menschen.",
+        "B) Die Wissenschaft, die sich mit dem Leben und Verhalten des Menschen, sowie deren Ursachen, Folgen und Bedingungen beschäftigt.",
+        "C) Die Wissenschaft, welche sich mit dem Erleben des Menschen auseinandersetzt.",
+        "D) Lehre vom Verhalten des Menschen."
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Psychologie ist die umfassende Wissenschaft von Erleben und Verhalten"
+    },
+    {
+      "id": 81,
+      "question": "Wie ist Kritik zu äußern?",
+      "options": [
+        "A) Höflich",
+        "B) Ohne Hemmungen",
+        "C) Sachlich",
+        "D) Laut"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Kritik sollte höflich und sachlich geäußert werden"
+    },
+    {
+      "id": 82,
+      "question": "Welches ist ein Grundbedürfnis eines Menschen?",
+      "options": [
+        "A) Essen",
+        "B) Freundschaft",
+        "C) Sicherheit",
+        "D) Selbstverwirklichung"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Essen ist ein physiologisches Grundbedürfnis"
+    },
+    {
+      "id": 83,
+      "question": "Wer hat das Konzept der Bedürfnis-Pyramide entworfen?",
+      "options": [
+        "A) Joseph Luft",
+        "B) Harry Inghamv",
+        "C) Abraham Maslow",
+        "D) Karl Bühler"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Abraham Maslow entwickelte die Bedürfnispyramide"
+    },
+    {
+      "id": 84,
+      "question": "Was sind Zeichen geringen Selbstwertgefühls?",
+      "options": [
+        "A) Hängende Schultern",
+        "B) Nervöse Körperbewegungen",
+        "C) Nutzung von Gesprächsbegleitern wie Ja, Hm, Okay",
+        "D) Augenkontakt"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Schlechte Körperhaltung und Nervosität zeigen geringes Selbstwertgefühl"
+    },
+    {
+      "id": 85,
+      "question": "Welche Denk- und Handlungsweisen behindern eine Konfliktlösung bei Streitigkeiten und Auseinandersetzungen?",
+      "options": [
+        "A) Eigene Forderungen und Wünsche werden ohne die Berücksichtigung der Position des Anderen durchgesetzt.",
+        "B) Gesprächsbereitschaft wird signalisiert und eine Lösung wird gemeinsam gesucht.",
+        "C) Es wird keine Kompromissbereitschaft gezeigt.",
+        "D) Es wird deutlich gemacht, dass auch andere Meinungen durchaus ihre Berechtigung haben."
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Sturheit und fehlende Kompromissbereitschaft behindern Konfliktlösung"
+    },
+    {
+      "id": 86,
+      "question": "Was ist bei Einzelpersonen besonders zu beachten?",
+      "options": [
+        "A) Sie bringen einem immer mehr Respekt entgegen",
+        "B) Sie sind immer friedfertiger als in einer Gruppe",
+        "C) Sie verhalten sich meist anders als in einer Gruppe",
+        "D) Sie können sich unsicher fühlen, da der Rückhalt der Gruppe fehlt"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Einzelpersonen verhalten sich anders und können ohne Gruppenstütze unsicher sein"
+    },
+    {
+      "id": 87,
+      "question": "Aufrechter Gang, Augenkontakt und klare Stimme sind Indizien für...",
+      "options": [
+        "A) Unsicherheit",
+        "B) Ein gesundes Selbstwertgefühl",
+        "C) Ein negativer emotionaler Zustand",
+        "D) Ein gutes Körpergefühl"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Positive Körpersprache zeigt gesundes Selbstwertgefühl und gutes Körpergefühl"
+    },
+    {
+      "id": 88,
+      "question": "Auf einem Schulhof sehen Sie mit ihrem Kollegen bei ihrer Nachtstreife eine Gruppe aggressiver Jugendlicher. Der Aufenthalt ist auf dem Gelände während der Nachtzeit nicht möglich. Was tun Sie?",
+      "options": [
+        "A) Mein Kollege und ich sprechen jeweils mehrere Gruppenmitglieder an und sprechen sofort ein Hausverbot aus.",
+        "B) Ich halte Kontakt mit der firmeninternen Notruf-und-Service-Leitstelle und informiere diese über die Situation.",
+        "C) Mein Kollege sichert mich ab, während ich mit dem Gruppenanführer ein ruhiges und sachliches Gespräch führe.",
+        "D) Mein Kollege und ich fahren einfach weiter und informieren den Kunden mit einem Infozettel."
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Leitstelle informieren und strukturiertes Vorgehen mit Absicherung"
+    },
+    {
+      "id": 89,
+      "question": "Welche Aussagen zum ersten Eindruck sind korrekt?",
+      "options": [
+        "A) Der erste Eindruck bildet sich ca. in den ersten 30 Sekunden.",
+        "B) Der erste Eindruck ist immer falsch.",
+        "C) Der erste Eindruck entsteht bewusst und unbewusst.",
+        "D) Der erste Eindruck ist immer richtig."
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Erste Eindrücke entstehen schnell und sowohl bewusst als auch unbewusst"
+    },
+    {
+      "id": 90,
+      "question": "Kommunikation findet nicht ausschließlich auf der verbalen (sprachlichen) Ebene statt. In Ihrer Tätigkeit als Sicherheitskraft spielt auch die Dienstkleidung als auch die Art Ihres Auftretens eine nicht unwichtige Rolle, da dies eine entsprechende Reaktion in Ihrem Gegenüber hervorruft / hervorrufen könnte. Zu welchen der im Folgend genannten Kommunikationsebenen gehören das Auftreten, sowie das persönliche Erscheinungsbild (Kleidung etc.)?",
+      "options": [
+        "A) Paraverbale Kommunikation.",
+        "B) Nonverbale Kommunikation.",
+        "C) Verbale Kommunikation.",
+        "D) Extraverbale Kommunikation."
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Auftreten und Erscheinungsbild gehören zur nonverbalen/extraverbalen Kommunikation"
+    },
+    {
+      "id": 91,
+      "question": "Was sind typisch charakteristische Merkmale einer Gruppe?",
+      "options": [
+        "A) In einer Gruppe existiert ein \"Wir-Gefühl\" und es bildet sich eine Hierarchie.",
+        "B) In einer Gruppe ist eine gegenseitige Beeinflussung kaum bis gar nicht vorhanden.",
+        "C) In einer Gruppe findet eine engere Kommunikation untereinander statt."
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Gruppen haben Wir-Gefühl, Hierarchie und intensive Kommunikation"
+    },
+    {
+      "id": 92,
+      "question": "Ein Motiv, für den Kauf eines teuren Autos kann sein...",
+      "options": [
+        "A) Materielle Sicherheit gewährleisten",
+        "B) Befriedigung von Grundbedürfnissen",
+        "C) Individualbedürfnisse – \"äußeres Ich\" - befriedigen",
+        "D) Macht und Stärke demonstrieren"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Teure Autos befriedigen Individualbedürfnisse und demonstrieren Status"
+    },
+    {
+      "id": 93,
+      "question": "Welche der folgenden Feststellungen entspricht nicht dem Verhalten von Jugendlichen?",
+      "options": [
+        "A) Jugendliche organisieren sich in Cliquen und fühlen sich in Gruppen stark.",
+        "B) Jugendliche sind unkritisch und befolgen diskussionslos die Anweisungen von Erwachsenen.",
+        "C) Jugendliche empfinden Autorität als etwas normales und verhalten sich immer angepasst und folgsam.",
+        "D) Jugendliche wollen sich vom Elternhaus lösen und streben nach eigenen Vorbildern."
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Jugendliche sind typischerweise kritisch und rebellisch gegenüber Autorität"
+    },
+    {
+      "id": 94,
+      "question": "Was sind Eindrücke äußerer Wahrnehmung?",
+      "options": [
+        "A) Motivation",
+        "B) Sehen, Fühlen",
+        "C) Sachverständnis",
+        "D) Riechen, Schmecken, Hören"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Äußere Wahrnehmung erfolgt über die fünf Sinne"
+    },
+    {
+      "id": 95,
+      "question": "Wie können Sicherheitsmitarbeiter Stress im Dienst abbauen/vermindern?",
+      "options": [
+        "A) Essen, Trinken und Ausruhen während der Pausenzeit",
+        "B) Keine Pausen nehmen um durchgehend Spannung zu halten",
+        "C) Versetzen lassen auf eine ruhigere Position",
+        "D) Dauerhaft auf Empfang bleiben um schnellstmöglich reagieren zu können"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Pausen und ruhigere Positionen helfen beim Stressabbau"
+    },
+    {
+      "id": 96,
+      "question": "Die Besucher einer stark frequentierten Diskothek zählen aus psychologischer Sicht zu welcher der folgenden Kategorien?",
+      "options": [
+        "A) Masse.",
+        "B) Menge.",
+        "C) Gruppe."
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Diskothekenbesucher bilden eine Menge, keine organisierte Gruppe"
+    },
+    {
+      "id": 97,
+      "question": "Was können besondere Merkmale von \"Ausländern\" sein?",
+      "options": [
+        "A) Frustration durch Verständigungsprobleme",
+        "B) Verstehen jede Ansprache",
+        "C) Finden sich immer sehr gut zu recht",
+        "D) Haben ein differenziertes Ehrgefühl"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Sprachbarrieren und kulturelle Unterschiede beim Ehrgefühl sind zu beachten"
+    },
+    {
+      "id": 98,
+      "question": "Warum sollte man bei einem Gespräch als Sicherheitsmitarbeiter mit fremden Personen einen bestimmten Abstand wahren?",
+      "options": [
+        "A) Damit diese sich nicht, durch das Eindringen in eine intime Zone, angegriffen fühlen.",
+        "B) Damit sich der Gegenüber nicht direkt angesprochen fühlt.",
+        "C) Damit der Gegenüber einen schlechter Verstehen kann.",
+        "D) Es kann immer sein, dass diese Personen einem nicht wohlgesonnen sind und man sich dadurch in Gefahr bringt."
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Abstand wahrt Intimzone und dient der Eigensicherung"
+    },
+    {
+      "id": 99,
+      "question": "Wie kann sog. \"Emphatie\" erreicht werden?",
+      "options": [
+        "A) Sich in andere Personen hineinversetzen",
+        "B) Falsche Vorurteile als Anlass zum Handeln nehmen",
+        "C) Falsches Verhalten gegenüber anderen",
+        "D) Anderen Personen zuhören"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Empathie entsteht durch Einfühlungsvermögen und aktives Zuhören"
+    },
+    {
+      "id": 100,
+      "question": "Unter einem Konflikt versteht man, bzw. ein solcher entsteht, wenn zwei scheinbar miteinander unvereinbare Meinungen aufeinandertreffen. Es wird u.a. in \"interpersonelle\" und \"intrapersonelle\" Konflikte entschieden. Welche der folgenden Aussagen hierzu ist / sind richtig?",
+      "options": [
+        "A) Ein intrapersoneller Konflikt ist ein Konflikt welcher sich immer im Unterbewusstsein und nicht bewusst abspielt.",
+        "B) Ein intrapersoneller Konflikt ist ein Konflikt zwischen mindestens zwei Personen.",
+        "C) Ein interpersoneller Konflikt ist ein Konflikt den man mit sich selbst austrägt.",
+        "D) Ein interpersoneller Konflikt ist ein Konflikt zwischen mindestens zwei Personen."
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Interpersonelle Konflikte finden zwischen mehreren Personen statt"
+    },
+    {
+      "id": 101,
+      "question": "Wie kann Stress abgebaut werden?",
+      "options": [
+        "A) Ausreichender, regelmäßiger Schlaf",
+        "B) Mehr arbeiten um den Stress auszublenden",
+        "C) Rauchen oder andere Suchtmittel konsumieren",
+        "D) Entspannung durch autogenes Training"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Schlaf und Entspannungstechniken bauen Stress ab"
+    },
+    {
+      "id": 102,
+      "question": "Sie sind als Citystreife in einer Einkaufspassage eingesetzt und mit Ihrem Kollegen unterwegs. Sie sehen eine Person die auf dem Boden sitzt und bettelt. Dies ist ausdrücklich verboten worden. Sie müssen das Verbot umsetzen. Wie sprechen Sie die Person an?",
+      "options": [
+        "A) Bitte gehen Sie jetzt. Oder ich schleife Sie hier raus.",
+        "B) Verlassen Sie diesen Bereich sofort!",
+        "C) Guten Tag, das Betteln ist hier nicht gestattet. Bitte verlassen Sie diesen Bereich. Danke.",
+        "D) Bettler haben hier nichts zu suchen. Raus mit Ihnen."
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Höfliche aber bestimmte Ansprache ist professionell"
+    },
+    {
+      "id": 103,
+      "question": "Die Bedürfnispyramide zeigt auf, dass sich menschliche Bedürfnisse in eine Art Rangordnung / Hierarchie einteilen lassen und man im \"Normalfall\" immer erst nach den Bedürfnissen der nächst höheren Stufe strebt, wenn man die Bedürfnisse einer unteren Stufe gestillt hat. Wer war der Begründer der besagten Bedürfnispyramide?",
+      "options": [
+        "A) Schulz von Thun.",
+        "B) Carl Gustav Jung.",
+        "C) Abraham Maslow.",
+        "D) Eric Berne.",
+        "E) Sigmund Freud."
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Abraham Maslow entwickelte die Bedürfnispyramide"
+    },
+    {
+      "id": 104,
+      "question": "Motive...",
+      "options": [
+        "A) Sind nicht wichtig für das menschliche Handeln",
+        "B) Ändern sich während des Lebens nicht",
+        "C) Können angeboren sein",
+        "D) Können während des Lebens erworben werden"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Motive können sowohl angeboren als auch erworben sein"
+    }
+  ]
+}

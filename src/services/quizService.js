@@ -22,9 +22,15 @@ class QuizService {
             
             // Topic mapping for file names
             const topicMap = {
-                'gewerberecht_quiz_json.json': 'Gewerberecht Fragenkatalog - Bewachungsgewerbe',
-                'Recht der öffentlichen Sicherheit und Ordnung.json': 'Recht der öffentlichen Sicherheit und Ordnung',
-                'Umgang mit Menschen.json': 'Umgang mit Menschen'
+                'Topic 1. Öffentliche Sicherheit und Ordnung.json': 'Topic 1. Öffentliche Sicherheit und Ordnung',
+                'Topic 2. Umgang mit Menschen.json': 'Topic 2. Umgang mit Menschen',
+                'Topic 3. Datenschutz.json': 'Topic 3. Datenschutz',
+                'Topic 4. Gewerberecht.json': 'Topic 4. Gewerberecht',
+                'Topic 5. Strafgesetzbuch.json': 'Topic 5. Strafgesetzbuch',
+                'Topic 6. Bürgeleriches Gesetzbuch.json': 'Topic 6. Bürgeleriches Gesetzbuch',
+                'Topic 7. Sicherheitstechnik.json': 'Topic 7. Sicherheitstechnik',
+                'Topic 8. Unfallverhütungsvorschriften.json': 'Topic 8. Unfallverhütungsvorschriften',
+                'Topic 9. Umgang mit Verteidigungswaffen.json': 'Topic 9. Umgang mit Verteidigungswaffen',
             };
             
             for (const file of files) {

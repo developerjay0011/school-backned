@@ -1,0 +1,700 @@
+{
+  "quiz_title": "Sachkundeprüfung 34a - Öffentliche Sicherheit und Ordnung",
+  "total_questions": 58,
+  "questions": [
+    {
+      "id": 1,
+      "question": "In welchem Artikel ist das \"Brief-, Post- und Fernmeldegeheimnis\" festgehalten?",
+      "options": [
+        "A) Artikel 15",
+        "B) Artikel 12",
+        "C) Artikel 13",
+        "D) Artikel 10"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Das Brief-, Post- und Fernmeldegeheimnis ist in Artikel 10 des Grundgesetzes verankert."
+    },
+    {
+      "id": 2,
+      "question": "In welchem Artikel ist die \"Menschenwürde\" festgehalten?",
+      "options": [
+        "A) Artikel 3",
+        "B) Artikel 1",
+        "C) Artikel 2",
+        "D) Artikel 5"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Die Menschenwürde ist in Artikel 1 des Grundgesetzes als oberstes Prinzip verankert."
+    },
+    {
+      "id": 3,
+      "question": "Rechtsvorschriften, die das Verhältnis von Bürger zu Staat regeln, nennt man...",
+      "options": [
+        "A) Landesrechte",
+        "B) Bürgerliches Recht",
+        "C) Staatsordnungsrechte",
+        "D) Öffentliches Recht"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Rechtsvorschriften, die das Verhältnis zwischen Bürgern und dem Staat regeln, werden als öffentliches Recht bezeichnet. Diese Vorschriften umfassen unter anderem das Vermögungsrecht, das Strafrecht und das Verfassungsrecht."
+    },
+    {
+      "id": 4,
+      "question": "In welche Rechtsarten kann man das aktuelle Recht unterscheiden?",
+      "options": [
+        "A) Öffentliches Recht",
+        "B) Bürgerrecht",
+        "C) Privates Recht",
+        "D) Staatsrecht"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Das deutsche Rechtssystem unterteilt sich grundsätzlich in öffentliches Recht und privates Recht."
+    },
+    {
+      "id": 5,
+      "question": "In welchem Artikel ist die \"Unverletzlichkeit der Wohnung\" festgehalten?",
+      "options": [
+        "A) Artikel 15",
+        "B) Artikel 13",
+        "C) Artikel 10",
+        "D) Artikel 12"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Die Unverletzlichkeit der Wohnung ist in Artikel 13 des Grundgesetzes verankert."
+    },
+    {
+      "id": 6,
+      "question": "Was bedeutet \"Koordinationsprinzip\"?",
+      "options": [
+        "A) Die Bürger sind rechtlich gleichgestellt",
+        "B) Der Bürger ist dem Staat untergeordnet",
+        "C) Ein Bürger ist einem anderen Bürger übergeordnet",
+        "D) Der Staat ist dem Bürger untergeordnet"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Das Koordinationsprinzip besagt, dass alle Beteiligten rechtlich gleichgestellt sind, typisch für das Privatrecht."
+    },
+    {
+      "id": 7,
+      "question": "Wer ist für die Aufrechterhaltung der öffentlichen Sicherheit und Ordnung zuständig?",
+      "options": [
+        "A) Polizei",
+        "B) Sicherheitsdienst",
+        "C) Ordnungsamt",
+        "D) Bund der Sicherheitswirtschaft"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Polizei und Ordnungsamt sind staatliche Behörden, die für die öffentliche Sicherheit und Ordnung zuständig sind."
+    },
+    {
+      "id": 8,
+      "question": "Welche Aussage zum Thema \"Gewaltmonopol\" ist korrekt?",
+      "options": [
+        "A) Normale Bürger dürfen unter bestimmten Umständen Gewalt anwenden",
+        "B) Das Gewaltmonopol ist auf private Stellen übertragbar",
+        "C) Sicherheitsmitarbeiter dürfen in ihrem Dienst unter bestimmten Umständen Gewalt anwenden",
+        "D) Das Gewaltmonopol steht nur der Polizei zu"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Bürger haben Notwehrrechte und Sicherheitsmitarbeiter können in bestimmten Situationen Gewalt anwenden, jedoch nicht hoheitlich."
+    },
+    {
+      "id": 9,
+      "question": "Was besagt das Sozialstaatsprinzip?",
+      "options": [
+        "A) Soll soziale Gerechtigkeit zwischen den Menschen schaffen",
+        "B) Garantiert jeder Person ein Mindestmaß an sozialer Hilfe",
+        "C) Schützt den Staat vor Einflüssen sozialistischer Strukturen",
+        "D) Die Reichen müssen sich für die Armen der Gesellschaft einsetzen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Das Sozialstaatsprinzip verpflichtet den Staat, soziale Gerechtigkeit zu schaffen und ein Mindestmaß an sozialer Sicherheit zu gewährleisten."
+    },
+    {
+      "id": 10,
+      "question": "Wann ist unter Umständen ein Eingriff in das staatliche Gewaltmonopol möglich?",
+      "options": [
+        "A) In Notwehr",
+        "B) In Besitzwehr",
+        "C) Nach einer verbotenen Eigenmacht",
+        "D) Nach einer unerlaubten Handlung"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Notwehr und Besitzwehr sind rechtmäßige Ausnahmen vom staatlichen Gewaltmonopol."
+    },
+    {
+      "id": 11,
+      "question": "Was bedeutet das \"Bundesstaatsprinzip\"?",
+      "options": [
+        "A) Es gibt nur ein Bundesstaat und keine Unterteilung in Länder",
+        "B) Verschiedene internationale Staaten sind in einem Bund organisiert (Bsp.: EU)",
+        "C) Die Bundesrepublik Deutschland besteht aus mehreren kleinen Staaten",
+        "D) Die Länder besitzen eigene Landesverfassungen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Deutschland ist ein Bundesstaat, bestehend aus Bundesländern mit eigenen Verfassungen und begrenzter Autonomie."
+    },
+    {
+      "id": 12,
+      "question": "Auf welche der folgenden Rechte können private Sicherheitskräfte im Rahmen ihrer dienstlichen Tätigkeit zurückgreifen? Welche der folgenden Aussagen trifft diesbezüglich nicht zu?",
+      "options": [
+        "A) Privaten Sicherheitsmitarbeitern stehen ausschließlich die Notwehrrechte zu",
+        "B) Sicherheitskräfte können im Rahmen ihrer Tätigkeit auch hoheitlich tätig werden, wenn der Auftraggeber ihnen entsprechende Befugnisse vertraglich übertragen hat",
+        "C) Private Sicherheitskräfte können im Rahmen ihrer dienstlichen Tätigkeit sowohl auf die Notwehr, als auch auf die sog. \"Jedermannsrechte\", den Notstand, wie auch den Ihnen vertraglich übertragenen Rechten (z.B. dem Hausrecht) zurückgreifen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Die Aussagen A und B treffen nicht zu. Private Sicherheitskräfte haben mehr als nur Notwehrrechte und können keine hoheitlichen Befugnisse durch Vertrag erhalten."
+    },
+    {
+      "id": 13,
+      "question": "Was besagt das \"Republikprinzip\"?",
+      "options": [
+        "A) Staatsoberhaupt ist ein gewählter Präsident",
+        "B) Das Volk ist Inhaber der Staatsgewalt",
+        "C) In einer Republik finden republikanische Wahlen statt",
+        "D) Das Oberhaupt bleibt solange im Dienst bis es stirbt"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "In einer Republik ist das Staatsoberhaupt gewählt und die Staatsgewalt geht vom Volk aus."
+    },
+    {
+      "id": 14,
+      "question": "Welches sind Organe der exekutiven Gewalt?",
+      "options": [
+        "A) Landgericht",
+        "B) Bundesrat",
+        "C) Ordnungsamt",
+        "D) Zoll"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Organe der exekutiven Gewalt sind unter anderem der Zoll und das Ordnungsamt. Diese Behörden haben die Aufgabe, die Einhaltung von Gesetzen und Verordnungen zu überwachen und bei Bedarf Maßnahmen zur Durchsetzung dieser Vorschriften zu ergreifen."
+    },
+    {
+      "id": 15,
+      "question": "In welchem Artikel ist der \"Gleichheitsgrundsatz\" festgehalten?",
+      "options": [
+        "A) Artikel 3",
+        "B) Artikel 14",
+        "C) Artikel 2",
+        "D) Artikel 10"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Der Gleichheitsgrundsatz ist in Artikel 3 des Grundgesetzes verankert."
+    },
+    {
+      "id": 16,
+      "question": "Welche Grundrechte sind für das Bewachungsgewerbe von Bedeutung?",
+      "options": [
+        "A) Versammlungsfreiheit",
+        "B) Recht auf Eigentum",
+        "C) Sozialisierung",
+        "D) Meinungsfreiheit"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Eigentumsrecht und Meinungsfreiheit sind besonders relevant für das Bewachungsgewerbe."
+    },
+    {
+      "id": 17,
+      "question": "In welchem Artikel ist das \"Recht auf Leben und körperliche Unversehrtheit\" festgehalten?",
+      "options": [
+        "A) Artikel 20",
+        "B) Artikel 19",
+        "C) Artikel 1",
+        "D) Artikel 21"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Das Recht auf Leben und körperliche Unversehrtheit ist in Artikel 2 des Grundgesetzes verankert (Hinweis: In der Originalantwort steht A=Artikel 20, dies scheint ein Fehler zu sein)."
+    },
+    {
+      "id": 18,
+      "question": "Welche Aussagen zu den sog. \"Bürgerrechten\" ist/sind richtig?",
+      "options": [
+        "A) Bürgerrechte haben nur deutsche Staatsangehörige",
+        "B) Bürgerrechte können jederzeit auf nahestehende Verwandte übertragen werden",
+        "C) Bürgerrechte sind u.a. im Grundgesetz festgehalten",
+        "D) Bürgerrechte hat jede Person die sich in Deutschland aufhält"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Bürgerrechte sind im Grundgesetz festgehalten. Sie haben nicht nur deutsche Staatsangehörige, sondern auch andere Personen."
+    },
+    {
+      "id": 19,
+      "question": "Das deutsche Strafrecht...",
+      "options": [
+        "A) ...kennt die beiden Strafarten Freiheitsstrafe und Geldstrafe",
+        "B) ...setzt für die Strafbarkeit immer eine vollendete Rechtsgutsverletzung voraus",
+        "C) ...setzt für die Strafbarkeit immer ein willensgesteuertes Verhalten eines Täters voraus, dass aus einem Aktiven Tun aber auch aus einem Unterlassen bestehen kann",
+        "D) ...ist Teil des privaten Rechts, weil es die Rechtsbeziehungen zwischen Bürger und Bürger regelt"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Das Strafrecht kennt Freiheits- und Geldstrafen und setzt willensgesteuertes Verhalten voraus."
+    },
+    {
+      "id": 20,
+      "question": "In wie viele Gewalten ist die Staatsgewalt aufgeteilt?",
+      "options": [
+        "A) 2",
+        "B) 3",
+        "C) 5",
+        "D) 4"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Die Staatsgewalt ist in drei Gewalten aufgeteilt: Legislative, Exekutive und Judikative."
+    },
+    {
+      "id": 21,
+      "question": "Wo findet das Subordinationsprinzip seine Anwendung?",
+      "options": [
+        "A) Strafgesetz",
+        "B) Öffentliches Recht",
+        "C) Privates Recht",
+        "D) Bürgerliches Gesetzbuch"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Das Subordinationsprinzip findet im öffentlichen Recht und Strafrecht Anwendung, wo der Bürger dem Staat untergeordnet ist."
+    },
+    {
+      "id": 22,
+      "question": "Welche Aussagen zum Privat- und öffentlichen Recht sind korrekt?",
+      "options": [
+        "A) Das Privatrecht regelt die Rechtsbeziehungen zwischen Bürger und Bürger",
+        "B) Das öffentliche Recht regelt die Rechtsbeziehungen zwischen Staat und Bürger",
+        "C) Das Privatrecht regelt die Rechtsbeziehungen zwischen Staat und Bürger",
+        "D) Das öffentliche Recht regelt die Rechtsbeziehungen zwischen verschiedenen Staaten"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Privatrecht regelt Bürger-Bürger-Verhältnisse, öffentliches Recht regelt Staat-Bürger-Verhältnisse."
+    },
+    {
+      "id": 23,
+      "question": "Was bedeutet \"Subordinationsprinzip\"?",
+      "options": [
+        "A) Ein Bürger ist einem anderen Bürger übergeordnet",
+        "B) Der Staat ist dem Bürger untergeordnet",
+        "C) Der Bürger ist dem Staat untergeordnet",
+        "D) Die Bürger sind rechtlich gleichgestellt"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Das Subordinationsprinzip bedeutet, dass der Bürger dem Staat untergeordnet ist."
+    },
+    {
+      "id": 24,
+      "question": "Was ist die Polizei?",
+      "options": [
+        "A) Ausführende Gewalt",
+        "B) Judikative",
+        "C) Legislative",
+        "D) Exekutive"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Die Polizei gehört zur ausführenden Gewalt (Exekutive)."
+    },
+    {
+      "id": 25,
+      "question": "Welcher dieser Bereiche können dem öffentlichen Recht zugeordnet werden?",
+      "options": [
+        "A) Arbeitsrecht",
+        "B) Erbrecht",
+        "C) Völkerrecht",
+        "D) Steuerrecht"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Völkerrecht und Steuerrecht gehören zum öffentlichen Recht."
+    },
+    {
+      "id": 26,
+      "question": "Welche Aussagen zum öffentlichen Recht sind korrekt?",
+      "options": [
+        "A) Das öffentliche Recht regelt u.a. die Verfolgung von Straftaten",
+        "B) Im öffentlichen Recht kann der Staat auch als Bürger auftreten",
+        "C) Im öffentlichen Recht ist der Bürger dem Staat untergeordnet",
+        "D) Im öffentlichen Recht sind beide Parteien rechtlich gleichgestellt"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Das öffentliche Recht regelt Strafverfolgung und der Bürger ist dem Staat untergeordnet."
+    },
+    {
+      "id": 27,
+      "question": "Das Recht auf Leben und körperliche Unversehrtheit (Art. 2 GG)...",
+      "options": [
+        "A) ...ist ein Abwehrrecht und richtet sich u.a. gegen Eingriffe des Staates",
+        "B) ...schützt nur die psychische Unversehrtheit der Bürger",
+        "C) ...ist ein Bürgerrecht",
+        "D) ...ist ein Menschenrecht"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Das Recht auf Leben und körperliche Unversehrtheit ist ein Abwehr- und Menschenrecht."
+    },
+    {
+      "id": 28,
+      "question": "Bei welchen Institutionen kann ein Bürger eine Anzeige erstatten?",
+      "options": [
+        "A) Rechtsanwalt",
+        "B) Polizei",
+        "C) Amtsgericht",
+        "D) Richter"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Anzeigen können bei der Polizei und bei Gerichten erstattet werden."
+    },
+    {
+      "id": 29,
+      "question": "Wo findet das Koordinationsprinzip seine Anwendung?",
+      "options": [
+        "A) Öffentliches Recht",
+        "B) Strafgesetz",
+        "C) Privates Recht",
+        "D) Bürgerliches Gesetzbuch"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Das Koordinationsprinzip findet im privaten Recht und BGB Anwendung."
+    },
+    {
+      "id": 30,
+      "question": "In welchem Artikel ist die \"Meinungsfreiheit\" festgehalten?",
+      "options": [
+        "A) Artikel 3",
+        "B) Artikel 2",
+        "C) Artikel 5",
+        "D) Artikel 5"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Die Meinungsfreiheit ist in Artikel 5 des Grundgesetzes verankert."
+    },
+    {
+      "id": 31,
+      "question": "In welchem Artikel ist das \"Recht auf Eigentum\" festgehalten?",
+      "options": [
+        "A) Artikel 15",
+        "B) Artikel 14",
+        "C) Artikel 13",
+        "D) Artikel 12"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Das Eigentumsrecht ist in Artikel 14 des Grundgesetzes verankert."
+    },
+    {
+      "id": 32,
+      "question": "Prüfen Sie die nachfolgenden Aussagen zu den Grundrechten und kreuzen Sie die richtigen an.",
+      "options": [
+        "A) Grundrechte gelten absolut und dürfen nicht eingeschränkt werden",
+        "B) Die Mehrzahl der Grundrechte zählt auch zu den Bürgerrechten",
+        "C) Der Bürger kann seine Grundrechte notfalls gerichtlich durchsetzen, weil die Staatsgewalten an die Grundrechte gebunden sind und diese achten sowie schützen müssen"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Die Mehrzahl der Grundrechte zählt auch zu den Bürgerrechten. Der Bürger kann seine Grundrechte notfalls gerichtlich durchsetzen, da die Staatsgewalten an die Grundrechte gebunden sind und sie achten sowie schützen müssen."
+    },
+    {
+      "id": 33,
+      "question": "Aus welchen Bestandteilen besteht ein Staat?",
+      "options": [
+        "A) Präsident, Bundesversammlung, Gerichtshof",
+        "B) Personen im Staatsgebiet, Recht und Gesetz, Staatsgebiet",
+        "C) Land, Verfassung, Volk",
+        "D) Judikative, Exekutive, Legislative"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Ein Staat besteht aus Staatsgebiet, Staatsvolk und Staatsgewalt (Verfassung/Recht)."
+    },
+    {
+      "id": 34,
+      "question": "Welcher dieser Bereiche können dem privaten Recht zugeordnet werden?",
+      "options": [
+        "A) Schuldrecht",
+        "B) Familienrecht",
+        "C) Sozialrecht",
+        "D) Verwaltungsrecht"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Schuldrecht und Familienrecht gehören zum privaten Recht."
+    },
+    {
+      "id": 35,
+      "question": "Wer ist u.a. Inhaber der Staatsgewalt?",
+      "options": [
+        "A) Gewerkschaften",
+        "B) Sicherheitsdienste",
+        "C) Landespolizei",
+        "D) Bundespolizei"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Landes- und Bundespolizei sind staatliche Organe und damit Inhaber der Staatsgewalt."
+    },
+    {
+      "id": 36,
+      "question": "In welche zwei Rechtsgebiete teilt sich das Rechtssystem der Bundesrepublik Deutschland?",
+      "options": [
+        "A) Bürgerliches Recht (BGB)",
+        "B) Privates Recht",
+        "C) Strafrecht (StGB)",
+        "D) Öffentliches Recht"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Das deutsche Rechtssystem teilt sich in privates Recht und öffentliches Recht."
+    },
+    {
+      "id": 37,
+      "question": "Wie viele wesentliche Staatsprinzipien gibt es?",
+      "options": [
+        "A) 4",
+        "B) 3",
+        "C) 5",
+        "D) 6"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Es gibt fünf wesentliche Staatsprinzipien: Demokratie-, Rechtsstaats-, Sozialstaats-, Bundesstaats- und Republikprinzip."
+    },
+    {
+      "id": 38,
+      "question": "Das Grundrecht der Unverletzlichkeit der Wohnung ist in Art. 13 GG verankert. Welche der nachstehenden Antworten trifft / treffen auf dieses Grundrecht zu.",
+      "options": [
+        "A) Angeordnete Durchsuchungen sind nur zulässig im Sinne des Strafprozessrechtes, nicht aber im Sinne des Zivilrechtes",
+        "B) Es ist ein individuelles Abwehrrecht gegen alle Organe öffentlicher Gewalt. Es regelt also keine Mietverhältnisse und schafft auch keinen Wohnraumanspruch",
+        "C) Dieses Recht steht nur dem / den Eigentümer / in der Wohnung zu",
+        "D) Durchsuchungen dürfen nur aufgrund eines richterlichen Beschlusses, bei Gefahr in Verzug aber auch durch die in den Gesetzen vorgesehenen Organe angeordnet und nur in der dort vorgeschriebenen Form durchgeführt werden"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Art. 13 GG ist ein Abwehrrecht gegen staatliche Eingriffe und Durchsuchungen bedürfen grundsätzlich richterlicher Anordnung."
+    },
+    {
+      "id": 39,
+      "question": "In welchem Artikel ist \"Recht auf Freiheit und Recht auf Leben\" festgehalten?",
+      "options": [
+        "A) Artikel 4",
+        "B) Artikel 10",
+        "C) Artikel 13",
+        "D) Artikel 2"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Das Recht auf Leben und Freiheit ist in Artikel 2 des Grundgesetzes verankert."
+    },
+    {
+      "id": 40,
+      "question": "Wofür steht die Abkürzung \"PPP\"?",
+      "options": [
+        "A) Public Private Partnership",
+        "B) Private Partner Partnership",
+        "C) Public Professional Partnership",
+        "D) Private Publication Partnership"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "PPP steht für Public Private Partnership (Öffentlich-Private Partnerschaft)."
+    },
+    {
+      "id": 41,
+      "question": "Deutschland ist ein/e...",
+      "options": [
+        "A) Bundesstaat",
+        "B) Bundesrepublik",
+        "C) Einheitsstaat",
+        "D) Staatenbund"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Deutschland ist ein Bundesstaat und eine Bundesrepublik. Als Bundesstaat besteht das Land aus verschiedenen Bundesländern, die über eine gewisse Autonomie verfügen. Als Bundesrepublik bedeutet dies, dass Deutschland eine demokratische Republik ist, in der die Staatsgewalt vom Volk ausgeht."
+    },
+    {
+      "id": 42,
+      "question": "Dürfen Privatpersonen jederzeit Gewalt anwenden?",
+      "options": [
+        "A) Grundsätzlich nein, dies geht aber z.B. bei einer Notwehr wenn man sich nicht ohne Gewalt verteidigen kann",
+        "B) Grundsätzlich ja, soweit keine Züchtigung von Kindern ja nicht okay",
+        "C) Grundsätzlich ja, da man andere Personen schon vor einem Angriff einschüchtern kann",
+        "D) Grundsätzlich nein, allerdings kann man sich gegen gerechtfertigte Eingriffe des Staates in die eigenen Grundrechte mit Gewalt verteidigen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "In Deutschland ist die Anwendung von Gewalt für Privatpersonen grundsätzlich nicht erlaubt. Eine Ausnahme besteht nur im Fall der Notwehr, wenn es keine andere Möglichkeit gibt, sich vor einem unmittelbaren, rechtswidrigen Angriff zu schützen. Dabei muss die Verteidigungshandlung stets erforderlich und angemessen sein, um den Angriff abzuwenden."
+    },
+    {
+      "id": 43,
+      "question": "Welches Grundrecht steht uneingeschränkt nur deutschen Staatsbürgern zu?",
+      "options": [
+        "A) Recht auf Schutz des Eigentums",
+        "B) Recht Arbeitsplatz und / oder Ausbildungsstätte frei zu wählen",
+        "C) Recht auf Wohnraum",
+        "D) Recht auf Leben und körperliche Unversehrtheit"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Die Berufsfreiheit (freie Wahl von Arbeitsplatz und Ausbildungsstätte) ist ein Bürgerrecht, das nur deutschen Staatsangehörigen zusteht."
+    },
+    {
+      "id": 44,
+      "question": "Welches Recht ist bei Schadensersatzforderungen anzuwenden?",
+      "options": [
+        "A) Privatrecht",
+        "B) Bürgerliches Gesetzbuch (BGB)",
+        "C) Strafgesetzbuch (StGB)",
+        "D) Schadensregulationsgesetz (ScG)"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Schadensersatzforderungen fallen unter das Privatrecht, insbesondere das BGB."
+    },
+    {
+      "id": 45,
+      "question": "Woraus setzt sich geltendes Recht und Gesetz u.a. zusammen?",
+      "options": [
+        "A) Gesetze",
+        "B) Verordnungen",
+        "C) Sitzungen im Bundestag",
+        "D) Verträge von Unternehmen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Geltendes Recht und Gesetz setzen sich aus verschiedenen Bestandteilen zusammen, darunter Gesetze und Verordnungen. Diese Regelungen dienen dazu, das Zusammenleben in der Gesellschaft zu regeln und bestimmte Verhaltensweisen zu bestimmen."
+    },
+    {
+      "id": 46,
+      "question": "Das Koordinationsprinzip...",
+      "options": [
+        "A) Gilt für das Strafrecht",
+        "B) Regelt Rechtsbeziehungen zwischen Bürger und Bürger",
+        "C) Regelt Rechtsbeziehungen zwischen Staat und Bürger",
+        "D) Besteht zwischen privaten Parteien"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Das Koordinationsprinzip regelt Rechtsbeziehungen zwischen privaten Parteien wie Bürgern untereinander. Es besteht also zwischen Bürgern und Bürgern."
+    },
+    {
+      "id": 47,
+      "question": "Die Grundrechte stellen ein sehr hohes Schutzgut dar und sind entsprechend durch das Grundgesetz geschützt. Unter dem vorliegend bestimmter, enger rechtlicher Voraussetzungen können bestimmte Grundrechte u.U. eingeschränkt werden. Welches der nachstehend genannten Grundrechte kann niemals eingeschränkt werden?",
+      "options": [
+        "A) Schutz der Menschenwürde",
+        "B) Recht auf Leben",
+        "C) Recht auf körperliche Unversehrtheit",
+        "D) Recht auf Freiheit"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Die Menschenwürde ist unantastbar und kann niemals eingeschränkt werden."
+    },
+    {
+      "id": 48,
+      "question": "Muss der Sicherheitsmitarbeiter die Grundrechte beachten?",
+      "options": [
+        "A) Nein, denn das Grundgesetz gilt nur für den Staat und soll den Bürger vor Eingriffen durch diesen schützen",
+        "B) Ja, denn auch der Umgang der Menschen untereinander ist vom Grundgesetz geschützt",
+        "C) Ja, denn diese gelten nicht nur für den Staat, sondern auch für jede Person in Deutschland",
+        "D) Nein, denn Sicherheitsmitarbeiter haben ähnliche Rechte wie Ordnungsbehörden"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Sicherheitsmitarbeiter müssen die Grundrechte beachten, da diese auch im zwischenmenschlichen Bereich gelten."
+    },
+    {
+      "id": 49,
+      "question": "Welches dieser Möglichkeiten sind Verfassungsprinzipien?",
+      "options": [
+        "A) Bundesländerprinzip",
+        "B) Staatsmachtprinzip",
+        "C) Sozialstaatsprinzip",
+        "D) Demokratieprinzip"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Sozialstaats- und Demokratieprinzip sind wichtige Verfassungsprinzipien des Grundgesetzes."
+    },
+    {
+      "id": 50,
+      "question": "Welche Aussage ist korrekt?",
+      "options": [
+        "A) Bundesrecht geht vor Landesrecht",
+        "B) Spezielles Recht geht vor allgemeinem Recht",
+        "C) Landesrecht geht vor Bundesrecht",
+        "D) Allgemeines Recht geht vor speziellem Recht"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Bundesrecht bricht Landesrecht und spezielles Recht geht vor allgemeinem Recht."
+    },
+    {
+      "id": 51,
+      "question": "Besitzen Sicherheitsmitarbeiter hoheitliche Rechte?",
+      "options": [
+        "A) Grundsätzlich nein",
+        "B) Grundsätzlich ja",
+        "C) Ausnahmsweise können hoheitliche Rechte für die Ausübung festgelegter und eingegrenzter Tätigkeiten an private Übertragen werden",
+        "D) Sicherheitsmitarbeiter haben während ihrer Dienstzeit ausnahmsweise hoheitliche Rechte"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Sicherheitsmitarbeiter haben grundsätzlich keine hoheitlichen Rechte, nur in sehr begrenzten Ausnahmefällen können diese übertragen werden."
+    },
+    {
+      "id": 52,
+      "question": "Was besagt das Rechtsstaatsprinzip?",
+      "options": [
+        "A) Jeder Mensch hat unterschiedliche Rechte",
+        "B) Schützt den Staat vor Einflüssen rechter Strukturen",
+        "C) Die Staatsgewalten sind an Gesetze gebunden und können nicht frei verfahren",
+        "D) Der Staat beruht auf der Grundlage von Recht und Gesetz"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Das Rechtsstaatsprinzip bedeutet, dass der Staat auf Recht und Gesetz beruht und alle Staatsgewalten an diese gebunden sind."
+    },
+    {
+      "id": 53,
+      "question": "Warum ist die Staatsgewalt aufgeteilt?",
+      "options": [
+        "A) Damit nicht eine Institution alleinige Macht ausüben kann",
+        "B) Um Machtmissbrauch zu verhindern",
+        "C) Um Kosten auf alle Bundesländer zu verteilen",
+        "D) Weil die Staatsmacht in jedem Land aufgeteilt werden muss"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Die Gewaltenteilung dient der Kontrolle und Verhinderung von Machtmissbrauch."
+    },
+    {
+      "id": 54,
+      "question": "Was sind die sog. hoheitlichen Rechte?",
+      "options": [
+        "A) Rechte die der Unternehmer für bestimmte Aufgaben seinen Mitarbeiter ausnahmsweise erteilen kann",
+        "B) Die Rechte die der Polizei zustehen",
+        "C) Rechte die staatliche Institutionen innehaben",
+        "D) Alle Rechte um in die Grundrechte der Bürger eingreifen zu können"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Hoheitliche Rechte sind besondere Befugnisse staatlicher Institutionen wie der Polizei."
+    },
+    {
+      "id": 55,
+      "question": "Das Sicherheitsmonopol ...?",
+      "options": [
+        "A) Kann nur für bestimmte Aufgaben übertragen werden",
+        "B) Wird nur von staatlichen Ordnungsorganen gewährleistet",
+        "C) Haben sowohl staatliche Ordnungsbehörden, als auch private Sicherheitsunternehmen inne",
+        "D) Ist ausschließlich Sicherheitsdiensten vorbehalten"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Das Sicherheitsmonopol beschreibt, dass ausschließlich staatliche Ordnungsorgane die hoheitliche Sicherheits- und Ordnungsgewalt ausüben. Private Sicherheitsunternehmen können zwar Sicherheitsdienstleistungen erbringen, verfügen jedoch nicht über das staatliche Sicherheitsmonopol. Daher ist das Sicherheitsmonopol ausschließlich den staatlichen Ordnungsorganen vorbehalten."
+    },
+    {
+      "id": 56,
+      "question": "Wann haben Sicherheitsmitarbeiter die gleichen Rechte wie ein Hilfspolizeibeamter?",
+      "options": [
+        "A) Nach Anordnung der Polizei",
+        "B) Nur bei Gefahr im Verzuge",
+        "C) Nie",
+        "D) Jederzeit"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Sicherheitsmitarbeiter haben niemals die gleichen Rechte wie ein Hilfspolizeibeamter. Die Rechte und Befugnisse von Sicherheitsmitarbeitern sind gesetzlich genau festgelegt und beschränkt. Sie dürfen bestimmte Aufgaben im Rahmen ihrer Tätigkeit durchführen, aber sie haben nicht den gleichen rechtlichen Status wie Polizeibeamte."
+    },
+    {
+      "id": 57,
+      "question": "Was besagt das Demokratieprinzip?",
+      "options": [
+        "A) Die Staatsgewalt geht nur vom Volk aus",
+        "B) Jede Person in Deutschland kann seinen Volksvertreter wählen",
+        "C) Die Bürger wählen ihre Vertreter in demokratischen Wahlen",
+        "D) Überall wo Entscheidungen getroffen werden, muss demokratisch vorgegangen werden"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Das Demokratieprinzip besagt, dass alle Staatsgewalt vom Volk ausgeht und die Bürger ihre Vertreter in freien Wahlen wählen."
+    },
+    {
+      "id": 58,
+      "question": "Welche Aussagen zum Privatrecht sind korrekt?",
+      "options": [
+        "A) Das Privatrecht regelt Schadensersatzfälle",
+        "B) Das Bürgerliche Gesetzbuch enthält alle Gesetze zum Privatrecht",
+        "C) Im Privatrecht kann ein Bürger dem anderen übergeordnet sein",
+        "D) Im Privatrecht sind die gegenseitigen Parteien rechtlich gleichgestellt"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Das Privatrecht regelt unter anderem Schadensersatzfälle und basiert auf der rechtlichen Gleichstellung der Parteien."
+    }
+  ]
+  }

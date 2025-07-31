@@ -1,0 +1,861 @@
+{
+  "quiz_title": "Sachkundeprüfung 34a - Sicherheitstechnik",
+  "total_questions": 72,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Welche Aufgaben haben Notruf- und Serviceleitstellen?",
+      "options": [
+        "A) Aufbewahrung von Objektschlüsseln",
+        "B) Dokumentation",
+        "C) Erfassung von Ereignissen",
+        "D) Ausgabe von Arbeitsmaterialien wenn Büro nicht besetzt ist"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 2,
+      "question": "Welche Aussagen zur Widerstandszeit sind korrekt?",
+      "options": [
+        "A) Die Widerstandszeit ist die Zeit, die ein Täter benötigt, um eine bestimmte mechanische Sicherheitseinrichtung - z.B. einen Zaun - zu überwinden.",
+        "B) Je höher die Widerstandszeit, desto besser.",
+        "C) Je niedriger die Widerstandszeit, desto besser.",
+        "D) Die Widerstandszeit ist die Zeit, die ein Sicherheitsmitarbeiter von Auslösung eines Alarmes bei einem Objekt bis zur Ankunft bei dem Objekt benötigt."
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 3,
+      "question": "Ein Verbundsicherheitsglas besteht aus...",
+      "options": [
+        "A) Folie - Glas",
+        "B) Glas - Glas - Folie",
+        "C) Folie - Glas - Folie",
+        "D) Glas - Folie - Glas"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 4,
+      "question": "Welche Vor- und/oder Nachteile bieten sich bei leitungsgebundenen Kommunikationsmitteln?",
+      "options": [
+        "A) Es gibt keinen wirklich nennenswerten Unterschied.",
+        "B) Leitungsgebundene Kommunikationsmittel bieten den Vorteil, dass es zu weniger atmosphärischen Störungen kommt."
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 5,
+      "question": "Was ist bei der Nutzung von Funkanlagen zu beachten?",
+      "options": [
+        "A) Funkgeräte können abgehört werden",
+        "B) Der Datenschutz ist nicht zu beachten, da nur persönlich bekannte Personen am Funk mitwirken",
+        "C) Schwierige Wörter sollten langsam und deutlich ausgesprochen werden, ggf. buchstabiert werden",
+        "D) Funksprüche sind stets mit dem Satz \"Ende, Danke\" zu beenden"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 6,
+      "question": "Warum ist Wasser als Löschmittel bei Ölbränden nicht zu empfehlen?",
+      "options": [
+        "A) Das Öl kann an der Wasseroberfläche weiter brennen, da es leichter ist als Wasser. Der Brandherd schwimmt weg.",
+        "B) Aufgrund der schwachen Kühlung ist Wasser in großen Mengen erforderlich. Wegen der fehlenden Wirksamkeit beim Löschen ist Wasser zu kostenaufwendig.",
+        "C) Technische und physikalische Öle entwickeln im Brandfall sehr hohe Temperaturen. Es besteht ein immens hohes Risiko einer explosionsartigen, physikalischen Verdampfungsreaktion."
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 7,
+      "question": "Wie hoch sollte ein Zaun mindestens sein?",
+      "options": [
+        "A) 2 m",
+        "B) 2,5 m",
+        "C) 1,8 m",
+        "D) 3 m"
+      ],
+      "correct_answers": ["B"],
+      "explanation": ""
+    },
+    {
+      "id": 8,
+      "question": "Welche Grundsätze gelten für die Brandbekämpfung?",
+      "options": [
+        "A) Tropf- und Fließbrände von oben nach unten löschen",
+        "B) Feuer in Windrichtung angreifen",
+        "C) Tropf- und Fließbrände von unten nach oben löschen",
+        "D) Feuer gegen die Windrichtung angreifen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 9,
+      "question": "Was sollte immer Bestandteil einer Einbruchmeldung sein?",
+      "options": [
+        "A) Alarmierung",
+        "B) Handmelder",
+        "C) Energieversorgung",
+        "D) Löschanlagen"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Bestandteile einer Einbruchmeldeanlage sollten immer die Alarmierung und die Energieversorgung sein. Die Alarmierung ist wichtig, um im Falle eines Einbruchs oder einer anderen Sicherheitsverletzung sowohl das Sicherheitspersonal als auch die zuständigen Behörden zu informieren. Die Energieversorgung gewährleistet die kontinuierliche Funktion der Einbruchmeldeanlage, damit sie rund um die Uhr einsatzbereit ist. Weitere mögliche Bestandteile können je nach Anforderungen und Gegebenheiten variieren, sollten aber in jedem Fall den gesetzlichen Vorschriften entsprechen."
+    },
+    {
+      "id": 10,
+      "question": "Einbruchhemmende Türen der Widerstandsklasse 4 bis 6...",
+      "options": [
+        "A) Bieten höheren Widerstand als Türen der Klasse 1 bis 3",
+        "B) Sind für den gewerblichen Bereich empfohlen",
+        "C) Werden nur in Banken eingesetzt",
+        "D) Sind für den privaten Bereich empfohlen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 11,
+      "question": "Wertschutzräume...",
+      "options": [
+        "A) Sollten an eine Gefahrenmeldeanlage angeschlossen sein",
+        "B) Können mit umfangreicher Sicherheitstechnik erweitert werden",
+        "C) Können durch Unbefugte nicht betreten werden",
+        "D) Dürfen gesetzlich nur in Banken eingesetzt werden"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 12,
+      "question": "Welcher Gefahrenmeldeanlage ist die Trekliste zuzuordnen?",
+      "options": [
+        "A) Brandmeldeanlage",
+        "B) Störmeldeanlage",
+        "C) Einbruchmeldeanlage",
+        "D) Überfallmeldeanlage"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 13,
+      "question": "Welche baulichen Anforderungen werden an Sicherheitszäune gestellt?",
+      "options": [
+        "A) Sie müssen einen Unterkriechschutz aufweisen (mindestens 80 cm eingelassen).",
+        "B) Sie müssen eine Mindesthöhe von 2,80 Meter aufweisen.",
+        "C) Sie müssen einen Übergrabbschutz aufweisen (mindestens 30 cm eingelassen)",
+        "D) Sie müssen einen Übersteigschutz aufweisen.",
+        "E) Sie müssen gegen Durchdringen gesichert sein (engmaschig)."
+      ],
+      "correct_answers": ["D", "E"],
+      "explanation": ""
+    },
+    {
+      "id": 14,
+      "question": "Ein Schaumlöscher...",
+      "options": [
+        "A) Kann für brennende, feste Stoffe eingesetzt werden",
+        "B) Kann für brennende, flüssige Stoffe eingesetzt werden",
+        "C) Kann für brennende Fette eingesetzt werden",
+        "D) Kann für brennende Metalle eingesetzt werden"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 15,
+      "question": "Welche der folgenden Angaben werden der mechanischen Sicherung zugeordnet?",
+      "options": [
+        "A) Meldelinie",
+        "B) Handschranke",
+        "C) Querriegel-Schloss",
+        "D) Infrarotmelder"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 16,
+      "question": "Was ist bei der Überwachung mit Kameras zu beachten?",
+      "options": [
+        "A) Es wird stets ein Videorecorder benötigt",
+        "B) Betroffene müssen über die Überwachung informiert werden",
+        "C) Das Bild einer Kamera kann nur auf einem Monitor ausgegeben werden",
+        "D) Für die Ausgabe auf Monitoren benötigt es eine Bildverteilung"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 17,
+      "question": "Biometrische Merkmale...",
+      "options": [
+        "A) Werden nur im Finanzbereich eingesetzt.",
+        "B) Ermöglichen eine genaue Identifikation",
+        "C) Können Schließsysteme ersetzen",
+        "D) Sind fälschungssicher"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 18,
+      "question": "Was versteht man in der Sicherheitstechnik in Bezug auf den Objektschutz unter einem Schlüsseldepot?",
+      "options": [
+        "A) Hier werden alle Zugangsschlüssel und Berechtigungskarten für das entsprechende Objekt verwahrt.",
+        "B) Hier werden sämtliche Objektschlüssel in einem zentralen Depot deponiert und verwaltet, auf das die Revier- und Interventionsfahrer im Bedarfsfall zugreifen können.",
+        "C) Hiermit ist der Wandtresorbauort gemeint, in dem der Zugangsschlüssel für die Feuerwehr deponiert wurde."
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 19,
+      "question": "Die Widerstandszeit gibt an...",
+      "options": [
+        "A) Wie viel Zeit der Täter im Objekt verbringt",
+        "B) Wie viel Zeit für den gesamten Einbruch von Anfang bis Ende vergeht",
+        "C) Wie viel Zeit der Täter benötigt, um eine Sicherheitseinrichtung zu überwinden",
+        "D) Wie viel Zeit der Sicherheitsmitarbeiter zur Ankunft am Objekt benötigt"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Die Widerstandszeit gibt an, wie viel Zeit der Täter benötigt, um eine Sicherheitseinrichtung zu überwinden. Sie ist ein Maß für die Effektivität einer Sicherheitsmaßnahme und kann bei der Bewertung der Sicherheit eines Gebäudes oder Geländes helfen."
+    },
+    {
+      "id": 20,
+      "question": "Was sind Merkmale einer Hauptschlüsselanlage?",
+      "options": [
+        "A) Ein Generalhauptschlüssel schließt alle vorhandenen Schließzylinder",
+        "B) Ein Einzelschlüssel schließt eine Haupttür und einen weiteren dazugehörigen Schließzylinder",
+        "C) Ein Hauptschlüssel schließt alle vorhandenen Schließzylinder",
+        "D) Die jeweiligen Einzelschlüssel schließen je einen zugehörigen Schließzylinder"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 21,
+      "question": "Das umfangreichste Schließsystem ist die...",
+      "options": [
+        "A) Generalhauptschlüsselanlage",
+        "B) Zentralschließanlage",
+        "C) Hauptschlüsselanlage",
+        "D) Mehrfachschließanlage"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 22,
+      "question": "Was sind sogenannte \"Ausleger\" bei Einfriedungen?",
+      "options": [
+        "A) Pfosten",
+        "B) Übersteigschutz",
+        "C) Zaunfelder",
+        "D) Verankerungen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "\"Ausleger\" bei Einfriedungen sind Übersteigschutzvorrichtungen. Sie dienen dazu, das Überklettern oder Übersteigen von Zäunen oder Mauern zu verhindern und somit die Sicherheit des eingefriedigten Geländes zu erhöhen."
+    },
+    {
+      "id": 23,
+      "question": "Durchlässe...",
+      "options": [
+        "A) Sollten immer einen höheren Widerstandswert bieten als die restliche Befriedung",
+        "B) Sind keine Schwachstellen in der Befriedung",
+        "C) Sind z.B. Portaldrehkreuz oder Schrankenanlage",
+        "D) Sind Lücken in einer Befriedung, die von Personen oder Fahrzeugen durchgangen oder durchfahren werden können"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 24,
+      "question": "Welche Anforderungen gibt es für die Schlüsselaufbewahrung?",
+      "options": [
+        "A) Es dürfen nicht mehr als 2 Schlüssel zusammen aufbewahrt werden",
+        "B) Schlüssel müssen immer verplombt werden",
+        "C) Bei längerer Aufbewahrung - in einem, für Schlüssel geeignetem, Behältnis (z.B. Schlüsseltresor)",
+        "D) Gesichert gegen den Zugriff von unbefugten Personen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 25,
+      "question": "Brände werden in bestimmte Brandklassen unterteilt. Brände der Brandklasse C sind...",
+      "options": [
+        "A) ...Brände flüssiger oder flüssig werdender Stoffe.",
+        "B) ...Brände von Fetten und Ölen.",
+        "C) ...Brände von Metallen.",
+        "D) ...Brände von Gasen."
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 26,
+      "question": "Was für Voraussetzungen gibt es für einen Brand?",
+      "options": [
+        "A) Zündung/Wärme",
+        "B) Sauerstoff",
+        "C) Mind. drei brennbare Stoffe",
+        "D) Kohlendioxid"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 27,
+      "question": "Eine Triplexiste ist...",
+      "options": [
+        "A) Teil einer Einbruchmeldeanlage",
+        "B) Teil einer Gefahrenmeldeanlage",
+        "C) Teil einer Brandmeldeanlage",
+        "D) Teil einer Überfallmeldeanlage"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 28,
+      "question": "Welche der folgenden Angaben dient/dienen als Durchfahrtssperren?",
+      "options": [
+        "A) 3-Arm-Drehsperre",
+        "B) Schrankenanlage",
+        "C) Portaldrehkreuz",
+        "D) Segmentsperre"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 29,
+      "question": "Wie ist bei einem Brand vorzugehen?",
+      "options": [
+        "A) Brandbekämpfung vor Rettungsversuch",
+        "B) Brandbekämpfung vor Brandmeldung",
+        "C) Brandmeldung vor Rettungsversuch",
+        "D) Rettungsversuch vor Brandbekämpfung"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 30,
+      "question": "Brände flüssiger Stoffe",
+      "options": [
+        "A) Brände fester Stoffe",
+        "B) Brände gasförmiger Stoffe",
+        "C) Metallbrände",
+        "D) Brände gasförmiger Stoffe"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Brandklasse B umfasst Brände gasförmiger Stoffe. Das bedeutet, dass in dieser Brandklasse brennbare Gase wie Methan, Propan oder Butan eingeschlossen sind. Diese Art von Bränden erfordert spezielle Löschmittel und -techniken, da die Bekämpfung von Gasbränden besondere Herausforderungen mit sich bringt."
+    },
+    {
+      "id": 31,
+      "question": "Als die 3 Säulen der Sicherheitstechnik bezeichnet man...",
+      "options": [
+        "A) Organisatorische und mechanische sowie pneumatische Maßnahmen.",
+        "B) Mechanische, repressive und präventive Maßnahmen.",
+        "C) Elektronische, manuelle und präventive Maßnahmen.",
+        "D) Mechanische, elektronische sowie organisatorische Maßnahmen."
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 32,
+      "question": "Ein Transpondersystem...",
+      "options": [
+        "A) Bietet vielfältigere Einsatzmöglichkeiten als Schlüssel",
+        "B) Enthalten biometrische Daten",
+        "C) Ist weniger sicher als ein Schlüsselsystem",
+        "D) Wird für Zugangs- oder Zufahrtsbereiche eingesetzt"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Ein Transpondersystem bietet vielfältigere Einsatzmöglichkeiten als herkömmliche Schlüssel, da es elektronisch gesteuert wird. Es wird häufig für Zugangs- oder Zufahrtsbereiche eingesetzt und ermöglicht eine effiziente Kontrolle und Verwaltung des Zutritts."
+    },
+    {
+      "id": 33,
+      "question": "Welche der folgenden Angaben sind automatische Melder?",
+      "options": [
+        "A) Druckknopfmelder",
+        "B) Trittleiste",
+        "C) Riegelkontakt",
+        "D) Bewegungsmelder"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Automatische Melder sind Riegelkontakte und Bewegungsmelder, da sie ohne manuelle Eingabe aktiviert werden können."
+    },
+    {
+      "id": 34,
+      "question": "Welche Aussagen zur Kameraüberwachung ist/sind richtig?",
+      "options": [
+        "A) Private Stellen dürfen grundsätzlich keine öffentlichen Bereiche überwachen.",
+        "B) Aufnahmen müssen immer nach 72 Stunden gelöscht werden.",
+        "C) Kameraüberwachung im privaten Bereich muss den betroffenen Personen angekündigt werden.",
+        "D) Die Kameraaufnahme ist nur im Rahmen einer Dienstanfallte gestattet."
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 35,
+      "question": "Die Perimeterüberwachung...",
+      "options": [
+        "A) Ist die Überwachung des Innenraumes eines Gebäudes",
+        "B) Ist die Überwachung von Freigelände",
+        "C) Ist die Überwachung der Außenhaut eines Gebäudes",
+        "D) Ist die Überwachung der Befriedung eines Objektes"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 36,
+      "question": "Was spielt bei der Errichtung von mechanischen Sicherheitseinrichtungen eine wichtige Rolle?",
+      "options": [
+        "A) Ausschließlich die Bauerlaubnis.",
+        "B) Die Höhe der Sicherheitseinrichtung.",
+        "C) Der Widerstandswert."
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 37,
+      "question": "Eine Einbruchmeldeanlage...",
+      "options": [
+        "A) Verhindert immer Einbruchsversuche",
+        "B) Wird von der Einbruchmeldezentrale aus gesteuert",
+        "C) Erkennt Einbruchsversuche frühzeitig",
+        "D) Ist direkt an eine Polizeileitstelle angeschlossen"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 38,
+      "question": "Die Peripherie eines Objektes ist...",
+      "options": [
+        "A) Der Innenraum eines Gebäudes",
+        "B) Die Befriedung am Gelände",
+        "C) Die Außenhaut des Objektes",
+        "D) Das Gelände am Objekt"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 39,
+      "question": "Was sind die 3 Säulen der Sicherheitstechnik?",
+      "options": [
+        "A) Mechanischer Schutz, Elektronischer Schutz, Personeller Schutz",
+        "B) Technische, organisatorische und personelle Maßnahmen",
+        "C) Mechanischer Schutz, Personeller Schutz, Organisatorischer Schutz",
+        "D) Mechanischer Schutz, Elektronischer Schutz, Organisatorischer Schutz"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 40,
+      "question": "Welche Arten von Meldern dienen in der Regel der Innenraumüberwachung bei einer Einbruchmeldeanlage (EMA)?",
+      "options": [
+        "A) Gasmelder",
+        "B) Bodendrucksensoren",
+        "C) Infrarotbewegungsmelder",
+        "D) Körperschallmelder"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 41,
+      "question": "Je höher die Widerstandsklasse...",
+      "options": [
+        "A) Desto höher ist der Wert des Objektes",
+        "B) Desto höher die Widerstandszeit mit gleichem Werkzeug",
+        "C) Desto höher ist der Wert der zu schützenden Werte",
+        "D) Desto mehr Zeit wird benötigt, das Objekt zu überwinden oder zu zerstören"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 42,
+      "question": "Unter einem Schlüsseldepot versteht man...",
+      "options": [
+        "A) ...Hier werden die Schlüssel für die Geldautomaten im Geldtransport verwahrt.",
+        "B) ...Die Organisation der Schlüsselverwaltung.",
+        "C) ...Dass hier der Objektschlüssel für die Feuerwehr in einem Wandtresorbauort verwahrt wird."
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 43,
+      "question": "Meldelinie",
+      "options": [
+        "A) Meldelinie",
+        "B) Bewegungsmelder",
+        "C) Fernwartung",
+        "D) Alarmierung"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 44,
+      "question": "Welche der folgenden Angaben werden der elektronischen Sicherung zugeordnet?",
+      "options": [
+        "A) Flammenmelder",
+        "B) Schließblech",
+        "C) Interne audiovisuelle Alarmierung",
+        "D) Feuerschutztür"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 45,
+      "question": "Bei der Verwendung von Rauchmeldern in Brandmeldeanlagen ist das Auftreten von Fehlalarmen möglich. Was sind potenzielle Ursachen?",
+      "options": [
+        "A) Umwelteinflüsse, Dämpfe, Staub, Alterung",
+        "B) Wechselnde Temperaturen, Infrarotlicht, Erschütterungen.",
+        "C) Ständige Sonneneinstrahlung, UV-Licht."
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 46,
+      "question": "Woraus besteht Verbundsicherheitsglas (VSG)?",
+      "options": [
+        "A) ESG - Folie = ESG",
+        "B) Folie - ESG = Folie",
+        "C) ESG - Folie = Folie",
+        "D) ESG - Kunststoffglas = ESG"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 47,
+      "question": "Was sollten Einfriedungen für Merkmale haben?",
+      "options": [
+        "A) Schutz gegen Durch- und Übergreifen",
+        "B) Mit Warnschildern versehen",
+        "C) Mit Strom durchflossen",
+        "D) Schutz gegen Übersteigen, Untergraben und Unterkriechen"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 48,
+      "question": "In einem Laborgebäude kommt es bei einem Brand in einem Lagerraum mit besonderen Chemikalien zu einer starken Hitzeentwicklung. Welche Melder sind bei rapidem Temperaturanstieg besonders gut geeignet?",
+      "options": [
+        "A) Flammenmelder.",
+        "B) Rauchmelder.",
+        "C) Wärmemelder."
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 49,
+      "question": "Eine Personenschleuse...",
+      "options": [
+        "A) Wird nur an Zugängen von Gebäuden eingesetzt",
+        "B) Wird oft in Einkaufszentren eingesetzt",
+        "C) Ist sicherer als ein Portaldrehkreuz",
+        "D) Kann mit biometrischen Systemen kombiniert werden"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 50,
+      "question": "Wie unterscheiden sich aktive und passive Glasbruchmelder voneinander?",
+      "options": [
+        "A) Ein passiver Glasbruchmelder besteht aus nur einem Bauelement, welches sich auf der Scheibe befindet und Schallwellen empfängt. Bei einem Glasbruch entsteht eine bestimmte Schallwellenfrequenz, die der passive Glasbruchmelder erkennt und meldet.",
+        "B) Ein aktiver Glasbruchmelder besteht aus nur einem Bauelement, welches sich auf der Scheibe befindet und Schallwellen empfängt. Ändert sich im Falle eines Bruches die Frequenz der Schallwellen, löst der aktive Glasbruchmelder Alarm aus.",
+        "C) Ein aktiver Glasbruchmelder besteht aus zwei Bauelementen, einem Sender und einem Empfänger. Der Sender sendet permanent Schallwellen zum Empfänger. Ändert sich durch einen Glasbruch oder durch heftige Schwingungen die empfangene Schallwellenfrequenz, löst der aktive Glasbruchmelder Alarm aus."
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 51,
+      "question": "Welche Arten von Zäunen kennen Sie?",
+      "options": [
+        "A) Stahlprofilrahmenzaun",
+        "B) Stahlmahrzaun",
+        "C) Holzlinsenzaun",
+        "D) Streckmetallzaun"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 52,
+      "question": "Ein V-Ausleger...",
+      "options": [
+        "A) Kann den Widerstandszeitwert erhöhen",
+        "B) Kann an Zäune angebracht werden",
+        "C) Ist ein Y-förmiger Chip in einer Zutrittskarte",
+        "D) Ist eine Erweiterung für Überwachungskameras"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 53,
+      "question": "Wie tief sollten Zaunfeldemente mindestens ins Erdreich reichen, um ein Untergraben zu erschweren?",
+      "options": [
+        "A) 20 cm",
+        "B) 40 cm",
+        "C) 80 cm",
+        "D) 60 cm"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 54,
+      "question": "Wie tief sollte der Untergrabschutz von Zäunen mindestens sein, wenn diese eingesetzt werden?",
+      "options": [
+        "A) 180-220 cm",
+        "B) 100-180 cm",
+        "C) 220-240 cm",
+        "D) 40-80 cm"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Der Untergrabschutz von Zäunen sollte mindestens 40-80 cm tief sein, um das Eindringen von Tieren oder Personen unter dem Zaun zu verhindern."
+    },
+    {
+      "id": 55,
+      "question": "Ein Bewegungsmelder gehört primär zum...",
+      "options": [
+        "A) Organisatorischen Schutz",
+        "B) Elektronischen Schutz",
+        "C) Mechanischen Schutz",
+        "D) Personellen Schutz"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Ein Bewegungsmelder gehört primär zum elektronischen Schutz. Er erkennt Bewegungen und kann in verschiedenen Sicherheitssystemen eingesetzt werden, um unerlaubtes Betreten oder Eindringen zu erkennen und löst so Alarme oder andere Sicherheitsmaßnahmen aus."
+    },
+    {
+      "id": 56,
+      "question": "Bereitstellung von Informationen für den Sicherheitsmitarbeiter",
+      "options": [
+        "A) Bereitstellung von Informationen für den Sicherheitsmitarbeiter",
+        "B) Nachweis von durchgeführten Leistungen für den Kunden",
+        "C) Arbeitszeitüberwachung des Mitarbeiters",
+        "D) Protokollierung von Kontrollstellen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 57,
+      "question": "Einbruchmeldeanlagen (EMA) sind Gefahrenmeldeanlagen die automatisch...",
+      "options": [
+        "A) ...Gegenstände gegen unbefugte Wegnahme sowie Flächen und Räume gegen unbefugtes Eindringen schützen.",
+        "B) ...Gegenstände gegen unbefugte Wegnahme sowie Flächen und Räume gegen befugtes Eindringen überwachen.",
+        "C) ...Die unbefugte Wegnahme von Gegenständen aus, sowie das unbefugte Eindringen in Räumen und Flächen abwehren."
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 58,
+      "question": "Welche der folgenden Angaben werden der organisatorischen Sicherung zugeordnet?",
+      "options": [
+        "A) 130 dB lauter Alarmton bei Einbruch",
+        "B) Überprüfung der Brandbekämpfungsmittel",
+        "C) Erstellung eines Flucht- und Rettungsweglanes",
+        "D) Auslösung eines Rauchmelders bei Brand"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 59,
+      "question": "Die Widerstandszeit wird gemessen anhand...",
+      "options": [
+        "A) ...des Gütefaktors / der Qualität des Materials einer sicherheitstechnischen Einrichtung.",
+        "B) ...der Zeit, die ein Täter benötigt, unter Verwendung jeglicher Hilfsmittel, um ein mechanisches Sicherheitshindernis zu überwinden.",
+        "C) ...der Zeit, die ein Fachmann benötigt, unter Verwendung modernster Hilfsmittel, um ein sicherheitstechnisches Hindernis zu überwinden.",
+        "D) ...der Zeit, die ein Täter benötigt, um ein Sicherheitshindernis zu überwinden."
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 60,
+      "question": "Der Werkstoff \"Glas\" wird als Bestandteil von Fenstern und Türen als große Schwachstelle gewertet. Wie kann dieser Schwachstelle konstruktiv entgegengewirkt werden?",
+      "options": [
+        "A) Durch nachträgliches Bekleben der Einzelscheibe mit einer Kunststofffolie.",
+        "B) Durch die Verwendung einer Doppelscheibe als \"Isolierglas mit Schall- und Wärmedämmung.\"",
+        "C) Durch die Verwendung einer Scheibe mit \"Verbundglas-Bauweise.\"",
+        "D) Durch den Einsatz von \"Einscheiben-Sicherheitsglas\" mit einer Glasdicke von mindestens 10 mm."
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 61,
+      "question": "Welches ist/sind Möglichkeiten ein Fenster mit Meldern zu überwachen?",
+      "options": [
+        "A) Glasbruchmelder",
+        "B) Querriegelschloss",
+        "C) Vergitterung",
+        "D) Bewegungsmelder"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Möglichkeiten, ein Fenster mit Meldern zu überwachen, sind der Einsatz von Glasbruchmeldern und Bewegungsmeldern. Glasbruchmelder reagieren auf das Geräuch, das entsteht, wenn eine Fensterscheibe zerbricht. Bewegungsmelder hingegen registrieren Veränderungen im Erfassungsbereich, z. B. wenn sich jemand dem Fenster nähert oder es durchbricht. Beide Melder können dazu beitragen, unerlaubtes Betreten oder Eindringen zu erkennen und entsprechende Maßnahmen einzuleiten."
+    },
+    {
+      "id": 62,
+      "question": "Was gehört zu den organisatorischen Maßnahmen des vorbeugenden Brandschutzes?",
+      "options": [
+        "A) Durchführung von Brandschutzkontrollen.",
+        "B) Unterweisung des Personals.",
+        "C) Die Bestellung von Brandschutzbeauftragten.",
+        "D) Installation von Sicherheitskennzeichnung.",
+        "E) Erarbeiten von Brandschutzplänen."
+      ],
+      "correct_answers": ["D", "E"],
+      "explanation": ""
+    },
+    {
+      "id": 63,
+      "question": "Die Reihenfolge der Grundsätze der Brandbekämpfung lautet...",
+      "options": [
+        "A) Melden - Retten - Bekämpfen",
+        "B) Retten - Melden - Bekämpfen",
+        "C) Bekämpfen -Retten - Melden"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 64,
+      "question": "Ziel eines Sicherheitsunternehmens sollte was sein?",
+      "options": [
+        "A) Widerstandszeitwert erhöhen",
+        "B) Interventionszeit verringern",
+        "C) Widerstandszeitwert verringern",
+        "D) Interventionszeit erhöhen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 65,
+      "question": "Welcher Melder kann als Streulichtmelder arbeiten?",
+      "options": [
+        "A) Rauchmelder",
+        "B) Flammenmelder",
+        "C) Wärmemelder",
+        "D) Druckknopfmelder"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 66,
+      "question": "Welche dieser Personenvereinzelungsanlagen hat die besten individuellen Prüfmöglichkeiten?",
+      "options": [
+        "A) Drei-Arm-Drehsperre",
+        "B) Portaldrehkreuz",
+        "C) Personenschleuse",
+        "D) Drehtür"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 67,
+      "question": "Welche Brandklassen gibt es?",
+      "options": [
+        "A) A, B, C, D, E",
+        "B) ABC, D, E, F, G",
+        "C) A, B, C",
+        "D) A, B, C, D, F"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 68,
+      "question": "Welche Schließanlage ist optimal für ein einfaches Mehrfamilienhaus?",
+      "options": [
+        "A) Zentralschließanlage",
+        "B) Hauptschlüsselanlage",
+        "C) Einzelschließanlage",
+        "D) Generalhauptschließanlage"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 69,
+      "question": "Verdrängung des Sauerstoffs",
+      "options": [
+        "A) Verdrängung des Sauerstoffs",
+        "B) Chemische Reaktion mit Brennstoffen",
+        "C) Abkühlung",
+        "D) Ersticken"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 70,
+      "question": "Die Interventionszeit...",
+      "options": [
+        "A) Ist die Zeit, die die Interventionskraft am Objekt für eine Kontrolle nach einem Alarm benötigt",
+        "B) Sollte geringer sein als der Widerstandszeitwert",
+        "C) Ist immer gleich groß",
+        "D) Ist die Zeit von der Alarmierung bis zum Eintreffen der Interventionskraft am Objekt"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 71,
+      "question": "Was ist bei der Bekämpfung eines Brandes zu beachten?",
+      "options": [
+        "A) Mehrere Feuerlöscher gleichzeitig einsetzen",
+        "B) Tropfdände von oben nach unten löschen",
+        "C) Brandbekämpfung nur gegen die Windrichtung",
+        "D) Mehrere Feuerlöscher nacheinander einsetzen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 72,
+      "question": "Welches ist ein Bestandteil einer Tür?",
+      "options": [
+        "A) Schlossekumschluss",
+        "B) Zarge",
+        "C) Schließblech",
+        "D) Klinkenstopper"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    }
+  ]
+}

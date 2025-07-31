@@ -1,0 +1,540 @@
+{
+  "quiz_title": "Sachkundeprüfung 34a - Datenschutz",
+  "total_questions": 45,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Was sind personenbezogene Daten im Sinne des Bundesdatenschutzgesetzes (BDSG)?",
+      "options": [
+        "A) Name, Vorname, Alter, Personalausweisnummer",
+        "B) Bewertung politischer Parteien im Rahmen einer anonymen Meinungsumfrage",
+        "C) Ausgefüllter Wahlzettel in der Wahlurne"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Personenbezogene Daten sind Einzelangaben über persönliche Verhältnisse bestimmter natürlicher Personen wie Name, Alter, etc."
+    },
+    {
+      "id": 2,
+      "question": "Wozu muss der Unternehmer seine Sicherheitsmitarbeiter schriftlich verpflichten?",
+      "options": [
+        "A) Besonders sensible personenbezogene Daten dürfen auch innerhalb des Betriebes nicht genutzt werden",
+        "B) Alle eigenen personenbezogenen Daten gegenüber dem betrieblichen Datenschutzbeauftragten offenbaren",
+        "C) Personenbezogene Daten nur an Geschäftspartner und Subunternehmer weitergeben",
+        "D) Datengeheimnis wahren"
+      ],
+      "correct_answers": ["A", "B", "C", "D"],
+      "explanation": "Alle genannten Punkte sind wichtige datenschutzrechtliche Verpflichtungen für Sicherheitsmitarbeiter."
+    },
+    {
+      "id": 3,
+      "question": "Welche Aufgaben kann ein Datenschutzbeauftragter primär haben?",
+      "options": [
+        "A) Kameras installieren, um zu überwachen, ob Mitarbeiter den Datenschutz einhalten",
+        "B) Überprüfung und Kontrolle, ob Schutzmaßnahmen dem Datenschutz dienlich eingehalten werden",
+        "C) Verbesserung der Schutzmaßnahmen, um Daten vor unberechtigtem Zugriff zu sichern",
+        "D) Kameras installieren, um zu überwachen, ob Mitarbeiter den Datenschutz einhalten"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Datenschutzbeauftragte kontrollieren und verbessern Schutzmaßnahmen, installieren aber keine Überwachungskameras."
+    },
+    {
+      "id": 4,
+      "question": "Ein Sicherheitsmitarbeiter wird von einer fremden Firma angerufen und gefragt, ob er für diese arbeiten möchte. Welche Rechte hat der Mitarbeiter?",
+      "options": [
+        "A) Auf Schadensersatz verklagen",
+        "B) Auskunft über den Umfang seiner festgehaltenen Daten in der Firma",
+        "C) Um Löschung bitten",
+        "D) Sich Zugang zu den Daten in der fremden Firma verschaffen"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Betroffene haben das Recht auf Auskunft über ihre Daten und können um Löschung bitten."
+    },
+    {
+      "id": 5,
+      "question": "Welches dieser Gesetze enthält für den Sicherheitsbereich relevante Regelungen zum Datenschutz?",
+      "options": [
+        "A) Datenschutzgrundverordnung und Bundesdatenschutzgesetz",
+        "B) Bewachungsverordnung",
+        "C) Betriebsverfassungsgesetz",
+        "D) Bürgerliches Gesetzbuch"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "DSGVO, BDSG und die Bewachungsverordnung enthalten relevante Datenschutzregelungen für Sicherheitsdienste."
+    },
+    {
+      "id": 6,
+      "question": "Welche Aussage/n zum \"Recht auf informationelle Selbstbestimmung\" ist/sind korrekt?",
+      "options": [
+        "A) Das Recht auf informationelle Selbstbestimmung besagt, dass jede Person selbst entscheiden kann, welche Informationen und Daten er in welchem Umfang von sich preisgibt",
+        "B) Das Recht auf informationelle Selbstbestimmung haben nicht die Mitarbeiter von Behörden oder Streitkräften",
+        "C) Das Recht auf informationelle Selbstbestimmung besagt, dass jeder Mensch sich aus frei verfügbaren Quellen informieren",
+        "D) Das Recht auf informationelle Selbstbestimmung ist in §8 GG festgehalten"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Das Recht auf informationelle Selbstbestimmung bedeutet, dass jeder selbst über die Preisgabe seiner Daten entscheiden kann."
+    },
+    {
+      "id": 7,
+      "question": "Der Türsteher wird vom Chef des Sicherheitsunternehmens entlassen. Was hat der ehemalige Sicherheitsmitarbeiter zu beachten?",
+      "options": [
+        "A) Seine nicht-automatisiert-gespeicherten Daten muss er innerhalb von 24 Stunden im Firmensitz abholen",
+        "B) Er muss alle, ihm im Dienst bekanntgewordenen, Betriebsgeheimnisse der Sicherheitsfirma und der Kunden für sich behalten",
+        "C) Er hat seine Daten umgehend dem örtlichen Jobcenter zu melden",
+        "D) Er muss beim Sicherheitsunternehmen eine Löschung seiner Daten beantragen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Auch nach der Kündigung muss der ehemalige Mitarbeiter alle Betriebsgeheimnisse weiterhin für sich behalten."
+    },
+    {
+      "id": 8,
+      "question": "Wie sind personenbezogene Daten zu sichern?",
+      "options": [
+        "A) Nach den Maßgaben der DSGVO und BDSG",
+        "B) Nur verschlüsselt bei automatisierten Daten",
+        "C) Nur verschlossen bei nicht automatisierten Daten",
+        "D) Gegen den unbefugten Zugriff Dritter"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Personenbezogene Daten müssen nach DSGVO/BDSG gesichert und vor unbefugtem Zugriff geschützt werden."
+    },
+    {
+      "id": 9,
+      "question": "Welche der folgenden Daten wird vom BDSG und DSGVO geschützt?",
+      "options": [
+        "A) Daten aller öffentlichen Stellen",
+        "B) Daten aller natürlichen Personen",
+        "C) Daten aller nicht-öffentlichen Stellen",
+        "D) Daten aller juristischen Personen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "BDSG und DSGVO schützen die Daten natürlicher Personen (Menschen)."
+    },
+    {
+      "id": 10,
+      "question": "Welche Aussage/n zu \"natürlichen Personen\" ist/sind korrekt?",
+      "options": [
+        "A) Eine natürliche Person wird man mit Vollendung der Geburt",
+        "B) Nur natürliche Personen können Daten erheben",
+        "C) Das Recht der informationellen Selbstbestimmung von natürlichen Personen ist u.a. durch die Datenschutzgrundverordnung geschützt",
+        "D) Natürliche Personen können auch Aktiengesellschaften und andere wirtschaftliche Gesellschaften sein"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Natürliche Personen sind Menschen ab der Geburt, deren informationelle Selbstbestimmung durch die DSGVO geschützt ist."
+    },
+    {
+      "id": 11,
+      "question": "Müssen Sicherheitsmitarbeiter im Dienst den Datenschutz beachten?",
+      "options": [
+        "A) Ja, immer",
+        "B) Nein, da das Bundesdatenschutzgesetz nur für juristische Personen gilt",
+        "C) Grundsätzlich nein, der Datenschutz muss aber bei der Aufnahme von Anzeigen - z.B. als Ladendetektiv - beachtet werden",
+        "D) Nein, der Datenschutz muss nur in der Verwaltung des Sicherheitsdienstes beachtet werden"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Sicherheitsmitarbeiter müssen immer den Datenschutz beachten, da sie regelmäßig mit personenbezogenen Daten umgehen."
+    },
+    {
+      "id": 12,
+      "question": "Mit welchen der folgenden Möglichkeiten sollte man Daten sichern?",
+      "options": [
+        "A) Die Daten möglichst vielen Mitarbeitern aushändigen, damit die Daten wieder zu erhalten sind, falls diese verloren gehen",
+        "B) Eine Kopie der Daten in eine ungeschützte Online-Cloud hochladen",
+        "C) Verschlüsselte Sicherheitskopien anlegen",
+        "D) In Datenschutzschrank legen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Daten sollten durch Verschlüsselung und sichere Aufbewahrung in Datenschutzschränken gesichert werden."
+    },
+    {
+      "id": 13,
+      "question": "Die Datenschutzgrundverordnung gilt für:",
+      "options": [
+        "A) Alle EU-Mitgliedsstaaten",
+        "B) Nur für Deutschland",
+        "C) Daten die besonders sensibel zu behandeln sind",
+        "D) Alle Länder der Welt"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Die DSGVO ist eine EU-Verordnung und gilt für alle EU-Mitgliedsstaaten."
+    },
+    {
+      "id": 14,
+      "question": "Was ist das \"Pseudonymisieren\" von Daten?",
+      "options": [
+        "A) Anstatt der Anzeige von dem Vor- und Nachnamen wird ein Nickname angezeigt",
+        "B) Die Veränderung von Daten, sodass diese nur mit hohem Aufwand einer natürlichen Person zugeordnet werden können",
+        "C) Das Ersetzen des Namens oder anderer Identifikationsmerkmale durch ein Kennzeichen",
+        "D) Der Betroffene gibt bei einer Onlinebestellung keine Daten an und bestellt anonym"
+      ],
+      "correct_answers": ["A", "B", "C"],
+      "explanation": "Pseudonymisierung bedeutet das Ersetzen von Identifikationsmerkmalen durch Kennzeichen oder Nicknames, sodass eine Zuordnung erschwert wird."
+    },
+    {
+      "id": 15,
+      "question": "Das Bundesdatenschutzgesetz (BDSG) gilt...",
+      "options": [
+        "A) ...ausschließlich für die Privatwirtschaft",
+        "B) ...nur für private Personen",
+        "C) ...nur für Bundesbehörden",
+        "D) ...für Bundes-, als auch für Landesbehörden und die Privatwirtschaft"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Das BDSG gilt sowohl für öffentliche Stellen (Bundes- und Landesbehörden) als auch für die Privatwirtschaft."
+    },
+    {
+      "id": 16,
+      "question": "Was ist das \"Anonymisieren\" von Daten?",
+      "options": [
+        "A) Die Veränderung von Daten, sodass diese nur mit hohem Aufwand einer natürlichen Person zugeordnet werden können",
+        "B) Das Ersetzen des Namens oder anderer Identifikationsmerkmale durch ein Kennzeichen",
+        "C) Die Verschlüsselung von Daten"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Anonymisierung bedeutet die vollständige Entfernung oder Verschlüsselung aller personenbezogenen Merkmale."
+    },
+    {
+      "id": 17,
+      "question": "In einer Diskothek kann ein Besucher nicht zahlen. Der Türsteher darf...",
+      "options": [
+        "A) Den Besucher nach dem Personalausweis durchsuchen",
+        "B) Sich die Daten vom Personalausweis abschreiben",
+        "C) In diesem Fall keine personenbezogenen Daten aufnehmen",
+        "D) Den Personalausweis der Person als Pfand einbehalten"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Ohne rechtliche Grundlage dürfen keine personenbezogenen Daten aufgenommen werden."
+    },
+    {
+      "id": 18,
+      "question": "Was ist bei der Kamera- und Videoüberwachung im Sicherheitsbereich zu beachten?",
+      "options": [
+        "A) Die Überwachung der Toilettenkabinen ist zur Wahrung des Hausrechts statthaft",
+        "B) Betroffene müssen immer auf die Kameraüberwachung aufmerksam gemacht oder informiert werden",
+        "C) Nach Erreichen des gewollten Zweckes ist kann die Aufnahme immer dauerhaft gespeichert werden",
+        "D) Die Überwachung der Toilettenkabinen ist zur Wahrung des Hausrechts statthaft"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Bei Videoüberwachung müssen Betroffene informiert werden und Aufnahmen können nach Zweckerreichung gespeichert werden."
+    },
+    {
+      "id": 19,
+      "question": "In welchem der folgenden Fälle muss der Betroffene benachrichtigt oder gefragt werden?",
+      "options": [
+        "A) Für die weitere Nutzung der Daten werden die Daten an ein Partnerunternehmen weitergegeben",
+        "B) Die Daten werden im System gelöscht, allerdings wird von ihnen eine schriftliche Kopie angelegt, was vom Besteller bereits bei der Bestellung zugestimmt worden ist",
+        "C) Auf einer Internetseite werden für die Bearbeitung einer Bestellung die Rechnungsdaten von der bestellenden Person aufgenommen",
+        "D) Wenn nach Abarbeitung der Bestellung die personenbezogenen Daten im System gelöscht werden"
+      ],
+      "correct_answers": ["A", "B", "C"],
+      "explanation": "Bei Weitergabe, Kopierung und Erhebung von Daten muss der Betroffene benachrichtigt oder um Zustimmung gefragt werden."
+    },
+    {
+      "id": 20,
+      "question": "Sind Verstöße gegen das Bundesdatenschutzgesetz Ordnungswidrigkeiten?",
+      "options": [
+        "A) Ja immer",
+        "B) Unter anderem, ja",
+        "C) Nein",
+        "D) Verstöße gegen das Bundesdatenschutzgesetz können auch Straftaten sein"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Verstöße gegen das BDSG können sowohl Ordnungswidrigkeiten als auch Straftaten darstellen."
+    },
+    {
+      "id": 21,
+      "question": "Was ist eine nicht-öffentliche-Stelle?",
+      "options": [
+        "A) Juristische Personen sind i.d.R auch nichtöffentliche Stellen",
+        "B) Jede natürliche Person",
+        "C) Agentur für Arbeit"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Nicht-öffentliche Stellen sind juristische Personen (Unternehmen) und natürliche Personen (Privatpersonen)."
+    },
+    {
+      "id": 22,
+      "question": "Hinsichtlich der Verarbeitung sog. besonderer Kategorien personenbezogener Daten nach Art. 9 der DSGVO ist die Verarbeitung personenbezogener Daten, aus denen zum Beispiel die rassische und ethnische Herkunft, politische Meinungen, religiöse oder weltanschauliche Überzeugungen oder die Gewerkschaftszugehörigkeit hervorgehen nicht erlaubt. Ausnahmen hiervon sind nur dann zulässig, wenn...",
+      "options": [
+        "A) ...die Verarbeitung durch Stiftungen, Vereinigungen oder sonstige Organisationen mit Gewinnerzielungsabsicht erfolgt (unter der Voraussetzung der Rechtmäßigkeit und der Zustimmung der Mitglieder)",
+        "B) ...eine ausdrückliche Einwilligung der Person vorliegt",
+        "C) ...Gründe des öffentlichen Interesses im Bereich der öffentlichen Gesundheit, wie z.B. dem Schutz vor schwerwiegenden grenzüberschreitenden Gesundheitsgefahren vorliegen"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Besondere Kategorien personenbezogener Daten dürfen nur mit ausdrücklicher Einwilligung oder bei öffentlichem Interesse verarbeitet werden."
+    },
+    {
+      "id": 23,
+      "question": "Was ist eine öffentliche Stelle?",
+      "options": [
+        "A) Behörden des Bundes",
+        "B) Natürliche Personen können auch eine öffentliche Stelle sein",
+        "C) Der öffentliche Fußballverein der Stadt",
+        "D) Organe der Rechtspflege eines Bundeslandes (z.B. Landgericht)"
+      ],
+      "correct_answers": ["A", "B", "D"],
+      "explanation": "Öffentliche Stellen sind Behörden, Gerichte und unter bestimmten Umständen auch natürliche Personen in öffentlicher Funktion."
+    },
+    {
+      "id": 24,
+      "question": "Darf durch private Stellen, in privaten Hausrechtsbereichen mit tatsächlich-öffentlichem (Publikums-) Verkehr Videoüberwachung erfolgen? Welche Antworten sind zutreffend?",
+      "options": [
+        "A) Eine private Videoüberwachung in privaten Hausrechtsbereichen mit tatsächlich-öffentlichem Publikumsverkehr ist grundsätzlich untersagt",
+        "B) Eine verdeckte Überwachung ist grundsätzlich nicht erlaubt",
+        "C) Es ist durch eine entsprechende Kennzeichnung (Beschilderung) auf die Videoüberwachung aufmerksam zu machen",
+        "D) Eine entsprechende Videoüberwachung ist ausschließlich nur öffentlichen Stellen gestattet"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Private Videoüberwachung ist unter bestimmten Bedingungen erlaubt, muss aber gekennzeichnet und offen erfolgen."
+    },
+    {
+      "id": 25,
+      "question": "Welche der folgenden Stellen muss einen Datenschutzbeauftragten bestellen?",
+      "options": [
+        "A) Ein Sicherheitsdienst mit 19 Mitarbeitern die alle Umgang mit der nichtautomatisierten Verarbeitung von Daten haben",
+        "B) Eine Internetagentur mit 11 Mitarbeiter von denen aber nur 9 Umgang mit der automatisierten Verarbeitung von personenbezogenen Daten haben",
+        "C) Das örtliche Ordnungsamt mit 21 Mitarbeiter, von denen nur 9 Umgang mit der automatisierten Verarbeitung von personenbezogenen Daten haben",
+        "D) Ein Entsorgungsunternehmen mit 12 Mitarbeiter die alle Umgang mit der automatisierten Verarbeitung von personenbezogenen Daten haben"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Datenschutzbeauftragte müssen bestellt werden bei: nichtöffentlichen Stellen ab 20 Personen (nichtautomatisiert) oder ab 10 Personen (automatisiert), öffentliche Stellen generell."
+    },
+    {
+      "id": 26,
+      "question": "Welche/r der folgenden Punkte kann eine Rechtmäßigkeit der Datenverarbeitung begründen?",
+      "options": [
+        "A) Die Verarbeitung ist für die Erfüllung eines Vertrages notwendig",
+        "B) Die zuständige Aufsichtsbehörde genehmigt die Herausgabe auf keiner Rechtsgrundlage",
+        "C) Betroffene Person hat Einwilligung für die Verarbeitung gegeben",
+        "D) Betroffene Person wird über die Verarbeitung informiert"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Rechtmäßige Datenverarbeitung erfordert Vertragserfüllung, Einwilligung oder andere gesetzliche Grundlagen."
+    },
+    {
+      "id": 27,
+      "question": "Der Grundsatz der \"Rechtmäßigkeit\" bei der Datenverarbeitung besagt, dass...",
+      "options": [
+        "A) Bei der Verarbeitung von personenbezogenen Daten nicht gegen geltendes Recht und Gesetz verstoßen werden darf",
+        "B) Datenverarbeitungsvorgänge ausschließlich auf Grundlage des BDSG erfolgen müssen",
+        "C) Personenbezogene Daten nicht verarbeitet werden dürfen, wenn damit gegen ein Gesetz verstoßen wird",
+        "D) Erlaubt es öffentlichen Stellen (z.B. Ämter) personenbezogene Daten auch zu verarbeiten, wenn diese unberechtigt aufgenommen worden sind"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Rechtmäßigkeit bedeutet, dass bei der Datenverarbeitung nicht gegen geltendes Recht verstoßen werden darf."
+    },
+    {
+      "id": 28,
+      "question": "Die Beobachtung öffentlich-zugänglicher Räume mit optisch-elektronischen Einrichtungen ist nach dem Bundesdatenschutzgesetz (BDSG) nur zulässig wenn...",
+      "options": [
+        "A) ...sie zur Wahrung des Hausrechts erforderlich ist, wie zum Beispiel zum Schutz gegen Ladendiebstahl",
+        "B) ...sie zur Aufgabenerfüllung öffentlicher Stellen erforderlich ist, wie zum Beispiel zur Verkehrslenkung",
+        "C) ...sie heimlich erfolgt, damit die Betroffenen anonym bleiben",
+        "D) ...Aufzeichnungen nicht über öffentliche oder private Fernsehsender ausgestrahlt werden"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Videoüberwachung ist zulässig zur Wahrung des Hausrechts oder zur Aufgabenerfüllung öffentlicher Stellen."
+    },
+    {
+      "id": 29,
+      "question": "Welche Folgen kann ein Verstoß gegen das BDSG haben?",
+      "options": [
+        "A) Immer Untersagung der Unternehmertätigkeit",
+        "B) Bußgeldverfahren",
+        "C) Behördliche Prüfung auf Tauglichkeit mit personenbezogenen Daten Umgang zu haben",
+        "D) Strafverfahren"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Verstöße gegen das BDSG können Bußgeld- oder Strafverfahren zur Folge haben."
+    },
+    {
+      "id": 30,
+      "question": "Was bedeutet \"Datenschutz\"?",
+      "options": [
+        "A) Datenschutz umfasst auch Maßnahmen die verhindern sollen, dass Daten durch Feuer oder Wasser beschädigt werden",
+        "B) Datenschutz befasst sich nur mit Maßnahmen die verhindern sollen, dass Daten durch unberechtigte Dritte gestohlen werden",
+        "C) Datenschutz umfasst alle Maßnahmen zum Schutz von Daten vor missbräuchlicher Verwendung",
+        "D) Der Datenschutz umfasst den Schutz des Rechts auf informationelle Selbstbestimmung"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Datenschutz umfasst Maßnahmen gegen Missbrauch und schützt das Recht auf informationelle Selbstbestimmung."
+    },
+    {
+      "id": 31,
+      "question": "Was bedeutet \"automatisierte Verarbeitung\"?",
+      "options": [
+        "A) Erhebung, Verarbeitung oder Nutzung personenbezogener Daten unter Einsatz von Datenverarbeitungsanlage",
+        "B) Erhebung, Verarbeitung oder Nutzung personenbezogener Daten unter Einsatz von Datenverarbeitungsanlage",
+        "C) Jede Erhebung, Verarbeitung oder Nutzung personenbezogener Daten",
+        "D) Nur die Verarbeitung von personenbezogenen Daten"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Automatisierte Verarbeitung bedeutet den Einsatz von Datenverarbeitungsanlagen (Computern) bei der Datenverarbeitung."
+    },
+    {
+      "id": 32,
+      "question": "Wann dürfen personenbezogene Daten verarbeitet werden?",
+      "options": [
+        "A) Grundsätzlich nur für festgelegte, eindeutige und legitime Zwecke",
+        "B) Ausschließlich wenn ein kompletter Datensatz vorliegt, der durch den Betroffenen nicht berichtigt werden muss",
+        "C) Jederzeit sobald der Betroffene darüber informiert wird",
+        "D) Ausnahmsweise auch für Archivzwecke, wissenschaftliche oder historische Forschungszwecke sowie zu statistischen Zwecken"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Datenverarbeitung ist nur für festgelegte Zwecke erlaubt, mit Ausnahmen für Archiv-, Forschungs- und Statistikzwecke."
+    },
+    {
+      "id": 33,
+      "question": "Was bedeutet \"Datensicherheit\"?",
+      "options": [
+        "A) Datensicherheit befasst sich auch mit Maßnahmen die verhindern sollen, dass Daten durch Staub und Alterung verloren gehen",
+        "B) Datensicherheit befasst sich mit Dienstleistungen die ein Sicherheitsunternehmen zum Schutz von Daten anbieten kann",
+        "C) Datensicherheit umfasst alle Maßnahmen zum Schutz von Daten vor Verlust, Zerstörung oder Verfälschung",
+        "D) Datensicherheit umfasst nur Maßnahmen die verhindern sollen, dass Daten durch Feuer oder Wasser beschädigt werden"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Datensicherheit umfasst alle technischen Maßnahmen zum Schutz vor Verlust, Zerstörung oder Verfälschung von Daten."
+    },
+    {
+      "id": 34,
+      "question": "Ab wann ist gemäß Bundesdatenschutzgesetz ein Datenschutzbeauftragter zu bestellen?",
+      "options": [
+        "A) Bei nichtöffentlichen Stellen wenn mind. 15 Personen Umgang auf anderer Weise mit personenbezogenen Daten haben",
+        "B) Bei öffentlichen Stellen wenn mind. 12 Personen Umgang mit der automatisierten Verarbeitung von personenbezogenen Daten haben",
+        "C) Bei nichtöffentlichen Stellen wenn mind. 10 Personen Umgang mit der automatisierten Verarbeitung von personenbezogenen Daten haben"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Datenschutzbeauftragte sind zu bestellen bei nichtöffentlichen Stellen ab 20 Personen (nichtautomatisiert) oder ab 10 Personen (automatisiert)."
+    },
+    {
+      "id": 35,
+      "question": "Welche Rechte hat ein Betroffener?",
+      "options": [
+        "A) Benachrichtigung wenn seine Daten gelöscht werden",
+        "B) Sofortige rückstandslose Löschung aller seiner Daten",
+        "C) Benachrichtigung bei erstmaliger Speicherung seiner Daten",
+        "D) Unter Umständen Schadensersatz bei entstandenem Schaden durch Verletzung seiner Rechte"
+      ],
+      "correct_answers": ["A", "C", "D"],
+      "explanation": "Betroffene haben Rechte auf Benachrichtigung bei Speicherung und Löschung sowie auf Schadensersatz bei Rechtsverletzungen."
+    },
+    {
+      "id": 36,
+      "question": "Was ist ein \"Dateisystem\" im Sinne der DSGVO?",
+      "options": [
+        "A) Sammlung von personenbezogenen Daten die analog in einem Ordner gespeichert sind",
+        "B) Digital gespeicherte Dateien auf einem Computer",
+        "C) Jede strukturierte Sammlung von personenbezogenen Daten auf die Personen Zugriff haben",
+        "D) Sammlung von personenbezogenen Daten die analog in einem Ordner gespeichert sind"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Ein Dateisystem umfasst sowohl digitale als auch analoge strukturierte Sammlungen personenbezogener Daten."
+    },
+    {
+      "id": 37,
+      "question": "Bei welcher dieser Situationen ist eine Kameraüberwachung statthaft?",
+      "options": [
+        "A) Umkleidekabine in einem Warenhaus",
+        "B) Kameraüberwachung auf öffentlicher Straße vor dem Werksgelände ohne besonderen Zweck",
+        "C) Überwachung der eigenen Wohnungstür",
+        "D) Einfahrt eines Werksgeländes"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Kameraüberwachung ist statthaft auf eigenem Grund und Boden sowie zur Sicherung von Betriebsgeländen."
+    },
+    {
+      "id": 38,
+      "question": "Welche Aussage/n zu \"juristischen Personen\" ist/sind korrekt?",
+      "options": [
+        "A) Grundsätzlich sind juristische Personen durch das BDSG nicht geschützt, müssen sich aber daran halten",
+        "B) Juristische Personen sind z.B. Kapitalgesellschaften",
+        "C) Juristische Personen sind keine nicht-öffentlichen Stellen",
+        "D) Das BDSG gilt für juristische Personen nicht"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Juristische Personen (Unternehmen, Vereine etc.) sind nicht durch das BDSG geschützt, müssen es aber befolgen."
+    },
+    {
+      "id": 39,
+      "question": "Dürfen im privaten Bereich, personenbezogene Daten, ohne Einverständnis der / des Betroffenen, zum Zweck der Datenverarbeitung erhoben werden?",
+      "options": [
+        "A) Nein, die Einwilligung zur Datenerhebung hat in der Regel schriftlich zu erfolgen",
+        "B) Ja, solche Daten dürfen von Sicherheitsmitarbeitern (SMA) erhoben werden, wenn es der Aufgabenerfüllung ihres Auftrages dient. Es ist nicht erforderlich den Betroffenen zu informieren",
+        "C) Nein, solche Daten dürfen nur erhoben werden, wenn der Betroffene eingewilligt hat",
+        "D) Ja, solche Daten dürfen von Jedermann erhoben werden, ungeachtet dessen, ob der Betroffene davon Kenntnis hat oder nicht"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Personenbezogene Daten dürfen grundsätzlich nur mit Einwilligung der betroffenen Person erhoben werden."
+    },
+    {
+      "id": 40,
+      "question": "Welches dieser Daten sind \"besondere Kategorien personenbezogener Daten\"?",
+      "options": [
+        "A) Religion",
+        "B) Krankheiten",
+        "C) Telefonnummer",
+        "D) Name und Vorname"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Besondere Kategorien sind sensible Daten wie Religion, Gesundheit, politische Meinungen etc."
+    },
+    {
+      "id": 41,
+      "question": "Wer ist \"Betroffener\" im Sinne des Bundesdatenschutzgesetzes?",
+      "options": [
+        "A) Eine identifizierte oder identifizierbare juristische Person",
+        "B) Eine identifizierte oder identifizierbare natürliche oder juristische Person",
+        "C) Eine identifizierte oder identifizierbare natürliche Person",
+        "D) Jede Person deren Daten verarbeitet werden"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Betroffener ist eine identifizierte oder identifizierbare natürliche Person (Mensch)."
+    },
+    {
+      "id": 42,
+      "question": "Was sind \"personenbezogene Daten\"?",
+      "options": [
+        "A) Einzelangaben über persönliche und sachliche Verhältnisse einer bestimmten oder bestimmbaren natürlichen Person",
+        "B) Einzelangaben über persönliche und sachliche Verhältnisse einer bestimmten oder bestimmbaren juristischen Person",
+        "C) Angaben über eine Person, wie z.B. Name, Blutgruppe, Bankdaten etc.",
+        "D) Einzelangaben über persönliche und sachliche Verhältnisse bestimmter oder bestimmbarer juristischer und natürlicher Personen"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Personenbezogene Daten sind alle Informationen über eine bestimmte oder bestimmbare natürliche Person."
+    },
+    {
+      "id": 43,
+      "question": "Was ist der Sinn der Datenschutzgrundverordnung und des Bundesdatenschutzgesetzes?",
+      "options": [
+        "A) Schutz von Daten gegen deren missbräuchliche Verwendung",
+        "B) Sicherung der Daten vor Verlust",
+        "C) Personen müssen immer ihre korrekten Daten angeben",
+        "D) Schutz der Persönlichkeitsrechte eines jeden Menschen"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "DSGVO und BDSG schützen vor Datenmissbrauch und sichern die Persönlichkeitsrechte."
+    },
+    {
+      "id": 44,
+      "question": "Was besagt das \"Datengeheimnis\"?",
+      "options": [
+        "A) Es müssen immer nur so viele Daten aufgenommen werden, wie für den Zweck nötig ist",
+        "B) Erhobene Daten dürfen nie weitergegeben werden",
+        "C) Mitarbeiter eines Sicherheitsdienstes dürfen keine Betriebsgeheimnisse nach außen tragen"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Das Datengeheimnis verpflichtet Mitarbeiter zur Verschwiegenheit über alle dienstlich bekannt gewordenen Daten."
+    },
+    {
+      "id": 45,
+      "question": "Wie lange muss ein Sicherheitsmitarbeiter nach der Kündigung die Geschäftsgeheimnisse für sich bewahren?",
+      "options": [
+        "A) Zwei Kalenderjahre",
+        "B) Für immer",
+        "C) Drei Kalenderjahre",
+        "D) Ein Kalenderjahr"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Die Verpflichtung zur Geheimhaltung von Betriebs- und Geschäftsgeheimnissen besteht zeitlich unbegrenzt."
+    }
+  ]
+}

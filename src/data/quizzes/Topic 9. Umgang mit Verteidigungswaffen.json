@@ -1,0 +1,667 @@
+{
+  "quiz_title": "Sachkundeprüfung 34a - Umgang mit Verteidigungswaffen",
+  "total_questions": 56,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Welche Unterlagen müssen u.a. bei Führen einer genehmigungspflichtigen Schusswaffe der zuständigen Behörde auf Aufforderung vorgezeigt werden können?",
+      "options": [
+        "A) Dienstausweis des Sicherheitsmitarbeiters",
+        "B) Personalausweis oder Reisepass",
+        "C) Munitionserwerbschein",
+        "D) Waffenbesitzkarte und Waffenschein"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 2,
+      "question": "Was ist/sind u.a. Voraussetzungen für die Beantragung einer Waffenbesitzkarte?",
+      "options": [
+        "A) Nachweis der Waffensachkunde",
+        "B) Nachweis eines über 2 Jahre geführten Schießbuches",
+        "C) Bedarf",
+        "D) Kleiner Waffenschein"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 3,
+      "question": "Verbotene Waffen...",
+      "options": [
+        "A) Können straffrei aus dem Ausland eingeführt werden",
+        "B) Sind in den Anhängen des WaffG einzeln aufgeführt",
+        "C) Dürfen von Waffenhändlern/Waffenschmieden unter Aufsicht hergestellt werden",
+        "D) Unterliegen einem absoluten Umgangsverbot"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Verbotene Waffen sind in den Anhängen des WaffG einzeln aufgeführt und unterliegen einem absoluten Umgangsverbot. Das bedeutet, dass der Besitz, die Herstellung, der Handel, das Überlassen oder das Mitführen dieser Waffen grundsätzlich strafbar ist. Zu den verbotenen Waffen zählen beispielsweise Schlagringe, Wurfsterne oder bestimmte Messerarten."
+    },
+    {
+      "id": 4,
+      "question": "Was bedeutet Führen im Sinne des WaffG?",
+      "options": [
+        "A) Das Ausüben der rechtlichen Gewalt außerhalb der eigenen Wohnung, eigenen Geschäftsräume, eigenen befriedeten Besitztums oder einer Schießstätte",
+        "B) Das Tragen einer Waffe auf einem Schießstand",
+        "C) Das rechtlich verpflichtende Führen eines Schießbuches",
+        "D) Das Ausüben der tatsächlichen Gewalt außerhalb der eigenen Wohnung, eigenen Geschäftsräume, eigenen befriedeten Besitztums oder einer Schießstätte"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 5,
+      "question": "Ein SMA führt im Dienst eine Schusswaffe, obwohl kein konkreter Bewachungsauftrag vorliegt. Seine Tätigkeit spielt sich im eingefriebeten Besitztum ab. Was bedeutet dies im Sinne des Waffengesetzes?",
+      "options": [
+        "A) Die fahrlässige Begehung ist ebenfalls strafbar.",
+        "B) Der SMA begeht eine Ordnungswidrigkeit.",
+        "C) Der SMA macht sich strafbar."
+      ],
+      "correct_answers": ["B"],
+      "explanation": ""
+    },
+    {
+      "id": 6,
+      "question": "Was bedeutet Überlassen im Sinne des WaffG?",
+      "options": [
+        "A) Einer anderen Person eine Waffe auf einem Schießstand für den vorübergehenden Gebrauch überlassen",
+        "B) Einer zuständigen Behörde die Waffe zur Überprüfung überlassen",
+        "C) Einer anderen Person eine Waffe zum Schießen überlassen wenn man daneben steht",
+        "D) Einer anderen Person den Besitz über eine Waffe oder Munition einräumen"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Im Sinne des Waffengesetzes bedeutet Überlassen, dass eine Person einer anderen Person den Besitz über eine Waffe oder Munition einräumt. Dies kann zum Beispiel durch einen Vertrag oder eine mündliche Vereinbarung geschehen."
+    },
+    {
+      "id": 7,
+      "question": "Welcher dieser Gegenstände ist eine Schusswaffe?",
+      "options": [
+        "A) Flinte",
+        "B) Armbrust",
+        "C) Präzisionsschleudern",
+        "D) Druckluftgewehr"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 8,
+      "question": "Welche tragbaren Gegenstände sind Waffen?",
+      "options": [
+        "A) Tragbare Gegenstände die zu Angriffs- und Verteidigungszwecken bestimmt sind und tragbare Gegenstände die zu Angriffs- und Verteidigungszwecken geeignet sind und im Gesetz genannt sind",
+        "B) Jeder tragbare Gegenstand wird bei einem Angriff zu einer Waffe",
+        "C) Nur tragbare Gegenstände die zu Angriffs- und Verteidigungszwecken bestimmt sind"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 9,
+      "question": "Was bedeutet Erwerben im Sinne des WaffG?",
+      "options": [
+        "A) Das Erlangen der tatsächlichen Gewalt einer Waffe oder Munition",
+        "B) Das Leihen einer Waffe oder Munition",
+        "C) Das Eintragen einer Waffe oder Munition in den Waffenschein",
+        "D) Das Kaufen einer Waffe oder Munition"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 10,
+      "question": "Welche Aussagen zur Waffenbesitzkarte ist/sind richtig?",
+      "options": [
+        "A) Kann nur Volljährigen ausgestellt werden",
+        "B) Berechtigt zum Besitz und Erwerb einer Waffe",
+        "C) Setzt die Waffensachkunde nicht voraus",
+        "D) Berechtigt nur zum Besitz einer Waffe"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Eine Waffenbesitzkarte berechtigt zum Besitz und Erwerb einer Waffe. Sie kann nur an Volljährige ausgestellt werden, da der Besitz und Erwerb von Waffen in Deutschland an bestimmte Altersgrenzen gebunden ist."
+    },
+    {
+      "id": 11,
+      "question": "Wodurch erhält man die Berechtigung zum Munitionserwerb?",
+      "options": [
+        "A) Kleiner Waffenschein",
+        "B) Großer Waffenschein",
+        "C) Munitionserwerbschein",
+        "D) Eintragung in Waffenbesitzkarte"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Die Berechtigung zum Munitionserwerb erhält man durch die Eintragung in die Waffenbesitzkarte und den Besitz eines Munitionserwerbscheins. Ohne diese Erlaubnisse ist es nicht gestattet, Munition zu erwerben. Die Eintragung in die Waffenbesitzkarte erfolgt nach Prüfung der persönlichen Zuverlässigkeit und Bedürftigkeit, während der Munitionserwerbschein für den Erwerb von Munition benötigt wird."
+    },
+    {
+      "id": 12,
+      "question": "Welche dieser Messer sind verboten?",
+      "options": [
+        "A) Taschenmesser mit einer Klingenlänge von 4,5 cm",
+        "B) Küchenmesser mit einer Klingenlänge über 14 cm",
+        "C) Faustmesser mit einseitig geschliffener Klinge"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Verbotene Messer sind Springmesser mit einer Klingenlänge von 8,4 cm, bei denen die Klinge vorne aus dem Griff herausspringt und doppelseitig geschliffen ist. Ebenso sind Faustmesser mit einseitig geschliffener Klinge verboten."
+    },
+    {
+      "id": 13,
+      "question": "Eine Waffe besitzt, wer...",
+      "options": [
+        "A) ...wer die tatsächliche Gewalt über die Waffe ausübt.",
+        "B) ...die tatsächliche Gewalt über die Waffe, außerhalb der eigenen Wohnung, Geschäftsräume oder befriedeten Besitztums ausübt.",
+        "C) ...wer die tatsächliche Gewalt über die Waffe einem Dritten einräumt.",
+        "D) ...die tatsächliche Gewalt über die Waffe erlangt."
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 14,
+      "question": "Was berechtigt zum Führen einer PTB-Waffe?",
+      "options": [
+        "A) Waffenbesitzkarte",
+        "B) Waffenschein",
+        "C) Kleiner Waffenschein",
+        "D) Ausnahmegenehmigung des Bundeskriminalamtes"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Zum Führen einer PTB-Waffe berechtigen eine Ausnahmegenehmigung des Bundeskriminalamtes sowie ein kleiner Waffenschein. Diese Genehmigungen müssen vor dem Führen einer PTB-Waffe beantragt und vom zuständigen Amt genehmigt werden."
+    },
+    {
+      "id": 15,
+      "question": "Wie ist eine PTB-Waffe zu erkennen?",
+      "options": [
+        "A) Prüfzeichen PTB im Fünfeck",
+        "B) Beschusszeichen in einer Raute",
+        "C) Prüfzeichen F im Fünfeck",
+        "D) Prüfzeichen PTB im Kreis"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 16,
+      "question": "Welche Voraussetzungen müssen Messer u.a. haben damit diese nicht den waffenrechtlichen Einschränkungen des WaffG unterliegen?",
+      "options": [
+        "A) Einseitig geschliffen",
+        "B) Für die Ausübung einer beruflichen Tätigkeit benötigt",
+        "C) Erheblich bedienbar",
+        "D) Klingenlänge unter 12 cm"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 17,
+      "question": "Was muss ein Sicherheitsmitarbeiter, der eine Schusswaffe im Dienst führen will, u.a. für Voraussetzungen erfüllen?",
+      "options": [
+        "A) Waffensachkunde nach § 7 WaffG",
+        "B) Wöchentlicher Schießnachweis",
+        "C) Volljährigkeit",
+        "D) Sachkundeprüfung nach §34a GewO"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Ein Sicherheitsmitarbeiter, der eine Schusswaffe im Dienst führen will, muss verschiedene Voraussetzungen erfüllen. Dazu gehört unter anderem die Waffensachkunde nach § 7 WaffG, also ein Nachweis über das Fachwissen im Umgang mit Waffen. Außerdem muss er volljährig sein und bestimmte persönliche Zuverlässigkeitsvoraussetzungen erfüllen."
+    },
+    {
+      "id": 18,
+      "question": "Was gilt für Nachbildungen von Schusswaffen?",
+      "options": [
+        "A) Nachbildungen dürfen nur mit einem kleinen Waffenschein besessen werden",
+        "B) Sind die Nachbildungen neofarben dürfen diese in der Öffentlichkeit geführt werden",
+        "C) Bei Kauf von Nachbildungen sind diese der zuständigen Behörde zu melden",
+        "D) Nachbildungen dürfen grundsätzlich nicht in der Öffentlichkeit geführt werden"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 19,
+      "question": "Welchen Zweck haben Sicherungen an Schusswaffen?",
+      "options": [
+        "A) Sicherungen sollen das unbeabsichtigte Herausfallen aus dem Holster verhindern.",
+        "B) Sicherungen sollen eine unbeabsichtigte Schussauslösung verhindern.",
+        "C) Sicherungen sollen die die unbeabsichtigte Schussauslösung und das Herausfallen aus dem Holster verhindern."
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Sicherungen an Schusswaffen dienen dazu, eine unbeabsichtigte Schussauslösung zu verhindern. Sie bieten einen zusätzlichen Schutz, um Fehlauslösungen oder Unfälle zu vermeiden."
+    },
+    {
+      "id": 20,
+      "question": "Ein Waffenschein...",
+      "options": [
+        "A) Berechtigt zum Abschießen einer Waffe",
+        "B) Berechtigt zum Kauf einer Waffe",
+        "C) Berechtigt zum Besitzen einer Waffe",
+        "D) Berechtigt zum Führen einer Waffe"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Ein Waffenschein berechtigt zum Führen einer Waffe. Er ist eine behördliche Erlaubnis, die es dem Inhaber ermöglicht, eine Schusswaffe außerhalb seiner eigenen Wohnung oder Geschäftsräume mitzuführen. Dabei sind jedoch bestimmte Auflagen zu beachten, zum Beispiel hinsichtlich des Führens in der Öffentlichkeit."
+    },
+    {
+      "id": 21,
+      "question": "Darf man Waffen gegen andere Personen einsetzen?",
+      "options": [
+        "A) Nein, solch eine Benutzung stellt eine Straftat dar.",
+        "B) Nein, sowas dürfen nur Behörden des Bundes und des Landes",
+        "C) Auch in Notwehrsituationen ist die Benutzung von Waffen nicht gerechtfertigt und verhältnismäßig",
+        "D) Unter Umständen können in Notwehrsituationen Waffen eingesetzt werden, wenn dieses das mildeste Mittel darstellt"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 22,
+      "question": "Wie sind Waffen und Munition aufzubewahren?",
+      "options": [
+        "A) So dass sie gegen Wegnahme durch unbefugte Dritte gesichert sind",
+        "B) In unterschiedlichen Räumen",
+        "C) Ausnahmslos getrennt voneinander",
+        "D) Unter bestimmten Umständen oder in besonderen Behältnissen können Waffen und Munition in einem Behältnis aufbewahrt werden"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 23,
+      "question": "Welche/r dieser Gegenstände zählt/zählen zu den verbotenen Gegenständen?",
+      "options": [
+        "A) Butterflymesser",
+        "B) Schreckschusspistole",
+        "C) Teleskopschlagstock",
+        "D) Air-Taser"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Air-Taser und Butterflymesser zählen zu den verbotenen Gegenständen. Der Besitz und die Verwendung dieser Gegenstände sind in Deutschland strafbar."
+    },
+    {
+      "id": 24,
+      "question": "Welche Fristen im Zusammenhang mit dem Erwerb von erlaubnispflichtigen Schusswaffen sind korrekt?",
+      "options": [
+        "A) Die WBK wird zunächst nur für 3 Jahre erteilt und nach drei Jahren maximal verlängert werden. Dies ist jedoch nur zwei mal möglich, bevor dieser neu beantragt werden muss.",
+        "B) Die eingetragene Erwerbserlaubnis für eine Schusswaffe ist für ein Jahr gültig.",
+        "C) Nachdem eine Schusswaffe käuflich erworben wurde, muss der Erwerb innerhalb von 14 Tagen in einen Besitzzentrag gewandelt werden."
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 25,
+      "question": "Welche dieser Waffen ist/sind u.U. erlaubnisfrei zu führen?",
+      "options": [
+        "A) Soft-Air-Waffen",
+        "B) Spielzeugwaffen",
+        "C) Signalpistole"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 26,
+      "question": "Welche Aussagen zum WaffG ist/sind korrekt?",
+      "options": [
+        "A) Ein Sicherheitsmitarbeiter benötigt eine Waffenbesitzkarte wenn er als Geld- und Werttransportfahrer tätig ist und eine Waffe trägt.",
+        "B) Für das Führen einer Waffe im Dienst muss ein besonderes Bedürfnis nachgewiesen werden",
+        "C) Das Sicherheitsunternehmen welches bewaffneten Geld- und Werttransport anbietet benötigt eine Firmen-Waffenbesitzkarte",
+        "D) Ein Sicherheitsmitarbeiter benötigt einen Waffenschein wenn er als Geld- und Werttransportfahrer tätig ist und eine Waffe trägt."
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 27,
+      "question": "Was bedeutet Besitzen im Sinne des WaffG?",
+      "options": [
+        "A) Das Ausüben der tatsächlichen Gewalt über eine Waffe oder Munition außerhalb der eigenen Wohnung, eigenen Geschäftsräumen, eigenen befriedeten Besitztums oder einer Schießstätte",
+        "B) Das Nutzen einer, auf einem Schießstand ausgeliehenen Waffe unter Aufsicht.",
+        "C) Das Ausüben der tatsächlichen Gewalt über eine Waffe oder Munition",
+        "D) Besitz beginnt erst mit der Eintragung in die Waffenbesitzkarte"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 28,
+      "question": "Wann wird eine Verlängerung des Waffenscheins versagt?",
+      "options": [
+        "A) Mangelhafte Pflege und Reinigung der Waffe.",
+        "B) Nichterfüllung der Schießübungen.",
+        "C) Das Bedürfnis zum Führen einer Schusswaffe ist entfallen."
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 29,
+      "question": "Wie sind Schreckschusspistolen waffenrechtlich einzuordnen?",
+      "options": [
+        "A) Verbotene Waffen",
+        "B) Tragbare Gegenstände",
+        "C) Schusswaffen gleichgestellte Gegenstände",
+        "D) Schusswaffen"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 30,
+      "question": "Durch wen wird ein kleiner Waffenschein ausgestellt?",
+      "options": [
+        "A) Zuständige Behörde",
+        "B) Bundeskriminalamt",
+        "C) Ordnungsamt",
+        "D) Schieß- und Schützenverein"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 31,
+      "question": "Auf welche der folgenden Personengruppen ist das Waffengesetz nicht anzuwenden?",
+      "options": [
+        "A) Bewachungsunternehmen",
+        "B) Jäger",
+        "C) Schießleiter auf einem Schießstand",
+        "D) Polizei"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Das Waffengesetz gilt nicht für die Polizei."
+    },
+    {
+      "id": 32,
+      "question": "Was bedeutet Umgangsverbot im Sinne des WaffG?",
+      "options": [
+        "A) Nur das Besitzen, Führen, Überlassen und Schießen mit solchen Waffen ist verboten",
+        "B) Jeglicher Umgang mit den Waffen ist verboten",
+        "C) Das Umgangsverbot gilt für das Hoheitsgebiet der Bundesrepublik Deutschland",
+        "D) Die Waffen die dem Umgangsverbot unterliegen dürfen nicht genutzt werden"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 33,
+      "question": "Wozu berechtigt eine Waffenbesitzkarte?",
+      "options": [
+        "A) Führen einer in der Waffenbesitzkarte eingetragenen Waffe",
+        "B) Schießen mit einer in der Waffenbesitzkarte eingetragenen Waffe",
+        "C) Kauf einer in der Waffenbesitzkarte eingetragenen Waffe",
+        "D) Besitz einer in der Waffenbesitzkarte eingetragenen Waffe"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Eine Waffenbesitzkarte berechtigt zum Besitz einer in ihr eingetragenen Waffe und auch zum Kauf einer in ihr eingetragenen Waffe."
+    },
+    {
+      "id": 34,
+      "question": "Wie lange ist eine Waffenbesitzkarte gültig?",
+      "options": [
+        "A) Nach Eintragung einer Waffe - solange wie die Voraussetzungen für deren Besitz erfüllt sind",
+        "B) Nach Ausstellung für den Erwerb einer Waffe - 1 Monat",
+        "C) Nach Ausstellung für den Erwerb einer Waffe - 1 Jahr",
+        "D) Nach Eintragung einer Waffe - 3 Jahre"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Eine Waffenbesitzkarte ist nach Ausstellung für den Erwerb einer Waffe ein Jahr gültig. Nach Eintragung einer Waffe ist sie solange gültig, wie die Voraussetzungen für den Besitz erfüllt sind."
+    },
+    {
+      "id": 35,
+      "question": "Welche Eigenschaften haben PTB-Waffen?",
+      "options": [
+        "A) Der Lauf ist so gebaut, dass keine Geschosse verschossen werden können",
+        "B) Die Ladung wird mit heißem Gas gezündet",
+        "C) Der Erwerb und Besitz ist erlaubnisfrei",
+        "D) Das Führen ist mit einem normalen Waffenschein möglich"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 36,
+      "question": "Welche Munitionsarten unterscheidet das Waffengesetz?",
+      "options": [
+        "A) Patronenmunition, Signalmunition, Kartuschenmunition, hülsenlose Munition",
+        "B) Feuermunition, Kartuschenmunition, hülsenlose Munition, pyrotechnische Munition",
+        "C) Patronenmunition, Kartuschenmunition, hülsenlose Munition, pyrotechnische Munition",
+        "D) Gasmunition, hülsenlose Munition, pyrotechnische Munition, Patronenmunition"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 37,
+      "question": "Welche dieser Waffen benötigt keinerlei besondere Erlaubnisse?",
+      "options": [
+        "A) Soft-Air-Waffen bis 0,5 Joule",
+        "B) Nachbildungen von Waffen die mind. 50 % kleiner als das Original sind",
+        "C) Luftdruck-, Federdruck-, CO2-Waffen",
+        "D) Schreckschusspistolen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Soft-Air-Waffen bis 0,5 Joule und Nachbildungen von Waffen, die mindestens 50% kleiner als das Original sind, benötigen keine besonderen Erlaubnisse. Diese fallen nicht unter das Waffengesetz und können frei erworben und besessen werden."
+    },
+    {
+      "id": 38,
+      "question": "Welche dieser Waffen sind in Deutschland verboten?",
+      "options": [
+        "A) Signalpistole",
+        "B) Gumischrotflintenmesser",
+        "C) Vollautomatische Schusswaffen",
+        "D) Halbautomatische Pistolen"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "In Deutschland sind vollautomatische Schusswaffen und Gumischrotflintenmesser verboten."
+    },
+    {
+      "id": 39,
+      "question": "Welche Eigenschaften haben Waffen mit dem Prüfzeichen F im Fünfeck?",
+      "options": [
+        "A) Die Bewegungsenergie des Geschosses bei Austritt aus dem Lauf beträgt max. 10 Joule",
+        "B) Die Geschosse können unter anderem durch Federspannung ausgelöst werden",
+        "C) Die Bewegungsenergie des Geschosses bei Austritt aus dem Lauf beträgt max. 7,5 Joule",
+        "D) Zum Führen wird ein kleiner Waffenschein benötigt"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 40,
+      "question": "Was gilt für Spielzeugwaffen?",
+      "options": [
+        "A) Spielzeugwaffen dürfen nicht geführt werden, wenn diese täuschend wie echte Feuerwaffen aussehen",
+        "B) Für Spielzeugwaffen gibt es keinerlei waffenrechtliche Einschränkungen",
+        "C) Spielzeugwaffen sind Waffen bei denen Geschosse mit max. 0,5 Joule aus einem Lauf verschossen werden",
+        "D) Spielzeugwaffen dürfen erst ab 6 Jahren geführt werden"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 41,
+      "question": "Welche Fristen nennt das Waffengesetz im Zusammenhang mit einer Waffenbesitzkarte (WBK)?",
+      "options": [
+        "A) Für den Erwerb einer Schusswaffe gilt die Erlaubnis für die Dauer von einem Jahr.",
+        "B) Wer eine Waffe aufgrund der WBK erwirbt, hat dies innerhalb einer Woche der zuständigen Behörde unter Vorlage der WBK anzuzeigen.",
+        "C) Die Berechtigung zur Ausübung der tatsächlichen Gewalt (Besitz) wird in der Regel nur befristet erteilt."
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 42,
+      "question": "Welche dieser Waffen trägt i.d.R. ein Prüfzeichen F im Fünfeck?",
+      "options": [
+        "A) Druckluftgewehr",
+        "B) Signalpistole",
+        "C) Schreckschusspistole"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 43,
+      "question": "Die WBK (Waffenbesitzkarte) ist die Erlaubnis, um Waffen zu besitzen, erwerben oder transportieren zu dürfen. Welche Voraussetzungen müssen erfüllt sein, damit die WBK beantragt werden kann?",
+      "options": [
+        "A) Der Antragsteller muss sachkundig sein, d.h. es muss sowohl die Sachkundeprüfung nach § 34a GewO, wie auch die Waffensachkundeprüfung nach § 7 WaffG erfolgreich absolviert worden sein.",
+        "B) Die Zuverlässigkeit muss entsprechend durch ein behördliches Führungszeugnis nachgewiesen werden können.",
+        "C) Der Nachweis eines entsprechenden Bedürfnisses reicht aus, unter der Voraussetzung, dass die Waffensachkundeprüfung nach § 7 WaffG erfolgreich absolviert wurde.",
+        "D) Der Antragsteller muss die letzten 5 Jahre in der BRD gelebt haben."
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 44,
+      "question": "Welche Aussagen zu öffentlichen Veranstaltungen ist/sind korrekt?",
+      "options": [
+        "A) Wenn die zuständige Behörde eine Sondergenehmigung erteilt ist das Führen auf öffentlichen Veranstaltungen ausnahmsweise erlaubt.",
+        "B) Das Führen von Waffen auf öffentlichen Veranstaltungen stellt immer eine Ordnungswidrigkeit dar.",
+        "C) Auf öffentlichen Veranstaltungen dürfen keine Waffen geführt werden.",
+        "D) Das Führen von Waffen auf öffentlichen Veranstaltungen stellt immer eine Straftat dar."
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 45,
+      "question": "Welche/r dieser Gegenstände sind/ist keine Waffe im Sinne des Waffengesetzes?",
+      "options": [
+        "A) Machete",
+        "B) Küchenmesser",
+        "C) Taser",
+        "D) Nunchaku"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 46,
+      "question": "Wie ist eine Waffensachkunde zu belegen, bzw. welche Kenntnisse müssen u.a. nachgewiesen werden?",
+      "options": [
+        "A) Es müssen u.a. Kenntnisse über waffenrechtliche und technische Kenntnisse, sowie über entsprechende Notwehr- und Notstandsrechte nachgewiesen werden.",
+        "B) Für die Erlangung des Sachkundenachweises nach § 7 WaffG reicht es aus, wenn Kenntnisse über Handhabung, Notwehr- und Notstandsrechte nachgewiesen werden.",
+        "C) Es müssen waffenrechtliche und technische Kenntnisse über die Handhabung, den Umgang mit der Munition, sowie über die Reichweite und Wirkung der Geschosse nachgewiesen werden."
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 47,
+      "question": "Was ist bei Verlust einer Schusswaffe zu veranlassen?",
+      "options": [
+        "A) Anzeige bei der zuständigen Behörde innerhalb der ersten 72 Stunden",
+        "B) Vorübergehende Abmeldung der Schusswaffe bei der zuständigen Behörde",
+        "C) Austragung der Waffe aus der Waffenbesitzkarte",
+        "D) Sofortige Anzeige bei der zuständigen Behörde"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 48,
+      "question": "Wann liegt keine Eignung zum Führen von Schusswaffen vor?",
+      "options": [
+        "A) In psychotherapeutischer Behandlung wegen suizidaler Gedanken",
+        "B) Mitarbeiter war vor 20 Jahren kurzzeitig alkoholabhängig",
+        "C) Mitarbeiter war die letzten 10 Jahre im Ausland wohnhaft",
+        "D) 17 Jahre alter Auszubildender als Fachkraft für Schutz und Sicherheit"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Es liegt keine Eignung zum Führen von Schusswaffen vor, wenn eine Person sich in psychotherapeutischer Behandlung wegen suizidaler Gedanken befindet. Außerdem ist ein 17-jähriger Auszubildender als Fachkraft für Schutz und Sicherheit nicht dazu berechtigt, Schusswaffen zu führen."
+    },
+    {
+      "id": 49,
+      "question": "Was benötigt man zum Erwerb von Munition?",
+      "options": [
+        "A) Immer Waffenschein",
+        "B) Unter Umständen eine Waffenbesitzkarte",
+        "C) Grundsätzlich Munitionserwerbschein",
+        "D) Nur einen kleinen Waffenschein"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 50,
+      "question": "Welche Aussage/n sind nicht richtig?",
+      "options": [
+        "A) Der Unternehmer muss die Übergabe von Waffen dokumentieren",
+        "B) Der Unternehmer muss Aufbewahrung über Waffenausgabe und -rücknahme mind. 3 Jahre aufbewahren",
+        "C) Der Sicherheitsunternehmer ist für die sichere Aufbewahrung der Waffen zuständig",
+        "D) Jeder Mitarbeiter muss einen Waffenschein haben um dienstlich Waffen führen zu dürfen."
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 51,
+      "question": "Welche Hilfsmittel sind bei der Sachkundeprüfung erlaubt?",
+      "options": [
+        "A) Schreckschusspistole",
+        "B) Pfeil und Bogen",
+        "C) Schlagstock",
+        "D) Taschenmesser"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 52,
+      "question": "Darf eine Waffe im Kofferraum eines Autos transportiert werden?",
+      "options": [
+        "A) Ja, allerdings darf im gleichen Kofferraum keine Munition transportiert werden.",
+        "B) Ja dies ist ausnahmslos möglich.",
+        "C) Grundsätzlich nein, allerdings ist dies möglich wenn die Waffe nicht schussbereit und nicht zugriffsbereit zu einem, vom Bedürfnis umfassten Zweck transportiert wird.",
+        "D) Nein, man darf Waffen nur in speziellen Einbauten eines PKWs transportieren."
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 53,
+      "question": "Welche Aussagen zur Waffenbesitzkarte sind nicht korrekt?",
+      "options": [
+        "A) Der Erwerb einer Waffe die in der Waffenbesitzkarte eingetragen wurde ist innerhalb von 2 Wochen der zuständigen Behörde zu melden",
+        "B) Die Waffenbesitzkarte gilt als Nachweis über den Besitz einer Schusswaffe",
+        "C) Nach Ausstellung der Waffenbesitzkarte gilt diese zunächst für 1 Jahr und kann danach alle 3 Jahre verlängert werden",
+        "D) Eine Waffenbesitzkarte kann auf mehrere Personen ausgestellt werden"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 54,
+      "question": "Wann dürfen Sicherheitsmitarbeiter Schusswaffen im Dienst tragen?",
+      "options": [
+        "A) Immer dann wenn subjektiv eine Gefährdung des Mitarbeiters besteht",
+        "B) Nur mit ausdrücklicher Genehmigung des Sicherheitsunternehmers",
+        "C) Nur im Geld- und Werttransport",
+        "D) Je nach dem Kundenwunsch entsprechend"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Sicherheitsmitarbeiter dürfen Schusswaffen im Dienst nur mit ausdrücklicher Genehmigung des Sicherheitsunternehmers tragen. Diese Genehmigung wird in der Regel nur erteilt, wenn eine konkrete Gefährdungslage vorliegt und eine Bewaffnung zum Schutz von Personen oder Sachwerten erforderlich ist."
+    },
+    {
+      "id": 55,
+      "question": "Welche Aussagen zum Waffenschein ist/sind korrekt?",
+      "options": [
+        "A) Ein Waffenschein kann nur erworben, wer durch das Bundeskriminalamt besonders geprüft wurde",
+        "B) Ein Waffenschein kann zweimal verlängert werden",
+        "C) Ein Waffenschein kann grundsätzlich nur von Sportschützen und Jägern beantragt werden"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Korrekte Aussagen zum Waffenschein sind, dass dieser zweimal verlängert werden kann und eine Gültigkeitsdauer von maximal 3 Jahren hat. Der Waffenschein berechtigt den Inhaber zum Führen von Schusswaffen in der Öffentlichkeit."
+    },
+    {
+      "id": 56,
+      "question": "Was gilt für das Führen von Hieb- und Stoßwaffen?",
+      "options": [
+        "A) Das Führen solcher Waffen ist grundsätzlich verboten",
+        "B) Das Führen solcher Waffen auf öffentlichen Veranstaltungen stellt eine Straftat dar",
+        "C) Das Führen solcher Waffen ist grundsätzlich erlaubt",
+        "D) Ein Sicherheitsmitarbeiter darf einen Schlagstock nur Ausübung seines Dienstes jederzeit führen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Korrekte Aussagen zum Waffenschein sind, dass dieser zweimal verlängert werden kann und eine Gültigkeit von bis zu 3 Jahren hat. Der Waffenschein berechtigt den Inhaber zum Führen von Schusswaffen in der Öffentlichkeit."
+    }
+  ]
+} 

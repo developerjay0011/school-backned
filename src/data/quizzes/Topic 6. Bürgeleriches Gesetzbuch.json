@@ -1,0 +1,1783 @@
+{
+  "quiz_title": "Sachkundeprüfung 34a - Bürgeleriches Gesetzbuch",
+  "total_questions": 149,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Das Nichtzurückgeben eines geliehenen Handys trotz Aufforderung ist...",
+      "options": [
+        "A) Ein ausschließlich strafrechtlicher Fall",
+        "B) Eine verbotene Eigenmacht nach §858 BGB",
+        "C) Eine unerlaubte Handlung nach § 823 BGB",
+        "D) Keine notwehrfähige Situation"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Das Nichtherausgeben ist sowohl verbotene Eigenmacht als auch unerlaubte Handlung"
+    },
+    {
+      "id": 2,
+      "question": "Wozu berechtigt die allgemeine Selbsthilfe nach §229 BGB u.a.?",
+      "options": [
+        "A) Sache zerstören",
+        "B) Verpflichteten festhalten",
+        "C) Verpflichteten persönlich bestrafen",
+        "D) Verpflichteten nach Personalien durchsuchen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Allgemeine Selbsthilfe berechtigt zum Festhalten und zur Sachzerstörung zur Anspruchsdurchsetzung"
+    },
+    {
+      "id": 3,
+      "question": "Wie kann man u.a. Besitzdiener werden?",
+      "options": [
+        "A) Ausleihen der Sache für einen vorübergehenden Zeitraum",
+        "B) Bewachungsvertrag",
+        "C) Kauf einer Sache",
+        "D) Arbeitsvertrag"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Besitzdiener wird man durch Bewachungsvertrag oder Arbeitsvertrag im Auftrag des Besitzers"
+    },
+    {
+      "id": 4,
+      "question": "Der Ladendetektiv L sieht, wie eine ihm unbekannte Frau aus Versehen gegen ein Regal stößt und mehrere teure Porzellanartikel herunterfallen und zerspringen. Welche Möglichkeit hat D?",
+      "options": [
+        "A) Allgemeine Selbsthilfe nach §229 BGB",
+        "B) [Option B fehlt im Original]",
+        "C) Vorläufige Festnahme nach §127 StPO",
+        "D) [Option D fehlt im Original]"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Bei fahrlässiger Sachbeschädigung kann allgemeine Selbsthilfe angewandt werden"
+    },
+    {
+      "id": 5,
+      "question": "Die sogenannte \"Unerlaubte Handlung\", bzw. Schadensersatzpflicht nach § 823 BGB besagt, dass, wer vorsätzlich oder fahrlässig das Rechtsgut eines anderen widerrechtlich verletzt und dadurch einen Schaden herbeiführt, demjenigen gegenüber zum Schadensersatz verpflichtet ist. Ab wann ist man in Deutschland schadensersatzpflichtig?",
+      "options": [
+        "A) Ab dem 14ten Lebensjahr",
+        "B) Ab dem 7ten Lebensjahr",
+        "C) Ab dem vollendeten 7ten Lebensjahr",
+        "D) Ab dem vollendeten 18ten Lebensjahr"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Schadensersatzpflicht beginnt ab dem vollendeten 7. Lebensjahr"
+    },
+    {
+      "id": 6,
+      "question": "A wird von einem bissigen Hund angegriffen. Was darf er nach den Rechtsvorschriften des BGB tun?",
+      "options": [
+        "A) Sich gegen den Angriff des Hundes direkt verteidigen – Notwehr §227 BGB",
+        "B) Sich mit Hilfe fremder Sachen gegen den Hund verteidigen – angreifender Notstand §904 BGB",
+        "C) Den Angriff des Hundes in Besitzerwehr §859 BGB abwehren",
+        "D) Sich ohne fremde Hilfsmittel gegen den Hund verteidigen – verteidigender Notstand §228 BGB"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Bei Tierangriffen kann angreifender oder verteidigender Notstand angewandt werden"
+    },
+    {
+      "id": 7,
+      "question": "Sie sind als Ladendetektiv tätig. Sie sehen wie ein unbekannter Mann ein Handy aus einer Vitrine nimmt und ausprobiert. Dann lässt er es fallen, legt das beschädigte Handy zurück in die Vitrine und will den Laden verlassen. Welche Rechtsfertigungsgrundlage für Ihr Handeln können Sie hier anwenden?",
+      "options": [
+        "A) Verteidigender Notstand §228 BGB",
+        "B) Notwehr § 227 BGB",
+        "C) Allgemeine Selbsthilfe §229 BGB",
+        "D) Besitzwehr §859/860 BGB"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Bei Sachbeschädigung kann allgemeine Selbsthilfe zur Anspruchsdurchsetzung angewandt werden"
+    },
+    {
+      "id": 8,
+      "question": "Welches der folgenden Angaben sind Individualrechtsgüter?",
+      "options": [
+        "A) Leib und Leben",
+        "B) Ehre",
+        "C) Sicherheit",
+        "D) Nahrung"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Leib, Leben und Ehre sind persönliche Individualrechtsgüter"
+    },
+    {
+      "id": 9,
+      "question": "Notwehr...",
+      "options": [
+        "A) Ist ein Rechtsfertigungsgrund aus dem BGB",
+        "B) Kann im BGB nur durch Eigentümer, Besitzer und Besitzdiener angewandt werden",
+        "C) Ist die Abwehr eines Angriffs durch einen Sache",
+        "D) Kann zeitlich versetzt zur Angriffshandlung stattfinden"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Notwehr ist ein Rechtsfertigungsgrund nach §227 BGB"
+    },
+    {
+      "id": 10,
+      "question": "Der Sicherheitsmitarbeiter eines Einkaufszentrums sieht, wie ein 16jähriger Junge auf einer Bank raucht und die Zigarette dann auf einer Bank ausdrücken will. Welches Recht darf der Sicherheitsmitarbeiter nach BGB ausüben?",
+      "options": [
+        "A) Allgemeine Selbsthilfe",
+        "B) Vorläufige Festnahme",
+        "C) Defensivnotstand",
+        "D) Selbsthilfe des Besitzdieners"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Sicherheitsmitarbeiter kann allgemeine Selbsthilfe und Selbsthilfe des Besitzdieners anwenden"
+    },
+    {
+      "id": 11,
+      "question": "Herr A. geht mit seinem Hund spazieren. Als Herr A. unachtsam ist, reißt sich der Hund los und greift Frau B. an. Der Hund verletzt Frau B. Welche Aussagen sind richtig?",
+      "options": [
+        "A) Herr A. begeht eine verbotene Eigenmacht",
+        "B) Herr A. muss für die Verletzungen und Schäden an Frau B. haften",
+        "C) Allein der Hund wird bestraft und wird eingeschläfert",
+        "D) Frau B. kann sich in Notwehr verteidigen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Tierhalter haften für Schäden durch ihre Tiere"
+    },
+    {
+      "id": 12,
+      "question": "Welche Aussagen sind korrekt?",
+      "options": [
+        "A) Bei der Besitzwehr und Besitzdiener darf keine körperliche Gewalt angewendet werden",
+        "B) Selbsthilfe des Besitzers kann nicht angewandt werden, wenn man die Person, die einem eine Sache in verbotener Eigenmacht weggenommen hat, einen Tag später wiedersieht",
+        "C) Besitzkehr kann zeitlich unbegrenzt durchgeführt werden",
+        "D) Besitzwehr ist nur auf frischer Tat gerechterfertigt"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Besitzwehr ist zeitlich begrenzt und nur auf frischer Tat möglich"
+    },
+    {
+      "id": 13,
+      "question": "Was ist keine Sache?",
+      "options": [
+        "A) Eine Stromleitung",
+        "B) Ein Haus",
+        "C) Wasser",
+        "D) Ein Hund"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Tiere sind nach §90a BGB keine Sachen, werden aber teilweise wie solche behandelt"
+    },
+    {
+      "id": 14,
+      "question": "Bestimmen Sie, in welchen Fällen eine sogenannte \"verbotene Eigenmacht\" gem. § 858 BGB vorliegt.",
+      "options": [
+        "A) Jugendliche veranstalten ein Zielwerfen mit Faustgroßen Steinen auf die Außenlampen eines Bekleidungsgeschäftes",
+        "B) Der Besitzer einer Sache unterbindet mit einfacher (leichter) körperlicher Gewalt (Zwang) die unbefugte Entnahme von Waren aus einem Regal",
+        "C) Zur Abwehr / Bekämpfung eines Entstehungsbrandes betritt eine Person ohne die ausdrückliche Zustimmung des Eigentümers dessen Grundstück und die Wohnräume",
+        "D) Eine Person verschafft sich ohne Erlaubnis des / der Berechtigten, Zutritt zu dessen / deren Geschäftsräume"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Sachbeschädigung und unbefugtes Betreten sind verbotene Eigenmacht"
+    },
+    {
+      "id": 15,
+      "question": "Nennen Sie die Festnahmemöglichkeiten im BGB.",
+      "options": [
+        "A) Selbsthilfe des Besitzdieners - §860 BGB",
+        "B) Allgemeine Selbsthilfe - §229 BGB",
+        "C) Notwehr - §227 BGB",
+        "D) Selbsthilfe des Besitzers - §859 BGB"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Nur die allgemeine Selbsthilfe berechtigt zur Festnahme im BGB"
+    },
+    {
+      "id": 16,
+      "question": "Welche Aussagen zum Besitzentzug sind korrekt?",
+      "options": [
+        "A) Der Besitzentzug ist strafbar",
+        "B) Eine Unterschlagung ist ein Besitzentzug",
+        "C) Eine Besitzentzug ist ein Angriff auf ein Rechtsgut",
+        "D) Der Besitzentzug ist in § 868 BGB festgehalten"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Unterschlagung ist Besitzentzug und greift das Rechtsgut Besitz an"
+    },
+    {
+      "id": 17,
+      "question": "Eine verbotene Eigenmacht wird gerechtfertigt durch...",
+      "options": [
+        "A) [Option A fehlt im Original]",
+        "B) Notwehr - §227 BGB",
+        "C) Rechtfertigender Notstand - §34 StGB",
+        "D) Allgemeine Selbsthilfe - § 229 BGB"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Notwehr und allgemeine Selbsthilfe können verbotene Eigenmacht rechtfertigen"
+    },
+    {
+      "id": 18,
+      "question": "Was sind u.a. Voraussetzungen für eine allgemeine Selbsthilfe nach §229 BGB?",
+      "options": [
+        "A) Keine obrigkeitliche Hilfe rechtzeitig vor Ort",
+        "B) Auf frischer Tat betroffener oder verfolgter Täter",
+        "C) Bei Nichtengreifen wird die Umsetzung des Anspruchs wesentlich erschwert",
+        "D) Bekannter Täter der der Flucht verdächtig ist"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Obrigkeitliche Hilfe muss nicht rechtzeitig erreichbar sein und Anspruchsdurchsetzung würde erschwert"
+    },
+    {
+      "id": 19,
+      "question": "Eine verbotene Eigenmacht...",
+      "options": [
+        "A) Ist immer rechtswidrig",
+        "B) Kann nicht vom Besitzer selbst begangen werden",
+        "C) Kann auch durch Sicherheitsmitarbeiter begangen werden",
+        "D) Ist immer widerrechtlich"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Besitzer kann sich nicht selbst den Besitz entziehen, aber Sicherheitsmitarbeiter können verbotene Eigenmacht begehen"
+    },
+    {
+      "id": 20,
+      "question": "Was bedeutet rechtswidrig?",
+      "options": [
+        "A) Gegen geltendes Recht und Gesetz verstoßend",
+        "B) Das Begehen einer unerlaubten Handlung immer",
+        "C) Das Begehen einer verbotenen Eigenmacht ohne Rechtsfertigungsgrund",
+        "D) Gegen den Willen des Besitzers handeln"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Rechtswidrig bedeutet gegen Recht verstoßend oder verbotene Eigenmacht ohne Rechtfertigung"
+    },
+    {
+      "id": 21,
+      "question": "Was sind \"Kinder\" zivilrechtlich gesehen?",
+      "options": [
+        "A) Personen unter 16 Jahren",
+        "B) Personen unter 18 Jahren",
+        "C) Personen unter 14 Jahren",
+        "D) Personen unter 21 Jahren"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Zivilrechtlich sind Kinder Personen unter 14 Jahren"
+    },
+    {
+      "id": 22,
+      "question": "Die sogenannte \"verbotene Eigenmacht\" gem. § 858 nennt zwei mögliche Formen der Begehung. Zum einen in Form der sogenannten \"Besitzstörung\" und zum anderen in Form des sogenannten \"Besitzentzuges\". In welchem / welchen der folgenden Fälle handelt es sich um eine Besitzstörung?",
+      "options": [
+        "A) Ein Gast einer gastronomischen Diskothek randaliert und bepöbelt andere Gäste",
+        "B) Ein Kollege aus Ihrem Sicherheitsunternehmen nimmt übrig gebliebene Kugelschreiber mit nachhause",
+        "C) Ein unbekannter Fahrzeughalter hat seinen PKW direkt vor Ihrer Ausfahrt abgestellt, so dass Sie mit Ihrem Fahrzeug nicht mehr ausfahren können"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Randalieren und Blockieren sind Besitzstörungen, nicht Besitzentzug"
+    },
+    {
+      "id": 23,
+      "question": "Der Revierfährer R stellt bei einer Kontrolle fest, dass sich bei einem Kundenobjekt mehrere bekannte Jugendliche auf einem nicht abgesperrten Parkplatz befinden. Der Kunde möchte nicht, dass sich während der Nachtzeit dort Personen aufhalten. Er spricht die Personen an, welche sich weigern den Parkplatz zu verlassen. Was kann R hier handeln?",
+      "options": [
+        "A) Vorläufige Festnahme §127 StPO",
+        "B) Besitzwehr §§ 859/860 BGB",
+        "C) Mit Gewalt nach §34 StGB",
+        "D) Notwehr §227 BGB"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Besitzwehr und Notwehr sind bei unbefugtem Aufenthalt anwendbar"
+    },
+    {
+      "id": 24,
+      "question": "Welche Aussagen zur Besitzstörung sind korrekt?",
+      "options": [
+        "A) Eine Besitzstörung ist ein Angriff auf ein Rechtsgut",
+        "B) Die Besitzstörung kann zivilrechtliche Konsequenzen haben",
+        "C) Die Besitzstörung ist in §623 festgehalten",
+        "D) Eine Körperverletzung ist ohne Besitzstörung"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Besitzstörung greift das Rechtsgut Besitz an und hat zivilrechtliche Folgen"
+    },
+    {
+      "id": 25,
+      "question": "Was ist §246 BGB?",
+      "options": [
+        "A) Allgemeine Selbsthilfe",
+        "B) Schikaneverbot",
+        "C) Angreifender Notstand",
+        "D) Verteidigender Notstand"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "§226 BGB regelt das Schikaneverbot"
+    },
+    {
+      "id": 26,
+      "question": "Der Mitarbeiter einer Arbeitsagentur wird von einem Kunden angegroffen.",
+      "options": [
+        "A) Ich nehme dem Kunden eine Sache weg nach allgemeiner Selbsthilfe §229 BGB",
+        "B) Ich handle in Besitzwehr nach §§ 859/860 BGB",
+        "C) Ich kann die Person u.U. nach §127 StPO festnehmen",
+        "D) Ich helfe ihm in Nothilfe nach §227 BGB"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Bei Angriff sind vorläufige Festnahme und Nothilfe möglich"
+    },
+    {
+      "id": 27,
+      "question": "Welche der folgenden Aussagen beschreiben Vorsatz?",
+      "options": [
+        "A) Das Unterlassen mit Wissen und Wollen",
+        "B) Das Tun aus Versehen",
+        "C) Das Tun ohne der im Verkehr erforderlichen Sorgfalt",
+        "D) Das Tun mit Wissen und Wollen"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Vorsatz ist das bewusste und gewollte Handeln oder Unterlassen"
+    },
+    {
+      "id": 28,
+      "question": "Bei welchen der folgenden Fälle liegt ein Besitzentzug vor?",
+      "options": [
+        "A) Ein Polizeibeamter nimmt einem Passanten nach Dienstende die Handschuhe weg",
+        "B) Ein Sicherheitsmitarbeiter in einer gastgewerblichen Diskothek geht das Portmonee eines Gastes aus dessen Hosentasche und behält es",
+        "C) Ein Gerichtsvollzieher geht in die Wohnung einer Person und beschlagnahmt den Fernseher",
+        "D) Ein Kunde nimmt in einer Selbstbedienungsbäckerei zwei Brötchen aus der Auslage und packt diese in seine Brötchentüte"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Unbefugtes Wegnehmen ohne Rechtfertigung ist Besitzentzug"
+    },
+    {
+      "id": 29,
+      "question": "Gibt es eine Selbsthilfe des Eigentümers?",
+      "options": [
+        "A) Ja, allerdings nur im Rahmen der Notwehr",
+        "B) Nein, ein Eigentümer kann sich einer verbotenen Eigenmacht nur erwehren wenn er auch Besitzer ist",
+        "C) Nein, ein Eigentümer der die Sache gerade besitzt kann auf Grundlage der Selbsthilfe des Besitzers tätig werden",
+        "D) Ja, denn auch der Eigentümer muss, obwohl er nicht den Besitz hat, sich verteidigen können"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Eigentümer hat keine eigene Selbsthilfe, nur wenn er auch Besitzer ist"
+    },
+    {
+      "id": 30,
+      "question": "Die verbotene Eigenmacht...",
+      "options": [
+        "A) ...muss widerrechtlich sein. Das heißt, die Besitzbeeinträchtigung erfolgt ohne oder gegen den Willen des Besitzers und ohne gesetzliche Gestattung",
+        "B) ...ist die widerrechtliche Beeinträchtigung, d.h. Entziehung oder Störung des Besitzes",
+        "C) ...ist im Gesetz nur als Besitzentziehung beschrieben",
+        "D) ...muss widerrechtlich sein. Das heißt, die Besitzbeeinträchtigung erfolgt ohne den Willen des Besitzdieners, z.B. eines Sicherheitsmitarbeiters"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Verbotene Eigenmacht ist widerrechtliche Besitzbeeinträchtigung gegen den Willen des Berechtigten"
+    },
+    {
+      "id": 31,
+      "question": "Wann wird kein Schadensersatz fällig?",
+      "options": [
+        "A) Bei einer gerechtfertigten Handlung die in Notwehr begangen worden ist",
+        "B) Bei der Verteidigung gegen eine Gefahr unter Zunahme fremder Sachen",
+        "C) Bei der Verteidigung gegen einen Angriff von einem fremden Menschen und der Überschreitung der Notwehr",
+        "D) Bei einer gerechtfertigten Handlung die in Besitzwehr begangen worden ist"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Bei gerechtfertigten Handlungen entsteht keine Schadensersatzpflicht"
+    },
+    {
+      "id": 32,
+      "question": "Was ist §823 BGB?",
+      "options": [
+        "A) Selbsthilfe des Besitzers",
+        "B) Hausrecht",
+        "C) Verbotene Eigenmacht",
+        "D) Schadensersatzpflicht"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "§823 BGB regelt die Schadensersatzpflicht bei unerlaubten Handlungen"
+    },
+    {
+      "id": 33,
+      "question": "Im Rahmen Ihrer Tätigkeit als Sicherheitskraft müssen Sie damit rechnen, dass auch körperliche Übergriffe auf Ihre Person nicht ausgeschlossen werden können. Wie dürfen Sie sich im Falle eines solchen Angriffs in Notwehr verteidigen?",
+      "options": [
+        "A) So, wie es erforderlich und geboten erscheint",
+        "B) So, wie es notwendig und zumutbar ist",
+        "C) So, wie es erforderlich und geboten ist",
+        "D) So, wie es durchsetzbar und notwendig ist"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Notwehr muss erforderlich und geboten sein"
+    },
+    {
+      "id": 34,
+      "question": "In einer Wohnung in einem Hochhaus brennt es. Der Anwohner A steht vor der verschlossenen Tür der Wohnung in der sich mehrere Personen aufhalten und nach Hilfe schreien. Wie kann A hier handeln wenn er die Tür öffnen möchte?",
+      "options": [
+        "A) Nothilfe nach §227 BGB",
+        "B) Rechtfertigender Notstand §34 StGB",
+        "C) [Option C fehlt im Original]",
+        "D) Aggressionsnotstand §904 BGB"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Rechtfertigender Notstand und Aggressionsnotstand sind bei Lebensgefahr anwendbar"
+    },
+    {
+      "id": 35,
+      "question": "Nach §227 BGB ist es erlaubt...",
+      "options": [
+        "A) Sich mittels eines Gegenstandes gegen einen Menschen zu verteidigen",
+        "B) Sich mittels eines Gegenstandes gegen einen Hund oder eine andere Sache zu verteidigen",
+        "C) Sich direkt gegen einen Mensch zu verteidigen",
+        "D) Sich direkt gegen einen Hund oder eine Sache zu verteidigen"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Notwehr nach §227 BGB erlaubt Verteidigung gegen Menschen, direkt oder mit Gegenständen"
+    },
+    {
+      "id": 36,
+      "question": "Welcher dieser Personen muss keinen Schadensersatz leisten?",
+      "options": [
+        "A) 15-jähriger Heranwachsender stellt sich auf einen Tisch im Klassenraum welcher zerbricht",
+        "B) 6-jähriges Kind wirft einen Stein in eine Schaufensterscheibe, welche einen Sprung erhält",
+        "C) 5-jähriges Kind lässt im Warenhaus einen Gameboy fallen, dessen Display zersplittert",
+        "D) 16-jähriger Jugendlicher verteidigt sich in Notwehr und verreißt die Jacke eines anderen Jungen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Kinder unter 7 Jahren und bei gerechtfertigter Notwehr entsteht keine Schadensersatzpflicht"
+    },
+    {
+      "id": 37,
+      "question": "Welche der nachfolgenden Aussagen trifft/treffen auf den Begriff \"Sache\" im Sinne von § 90 BGB zu?",
+      "options": [
+        "A) Ebenfalls auch die Rechte an einem komponierten Musikstück können gestohlen werden und sind demnach Sachen im Sinne des Gesetzes",
+        "B) Sachen sind körperliche Gegenstände, unabhängig vom Aggregatzustand",
+        "C) Zu Sachen in diesem Sinne zählen auch die elektrische Energie und Computerdaten",
+        "D) Allgemeingüter wie die freie Luft oder das fließende Wasser in einem Fluss, fallen ebenso unter den Begriff \"Sache\""
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Sachen sind nach §90 BGB körperliche Gegenstände unabhängig vom Aggregatzustand"
+    },
+    {
+      "id": 38,
+      "question": "Welche Aussagen zur Tierhalterhaftung sind korrekt?",
+      "options": [
+        "A) Grundsätzlich haftet jeder Tierhalter für Schäden die durch sein Tier entstehen",
+        "B) Tierhalter haften grundsätzlich nicht für Schäden ihres Tieres",
+        "C) Tierhalter haften nicht für Schäden ihres Tieres, wenn es beruflich genutzt wird und der Halter die erforderliche Sorgfalt bei Aufsicht des Tieres beachtet hat",
+        "D) Tierhalter haften nicht für Schäden ihres Tieres, wenn dieses trotz eines gegenteiligen Kommandos einen Schaden hervorgerufen hat"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Tierhalter haften grundsätzlich, außer bei beruflicher Nutzung mit ordnungsgemäßer Aufsicht"
+    },
+    {
+      "id": 39,
+      "question": "Welche Aussagen zum Eigentum sind korrekt?",
+      "options": [
+        "A) Eigentum stellt immer auch den Besitz dar",
+        "B) Eigentum darf nur zum Wohle der Allgemeinheit eingesetzt werden",
+        "C) Eigentum verpflichtet",
+        "D) Eigentum kann nur durch Kauf erworben werden"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Eigentum verpflichtet und soll dem Allgemeinwohl dienen"
+    },
+    {
+      "id": 40,
+      "question": "Welche rechtlichen Folgen stellt das BGB vor?",
+      "options": [
+        "A) Schadensersatz",
+        "B) Bußgeld",
+        "C) Geldstrafe",
+        "D) Schmerzensgeld"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Das BGB regelt zivilrechtliche Folgen wie Schadensersatz und Schmerzensgeld"
+    },
+    {
+      "id": 41,
+      "question": "Welche Aussagen zur Notwehrstandshandlung sind korrekt?",
+      "options": [
+        "A) Gefahren sind u.a. Angriffe von Tieren",
+        "B) Gefahr ist nicht anders abwendbar",
+        "C) Gefahr muss von einer fremden unbeweglichen Sache ausgehen",
+        "D) Gefahren sind alle Angriffe von Tieren und Menschen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Tierangriffe sind Gefahren und müssen nicht anders abwendbar sein"
+    },
+    {
+      "id": 42,
+      "question": "Was ist §860 BGB?",
+      "options": [
+        "A) Verbotene Eigenmacht",
+        "B) Selbsthilfe des Besitzdieners",
+        "C) Schadensersatzpflicht",
+        "D) Selbsthilfe des Besitzers"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "§860 BGB regelt die Selbsthilfe des Besitzdieners"
+    },
+    {
+      "id": 43,
+      "question": "Selbsthilferechte...",
+      "options": [
+        "A) Sind Jedermannsrechte",
+        "B) Sind Rechtsfertigungsgründe",
+        "C) Sind übertragbare Selbsthilferechte",
+        "D) Sind Notwehrrechte"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Selbsthilferechte sind Rechtsfertigungsgründe und können übertragen werden"
+    },
+    {
+      "id": 44,
+      "question": "Welche Aussagen zu Heranwachsenden sind korrekt?",
+      "options": [
+        "A) Heranwachsende sind Personen von 18-21 Jahren",
+        "B) Heranwachsende sind für ihre Schäden grundsätzlich nicht haftbar zu machen",
+        "C) Heranwachsende können unter Umständen nach jugendstrafrechtlich bestraft werden",
+        "D) Heranwachsende sind Personen von 16-18 Jahren"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Heranwachsende sind 18-21 Jahre alt und können nach Jugendstrafrecht bestraft werden"
+    },
+    {
+      "id": 45,
+      "question": "Was bedeutet „Verhältnismäßigkeit der Mittel?",
+      "options": [
+        "A) Das Mittel zur Verteidigungshandlung muss immer ein geringeres Rechtsgut beeinflussen",
+        "B) Für die Verteidigungshandlung muss das mildeste Mittel angewandt werden",
+        "C) Das Mittel muss geeignet sein den Angriff oder die Gefahr abzuwenden",
+        "D) Der Sachwert des Mittels zur Verteidigung darf nie größer sein, als der der Gefahr"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Verhältnismäßigkeit erfordert das mildeste geeignete Mittel"
+    },
+    {
+      "id": 46,
+      "question": "Welche Aussagen zu Minderjährigen ist/sind korrekt?",
+      "options": [
+        "A) Minderjährige fallen unter das Jugendschutzgesetz",
+        "B) Minderjährige sind Personen unter 18 Jahren",
+        "C) Minderjährige sind strafunmündig",
+        "D) Minderjährige sind Personen unter 21 Jahren"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Minderjährige sind unter 18 Jahre alt und fallen unter das Jugendschutzgesetz"
+    },
+    {
+      "id": 47,
+      "question": "In Bezug auf die Selbsthilfe hat der Besitzdiener welche Rechte?",
+      "options": [
+        "A) Er darf sich einer verbotenen Eigenmacht notfalls mit Gewalt erwehren",
+        "B) Nur die entsprechenden Nothilfe-/Nothilferechte",
+        "C) Die gleichen Rechte wie der Besitzer",
+        "D) Nur ein Festhalterecht nach §229 BGB"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Besitzdiener haben die gleichen Selbsthilferechte wie der Besitzer"
+    },
+    {
+      "id": 48,
+      "question": "Was ist in §230 BGB festgehalten?",
+      "options": [
+        "A) Notwehr",
+        "B) Allgemeine Selbsthilfe",
+        "C) Grenzen der Selbsthilfe",
+        "D) Nothilfe"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§230 BGB regelt die Grenzen der Selbsthilfe"
+    },
+    {
+      "id": 49,
+      "question": "Welche zivilrechtlichen Ansprüche gibt es u.a.?",
+      "options": [
+        "A) Bewusganspruch",
+        "B) Herausgabeanspruch",
+        "C) Interventionsanspruch",
+        "D) Unterlassungsanspruch"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Herausgabe- und Unterlassungsansprüche sind wichtige zivilrechtliche Ansprüche"
+    },
+    {
+      "id": 50,
+      "question": "Wozu berechtigen die sogenannten Jedermannsrechte?",
+      "options": [
+        "A) Grundrechte fremder Personen einzuschränken",
+        "B) Rechtsgüter fremder Personen verletzen",
+        "C) Vorübergehend Eingriffsrechte der Polizei vornehmen",
+        "D) Unberechtigte Angriffe gegenüber vorherigen Angreifern durchzuführen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Jedermannsrechte berechtigen unter bestimmten Umständen zur Einschränkung fremder Rechte"
+    },
+    {
+      "id": 51,
+      "question": "Was ist §858 BGB?",
+      "options": [
+        "A) Selbsthilfe des Besitzers",
+        "B) Selbsthilfe des Besitzdieners",
+        "C) Verbotene Eigenmacht",
+        "D) Schadensersatzpflicht"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§858 BGB regelt die verbotene Eigenmacht"
+    },
+    {
+      "id": 52,
+      "question": "Welche Antworten treffen in Bezug auf die Notwehr gem. den §§ 32 StGB, 227 BGB und § 15 OWiG zu?",
+      "options": [
+        "A) Bei der sogenannten \"Exzessivnotwehr\" wird irrtümlicherweise von einem gegenwärtigen Angriff ausgegangen",
+        "B) Notwehr im Sinne des BGB gegen Kinder unter 14 Jahren ist grundsätzlich untersagt",
+        "C) Ein angeschuldigter 12-jähriger hat eine Schaufel Zigaretten angesteckt und wird den Kassenbereich ohne zu zahlen verlassen. Eine Anwendung von Notwehr ist hier möglich",
+        "D) Bei der sogenannten \"Putativnotwehr\" wird die Erforderlichkeit überschritten"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Notwehr ist auch gegen Kinder möglich, wenn sie einen Angriff ausführen"
+    },
+    {
+      "id": 53,
+      "question": "Wer ist nach §823 BGB zum Schadensersatz verpflichtet?",
+      "options": [
+        "A) Jeder der vorsätzlich oder fahrlässig einen Schaden an einem fremden Rechtsgut hervorruft",
+        "B) Jeder der vorsätzlich ein fremdes Rechtsgut widerrechtlich verletzt",
+        "C) Jeder der vorsätzlich oder fahrlässig ein fremdes Rechtsgut verletzt",
+        "D) Jeder der vorsätzlich oder fahrlässig ein fremdes Rechtsgut widerrechtlich verletzt"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Schadensersatzpflicht erfordert vorsätzliche oder fahrlässige widerrechtliche Rechtsgutsverletzung"
+    },
+    {
+      "id": 54,
+      "question": "Sie sind als Streife in einem öffentlichen Shoppingcenter eingesetzt. Sie sehen wie zwei unbekannte jugendliche Personen auf einer Bank sitzen, rauchen und ihre Zigaretten auf den Boden der Bank ausdrücken. Als Sie beiden Jugendlichen ankommen sind die Zigaretten aus und die Polizei bereits beschädigt. Wie können Sie handeln?",
+      "options": [
+        "A) Vorläufige Festnahme 127 StPO",
+        "B) Besitzwehr §859/860 BGB",
+        "C) Notwehr §227 BGB",
+        "D) Allgemeine Selbsthilfe §229 BGB"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Bei Sachbeschädigung sind vorläufige Festnahme und allgemeine Selbsthilfe möglich"
+    },
+    {
+      "id": 55,
+      "question": "In welchem Fall liegt ein Besitzentzug vor?",
+      "options": [
+        "A) G leiht sich bei H eine DVD aus und gibt diese zum vereinbarten Termin nicht zurück",
+        "B) F begeht einen Diebstahl in einem Elektronikmarkt",
+        "C) C nutzt die Mallfonse von D obwohl dieser es ihm verboten hat",
+        "D) A läuft über den Rasen von B. Gegen den Willen des B"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Nichtherausgabe und Diebstahl sind Formen des Besitzentzugs"
+    },
+    {
+      "id": 56,
+      "question": "Das unbefugte Betreten eines fremden Hausrechtsbereiches ist aus zivilrechtlicher Sicht...",
+      "options": [
+        "A) ...ein gegenwärtiger, rechtswidriger Angriff auf ein fremdes Rechtsgut",
+        "B) ...eine Besitzstörung (verbotene Eigenmacht)",
+        "C) ...eine Besitzentziehung (verbotene Eigenmacht)",
+        "D) ...ein Fall des verteidigenden (Defensiv) Notstandes",
+        "E) ...ein Fall des angreifenden Notstandes"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Unbefugtes Betreten ist ein Angriff und eine Besitzstörung"
+    },
+    {
+      "id": 57,
+      "question": "Was ist §228 BGB?",
+      "options": [
+        "A) Verteidigender Notstand",
+        "B) Allgemeine Selbsthilfe",
+        "C) Angreifender Notstand",
+        "D) Notwehr"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§228 BGB regelt den verteidigenden Notstand"
+    },
+    {
+      "id": 58,
+      "question": "Was ist Voraussetzung für eine Festnahme nach der allgemeinen Selbsthilfe (§229) BGB?",
+      "options": [
+        "A) Man darf gegen die Person, die sich körperlich gegen die Festnahme wehrt, keinen Widerstand leisten",
+        "B) Vor der Festnahme ist obrigkeitliche Hilfe zu verständigen",
+        "C) Es muss ein zivilrechtlicher Anspruch gegen die festzunehmende Person vorliegen",
+        "D) Obrigkeitliche Hilfe ist nicht rechtzeitig zu erreichen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Festnahme erfordert einen Anspruch und dass obrigkeitliche Hilfe nicht rechtzeitig erreichbar ist"
+    },
+    {
+      "id": 59,
+      "question": "Wie kann eine verbotene Eigenmacht begangen werden?",
+      "options": [
+        "A) Durch die Störung von Besitz unter Anwendung von §229 BGB",
+        "B) Durch den Entzug von Besitz unter Anwendung von §227 BGB",
+        "C) Durch die Störung von Besitz",
+        "D) Durch den Entzug von Besitz"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Verbotene Eigenmacht erfolgt durch Besitzstörung oder Besitzentzug"
+    },
+    {
+      "id": 60,
+      "question": "Wann besteht keine unerlaubte Handlung?",
+      "options": [
+        "A) Wenn in Notwehr gehandelt wurde",
+        "B) Wenn ein Rechtsgut eines Familienmitgliedes verletzt wird",
+        "C) Wenn der Schaden am Rechtsgut durch Fahrlässigkeit hervorgerufen wurde",
+        "D) Wenn ein Rechtsfertigungsgrund vorliegt"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Bei Rechtsfertigungsgründen wie Notwehr liegt keine unerlaubte Handlung vor"
+    },
+    {
+      "id": 61,
+      "question": "Wie entscheiden Sie bei der Abwägung folgender Rechtsgüter?",
+      "options": [
+        "A) Gesundheit ist höherwertiger als Ehre",
+        "B) Ehre ist höherwertiger als Besitz",
+        "C) Besitz ist geringwertiger als Eigentum",
+        "D) Gesundheit geht vor Leib und Leben"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Gesundheit steht über Ehre und Eigentum über Besitz in der Rechtsgüterhierarchie"
+    },
+    {
+      "id": 62,
+      "question": "Nach §823 BGB...",
+      "options": [
+        "A) Begeht eine unerlaubte Handlung wer vorsätzlich das Rechtsgut einer anderen Person verletzt",
+        "B) Begeht eine unerlaubte Handlung wer fahrlässig das Rechtsgut einer anderen Person verletzt",
+        "C) Begeht eine verbotene Eigenmacht wer dem Besitzdiener den Besitz ohne dessen Willen entzieht",
+        "D) Begeht eine verbotene Eigenmacht wer dem Besitzer den Besitz ohne dessen Willen entzieht"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "§823 BGB erfasst vorsätzliche und fahrlässige Rechtsgutsverletzungen"
+    },
+    {
+      "id": 63,
+      "question": "Was ist ein Diebstahl zivilrechtlich gesehen?",
+      "options": [
+        "A) Besitzentzug",
+        "B) Verbotene Eigenmacht",
+        "C) Besitzkehr",
+        "D) Schikane"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Diebstahl ist zivilrechtlich Besitzentzug und verbotene Eigenmacht"
+    },
+    {
+      "id": 64,
+      "question": "Welches der folgenden Angaben sind/ist keine Sachen?",
+      "options": [
+        "A) Fest installierter Zigarettenautomat am öffentlichen Bahnhof",
+        "B) Hauskatze",
+        "C) Brief",
+        "D) Wasser in der Regentonne"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Tiere sind nach §90a BGB keine Sachen"
+    },
+    {
+      "id": 65,
+      "question": "Welche Aussagen zum Hausrecht sind korrekt?",
+      "options": [
+        "A) Das Hausrecht kann nur der Besitzer ausüben",
+        "B) Das Hausrecht setzt sich u.a. aus §903 BGB, §123 StGB und anderen Rechten und Gesetzen zusammen",
+        "C) Das Hausrecht ist ein Grundrecht",
+        "D) Die Ausübung des Hausrechts kann übertragen werden"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Hausrecht basiert auf verschiedenen Gesetzen und kann übertragen werden"
+    },
+    {
+      "id": 66,
+      "question": "Welche dieser Personen begeht eine verbotene Eigenmacht?",
+      "options": [
+        "A) X reißt einer älteren Dame die Handtasche aus der Hand",
+        "B) Z nimmt ein Handy aus einem Regal um dieses im Markt auszuprobieren",
+        "C) Y verkratzt die Scheiben in der Straßenbahn",
+        "D) W der sich mit Q einen Computer teilt, surft während der Abwesenheit von Q im Internet"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Handtaschenraub und Sachbeschädigung sind verbotene Eigenmacht"
+    },
+    {
+      "id": 67,
+      "question": "Der Besitzdiener...",
+      "options": [
+        "A) Kann sich einer verbotenen Eigenmacht notfalls mit Gewalt erwehren",
+        "B) Hat in Bezug auf eine verbotene Eigenmacht die gleichen Rechte wie ein Eigentümer",
+        "C) Hat in Bezug auf eine verbotene Eigenmacht die gleichen Rechte wie ein Besitzer",
+        "D) Kann sich einer Besitzkehr notfalls mit Gewalt erwehren"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Besitzdiener haben die gleichen Rechte wie Besitzer bei verbotener Eigenmacht"
+    },
+    {
+      "id": 68,
+      "question": "Welche Person / en ist / sind beim Vorliegen einer sogenannten \"verbotenen Eigenmacht\" zur Selbsthilfe befugt?",
+      "options": [
+        "A) Der Besitzdiener im Interesse des Besitzherrn",
+        "B) Der unmittelbare Besitzer",
+        "C) Der Eigentümer"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Besitzer und Besitzdiener sind zur Selbsthilfe bei verbotener Eigenmacht befugt"
+    },
+    {
+      "id": 69,
+      "question": "Welche Aussagen zu Notständen sind korrekt?",
+      "options": [
+        "A) Im BGB wird die Entscheidung ob es sich um einen Aggressiv-oder um einen Defensivnotstand handelt, davon abhängig gemacht, ob eigene oder fremde Mittel zur Abwendung der drohenden Gefahr eingesetzt werden",
+        "B) Bei den Notständen im BGB geht die Gefahr in der Regel nicht von einer Sache oder einem Tier aus",
+        "C) Bei den Notständen im StGB ist es zur Abwendung der Gefahr (in beiden Fällen) erforderlich, eine (eigentlich) strafbare Handlung zu begehen",
+        "D) Bei einer Notstandssituation findet im Gegensatz zur Notwehr kein gegenwärtiger, rechtswidriger Angriff statt, sondern es droht eine gegenwärtige Gefahr die abgewendet werden muss"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Notstand unterscheidet sich von Notwehr durch Gefahr statt Angriff und Mittelherkunft"
+    },
+    {
+      "id": 70,
+      "question": "Der Begriff der Sache ist im Gesetz klar definiert. Welche der nachfolgend genannten Dinge sind Sachen im Sinne des Gesetzes und können demnach verwendet, bzw. gestohlen werden?",
+      "options": [
+        "A) Die Rechte an einem komponierten Musikstück",
+        "B) Eine Flasche Cognac",
+        "C) Wasser in einem Fluss",
+        "D) Elektrische Energie",
+        "E) Armbanduhren"
+      ],
+      "correct_answers": ["B", "E"],
+      "explanation": "Nur körperliche Gegenstände wie Flaschen und Uhren sind Sachen im Sinne des §90 BGB"
+    },
+    {
+      "id": 71,
+      "question": "Der Ladendetektiv D sieht, wie seine bekannte Nachbarin Frau N absichtlich eine Vitrine im Geschäft zerschlägt und wegläuft. Welche Möglichkeit hat D?",
+      "options": [
+        "A) Festhalten nach §229 BGB",
+        "B) Zivilrechtliche Ansprüche gerichtlich geltend machen",
+        "C) Strafrechtliche Ansprüche gerichtlich geltend machen",
+        "D) Festhalten nach §127 StPO"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Nach Sachbeschädigung können zivil- und strafrechtliche Ansprüche geltend gemacht werden"
+    },
+    {
+      "id": 72,
+      "question": "Welche Aussagen zu Jugendlichen ist/sind korrekt?",
+      "options": [
+        "A) Jugendliche sind Personen im Alter von 12-18 Jahren",
+        "B) Jugendliche können bestraft werden",
+        "C) Jugendliche müssen immer für alle ihre Schäden haften",
+        "D) Jugendliche können Straftaten begehen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Jugendliche (14-18 Jahre) können bestraft werden und Straftaten begehen"
+    },
+    {
+      "id": 73,
+      "question": "Welche der folgenden Personen handelt nach dem verteidigenden Notstand?",
+      "options": [
+        "A) F verteidigt sich gegen G, der F mit einem Laserpointer ins Auge leuchtet",
+        "B) A wirft den brennenden Mülleimer von B, dessen Mülleimer ihn und andere Person gefährdet ins Hafenbecken",
+        "C) C verteidigt sich gegen einen bissigen Hund wobei er diesem Verletzungen zufügt",
+        "D) D nimmt in der Schule einen Feuerlöscher aus einer Halterung"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Verteidigender Notstand liegt vor bei Gefahrenabwehr durch Zerstörung oder Beschädigung"
+    },
+    {
+      "id": 74,
+      "question": "Ein Jugendlicher besprüht mit einer Farbspraydose die Wand eines Bürohauses das nicht zu ihrem Revier gehört. Als Sicherheitsmitarbeiter sehen Sie dies. Wie können Sie handeln?",
+      "options": [
+        "A) Rechtfertigender Notstand §34 StGB",
+        "B) Besitzwehr §859 BGB",
+        "C) Nothilfe nach §32 StGB",
+        "D) Nothilfe nach §227 BGB"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Bei Sachbeschädigung kann Nothilfe nach StGB oder BGB geleistet werden"
+    },
+    {
+      "id": 75,
+      "question": "Können mehrere Personen Eigentümer einer Sache sein?",
+      "options": [
+        "A) Ja das geht. Die Personen nennt man dann Miteigentümer",
+        "B) Nein das geht nicht. Es kann nur einen Eigentümer geben"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Miteigentum ist möglich und rechtlich anerkannt"
+    },
+    {
+      "id": 76,
+      "question": "Ein Vater möchte seinem 5jährigen Sohn spazieren, bzw. begleitet diesen, als dieser mit dem Dreirad unterwegs ist. Im Spiel mit dem Dreirad verursacht das Kind aus Versehen mit diesem einen leichten Lackschaden an einem abgestellten PKW. In diesem Fall...",
+      "options": [
+        "A) ...muss der Vater als Elternteil in jedem Fall Schadensersatz leisten, da das Kind selbst noch nicht schadensersatzpflichtig ist",
+        "B) ...ist der Vater nur zur Zahlung des entstandenen Schadens verpflichtet, wenn ihm eine Verletzung der Aufsichtspflicht entsprechend nachgewiesen werden kann",
+        "C) ...bleibt der Halter des PKW auf seinem Schaden sitzen und muss in jedem Fall selbst aufkommen, da das Kind selbst noch nicht schadensersatzpflichtig ist"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Eltern haften nur bei nachgewiesener Verletzung der Aufsichtspflicht"
+    },
+    {
+      "id": 77,
+      "question": "Was muss für eine unerlaubte Handlung gegeben sein?",
+      "options": [
+        "A) Vorsatz",
+        "B) Verletzung von Leib und Leben, Gesundheit, Eigentum, Besitz etc.",
+        "C) Verletzung eines Rechtsgutes einer anderen Person",
+        "D) Schäden am Rechtsgut einer anderen Person"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Unerlaubte Handlung erfordert Rechtsgutsverletzung und Schaden bei einer anderen Person"
+    },
+    {
+      "id": 78,
+      "question": "Welche Gesetze kann ein Sicherheitsmitarbeiter, der Besitzdiener ist, anwenden?",
+      "options": [
+        "A) Selbsthilfe des Besitzers - §859 BGB",
+        "B) Selbsthilfe des Besitzdieners - §860 BGB",
+        "C) Befugnisse des Besitzdieners - §904 BGB",
+        "D) Allgemeine Selbsthilfe - §229 BGB"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Besitzdiener können Selbsthilfe des Besitzdieners und allgemeine Selbsthilfe anwenden"
+    },
+    {
+      "id": 79,
+      "question": "Was ist §227 BGB?",
+      "options": [
+        "A) Notwehr",
+        "B) Verteidigender Notstand",
+        "C) Angreifender Notstand",
+        "D) Allgemeine Selbsthilfe"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§227 BGB regelt die Notwehr im Zivilrecht"
+    },
+    {
+      "id": 80,
+      "question": "Ein 13-jähriges Kind lehnt sich in einem Fahrradgeschäft an eine Reihe Fahrräder. Als diese umfallen, entsteht ein einigen Rädern ein Schäden. Das Kind will weglaufen. Der Ladendetektiv hat die Situation beobachtet. Auf Grundlage welcher Rechte darf dieser eingreifen?",
+      "options": [
+        "A) Allgemeine Selbsthilfe - §229 BGB",
+        "B) Notwehr - §227 BGB",
+        "C) Verteidigender Notstand - §228 BGB",
+        "D) Vorläufige Festnahme - §127 StPO"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Bei fahrlässiger Sachbeschädigung kann allgemeine Selbsthilfe angewandt werden"
+    },
+    {
+      "id": 81,
+      "question": "Sie werden als Fußgänger Zeuge eines Verkehrsunfalls und wollen erste Hilfe leisten. Im Rahmen dessen bitten Sie einen zufällig anwesenden Autofahrer um seinen Verbandskasten. Dieser will sie jedoch nicht, so dass Sie ihm daher der Herausgabe. Welche der folgenden Aussagen diesbezüglich trifft zu?",
+      "options": [
+        "A) Nach § 903 BGB (Befugnisse des Eigentümers) steht es dem PKW-Fahrer nur dann zu, wenn er nicht gegen das Gesetz verstößt oder die Rechte Dritter verletzt",
+        "B) Auch gegen den Willen des PKW-Fahrers dürfen Sie im Rahmen des entschuldigenden Notstandes nach § 35 StGB an sich nehmen",
+        "C) Nach § 903 BGB (Befugnisse des Eigentümers) steht es dem PKW-Fahrer zu. Sie jederzeit von der Einwirkung auf sein Eigentum entsprechend auszuschließen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Eigentümerrechte sind begrenzt wenn Gesetze oder Rechte Dritter betroffen sind"
+    },
+    {
+      "id": 82,
+      "question": "Was ist der Unterschied zwischen dem verteidigenden und dem angreifenden Notstand?",
+      "options": [
+        "A) Der verteidigende Notstand verwendet eigene Mittel, der angreifende fremde Mittel",
+        "B) Der eine Notstand steht im Strafgesetzbuch der andere im Bürgerlichen Gesetzbuch",
+        "C) Der angreifende Notstand untersagt es dem Eigentümer einer Sache, die Einwirkung auf diese auszuschließen, wenn eine andere Person die Sache für die Abwehr einer Gefahr benötigt",
+        "D) Es gibt keinen Unterschied"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Verteidigender Notstand nutzt eigene, angreifender fremde Mittel zur Gefahrenabwehr"
+    },
+    {
+      "id": 83,
+      "question": "Wer ist Besitzer?",
+      "options": [
+        "A) Eine Person die mittelbar die Gewalt über diese Sache ausüben kann",
+        "B) Eine Person die die tatsächliche Sachherrschaft über die Sache hat",
+        "C) Eine Person die die rechtliche Sachherrschaft über die Sache hat",
+        "D) Eine Person die eine Sache an sich hat, immer"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Besitzer hat die tatsächliche Sachherrschaft und kann mittelbar Gewalt ausüben"
+    },
+    {
+      "id": 84,
+      "question": "Die rechtliche Gewalt über eine Sache...",
+      "options": [
+        "A) Hat der Besitzer",
+        "B) Hat der Eigentümer",
+        "C) Hat der Besitzdiener",
+        "D) Hat der Staat"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Der Eigentümer hat die rechtliche Gewalt über eine Sache"
+    },
+    {
+      "id": 85,
+      "question": "Der Türsteher T sieht wie zwei unbekannte, zuvor abgewiesene junge Männer über den Zaun ins Raucherbereich klettern um in das Diskothekinnere zu gelangen. Was begehen die jungen Männer hier?",
+      "options": [
+        "A) Besitzstörung nach §858 BGB",
+        "B) Besitzentzug nach §858 BGB",
+        "C) Eigentümerstörung nach §903 BGB",
+        "D) Hausfriedensbruch nach §123 StGB"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Unbefugtes Betreten ist Besitzstörung und Hausfriedensbruch"
+    },
+    {
+      "id": 86,
+      "question": "Was ist der Unterschied zwischen Besitzer und Eigentümer?",
+      "options": [
+        "A) Der Eigentümer ist immer Besitzer der Sache",
+        "B) Der Eigentümer hat die tatsächliche Gewalt über eine Sache, der Besitzer die rechtliche",
+        "C) Der Eigentümer hat die rechtliche Gewalt über eine Sache, der Besitzer die tatsächliche",
+        "D) Der Eigentümer hat die rechtliche Gewalt über eine Sache, der Besitzer die tatsächliche"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Eigentümer hat rechtliche, Besitzer hat tatsächliche Gewalt über die Sache"
+    },
+    {
+      "id": 87,
+      "question": "X geht in ein Elektronikgeschäft und kauft sich eine Playstation. Mit seinem Freund Y hat er abgemacht, dass Y die Hälfte der Kosten übernimmt damit dieser die Playstation ebenfalls nutzen kann. Was ist Y?",
+      "options": [
+        "A) Mitbesitzer",
+        "B) Miteigentümer",
+        "C) Besitzdiener",
+        "D) Alleineigentümer"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Y wird durch Kostenbeteiligung zum Miteigentümer"
+    },
+    {
+      "id": 88,
+      "question": "Der Besitz einer Sache wird durch die Erlangung der tatsächlichen Gewalt über die Sache gem. § 854 BGB erworben. Welche der nachfolgenden Aussagen zum Besitz ist / sind nicht richtig?",
+      "options": [
+        "A) Diese Bestimmung regelt den Erwerb des unmittelbaren Besitzes an beweglichen und unbeweglichen Sachen",
+        "B) Auch durch die unrechtmäßige Erlangung der tatsächlichen Gewalt, wie z.B. beim Diebstahl, wird der Täter zum Besitzer der Sache im rechtsgemäßen Sinne",
+        "C) Diese Bestimmung regelt nur den Erwerb des unmittelbaren Besitzes an beweglichen Sachen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§854 BGB gilt für bewegliche und unbewegliche Sachen - Aussage A ist falsch"
+    },
+    {
+      "id": 89,
+      "question": "Die nachstehenden Äußerungen nehmen Bezug auf die Ausübung und Durchsetzung von Rechten durch Staatsbürger. Entscheiden Sie sich für die richtige / n Aussage / n.",
+      "options": [
+        "A) Wer in Ausübung der ihm zustehenden Rechte, die Grenzen des zulässigen überschreitet, ist grundsätzlich entschuldigt",
+        "B) Der Schutz und die Durchsetzung von Rechten ist - soweit sie dem Einsatz von Zwangsmitteln erfordert- grundsätzlich Aufgabe des Staates",
+        "C) Die Anwendung von privater Gewalt ist in Ausnahmefällen ohne Einschränkung möglich",
+        "D) Private Gewaltanwendung zur Durchsetzung vermeitlicher oder wirklicher Rechtspositionen, ist mit den rechtsstaatlichen Prinzipien nicht vereinbar"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Rechtsdurchsetzung mit Zwangsmitteln ist grundsätzlich staatliche Aufgabe"
+    },
+    {
+      "id": 90,
+      "question": "§ 823 BGB: Schadensersatzpflicht, zahlt einige Rechte auf, deren widerrechtliche Verletzung den unerlaubte Handlungen zum Ersatz des daraus entstehenden Schadens verpflichtet. Welche der nachstehenden Beschreibungen werden durch § 823 BGB erfasst?",
+      "options": [
+        "A) Persönlichkeitsrechte des einzelnen Menschen, wie z.B. Leben, Körper und Freiheit",
+        "B) Störenfrieden beschädigen mehrere geparkte Fahrzeuge",
+        "C) Ein Hundehalter lässt sein Tier frei herumlaufen. Der Hund verursacht dadurch den Sturz eines Radfahrers, der einen Gesundheitsschaden erleidet"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "§823 BGB erfasst Persönlichkeitsrechte und Sachschäden durch widerrechtliche Handlungen"
+    },
+    {
+      "id": 91,
+      "question": "Was ist nach §226 BGB verboten?",
+      "options": [
+        "A) Fremdes Rechtsgut verletzen",
+        "B) Wegnahme von Besitz",
+        "C) Schikane",
+        "D) Festhalten eines Täters um zivilrechtliche Ansprüche umzusetzen"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§226 BGB verbietet die Rechtsausübung in schikanöser Weise"
+    },
+    {
+      "id": 92,
+      "question": "Was ist eine Handlung nach §823 BGB?",
+      "options": [
+        "A) Eine allgemeine Selbsthilfe",
+        "B) Eine vorsätzliche oder fahrlässige Verletzung eines fremden Rechtsgutes",
+        "C) Eine Notwehr",
+        "D) Z.B. Das Zerkratzen des Autos des Nachbarn"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Unerlaubte Handlung ist vorsätzliche oder fahrlässige Rechtsgutsverletzung wie Sachbeschädigung"
+    },
+    {
+      "id": 93,
+      "question": "In welchem der folgenden Fälle wird Schadensersatz fällig?",
+      "options": [
+        "A) K attackiert L mit seiner Schaufel. L kann aber gerade noch eine Metallstange greifen und sich schlagen. Dabei verbeult die Schaufel von K möchte Schadensersatz haben",
+        "B) G greift H mit einem Messer an. H erhält dabei wesentliche Substanzverletzungen an seinem Knie und benötigt eine intensive Behandlung benötigt. H möchte Schadensersatz haben",
+        "C) Der Hund von A greift B an. B verteidigt sich und verletzt den Hund von A. A möchte Schadensersatz haben",
+        "D) Der Hund von C greift D an. D nimmt eine frei herumstehende Baustellenabsperrung der Firma E und verteidigt sich gegen den Hund. Die Absperrung wird dabei erheblich beschädigt. Die Firma E möchte Schadensersatz haben"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Schadensersatz wird bei rechtswidriger Schädigung fällig, nicht bei gerechtfertigter Notwehr"
+    },
+    {
+      "id": 94,
+      "question": "Was ist §90 BGB?",
+      "options": [
+        "A) Begriff des Tieres",
+        "B) Begriff der Sache",
+        "C) Wesentliche Bestandteile einer Sache",
+        "D) Vertretbare Sachen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "§90 BGB definiert den Begriff der Sache als körperliche Gegenstände"
+    },
+    {
+      "id": 95,
+      "question": "Was ist eine Sache im Sinne des BGB?",
+      "options": [
+        "A) Strom",
+        "B) Mensch",
+        "C) Gebäude",
+        "D) Tier"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Nur das Gebäude ist eine Sache im Sinne des §90 BGB (körperlicher Gegenstand)"
+    },
+    {
+      "id": 96,
+      "question": "Welche der folgenden Rechtsgüter sind notwehrfähig?",
+      "options": [
+        "A) Ehre",
+        "B) Besitz",
+        "C) Gleichberechtigung",
+        "D) Meinungsfreiheit"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Ehre und Besitz sind konkrete Rechtsgüter die notwehrfähig sind"
+    },
+    {
+      "id": 97,
+      "question": "Beim Aggressionsnotstand...",
+      "options": [
+        "A) ...handelt es sich um einen Schuldaufhebungsgrund",
+        "B) ...handelt es sich um einen Rechtsfertigungsgrund",
+        "C) ...richtet sich die Einwirkung gegen die Sache eines unbeteiligten Dritten, von der die Gefahr nicht ausgeht",
+        "D) ...ist der Handelnde nicht zum Schadensersatz verpflichtet"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Aggressionsnotstand ist Rechtsfertigungsgrund bei Einwirkung auf fremde Sachen"
+    },
+    {
+      "id": 98,
+      "question": "Das allgemeine Privatrecht regelt die Rechtsbeziehungen zwischen...",
+      "options": [
+        "A) ...dem Staat und den Bürgern, sofern der Staat nicht hoheitlich tätig wird",
+        "B) ...einzelnen Bürgern",
+        "C) ...den Trägern der Staatsgewalt untereinander"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Privatrecht regelt Beziehungen zwischen gleichgestellten Privatpersonen"
+    },
+    {
+      "id": 99,
+      "question": "Vor mehreren Wochen wurde Ihnen Ihr Fahrrad gestohlen. Auf dem Weg zur Arbeit sehen Sie, wie ein Ihnen Unbekannter, in einiger Entfernung mit Ihrem Rad vor einem Restaurant hält, dieses abstellt und das Restaurant betritt. Welche Handlungsmöglichkeiten haben Sie in diesem Fall? Welche Aussage / n trifft / treffen zu?",
+      "options": [
+        "A) Ich kann von meinem Selbsthilferecht nach § 859, bzw. § 860 BGB Gebrauch machen",
+        "B) Da unter den gegebenen Umständen, obrigkeitliche Hilfe rechtzeitig erreichbar ist, kann ich meinen Anspruch zunächst nur sichern und ziehe entsprechend die Polizei hinzu",
+        "C) Ich kann von meinem Selbsthilferecht nach § 229 BGB (Selbsthilfe) Gebrauch machen und meinen Rechtsanspruch entsprechend zu sichern, dementsprechend kann ich den vermeidlichen Täter entsprechend direkt festhalten lassen",
+        "D) Ich kann von meinem Recht zur vorläufigen Festnahme nach § 127 Abs. 1 StPO (der vorläufigen Festnahme) Gebrauch machen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Bei erreichbarer obrigkeitlicher Hilfe sollte diese bevorzugt werden"
+    },
+    {
+      "id": 100,
+      "question": "Was ist der Unterschied zwischen tatsächlicher und rechtlicher Gewalt über eine Sache?",
+      "options": [
+        "A) Die tatsächliche Gewalt hat der Besitzer",
+        "B) Beides wird von unterschiedlichen Personen ausgeübt",
+        "C) Es gibt keinen Unterschied",
+        "D) Die rechtliche Gewalt hat nur der Eigentümer"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Besitzer hat tatsächliche, Eigentümer hat rechtliche Gewalt über die Sache"
+    },
+    {
+      "id": 101,
+      "question": "Welche Aussagen zu §90a BGB ist/sind korrekt?",
+      "options": [
+        "A) Es sind die für Sachen geltenden Vorschriften anzuwenden, soweit nicht etwas anderes bestimmt ist",
+        "B) Tiere sind grundsätzlich keine Sachen, werden u.U. aber wie solche behandelt",
+        "C) Angriffe durch Tiere sind notwehrfähig",
+        "D) Tiere sind grundsätzlich Sachen, werden aber i.d.R. nicht wie solche behandelt"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Tiere sind keine Sachen nach §90a BGB, aber Sachvorschriften gelten teilweise"
+    },
+    {
+      "id": 102,
+      "question": "Ein zivilrechtlicher Anspruch...",
+      "options": [
+        "A) Muss immer vor Gericht eingeklagt werden",
+        "B) Ist u.a. der Herausgabeanspruch",
+        "C) Kann nur mithilfe der Selbsthilferechte des Besitzers geltend gemacht werden",
+        "D) Muss vor Gericht eingeklagt sein"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Herausgabeanspruch ist ein zivilrechtlicher Anspruch der eingeklagt werden muss"
+    },
+    {
+      "id": 103,
+      "question": "Welche Aussagen zum Besitz ist/sind korrekt?",
+      "options": [
+        "A) Der Eigentümer kann auch gleichzeitig der Besitzer sein",
+        "B) Der Besitz von gestohlenen Sachen ist strafbar",
+        "C) Durch verbotene Eigenmacht erlangter Besitzer ist fehlerhaft",
+        "D) Besitzer von Sachen können diese verkaufen oder verschenken"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Eigentümer kann Besitzer sein und durch verbotene Eigenmacht erlangter Besitz ist fehlerhaft"
+    },
+    {
+      "id": 104,
+      "question": "Welche dieser Personen begeht eine Besitzstörung?",
+      "options": [
+        "A) L streichelt den Hund von M obwohl ihm M mehrfach gewarnt hat, dass der Hund bissig sei",
+        "B) K nimmt in einem DVD-Verleih eine Verpackung aus dem Regal und geht damit zur Kasse",
+        "C) H bemalt den Briefkasten von J mit abwaschbarer Farbe",
+        "D) I läuft über den Rasen von G obwohl G ihm dies verboten hat"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Bemalen und unbefugtes Betreten sind Besitzstörungen"
+    },
+    {
+      "id": 105,
+      "question": "Was ist der Unterschied in der Bedeutung von widerrechtlich und rechtswidrig?",
+      "options": [
+        "A) Es gibt keinen",
+        "B) Widerrechtlich sind verbotene Eigenmachten; rechtswidrig sind Straftaten",
+        "C) Widerrechtlich sind Straftaten; rechtswidrig sind unerlaubte Handlungen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Widerrechtlich und rechtswidrig bedeuten dasselbe - gegen das Recht verstoßend"
+    },
+    {
+      "id": 106,
+      "question": "Welche Aussage / n zur Notwehr ist / sind zutreffend?",
+      "options": [
+        "A) Der Angreifer muss nicht schuldhaft handeln. Deshalb ist auch eine Verteidigungshandlung gegen Kinder unter 14 Jahren zulässig",
+        "B) Ein Angriff ist nur dann gegenwärtig, wenn er unmittelbar bevorsteht, also wenn der Angreifer z.B. zum Schlag ausholt",
+        "C) Rechtswidrig ist jeder Angriff auf fremde Rechtsgüter der ohne Rechtsfertigungsgrund erfolgt"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Notwehr ist auch gegen schuldunfähige Personen möglich und rechtswidrige Angriffe haben keinen Rechtfertigungsgrund"
+    },
+    {
+      "id": 107,
+      "question": "Was ist §229 BGB?",
+      "options": [
+        "A) Notwehr",
+        "B) Verteidigender Notstand",
+        "C) Angreifender Notstand",
+        "D) Allgemeine Selbsthilfe"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "§229 BGB regelt die allgemeine Selbsthilfe"
+    },
+    {
+      "id": 108,
+      "question": "Die rechtlich sogenannte \"Nothilfe\"...",
+      "options": [
+        "A) Ist eine Handlung nach §227 BGB",
+        "B) Berechtigt zur Verteidigung obwohl man selbst nicht angegriffen wird",
+        "C) [Option C fehlt im Original]",
+        "D) Muss geleistet werden"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Nothilfe nach §227 BGB berechtigt zur Verteidigung anderer Personen"
+    },
+    {
+      "id": 109,
+      "question": "Der Junge wehrt sich gegen die berechtigte Handlung des Sicherheitsmitarbeiters. Dabei verletzt er diesen im Gesicht. Muss der 16-jährige Junge Schadensersatz leisten?",
+      "options": [
+        "A) Nein, da er als Jugendlicher noch keinen Schadensersatz leisten muss",
+        "B) Nein, da er sich in Notwehr verteidigt hat",
+        "C) Ja, für alle Kosten/Schäden die durch die Verletzung entstehen",
+        "D) Ja, aber nur für die Verletzung"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "16-Jährige sind schadensersatzpflichtig, keine Notwehr gegen berechtigte Handlungen"
+    },
+    {
+      "id": 110,
+      "question": "Das Bürgerliche Gesetzbuch enthält welches dieser Rechte?",
+      "options": [
+        "A) Selbsthilfe des Eigentümers",
+        "B) Notwehr",
+        "C) Vorläufige Festnahme",
+        "D) Allgemeine Selbsthilfe"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Das BGB enthält Notwehr (§227) und allgemeine Selbsthilfe (§229)"
+    },
+    {
+      "id": 111,
+      "question": "Was sind die Eigenschaften eines Besitzdieners?",
+      "options": [
+        "A) Ein Besitzdiener muss die Rechte vom Eigentümer übertragen bekommen haben",
+        "B) Ein Besitzdiener kann sich einer verbotenen Eigenmacht erwehren",
+        "C) Ein Besitzdiener der Rechte vom Besitzer übertragen bekommen hat, kann mit der Sache nach belieben verfahren",
+        "D) Ein Besitzdiener kann sich nur einem Besitzentzug erwehren"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Besitzdiener können sich gegen verbotene Eigenmacht zur Wehr setzen"
+    },
+    {
+      "id": 112,
+      "question": "Was ist §859 BGB?",
+      "options": [
+        "A) Verbotene Eigenmacht",
+        "B) Selbsthilfe des Besitzers",
+        "C) Selbsthilfe des Besitzdieners"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "§859 BGB regelt die Selbsthilfe des Besitzers"
+    },
+    {
+      "id": 113,
+      "question": "Was besagt §904 BGB?",
+      "options": [
+        "A) Ein Eigentümer darf, unter bestimmten Umständen, die Einwirkung auf seine Sache nicht verbieten",
+        "B) Ein Eigentümer darf mit seinen Sachen nach Belieben verfahren",
+        "C) Ein Eigentümer darf keinen Ersatz für den ihm entstandenen Schaden verlangen",
+        "D) Ein Eigentümer kann Ersatz für den ihm entstandenen Schaden verlangen"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "§904 BGB regelt den Aggressionsnotstand - Eigentümer muss Einwirkung dulden, kann aber Ersatz verlangen"
+    },
+    {
+      "id": 114,
+      "question": "Ein Türsteher einer Sicherheitsfirma in einer Diskothek ist rechtlich gesehen...",
+      "options": [
+        "A) Eigentümer",
+        "B) Besitzdiener",
+        "C) Besitzer",
+        "D) Nichts davon"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Türsteher handeln als Besitzdiener im Auftrag des Besitzers/Eigentümers"
+    },
+    {
+      "id": 115,
+      "question": "Wer ist zum Schadensersatz verpflichtet?",
+      "options": [
+        "A) Jeder der widerrechtlich einem anderen vorsätzlich oder fahrlässig einen Schaden an einem Rechtsgut zufügt",
+        "B) Jeder der rechtswidrig einem anderen vorsätzlich oder fahrlässig einen Schaden an einem Rechtsgut zufügt",
+        "C) Jeder der eine Straftat begeht",
+        "D) Jeder der einen Schaden entstehen lässt"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Schadensersatzpflicht bei widerrechtlicher/rechtswidriger vorsätzlicher oder fahrlässiger Schädigung"
+    },
+    {
+      "id": 116,
+      "question": "Welche Aussagen zu den Voraussetzungen der Notwehr ist/sind korrekt?",
+      "options": [
+        "A) Notwehr ist auch dann statthaft wenn ein gegenwärtiger rechtswidriger Angriff auf eine andere Person vorliegt",
+        "B) In Notwehr kann gehandelt werden, wenn man von Menschen oder Tieren angegriffen wird",
+        "C) Notwehr ist nur dann statthaft wenn ein gegenwärtiger rechtswidriger Angriff auf sich selbst vorliegt",
+        "D) Der Angriff muss unmittelbar bevorstehen, gerade stattfinden oder noch andauern"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Notwehr ist auch für andere möglich (Nothilfe) und Angriff muss gegenwärtig sein"
+    },
+    {
+      "id": 117,
+      "question": "Die Notstandshandlung im Sinne des § 904 BGB (Aggressionsnotstand)...",
+      "options": [
+        "A) ...ist nur möglich, wenn fremde Rechtsgüter jeglicher Art, einer gegenwärtigen, nicht anders anwendbaren Gefahr ausgesetzt sind und diese Handlung zur Abwendung erforderlich ist",
+        "B) ...besteht in der unmittelbaren oder mittelbaren Einwirkung auf eine Sache, die zur Abwehr der Gefahr notwendig sein muss, z.B. deren Benutzung, Beschädigung oder Zerstörung",
+        "C) ...ist nicht zulässig, wenn der Eigentümer der Sache auf die eingwirkt werden soll, die Einwirkung verbietet",
+        "D) ...wirkt auf fremde Sachen ein, von der die Gefahr nicht ausgeht"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Aggressionsnotstand erlaubt Einwirkung auf fremde Sachen zur Gefahrenabwehr"
+    },
+    {
+      "id": 118,
+      "question": "Welche Aussagen zum Bürgerlichen Gesetzbuch ist/sind korrekt?",
+      "options": [
+        "A) Subordinationsprinzip",
+        "B) Regelt Rechtsbeziehungen zwischen z.B. dem Ordnungsamt und einer Privatperson",
+        "C) Regelt Rechtsbeziehungen zwischen Privatpersonen",
+        "D) Koordinationsprinzip"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "BGB regelt Privatrecht zwischen gleichgestellten Personen (Koordinationsprinzip)"
+    },
+    {
+      "id": 119,
+      "question": "Als private Sicherheitskraft können Sie u.a. im Rahmen der sogenannten \"Jedermannsrechte\" auf die sogenannten \"Notstandsrechte zurückgreifen, wenn entsprechende Voraussetzungen vorliegen. Welche der folgenden Notstände sind nicht durch das Privatrecht geregelt?",
+      "options": [
+        "A) Rechtfertigender Notstand",
+        "B) Entschuldigender Notstand",
+        "C) Aggressionsnotstand",
+        "D) Defensivnotstand"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Rechtfertigender und entschuldigender Notstand sind im StGB geregelt, nicht im BGB"
+    },
+    {
+      "id": 120,
+      "question": "Bei welchen der folgenden Angaben handelt es sich um Rechtsfertigungsgrunde aus dem BGB?",
+      "options": [
+        "A) §859 BGB - Selbsthilfe des Besitzers",
+        "B) §858 BGB - verbotene Eigenmacht",
+        "C) §229 BGB - allgemeine Selbsthilfe",
+        "D) §903 BGB - Befugnisse des Eigentümers"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Selbsthilfe des Besitzers und allgemeine Selbsthilfe sind Rechtsfertigungsgründe"
+    },
+    {
+      "id": 121,
+      "question": "Wenn jemand ein sogenanntes \"absolutes Recht\", wie z.B. das Eigentum eines anderen verletzt, so kann daraus ein sogenannter \"Anspruch\" entstehen. Überprüfen Sie die nachfolgenden Aussagen dazu und kreuzen Sie die richtigen an:",
+      "options": [
+        "A) Ein Anspruch kann ausschließlich nur eine Schadensersatzforderung sein",
+        "B) Ansprüche sind z.B. die Herausgabe von Sachen oder das Unterlassen von Handlungen",
+        "C) Ansprüche verjähren nicht",
+        "D) Ansprüche können sich immer gegen Jedermann richten, auch ohne Berücksichtigung auf das Alter"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Ansprüche können verschiedene Formen haben wie Herausgabe oder Unterlassung"
+    },
+    {
+      "id": 122,
+      "question": "Ab wann muss man den Fund einer Sache der zuständigen Behörde melden?",
+      "options": [
+        "A) Sofort",
+        "B) Spätestens nach zwei Wochen",
+        "C) Innerhalb der ersten 72 Stunden",
+        "D) Nach einer Woche"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Fundsachen müssen sofort der zuständigen Behörde gemeldet werden"
+    },
+    {
+      "id": 123,
+      "question": "Was ist immer eine verbotene Eigenmacht?",
+      "options": [
+        "A) Die Wegnahme einer Sache vom Besitzer ohne dessen Willen",
+        "B) Das Entziehen des Besitzes vom Besitzer",
+        "C) Das Stören des Besitzes ohne den Willen des Besitzers",
+        "D) Das Zerstören einer Sache des Besitzers"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Wegnahme ohne Willen und Besitzstörung sind immer verbotene Eigenmacht"
+    },
+    {
+      "id": 124,
+      "question": "Warum gibt es die Notwehr im Bürgerlichen Gesetzbuch?",
+      "options": [
+        "A) Um sich vor Strafverfolgung zu schützen",
+        "B) Um sich vor jedem Angriff zu schützen",
+        "C) Um Schäden die in Notwehr begangen werden, zu rechtfertigen",
+        "D) Um sich vor zivilrechtlichen Ansprüchen zu schützen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Notwehr im BGB rechtfertigt Schäden und schützt vor zivilrechtlichen Ansprüchen"
+    },
+    {
+      "id": 125,
+      "question": "Ziel der allgemeine Selbsthilfe nach §229 BGB ist u.a...",
+      "options": [
+        "A) Die Durchsetzung zivilrechtlicher Ansprüche",
+        "B) Die Bestrafung des Täters",
+        "C) Die Personaliensfeststellung",
+        "D) Die Festnahme des Täters durch die Polizei"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Allgemeine Selbsthilfe dient der Anspruchsdurchsetzung und Personaliensfeststellung"
+    },
+    {
+      "id": 126,
+      "question": "Was regelt §828 BGB?",
+      "options": [
+        "A) Unerlaubte Handlung",
+        "B) Verbotene Eigenmacht",
+        "C) Den Einsatz von Schäden bei Kindern und Jugendlichen",
+        "D) Schadensersatz bei Minderjährigen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "§828 BGB regelt Schadensersatz und Haftung bei Minderjährigen"
+    },
+    {
+      "id": 127,
+      "question": "Ein Eigentümer...",
+      "options": [
+        "A) Muss eine Einwirkung auf seine Sachen im Rahmen eines Notstandes nach §904 dulden",
+        "B) Darf bei Ausübung seines Eigentums die Rechte anderer Personen nicht verletzen",
+        "C) Kann nach einem Notstand nach §228 BGB Schadensersatz verlangen",
+        "D) Muss zivilrechtliche Ansprüche immer gerichtlich geltend machen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Eigentümer muss Notstandseinwirkung dulden und darf keine fremden Rechte verletzen"
+    },
+    {
+      "id": 128,
+      "question": "Welches Mittel ist zu wählen?",
+      "options": [
+        "A) Das Mittel welches am wenigsten Schaden anrichtet und geeignet ist den Angriff abzuwehren",
+        "B) Das Mittel welches den Angriff sofort beendet auch wenn es einen hohen Schaden anrichtet",
+        "C) Das sanfteste",
+        "D) Das mildeste"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Es ist das mildeste/sanfteste geeignete Mittel zu wählen"
+    },
+    {
+      "id": 129,
+      "question": "Welche dieser Personen begeht einen Besitzentzug?",
+      "options": [
+        "A) Der Sicherheitsmitarbeiter B behält nach dem Einsatz das Funkgerät ohne es zurückgeben zu wollen",
+        "B) C nimmt eine Zigarette aus der Packung die ihm von D angeboten wird",
+        "C) E nimmt ein Kind aus dem Bett einer Entbindungsstation und bringt dieses ins Ausland",
+        "D) A nimmt aus dem Wartezimmer eines Arztes eine Zeitung mit nachhause"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Nichtherausgabe des Funkgeräts und Mitnahme der Zeitung sind Besitzentzug"
+    },
+    {
+      "id": 130,
+      "question": "Welche Arten der verbotenen Eigenmacht kennen Sie?",
+      "options": [
+        "A) Besitzstörung",
+        "B) Besitzwegzug",
+        "C) Besitzentzug",
+        "D) Besitzerstörung"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Verbotene Eigenmacht umfasst Besitzstörung und Besitzentzug"
+    },
+    {
+      "id": 131,
+      "question": "Als private Sicherheitskraft schützen Sie unter anderem den Besitz und das Eigentum Dritter. In Ihrer Tätigkeit als Sicherheitskraft sind Sie...",
+      "options": [
+        "A) ...Besitzdiener",
+        "B) ...Eigentümer",
+        "C) ...Besitzer"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Sicherheitskräfte handeln als Besitzdiener im Auftrag der Auftraggeber"
+    },
+    {
+      "id": 132,
+      "question": "Wer ist Eigentümer?",
+      "options": [
+        "A) Der Käufer einer Sache wenn er diese nach dem Kauf sofort weiterverkauft",
+        "B) Personen die die rechtliche Sachherrschaft über eine Sache haben",
+        "C) Personen die die tatsächliche Sachherrschaft über eine Sache haben",
+        "D) Die Person die jederzeit rechtlich über die Sache verfügen kann"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Eigentümer haben die rechtliche Sachherrschaft und können rechtlich über die Sache verfügen"
+    },
+    {
+      "id": 133,
+      "question": "Wer begeht eine verbotene Eigenmacht?",
+      "options": [
+        "A) Jemand der eine Straftat begeht",
+        "B) Jemand der fremden Besitz ohne den Willen des Besitzers entzieht",
+        "C) Jemand der eine unerlaubte Handlung begeht",
+        "D) Jemand der fremden Besitz ohne den Willen des Besitzers stört"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Verbotene Eigenmacht liegt vor bei Besitzentzug oder -störung ohne Willen des Besitzers"
+    },
+    {
+      "id": 134,
+      "question": "Welches der folgenden Rechte hat der Eigentümer einer Sache grundsätzlich?",
+      "options": [
+        "A) Die Sache verkaufen",
+        "B) [Option B fehlt im Original]",
+        "C) Die Sache vom Besitzer zurückverlangen",
+        "D) Die Sache gegen andere Personen einzusetzen"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Eigentümer kann die Sache verkaufen und vom Besitzer zurückverlangen"
+    },
+    {
+      "id": 135,
+      "question": "Was ist eine Sache?",
+      "options": [
+        "A) Ein Objekt mit §90 BGB",
+        "B) Nur körperliche Gegenstände",
+        "C) Ein Mensch gilt auch als körperlicher Gegenstand",
+        "D) Nur feste und flüssige Gegenstände"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Sachen sind nach §90 BGB körperliche Gegenstände"
+    },
+    {
+      "id": 136,
+      "question": "Was besagt §985 BGB?",
+      "options": [
+        "A) Der Besitzer kann nur nach fristgerechter Ankündigung die Herausgabe der Sache verlangen",
+        "B) Der Besitzer kann vom Besitzdiener die Herausgabe der Sache verlangen",
+        "C) Der Eigentümer kann nur nach fristgerechter Ankündigung die Herausgabe der Sache verlangen",
+        "D) Der Eigentümer kann vom Besitzer die Herausgabe der Sache verlangen"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "§985 BGB regelt den Herausgabeanspruch des Eigentümers gegen den Besitzer"
+    },
+    {
+      "id": 137,
+      "question": "Zu welchen Handlungen kann Sie die allgemeine Selbsthilfe nach §229 BGB rechtfertigen?",
+      "options": [
+        "A) Den Widerstand des Verpflichteten brechen",
+        "B) Sofortige Gewaltanwendung",
+        "C) Festhalten",
+        "D) Wegnehmen und weiterverkaufen einer Sache des Verpflichteten"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Allgemeine Selbsthilfe rechtfertigt Festhalten und Widerstand brechen"
+    },
+    {
+      "id": 138,
+      "question": "Was ist §903 BGB?",
+      "options": [
+        "A) Befugnisse des Besitzers",
+        "B) Angreifender Notstand",
+        "C) Befugnisse des Eigentümers",
+        "D) Befugnisse des Besitzdieners"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§903 BGB regelt die Befugnisse des Eigentümers"
+    },
+    {
+      "id": 139,
+      "question": "Welche der folgenden Aussagen beschreiben Fahrlässigkeit?",
+      "options": [
+        "A) Das Tun ohne der im Verkehr erforderlichen Sorgfalt",
+        "B) Das Tun mit Wissen und Wollen",
+        "C) Das Unterlassen mit Wissen und Wollen",
+        "D) Das Tun aus Versehen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Fahrlässigkeit ist das Handeln ohne die erforderliche Sorgfalt"
+    },
+    {
+      "id": 140,
+      "question": "Welche Aussagen zu §904 BGB = Aggressiver Notstand ist/sind richtig?",
+      "options": [
+        "A) Berechtigt zu einer Wegnahme einer fremden Sache um sich mit ihr gegen eine gegenwärtige Gefahr zu verteidigen",
+        "B) Der Eigentümer einer Sache, darf die Einwirkung auf diese nicht verbieten wenn eine andere Person diese Sache für die Abwehr einer Gefahr benötigt",
+        "C) Der Eigentümer einer Sache, darf die Einwirkung auf diese verbieten wenn eine andere Person diese Sache für die Abwehr einer Gefahr benötigt",
+        "D) Ein Eigentümer darf sich mit seiner Sache gegen einen Hund verteidigen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Aggressionsnotstand erlaubt Wegnahme fremder Sachen zur Gefahrenabwehr"
+    },
+    {
+      "id": 141,
+      "question": "Welche der folgenden Personen handelt nach dem angreifenden Notstand?",
+      "options": [
+        "A) H nimmt den Feuerlöscher von den LKW des K, um ein brennendes Auto, in dem mehrere Kinder sitzen, zu löschen",
+        "B) Auf einer Veranstaltung entwendet L der älteren Dame M den Gehstock, damit L eine klemmende Fluchttür aufstoßen kann vor der sich mehrere, in Panik befindende, Personen quetschen",
+        "C) G verteidigt sich gegen den Hund von P als dieser ihn angreift",
+        "D) Herr G reißt eine Latte aus einem Zaun um sich gegen Frau P zu verteidigen als diese ihn mit einem Pfefferspray attackiert"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Angreifender Notstand liegt vor bei Wegnahme fremder Sachen zur Gefahrenabwehr"
+    },
+    {
+      "id": 142,
+      "question": "Der Türsteher T sieht wie zwei ihm bekannte, zuvor abgewiesene junge Männer über den Zaun im Raucherbereich klettern um in das Diskothekinnere zu gelangen. Wie kann T hier handeln?",
+      "options": [
+        "A) Angreifender Notstand nach §904 BGB",
+        "B) Vorläufige Festnahme nach §127 StPO",
+        "C) Besitzwehr nach §§ 859/860 BGB",
+        "D) Notwehr nach §227 BGB"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Bei unbefugtem Betreten sind Besitzwehr und Notwehr anwendbar"
+    },
+    {
+      "id": 143,
+      "question": "Vitali wird einem Freitagvormittag in einem Straßencafé das Handy entrissen. Als er am Samstag wieder durch die Stadt geht erkennt er den Dieb mit dem Handy in seiner Hand wieder.",
+      "options": [
+        "A) Vitali kann den Dieb nach §904 BGB verletzen ohne Schmerzensgeld leisten zu müssen",
+        "B) Vitali kann den Dieb nach §127 StPO festnehmen",
+        "C) Vitali kann in Notwehr nach §227 BGB handeln",
+        "D) Vitali kann den Dieb nach §229 BGB festhalten"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Nach einem Tag ist nur noch allgemeine Selbsthilfe möglich, nicht mehr Besitzwehr"
+    },
+    {
+      "id": 144,
+      "question": "Sie sind als Citystreife in einem Einkaufszentrum eingesetzt und sind für die Sicherheit des Zentrums und der Läden zuständig. Sie sehen wie ein Herr mit einer Flasche immer wieder gegen die Fensterscheibe eines Ladengeschäfts schlägt. Was dürfen sie tun?",
+      "options": [
+        "A) Notwehr nach §227 BGB",
+        "B) Festhalten nach §823 BGB",
+        "C) Besitzwehr nach §860 BGB",
+        "D) Angreifender Notstand nach §904 BGB"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Bei Sachbeschädigung sind Notwehr und Besitzwehr als Besitzdiener möglich"
+    },
+    {
+      "id": 145,
+      "question": "Wie kann man es nennen, wenn mehrere Personen Eigentümer einer Sache sind?",
+      "options": [
+        "A) Eigentümer und Besitzer",
+        "B) Gesamteigentum",
+        "C) Besitzer und Besitzdiener",
+        "D) Miteigentum"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Mehrere Eigentümer bilden Gesamteigentum oder Miteigentum"
+    },
+    {
+      "id": 146,
+      "question": "Welche der folgenden Handlungen wird auf Grundlage des BGB bestraft?",
+      "options": [
+        "A) Keine",
+        "B) Verbotene Eigenmacht",
+        "C) Das Schikanieren anderer Personen",
+        "D) Unerlaubte Handlung"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Das BGB regelt Zivilrecht, keine Strafen - nur zivilrechtliche Folgen"
+    },
+    {
+      "id": 147,
+      "question": "Die Verletzung welchen Rechtsgutes zieht ein Schadensersatzanspruch nach sich?",
+      "options": [
+        "A) Gesundheit",
+        "B) Leib und Leben",
+        "C) Ehre",
+        "D) Eine Verletzung jedes Rechtsgutes kann Schadensersatzansprüche nach sich ziehen"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Jede Rechtsgutsverletzung kann zu Schadensersatzansprüchen führen"
+    },
+    {
+      "id": 148,
+      "question": "Der Türsteher T sieht wie zwei unbekannte, zuvor abgewiesene junge Männer über den Zaun im Raucherbereich klettern um in das Diskothekinnere zu gelangen. Wie kann T hier handeln?",
+      "options": [
+        "A) Verteidigender Notstand nach §228 BGB",
+        "B) Angreifender Notstand nach §904 BGB",
+        "C) Notwehr nach §227 BGB",
+        "D) Vorläufige Festnahme nach §127 StPO"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Bei Hausfriedensbruch sind Notwehr und vorläufige Festnahme möglich"
+    },
+    {
+      "id": 149,
+      "question": "Welche Aussagen zu Kindern ist/sind korrekt?",
+      "options": [
+        "A) Kinder können für Schäden nicht haftbar gemacht werden",
+        "B) Kinder können nicht bestraft werden",
+        "C) Kinder werden für verbotene Eigenmachten nie zur Verantwortung gezogen",
+        "D) Kinder können Straftaten begehen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Kinder unter 14 Jahren können nicht bestraft werden (Strafunmündigkeit)"
+    }
+  ]
+}

@@ -1,0 +1,1779 @@
+{
+  "quiz_title": "Sachkundeprüfung 34a - Übungsfragen Strafrecht",
+  "total_questions": 148,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Welche Arten von Bestrafungen gibt es?",
+      "options": [
+        "A) Bußgeld",
+        "B) Geldstrafe",
+        "C) Untersuchungshaft",
+        "D) Freiheitsstrafe"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Das deutsche Strafrecht kennt nur zwei Hauptstrafen: Geldstrafe und Freiheitsstrafe. Bußgelder sind Ordnungswidrigkeiten, Untersuchungshaft ist eine Maßnahme."
+    },
+    {
+      "id": 2,
+      "question": "Was ist ein \"Diebstahl mit Waffen, Bandendiebstahl, Wohnungseinbruchsdiebstahl\"?",
+      "options": [
+        "A) Diebstahl mit Waffen, Bandendiebstahl, Wohnungseinbruchsdiebstahl",
+        "B) Besonders schwerer Fall des Diebstahls",
+        "C) Diebstahl",
+        "D) Diebstahl und Unterschlagung geringwertiger Sachen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Diese Varianten fallen unter §243 StGB - besonders schwerer Fall des Diebstahls."
+    },
+    {
+      "id": 3,
+      "question": "Was beinhaltet §132a StGB?",
+      "options": [
+        "A) Hausfriedensbruch",
+        "B) Meineid",
+        "C) Missbrauch von Titeln, Berufsbezeichnungen und Abzeichen",
+        "D) Amtsanmaßung"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§132a StGB regelt den Missbrauch von Titeln, Berufsbezeichnungen und Abzeichen."
+    },
+    {
+      "id": 4,
+      "question": "In welchem / welchen der folgend genannten Beispiele handelt es sich um einen besonders schweren Fall des Diebstahls gem. § 243 StGB?",
+      "options": [
+        "A) Ein Täter bricht in ein Wohnhaus ein, während die Eigentümer im Urlaub sind und stiehlt hochwertigen Schmuck aus einem abgeschlossenen Behältnis",
+        "B) Ein Täter beklaut einen Arbeitskollegen, indem er einen hohen Geldbetrag aus dessen verschlossener Geldkassette entnimmt, nachdem er diese mit Gewalt aufgebrochen hat",
+        "C) Ein Täter stiehlt die Handtasche einer älteren Dame an einem Bahnhof, welche sie kurzzeitig abgestellt hat um Informationen aus dem Fahrplan zu entnehmen",
+        "D) Ein Täter stiehlt aus einem Waffenfachgeschäft eine Schreckschusspistole",
+        "E) Ein Täter entwendet verschiedene, frei verkäufliche Pyrotechnik kurz vor Silvester aus einem lokalen Geschäft"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Wohnungseinbruchsdiebstahl mit Aufbrechen eines verschlossenen Behältnisses erfüllt mehrere Qualifikationsmerkmale des §243 StGB."
+    },
+    {
+      "id": 5,
+      "question": "Welche Aussage/n zur Unterschlagung – §246 StGB ist/sind korrekt?",
+      "options": [
+        "A) Ist das gleiche wie ein Diebstahl nur ohne Zueignungsabsicht",
+        "B) Ist die Wegnahme und anschließender Zueignung einer fremden beweglichen Sache",
+        "C) Eine fremde bewegliche Sache kann einem Dritten zugeeignet werden",
+        "D) Ist nur die Zueignung einer fremden beweglichen Sache"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Bei der Unterschlagung fehlt die Wegnahme, da der Täter bereits im Besitz der Sache ist. Zueignung kann für sich selbst oder Dritte erfolgen."
+    },
+    {
+      "id": 6,
+      "question": "Welche Arten von Straftaten kennen Sie?",
+      "options": [
+        "A) Jedermanns-Taten",
+        "B) Verbrechen",
+        "C) Taten des Besitzers",
+        "D) Vergehen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Das StGB unterscheidet zwischen Verbrechen (Mindeststrafe 1 Jahr) und Vergehen (unter 1 Jahr oder Geldstrafe)."
+    },
+    {
+      "id": 7,
+      "question": "Was beinhaltet §244 StGB?",
+      "options": [
+        "A) Wohnungseinbruchsdiebstahl",
+        "B) Diebstahl",
+        "C) Diebstahl mit Waffen, Bandendiebstahl",
+        "D) Unterschlagung"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "§244 StGB regelt den Diebstahl mit Waffen, Bandendiebstahl und Wohnungseinbruchsdiebstahl."
+    },
+    {
+      "id": 8,
+      "question": "Anstifter ist, wer vorsätzlich einen anderen, zu dessen mit Vorsatz begangener, rechtswidriger Tat bestimmt hat. Welche der folgenden Aussagen zum Anstifter ist richtig?",
+      "options": [
+        "A) Auch wenn der Anstifter selbst nicht bei der Tat anwesend ist, bzw. war, erwartet es ihn dennoch, dass dieser gleich dem Täter bestraft wird",
+        "B) Auch wenn der Anstifter selbst nicht bei der Tat anwesend ist, bzw. war, erwartet es ihn dennoch, dass dieser als Täter bestraft wird",
+        "C) Der Anstifter kann u.U. auch für die Beihilfe zu einer Straftat verurteilt werden",
+        "D) Da der Anstifter selbst nicht bei der Tat anwesend ist / war, erwartet ihn in der Regel ein geringeres Strafmaß als der handelnde Täter selbst"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Der Anstifter wird nach §26 StGB gleich dem Täter bestraft, auch wenn er nicht physisch anwesend war."
+    },
+    {
+      "id": 9,
+      "question": "Welche 3 Elemente müssen zwingend erfüllt sein, damit man vom Vorliegen einer strafbaren Handlung sprechen kann?",
+      "options": [
+        "A) Tatbestandsmäßigkeit - Rechtmäßigkeit - Schuld",
+        "B) Tatbestandsmäßigkeit - Rechtsfähigkeit - Schuld",
+        "C) Tatbestandsmäßigkeit - Rechtswidrigkeit - Schuld"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Eine Straftat erfordert Tatbestandsmäßigkeit, Rechtswidrigkeit und Schuld - das sind die drei Säulen des Verbrechensaufbaus."
+    },
+    {
+      "id": 10,
+      "question": "Wann ist man \"schuldunfähig\"?",
+      "options": [
+        "A) Als Kind unter 14 Jahren",
+        "B) Als Jugendlicher unter 18 Jahren",
+        "C) Im Vollrausch oder als psychisch Unzurechnungsfähiger",
+        "D) Immer wenn man fahrlässig gehandelt hat"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Schuldunfähig sind Kinder unter 14 Jahren und Personen im Vollrausch oder mit psychischen Störungen."
+    },
+    {
+      "id": 11,
+      "question": "Ein Täter stiehlt eine Armbanduhr und verkauft diese anschließend in einer Bahnhofshalle an einen unbekannten Käufer. Welche der folgenden Aussagen hierzu ist / sind richtig?",
+      "options": [
+        "A) Sowohl Täter als auch unbekannter Täter erfüllen den Straftatbestand der Hehlerei nach § 259 StGB erfüllt",
+        "B) Nur der unbekannte Käufer macht sich der Hehlerei nach § 259 StGB strafbar",
+        "C) Der Täter hat sowohl den Straftatbestand des Diebstahls nach § 242 StGB, als auch den Tatbestand der Hehlerei nach § 259 StGB erfüllt",
+        "D) Der Täter hat sich ausschließlich der Hehlerei nach § 259 StGB strafbar gemacht"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Der Täter begeht Diebstahl durch das Stehlen und Hehlerei durch den Verkauf der gestohlenen Sache."
+    },
+    {
+      "id": 12,
+      "question": "Was beinhaltet §255 StGB?",
+      "options": [
+        "A) Räuberische Erpressung",
+        "B) Schwerer räuberischer Diebstahl",
+        "C) Schwere räuberische Erpressung",
+        "D) Raub"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§255 StGB regelt die räuberische Erpressung."
+    },
+    {
+      "id": 13,
+      "question": "Welche Straftaten kann man in Notwehr begehen ohne bestraft zu werden?",
+      "options": [
+        "A) Alle",
+        "B) Eigentumsdelikte",
+        "C) Freiheitsdelikte",
+        "D) Körperverletzungsdelikte"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "In einer rechtmäßigen Notwehrsituation können grundsätzlich alle tatbestandsmäßigen Handlungen gerechtfertigt sein."
+    },
+    {
+      "id": 14,
+      "question": "Wann ist ein Angriff \"gegenwärtig\"?",
+      "options": [
+        "A) Solange wie sich der Angreifer im Umkreis von einer Armlänge aufhält",
+        "B) Wenn er kurz bevorsteht",
+        "C) Kurz nachdem er beendet ist",
+        "D) Wenn er noch andauert"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Ein Angriff ist gegenwärtig, wenn er unmittelbar bevorsteht oder noch andauert."
+    },
+    {
+      "id": 15,
+      "question": "Welche Bestrafungen gibt es in der Bundesrepublik Deutschland strafrechtlich?",
+      "options": [
+        "A) Bußgeld",
+        "B) Geldstrafe",
+        "C) Ordnungsgeld",
+        "D) Freiheitsstrafe"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Das deutsche Strafrecht kennt nur Geld- und Freiheitsstrafe als Hauptstrafen."
+    },
+    {
+      "id": 16,
+      "question": "Was ist eine Straftat u.a.?",
+      "options": [
+        "A) Eine strafbare Handlung die mit Rechtswidrigkeit und Schuld begangen wird",
+        "B) Wer eine strafbare Handlung, unter Anwendung eines Rechtfertigungsgrandes begeht",
+        "C) Das vorsätzliche Verletzen einer anderen Person ohne deren Einwilligung",
+        "D) Jede \"unerlaubte Handlung\" nach §823 ist eine Straftat"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Eine Straftat ist eine tatbestandsmäßige, rechtswidrige und schuldhafte Handlung."
+    },
+    {
+      "id": 17,
+      "question": "Was beinhaltet §132 StGB?",
+      "options": [
+        "A) Amtsanmaßung",
+        "B) Missbrauch von Titeln, Berufsbezeichnungen und Abzeichen",
+        "C) Falsche uneidliche Aussagen",
+        "D) Hausfriedensbruch"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§132 StGB regelt die Amtsanmaßung."
+    },
+    {
+      "id": 18,
+      "question": "Der Ladendetektiv L. sieht wie eine ihm unbekannte männliche Person P. ein Smartphone aus einer Auslage nimmt und den Laden ohne zu bezahlen verlassen will. Welche Handlung ist nach StGB oder StPO statthaft?",
+      "options": [
+        "A) Vorläufige Festnahme",
+        "B) Besitzwehr/Besitzkehr",
+        "C) Allgemeine Selbsthilfe",
+        "D) Notwehr/Nothilfe"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Vorläufige Festnahme nach §127 StPO und Notwehr/Nothilfe zur Verteidigung des Eigentumsrechts sind statthaft."
+    },
+    {
+      "id": 19,
+      "question": "Der Türsteher einer Diskothek weist einen 19-jährigen Besucher am Eingang ab, da dieser schon zu stark alkoholisiert sei und untersagt diesem den Innenbereich zu betreten. Der Besucher wartet nun auf der Rückseite der Diskothek am Notausgang solange, bis ein Mitarbeiter hinausgeht und die Tür offen stehen lässt. Dann geht der Besucher durch den Notausgang rein. Welche Straftat/en hat der Besucher hier erfüllt?",
+      "options": [
+        "A) Begünstigung",
+        "B) Hausfriedensbruch",
+        "C) Betrug",
+        "D) Erschleichen von Leistungen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Der Besucher begeht Hausfriedensbruch durch unbefugtes Eindringen und erschleicht sich Leistungen (Eintritt)."
+    },
+    {
+      "id": 20,
+      "question": "Wer die unbefugt die Berufsbezeichnung \"Arzt\" führt...",
+      "options": [
+        "A) Wird immer zivilrechtlich verfolgt",
+        "B) Muss mit strafrechtlicher Verfolgung rechnen",
+        "C) Begeht ein Vergehen",
+        "D) Begeht ein Verbrechen"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Der unbefugte Gebrauch der Berufsbezeichnung \"Arzt\" ist nach §132a StGB ein Vergehen."
+    },
+    {
+      "id": 21,
+      "question": "Das StGB...",
+      "options": [
+        "A) Ist in zwei wesentliche Bereiche unterteilt",
+        "B) Ist nur in Anwendung mit der StPO gültig",
+        "C) Beinhaltet die konkreten Straftaten als auch allgemeine Strafvorschriften",
+        "D) Gilt nicht für die Polizei"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Das StGB gliedert sich in Allgemeinen Teil (AT) und Besonderen Teil (BT) mit konkreten Straftaten und allgemeinen Vorschriften."
+    },
+    {
+      "id": 22,
+      "question": "Welche der nachstehenden Delikte werden grundsätzlich nur auf Antrag des / der Geschädigten durch die Strafverfolgungsbehörden verfolgt?",
+      "options": [
+        "A) Gefährliche Körperverletzung gem. § 224 StGB",
+        "B) Hausfriedensbruch gem. § 123 StGB",
+        "C) Diebstahl gem. § 242 StGB",
+        "D) Beleidigung gem. § 185 StGB"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Hausfriedensbruch und Beleidigung sind absolute Antragsdelikte."
+    },
+    {
+      "id": 23,
+      "question": "Wann ist der Versuch strafbar?",
+      "options": [
+        "A) Bei fahrlässiger Körperverletzung",
+        "B) Bei Vergehen nur bei vorsätzlichen Taten",
+        "C) Bei Verbrechen immer",
+        "D) Beim Wohnungseinbruchsdiebstahl"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Der Versuch ist bei allen Verbrechen strafbar und bei Vergehen nur wenn das Gesetz es ausdrücklich bestimmt (wie bei §244 StGB)."
+    },
+    {
+      "id": 24,
+      "question": "Wann ist eine vorläufige Festnahme nach §127 StPO statthaft?",
+      "options": [
+        "A) Den bekannten Täter auf frischer Tat betreffen",
+        "B) Den unbekannten Täter einen Tag später wieder antreffen",
+        "C) Den unbekannten Täter auf frischer Tat betreffen",
+        "D) Den fluchtverdächtigen Täter auf frischer Tat betreffen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Vorläufige Festnahme ist statthaft bei unbekannten Tätern oder Fluchtgefahr auf frischer Tat."
+    },
+    {
+      "id": 25,
+      "question": "Was ist der Unterschied zwischen einem echten und einem unechten Unterlassungsdelikt?",
+      "options": [
+        "A) Bei einem unechten Unterlassungsdelikt braucht die Handlung des Unterlassenden nicht zumutbar sein, er muss in jedem Fall einen strafrechtlichen Erfolg verhindern",
+        "B) Echte Unterlassungsdelikte sind in eigenen Tatbeständen geregelte Delikte, bei denen der Täter trotz des Gebots nicht tätig wird (z.B. Nichtanzeige geplanter Straftaten gem. § 138 StGB)",
+        "C) Bei einem echten Unterlassungsdelikt muss der Täter Garant sein",
+        "D) Bei einem unechten Unterlassungsdelikt wird eine Garantenstellung vorausgesetzt"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Echte Unterlassungsdelikte haben eigene Tatbestände, unechte setzen eine Garantenstellung voraus."
+    },
+    {
+      "id": 26,
+      "question": "Aus welchen Teilen setzt sich eine Straftat zusammen?",
+      "options": [
+        "A) Tatbestand + Rechtswidrigkeit + Schuld",
+        "B) Strafbare Handlung + Rechtswidrigkeit + Schuld",
+        "C) Tatbestand + Rechtfertigungsgrund + Schuld",
+        "D) Tatbestand + Rechtswidrigkeit + Straftat"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Eine Straftat besteht aus Tatbestand (strafbare Handlung), Rechtswidrigkeit und Schuld."
+    },
+    {
+      "id": 27,
+      "question": "Ist man in jedem Fall dazu verpflichtet Erste Hilfe zu leisten?",
+      "options": [
+        "A) Nein, nur wenn ein Unglücksfall oder eine gemeine Gefahr oder Not vorliegt und man eine Ersthelfer-Ausbildung hat",
+        "B) Ja, man ist in jedem Fall verpflichtet, selbst Erste Hilfe zu leisten",
+        "C) Nein, nur wenn ein Unglücksfall oder eine gemeine Gefahr oder Not vorliegt und wenn Hilfeleistung erforderlich und zumutbar ist"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Hilfeleistung ist nach §323c StGB nur bei Unglücksfällen erforderlich und muss zumutbar sein."
+    },
+    {
+      "id": 28,
+      "question": "Ein Anstifter...",
+      "options": [
+        "A) Beeinflusst den Täter durch z.B. Zureden oder Bezahlung",
+        "B) Führt eine aktive Tathandlung aus",
+        "C) Wird milder als der Täter bestraft",
+        "D) Wird genauso wie der Täter bestraft"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Der Anstifter bestimmt andere zur Tat und wird nach §26 StGB wie der Täter bestraft."
+    },
+    {
+      "id": 29,
+      "question": "Vorsätzliches Handeln...",
+      "options": [
+        "A) Wird vorgeworfen, wenn der Täter unter Außerachtlassung der im Verkehr erforderlichen Sorgfalt gehandelt hat",
+        "B) Ist auch bei einer fahrlässigen Körperverletzung möglich",
+        "C) Setzt voraus, dass sich der Täter über die Begehung einer Tat und möglicher Folgen im Klaren ist",
+        "D) Ist das Handeln mit Wissen und Wollen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Vorsatz ist das Handeln mit Wissen und Wollen der Tatbestandsverwirklichung."
+    },
+    {
+      "id": 30,
+      "question": "Sie sind als Citystreife in einem Einkaufszentrum eingesetzt und sind für die Sicherheit des Zentrums und der Läden zuständig. Sie sehen wie ein Ihnen bekannter Herr mit einer Flasche immer wieder gegen die Fensterscheibe eines Ladengeschäfts schlägt. Was dürfen sie tun?",
+      "options": [
+        "A) Rechtfertigender Notstand §34 StGB",
+        "B) Vorläufige Festnahme nach §127 StPO",
+        "C) Notwehr nach §33 StGB",
+        "D) Notwehr nach §32 StGB"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Bei Sachbeschädigung ist Notwehr nach §32 StGB zur Verteidigung fremden Eigentums zulässig."
+    },
+    {
+      "id": 31,
+      "question": "Was beinhaltet §259 StGB?",
+      "options": [
+        "A) Illegaler Handel",
+        "B) Raub",
+        "C) Betrug",
+        "D) Hehlerei"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "§259 StGB regelt die Hehlerei."
+    },
+    {
+      "id": 32,
+      "question": "Welcher Bestandteil einer Straftat fehlt, wenn eine Person aus Versehen das Auto seines Nachbarn beschädigt?",
+      "options": [
+        "A) Subjektiver Tatbestand",
+        "B) Objektiver Tatbestand",
+        "C) Schuld",
+        "D) Rechtswidrigkeit"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Bei versehentlicher Beschädigung fehlt der Vorsatz als subjektiver Tatbestand."
+    },
+    {
+      "id": 33,
+      "question": "Was beinhaltet §224 StGB?",
+      "options": [
+        "A) Schwere Körperverletzung",
+        "B) Vorsätzliche Körperverletzung",
+        "C) Fahrlässige Körperverletzung",
+        "D) Gefährliche Körperverletzung"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "§224 StGB regelt die gefährliche Körperverletzung."
+    },
+    {
+      "id": 34,
+      "question": "Schuldausschließungsgründe...",
+      "options": [
+        "A) Schließen die Schuld bei einer strafbaren Handlung aus",
+        "B) Minimieren die Bestrafung",
+        "C) Sind u.a. Notwehrexzess oder der entschuldigende Notstand",
+        "D) Können nicht flexibel angewandt werden"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Schuldausschließungsgründe wie entschuldigender Notstand schließen die Schuld aus."
+    },
+    {
+      "id": 35,
+      "question": "Wird eine Straftat gemeinschaftlich begangen sind die Täter...",
+      "options": [
+        "A) Anstifter",
+        "B) Mittäter",
+        "C) Gehilfe",
+        "D) Alleintäter"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Bei gemeinschaftlicher Begehung sind die Beteiligten Mittäter nach §25 Abs. 2 StGB."
+    },
+    {
+      "id": 36,
+      "question": "Wann wird ein Notwehrexzess entschuldigt?",
+      "options": [
+        "A) Immer",
+        "B) Bei Fahrlässigkeit",
+        "C) Bei Furcht oder Schrecken",
+        "D) Bei Verwirrung"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Notwehrexzess wird nach §33 StGB bei Furcht, Verwirrung oder Schrecken entschuldigt."
+    },
+    {
+      "id": 37,
+      "question": "Was beinhaltet §253 StGB?",
+      "options": [
+        "A) Schwerer räuberischer Diebstahl",
+        "B) Nötigung",
+        "C) Erpressung",
+        "D) Bedrohung"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§253 StGB regelt die Erpressung."
+    },
+    {
+      "id": 38,
+      "question": "Was beinhaltet §267 StGB?",
+      "options": [
+        "A) Urkundenfälschung",
+        "B) Urkundenunterdrückung",
+        "C) Erschleichen von Leistungen",
+        "D) Betrug"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§267 StGB regelt die Urkundenfälschung."
+    },
+    {
+      "id": 39,
+      "question": "Eine Beleidigung...",
+      "options": [
+        "A) Muss vom Opfer als Beleidigung aufgefasst werden",
+        "B) Greift das Rechtsgut der Gesundheit an",
+        "C) Ist eine Straftat bei der in der Regel ein Bußgeld fällig wird",
+        "D) Kann in Wort, Schrift und als Tätlichkeit begangen werden"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Beleidigung nach §185 StGB greift die Ehre an und kann verbal oder durch Tätlichkeiten erfolgen."
+    },
+    {
+      "id": 40,
+      "question": "Das Verändern eines Preisettiketts im Supermarkt und dem Versuch danach an der Kasse weniger zahlen zu müssen...",
+      "options": [
+        "A) Ist eine Urkundenfälschung nach § 267 StGB",
+        "B) Ist ein Diebstahl nach §242 StGB",
+        "C) Ist Hehlerei nach §259 StGB",
+        "D) Ist ein Betrug nach §263 StGB"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Das Verändern des Preisschildes ist Urkundenfälschung, der Kassenvorgang wäre Betrug."
+    },
+    {
+      "id": 41,
+      "question": "Was beinhaltet §249 StGB?",
+      "options": [
+        "A) Räuberische Erpressung",
+        "B) Fahrlässiger Diebstahl",
+        "C) Schwerer Raub",
+        "D) Raub"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "§249 StGB regelt den Raub."
+    },
+    {
+      "id": 42,
+      "question": "Was beinhaltet §229 StGB?",
+      "options": [
+        "A) Diebstahl",
+        "B) Gefährliche Körperverletzung",
+        "C) Rechtfertigende Einwilligung",
+        "D) Fahrlässige Körperverletzung"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "§229 StGB regelt die fahrlässige Körperverletzung."
+    },
+    {
+      "id": 43,
+      "question": "Was beinhaltet §303 StGB?",
+      "options": [
+        "A) Sachbeschädigung",
+        "B) Diebstahl",
+        "C) Fahrlässige Sachbeschädigung",
+        "D) Brandstiftung"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§303 StGB regelt die Sachbeschädigung."
+    },
+    {
+      "id": 44,
+      "question": "Das deutsche Strafrecht wird in materielles und formelles Strafrecht unterschieden. Beim materiellen Strafrecht...",
+      "options": [
+        "A) ...Geht es ausschließlich um die einzelnen Straftatbestände im StGB",
+        "B) ...Geht es um das sog. Strafverfahrensrecht, dass die Durchsetzung dieser Strafen regelt (wie u.a. zum Beispiel die StPO)",
+        "C) ...Geht es um die Voraussetzungen zur Strafbarkeit und den daraus resultierenden Konsequenzen (also den damit verbundenen Strafen)"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Materielles Strafrecht regelt die Voraussetzungen der Strafbarkeit und die Rechtsfolgen."
+    },
+    {
+      "id": 45,
+      "question": "Die Rechtswidrigkeit entfällt bei...",
+      "options": [
+        "A) Entschuldigender Notstand",
+        "B) Notwehrexzess",
+        "C) Vorläufiger Festnahme",
+        "D) Notwehr"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Rechtfertigungsgründe wie Notwehr und vorläufige Festnahme schließen die Rechtswidrigkeit aus."
+    },
+    {
+      "id": 46,
+      "question": "Der Ladendetektiv spricht die Dame hinter den Kassen an und bittet Sie, ihm zu folgen. Allerdings wehrt sich die Frau, schlägt den Ladendetektiv ins Gesicht und läuft davon. Welche/r Tatbestand ist hier erfüllt?",
+      "options": [
+        "A) Räuberische Erpressung",
+        "B) Raub",
+        "C) Räuberischer Diebstahl",
+        "D) Vorsätzliche Körperverletzung"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Räuberischer Diebstahl nach §252 StGB und vorsätzliche Körperverletzung nach §223 StGB."
+    },
+    {
+      "id": 47,
+      "question": "Warum ist die Notwehr im BGB als auch StGB festgehalten?",
+      "options": [
+        "A) Die Notwehr im StGB schützt vor Schadensersatzansprüchen, die Notwehr im BGB vor Strafverfolgung",
+        "B) Die Notwehr im StGB schützt vor Strafverfolgung, die Notwehr im BGB vor Schadensersatzansprüchen",
+        "C) Da die Notwehrüberschreitung auch im StGB festgehalten ist",
+        "D) Damit sich auch Polizisten im Dienst verteidigen dürfen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Notwehr im StGB rechtfertigt strafrechtlich, im BGB schützt sie vor zivilrechtlichen Ansprüchen."
+    },
+    {
+      "id": 48,
+      "question": "Was beinhaltet §241 StGB?",
+      "options": [
+        "A) Schwere Bedrohung",
+        "B) Erpressung",
+        "C) Bedrohung",
+        "D) Androhung von Straftaten gegen die öffentliche Sicherheit und Ordnung"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§241 StGB regelt die Bedrohung."
+    },
+    {
+      "id": 49,
+      "question": "Ein Diebstahl...",
+      "options": [
+        "A) Ist eine Tat nach §303 BGB",
+        "B) Kann nur vorsätzlich begangen werden",
+        "C) Erfordert nur, dass fremdes Gewahrsam gebrochen wird, und neues begründet wird",
+        "D) Ist die Wegnahme einer fremden beweglichen Sache mit Zueignungsabsicht"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Diebstahl nach §242 StGB ist die vorsätzliche Wegnahme fremder beweglicher Sachen zur Zueignung."
+    },
+    {
+      "id": 50,
+      "question": "Wie nennt sich die Festnahmemöglichkeit im StGB/StPO?",
+      "options": [
+        "A) Festsetzung",
+        "B) Allgemeine Selbsthilfe",
+        "C) Vorläufige Festnahme",
+        "D) Gerechtfertigte Festnahme"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Die Festnahmemöglichkeit für Jedermann ist die vorläufige Festnahme nach §127 StPO."
+    },
+    {
+      "id": 51,
+      "question": "Für eine Tatbestandsverwirklichung durch Unterlassen muss beim Täter eine Garantenstellung vorliegen (§ 13 StGB). In welchem der nachstehenden Beispiele hat der Garant seine Obhutspflicht verletzt?",
+      "options": [
+        "A) Warenhausdetektiv D. sieht, wie auf der Straße ein Jugendlicher die Antenne eines fremden Pkw umknickt und schreitet nicht ein",
+        "B) Der Warenhausdetektiv D. sieht während seines Dienstes, wie ein Mann eine Flasche Whiskey in der Innentasche seiner Jacke verstaut. D. unternimmt jedoch nichts dagegen, obwohl ihm ein Einschreiten möglich gewesen wäre",
+        "C) Während seiner Freizeit sieht Warenhausdetektiv D. in einem Markt eine Frau, die ein Deodarant in die Tasche ihrer Kleidung steckt und schreitet nicht ein"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Der Detektiv hat während des Dienstes eine Garantenstellung für das zu bewachende Objekt."
+    },
+    {
+      "id": 52,
+      "question": "Eine Tat nach §126 StGB –Störung des öffentlichen Friedens durch Androhung von Straftaten muss...",
+      "options": [
+        "A) Schriftlich begangen werden",
+        "B) Mündlich begangen werden",
+        "C) Eine bestimmte schwere Straftat ankündigen",
+        "D) Mit mindestens 1 Jahr Freiheitsstrafe bestraft werden"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§126 StGB erfordert die Androhung bestimmter schwerer Straftaten wie Mord oder Totschlag."
+    },
+    {
+      "id": 53,
+      "question": "Welche Aussage/n zu Beteiligung und Täterschaft ist/sind richtig?",
+      "options": [
+        "A) Person B sieht wie sein Kumpel A eine andere Person C schlägt und tritt. Person B stellt sich dazu und motiviert seinen Kumpel A bei seiner Tat. Person B wird genauso bestraft als hätte er die Tat selbst begangen",
+        "B) Der Zuhälter Z beauftragt seinen Handlager H, einen nicht zahlenden Kunden zusammenzuschlagen und schwer zu verletzen. Z und H werden beide bestraft",
+        "C) Frau F fragt ihren neuen Freund N nach einem Baseballschläger. Sie möchte damit ihren Ex-Freund E zusammenschlagen und tut dies nach einigen Tagen auch. Ihr Freund N wusste von ihren Planungen nichts. N wird nicht bestraft",
+        "D) Die Seriendiebe S und D gehen zusammen in Ladengeschäft und stehlen gemeinschaftlich mehrere teure Technikgeräte. Es kann nur einer von Ihnen bestraft werden, oder beide können sich die Strafe aufteilen"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Z ist Anstifter und wird bestraft. N hatte keinen Vorsatz bezüglich der Tat und wird nicht bestraft."
+    },
+    {
+      "id": 54,
+      "question": "In welchen Fällen ist die vorläufige Festnahme nach § 127 Abs. 1 StPO gerechtfertigt?",
+      "options": [
+        "A) Wenn der Täter sich im 14.ten Lebensjahr befindet und tatbestandsmäßig, rechtswidrig und schuldhaft einen gesetzlichen Straftatbestand erfüllt hat",
+        "B) Wenn der Täter auf frischer Tat betroffen oder verfolgt wurde und die Identität zwar feststeht, aber die Gefahr besteht, dass dieser nach einem Verbrechen der Flucht verdächtig ist und somit die Gefahr besteht, dass er sich dadurch dauerhaft der Strafverfolgung entziehen wird",
+        "C) Wenn der Täter auf frischer Tat betroffen oder verfolgt wurde und die Identität nicht sofort festgestanden hat, oder dieser der Flucht verdächtig war"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Vorläufige Festnahme ist bei Fluchtgefahr oder unbekannter Identität auf frischer Tat möglich."
+    },
+    {
+      "id": 55,
+      "question": "Rechtfertigungsgründe sind...",
+      "options": [
+        "A) Dürfen nur im Dienst verwendet werden",
+        "B) Handlungen aufgrund eines Gesetzes die eine strafbare Handlung rechtfertigen",
+        "C) Können Jedermannsrechte sein",
+        "D) Handlungen aufgrund eines Gesetzes die eine strafbare Handlung entschuldigen"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Rechtfertigungsgründe rechtfertigen tatbestandsmäßige Handlungen und können Jedermannsrechte sein."
+    },
+    {
+      "id": 56,
+      "question": "Ein Sicherheitsmitarbeiter in einer Diskothek wird von einem unbekannten Gast mit einer abgebrochenen Flasche angegriffen und verletzt. Die Tatbestände welcher Straftaten erfüllt der Gast mit seiner Handlung?",
+      "options": [
+        "A) Vorsätzliche Körperverletzung",
+        "B) Gefährliche Körperverletzung",
+        "C) Fahrlässige Körperverletzung",
+        "D) Schwere Körperverletzung"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Angriff mit abgebrochener Flasche erfüllt sowohl §223 (vorsätzliche) als auch §224 StGB (gefährliche Körperverletzung)."
+    },
+    {
+      "id": 57,
+      "question": "Wer begeht eine Bedrohung nach §241 StGB?",
+      "options": [
+        "A) A trifft seine Ex-Frau F im Supermarkt. Beide geraten in einen Streit in dem A sagt:\"Ich warte draußen auf dich und dann hack ich dir beide Beine ab\"",
+        "B) B wird an der Tür von T abgewiesen. B sagt zu T:\" Ich hole meine Jungs und dann gibt es richtig Haue\"",
+        "C) C streitet sich oft mit seinem Nachbarn N. Da N heute wieder Rasen mäht obwohl es C nicht passt beschimpft C ihn mit den Worten: \"Hör auf mit dem Scheiß, oder ich säge deinem Hund den Kopf ab\"",
+        "D) D geht in ein Geschäft, nimmt eine CD aus dem Regal und will den Laden, ohne zu bezahlen verlassen. Der Ladendetektiv L läuft hinter ihm hinterher. D richtet eine Pistole auf L und sagt:\"Bleib stehen oder ich schieß dir eine Kugel in den Kopf\""
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Bedrohung mit konkreten Verletzungshandlungen erfüllt §241 StGB."
+    },
+    {
+      "id": 58,
+      "question": "Was beinhaltet §257 StGB?",
+      "options": [
+        "A) Meineid",
+        "B) Strafvereitelung",
+        "C) Falsche uneidliche Aussage",
+        "D) Begünstigung"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "§257 StGB regelt die Begünstigung."
+    },
+    {
+      "id": 59,
+      "question": "Was beinhaltet §226 StGB?",
+      "options": [
+        "A) Schwere Körperverletzung",
+        "B) Gefährliche Körperverletzung",
+        "C) Fahrlässige Körperverletzung",
+        "D) Vorsätzliche Körperverletzung"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§226 StGB regelt die schwere Körperverletzung."
+    },
+    {
+      "id": 60,
+      "question": "Was sind Offizialdelikte?",
+      "options": [
+        "A) Alle Verbrechen",
+        "B) Alle Vergehen",
+        "C) Straftaten die vom Staat verfolgt werden müssen",
+        "D) Straftaten die nur auf Antrag des Opfers verfolgt werden"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Offizialdelikte werden von Amts wegen verfolgt, alle Verbrechen sind Offizialdelikte."
+    },
+    {
+      "id": 61,
+      "question": "Wer eine Körperverletzung mit einer anderen Person gemeinschaftlich begeht...",
+      "options": [
+        "A) Begeht eine schwere Körperverletzung",
+        "B) Wird als Gehilfe bestraft",
+        "C) Ist Mittäter",
+        "D) Begeht eine gefährliche Körperverletzung"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Gemeinschaftliche Körperverletzung macht die Beteiligten zu Mittätern und erfüllt §224 StGB (gefährliche KV)."
+    },
+    {
+      "id": 62,
+      "question": "Ein Arzt zieht bewusst ein tödliches Serum auf um ein ihm unliegsamen Patienten loszuwerden und übergibt der Krankenschwester die Spritze mit dem Serum, ohne dass diese Kenntnis hierüber hat. Im Glauben dass es sich um ein gewöhnliches und für den Patienten notwendiges Medikament handelt, verabreicht sie diesem die Spritze, was unweigerlich zum Tod des Patienten führt. Welche der folgenden Aussagen hierzu ist / sind richtig?",
+      "options": [
+        "A) Der Arzt ist in diesem Fall sog. \"Tatmittler\"",
+        "B) Die Krankenschwester handelt in diesem Fall als sog. \"mittelbarer Täter.\"",
+        "C) Die Krankenschwester hat sich unabhängig von der Unkenntnis des Serums, der Körperverletzung mit Todesfolge gem. § 227 StGB strafbar gemacht",
+        "D) Der Arzt handelt in diesem Fall als sog. \"mittelbarer Täter.\""
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Der Arzt nutzt die unwissende Krankenschwester als Werkzeug und ist mittelbarer Täter."
+    },
+    {
+      "id": 63,
+      "question": "Welche der folgenden Personengruppen können keine Straftaten begehen?",
+      "options": [
+        "A) Polizisten",
+        "B) Personen mit krankhafter seelischer Störung",
+        "C) Kinder",
+        "D) Soldaten der Bundeswehr"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Kinder unter 14 Jahren und Personen mit krankhafter seelischer Störung sind schuldunfähig."
+    },
+    {
+      "id": 64,
+      "question": "Unterlassungsdelikte...",
+      "options": [
+        "A) Stellen ein Unterlassen unter Strafe",
+        "B) Werden in echte und unechte Unterlassungsdelikte unterteilt",
+        "C) Setzt eine Garantenstellung voraus",
+        "D) Werden nur bei Vorsatz bestraft"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Unterlassungsdelikte stellen Nichtstun unter Strafe und werden in echte und unechte unterteilt."
+    },
+    {
+      "id": 65,
+      "question": "A. erfährt von B. glaubhaft, dass B. einen Raub plant. A. behält diese Information für sich.",
+      "options": [
+        "A) A begeht eine Straftat",
+        "B) A kann nicht bestraft werden, da dieser auf Grundlage des Opportunitätsprinzips diese Informationen nicht weitergeben muss",
+        "C) A muss einer zuständigen Behörde oder dem evtl. zukünftigen Opfer eine Anzeige machen",
+        "D) B begeht eine Straftat"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "A begeht Nichtanzeige geplanter Straftaten nach §138 StGB und muss Anzeige erstatten."
+    },
+    {
+      "id": 66,
+      "question": "Bei einer tatbestandlichen Handlung nach §303 StGB...",
+      "options": [
+        "A) Kann eine fremde Sache beschädigt oder zerstört werden",
+        "B) Muss eine fremde Sache immer beschädigt oder zerstört werden",
+        "C) Muss immer das Erscheinungsbild der Sache vorübergehend verändert werden",
+        "D) Kann das wesentliche Erscheinungsbild nicht nur vorübergehend verändert werden"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Sachbeschädigung kann durch Beschädigung oder Zerstörung erfolgen, auch durch dauerhafte Veränderung des Erscheinungsbildes."
+    },
+    {
+      "id": 67,
+      "question": "Was beinhaltet §246 StGB?",
+      "options": [
+        "A) Besonders schwerer Fall des Diebstahls",
+        "B) Unterschlagung",
+        "C) Diebstahl",
+        "D) Diebstahl mit Waffen, Bandendiebstahl, Wohnungseinbruchsdiebstahl"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "§246 StGB regelt die Unterschlagung."
+    },
+    {
+      "id": 68,
+      "question": "Wer unbefugt sich mit der Ausübung eines öffentlichen Amtes befasst...",
+      "options": [
+        "A) Wird mit Freiheitsstrafe oder Geldstrafe bestraft",
+        "B) Begeht eine Straftat nach §132 StGB",
+        "C) Begeht keine Straftat nach StGB",
+        "D) Wird auch bestraft wenn er dies fahrlässig begeht"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Amtsanmaßung nach §132 StGB wird mit Freiheits- oder Geldstrafe bestraft."
+    },
+    {
+      "id": 69,
+      "question": "Ziel des Straf- und Verfahrensrecht ist u.a. ...",
+      "options": [
+        "A) Sanktionierung von Straftaten",
+        "B) Die Zahlung von Schadensersatz",
+        "C) Aufrechterhaltung des Zivilrechts",
+        "D) Abschreckung anderer"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Strafrecht dient der Sanktionierung von Straftaten und der Abschreckung (Generalprävention)."
+    },
+    {
+      "id": 70,
+      "question": "Der Tatbestand...",
+      "options": [
+        "A) Ist bei jeder rechtswidrigen Tat gegeben",
+        "B) Ist nur unter bestimmten Umständen Teil einer Straftat",
+        "C) Beschreibt die Merkmale die gegeben sein müssen, damit eine Handlung strafbar sein kann",
+        "D) Kann bei einer Straftat unterschiedlich sein"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Der Tatbestand beschreibt die gesetzlichen Merkmale einer strafbaren Handlung."
+    },
+    {
+      "id": 71,
+      "question": "Die \"unterlassene Hilfeleistung\" ist...",
+      "options": [
+        "A) Ein unechtes Unterlassungsdelikt",
+        "B) Ein echtes Unterlassungsdelikt",
+        "C) Wird nur strafrechtlich verfolgt, wenn man eine Garantenstellung innehatte",
+        "D) Eine Straftat"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Unterlassene Hilfeleistung nach §323c StGB ist ein echtes Unterlassungsdelikt."
+    },
+    {
+      "id": 72,
+      "question": "Wer nach einer gerichtlichen Vereidigung falsch aussagt, er diese Aussage aber nach bestem Wissen und Gewissen trifft...",
+      "options": [
+        "A) Begeht keine Straftat",
+        "B) Wird bestraft",
+        "C) Muss nur ein Ordnungsgeld zahlen",
+        "D) Begeht einen Meineid nach §154 StGB"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "Ohne Vorsatz (bei gutem Glauben) liegt kein Meineid vor."
+    },
+    {
+      "id": 73,
+      "question": "Was beinhaltet §265a StGB?",
+      "options": [
+        "A) Beleidigung",
+        "B) Hehlerei",
+        "C) Erschleichen von Leistungen",
+        "D) Falsche Verdächtigung"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§265a StGB regelt das Erschleichen von Leistungen."
+    },
+    {
+      "id": 74,
+      "question": "Was bedeutet \"Wegnahme\" im Sinne des §242 StGB – Diebstahl?",
+      "options": [
+        "A) Erstellung eigenen Besitzes an der Sache",
+        "B) Nur die Begründung neuen Gewahrsams",
+        "C) Das gleiche wie eine Besitzstörung im BGB",
+        "D) Bruch fremden Gewahrsams und Begründung neuen Gewahrsams"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Wegnahme ist der Bruch fremden und die Begründung neuen Gewahrsams."
+    },
+    {
+      "id": 75,
+      "question": "Die zwei Teile des StGB nennen sich...",
+      "options": [
+        "A) Hauptteil",
+        "B) Besonderer Teil",
+        "C) Zusatzteil",
+        "D) Allgemeiner Teil"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Das StGB gliedert sich in Allgemeinen Teil (AT) und Besonderen Teil (BT)."
+    },
+    {
+      "id": 76,
+      "question": "Welche Arten von Antragsdelikten kennen Sie?",
+      "options": [
+        "A) Relative Antragsdelikte",
+        "B) Absolute Antragsdelikte",
+        "C) Vollantragsdelikte",
+        "D) Teilantragsdelikte"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Es gibt absolute Antragsdelikte (immer Antrag erforderlich) und relative Antragsdelikte (nur bei bestimmten Voraussetzungen)."
+    },
+    {
+      "id": 77,
+      "question": "Als der Mitarbeiter M in seiner Pause in das Chefbüro geht, kann er aus einem Raum weiter das Gespräch der Sekretärin S und des Chefs C hören. Diese unterhalten sich über die Affäre die beide miteinander haben. M möchte aus der Situation einen Vorteil ziehen. Als er mit dem Chef spricht, verlangt er eine Gehaltserhöhung von 800 € – ansonsten würde M der Frau von C etwas von der Affäre von S sagen. Was begeht M für eine Straftat?",
+      "options": [
+        "A) Bedrohung",
+        "B) Beleidigung",
+        "C) Begünstigung",
+        "D) Erpressung"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "M erpresst eine Vermögensleistung durch Androhung der Preisgabe kompromittierender Umstände - §253 StGB."
+    },
+    {
+      "id": 78,
+      "question": "Welche Aussage/n zu den Körperverletzungsdelikten ist/sind richtig?",
+      "options": [
+        "A) Eine Körperverletzung kann am eigenen Körper begangen werden",
+        "B) Alle Körperverletzungsdelikte sind Vergehen",
+        "C) Bei allen Körperverletzungsdelikten ist der Versuch strafbar",
+        "D) Die gefährliche Körperverletzung hat eine höhere Strafandrohung als die \"normale\" vorsätzliche Körperverletzung"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Gefährliche Körperverletzung (§224) hat höhere Strafandrohung als einfache Körperverletzung (§223)."
+    },
+    {
+      "id": 79,
+      "question": "Welches sind Teile einer Straftat?",
+      "options": [
+        "A) Rechtswidrigkeit",
+        "B) Fremdes Rechtsgut",
+        "C) Volljährigkeit",
+        "D) Schuld"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Die drei Elemente einer Straftat sind Tatbestand, Rechtswidrigkeit und Schuld."
+    },
+    {
+      "id": 80,
+      "question": "Welche Aussage / n zum Thema Notwehr ist / sind zutreffend?",
+      "options": [
+        "A) Die Nothilfe ist Teil des § 32 StGB und gehört somit zum Begriff der Notwehr",
+        "B) Die Notwehr ist nur dann zulässig, wenn der Angriff sich direkt gegen meine Person richtet",
+        "C) Bei der Notwehr geht der Angriff von einem Menschen aus, beim Notstand geht der Angriff oder eine Gefahr z.B. von einer Sache oder einem Tier aus",
+        "D) Wenn einem anderen Menschen geholfen wird, so geschieht das immer im Rahmen des Notstandes",
+        "E) Sich gegen den Angriff eines frei laufenden Hundes zu wehren ist Notwehr im Sinne des Gesetzes, da Tiere keine Sachen mehr sind"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Nothilfe ist Teil der Notwehr (§32 StGB), Notwehr setzt menschlichen Angriff voraus, Notstand auch tierische/sachliche Gefahren."
+    },
+    {
+      "id": 81,
+      "question": "Was beinhaltet §263 StGB?",
+      "options": [
+        "A) Betrug",
+        "B) Hehlerei",
+        "C) Schwerer Betrug",
+        "D) Begünstigung"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§263 StGB regelt den Tatbestand des Betrugs."
+    },
+    {
+      "id": 82,
+      "question": "Straftaten sind...",
+      "options": [
+        "A) Hauptsächlich im Strafgesetzbuch erfasst",
+        "B) U.a. im strafrechtlichen Nebengesetzen (z.B. Waffengesetz) erfasst",
+        "C) Im der Strafprozessordnung erfasst",
+        "D) Nur im Strafgesetzbuch erfasst"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Straftaten sind hauptsächlich im Strafgesetzbuch (StGB) erfasst, finden sich aber auch in strafrechtlichen Nebengesetzen wie dem Waffengesetz, Betäubungsmittelgesetz etc."
+    },
+    {
+      "id": 83,
+      "question": "Die Fahrlässigkeit ist durch sorgfaltswidriges Verhalten gekennzeichnet. Welche Merkmale machen die objektive Sorgfaltswidrigkeit aus?",
+      "options": [
+        "A) Besitzt der Täter überdurchschnittliche Kenntnisse oder Fähigkeiten, so ist es seine freie Entscheidung, ob er diese einsetzt um Schäden zu vermeiden",
+        "B) Besitzt der Täter überdurchschnittliche Kenntnisse oder Fähigkeiten, so muss er diese zur Abwendung von Schäden einsetzen",
+        "C) Als Maßstab dient die Frage, wie sich ein besonnener und gewissenhafter Mensch in einer solchen Situation verhalten hätte"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Bei der Fahrlässigkeit müssen überdurchschnittliche Fähigkeiten eingesetzt werden, Maßstab ist der besonnene Mensch."
+    },
+    {
+      "id": 84,
+      "question": "Was beinhaltet §258 StGB?",
+      "options": [
+        "A) Strafvereitelung",
+        "B) Begünstigung",
+        "C) Falsche uneidliche Aussage",
+        "D) Meineid"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§258 StGB regelt die Strafvereitelung."
+    },
+    {
+      "id": 85,
+      "question": "Was beinhaltet §123 StGB?",
+      "options": [
+        "A) Hausfriedensbruch",
+        "B) Körperverletzung",
+        "C) Amtsanmaßung",
+        "D) Diebstahl"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§123 StGB regelt den Hausfriedensbruch."
+    },
+    {
+      "id": 86,
+      "question": "Was beinhaltet §154 StGB?",
+      "options": [
+        "A) Falsche Verdächtigung",
+        "B) Falsche uneidliche Aussage",
+        "C) Meineid",
+        "D) Beleidigung"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§154 StGB regelt den Meineid."
+    },
+    {
+      "id": 87,
+      "question": "Welche/s der folgenden Angaben sind Schuldausschließungsgründe?",
+      "options": [
+        "A) Handlung im entschuldigenden Notstand",
+        "B) Psychische Unzurechnungsfähigkeit",
+        "C) Vollrausch",
+        "D) Kind unter 16 Jahren"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Entschuldigender Notstand und psychische Unzurechnungsfähigkeit schließen die Schuld aus."
+    },
+    {
+      "id": 88,
+      "question": "Eine Person die eine vorläufige Festnahme nach §127 StPO durchführt...",
+      "options": [
+        "A) Begeht tatbestandlich eine Freiheitsberaubung nach §239 StGB erfüllt",
+        "B) Begeht tatbestandliche keine Freiheitsberaubung nach §239 StGB",
+        "C) Handelt ohne Schuld",
+        "D) Handelt nicht rechtswidrig"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Vorläufige Festnahme erfüllt tatbestandlich Freiheitsberaubung, ist aber durch §127 StPO gerechtfertigt."
+    },
+    {
+      "id": 89,
+      "question": "Was beinhaltet §153 StGB?",
+      "options": [
+        "A) Nichtanzeige geplanter Straftaten",
+        "B) Störung des öffentlichen Friedens durch Androhung von Straftaten",
+        "C) Meineid",
+        "D) Falsche uneidliche Aussage"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "§153 StGB regelt die falsche uneidliche Aussage."
+    },
+    {
+      "id": 90,
+      "question": "Welche Objekte sind durch §123 StGB – Hausfriedensbruch – umfasst?",
+      "options": [
+        "A) Befriedetes Besitztum",
+        "B) Privatgrundstück welches durch ein Schild mit der Aufschrift \"Betreten verboten\" gesichert ist",
+        "C) Parkplatz ohne Befriedung",
+        "D) Geschäftsräume"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "§123 StGB schützt Wohnungen, Geschäftsräume und befriedetes Besitztum."
+    },
+    {
+      "id": 91,
+      "question": "Wer eine Sache, die eine andere Person aus einem Diebstahl erlangt hat, verkauft, begeht die Straftat...",
+      "options": [
+        "A) Hehlerei – §259 StGB",
+        "B) Erschleichen von Leistungen - §265a StGB",
+        "C) Betrug - §263 StGB",
+        "D) Begünstigung - §257 BGB"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Der Verkauf gestohlener Sachen ist Hehlerei, gegenüber dem Käufer kann Betrug vorliegen."
+    },
+    {
+      "id": 92,
+      "question": "Ein Ladendetektiv wird auf eine Person aufmerksam, die an ein Regal stößt wodurch versehentlich mehrere teure Porzellanteller zu Bruch gehen. Wann darf der Detektiv die Person nach §127 StPO vorläufig festnehmen?",
+      "options": [
+        "A) Wenn die Personalien der Person unbekannt sind",
+        "B) Wenn die Person der Flucht verdächtig ist",
+        "C) Wenn die Person älter ist als 14 Jahre",
+        "D) Gar nicht"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Bei fahrlässiger Sachbeschädigung ist keine vorläufige Festnahme möglich, da kein Vorsatz vorliegt."
+    },
+    {
+      "id": 93,
+      "question": "Welche Aussage/n zu §1 StGB ist/sind korrekt?",
+      "options": [
+        "A) Ein Täter kann für seine Tat bestraft werden wenn nach seiner Tat eine entsprechendes Gesetz ins Strafgesetzbuch aufgenommen worden ist",
+        "B) Eine Tat die im Strafgesetzbuch festgehalten ist kann bestraft werden",
+        "C) Willkür der Gerichte werden minimiert",
+        "D) Die Bestrafung eines Täters ist auch ohne Strafgesetz möglich"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "§1 StGB verankert das Gesetzlichkeitsprinzip: keine Strafe ohne Gesetz."
+    },
+    {
+      "id": 94,
+      "question": "Der Gast aus Nr. 26 ist erst 17 Jahre alt. Was bedeutet das strafrechtlich?",
+      "options": [
+        "A) Der Gast kann strafrechtlich noch nicht verfolgt werden, da er minderjährig ist",
+        "B) Der Sicherheitsmitarbeiter darf die Person nicht vorläufig festnehmen",
+        "C) Die Schuldfähigkeit des Gastes liegt vor",
+        "D) Der Sicherheitsmitarbeiter darf die Person vorläufig festnehmen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "17-Jährige sind bedingt schuldfähig und können vorläufig festgenommen werden."
+    },
+    {
+      "id": 95,
+      "question": "Ein Vermieter saniert die Balkons seiner Wohnanlage nicht, obwohl er dazu durch Fristen rechtlich verpflichtet wäre. Eines Tages bricht der Balkon einer Wohneinheit ab, während sich Personen darauf aufhalten. Die Personen werden schwer verletzt. Welche Aussage/n ist/sind richtig?",
+      "options": [
+        "A) Der Vermieter begeht ein unechtes Unterlassungsdelikt",
+        "B) Der Vermieter handelt nicht rechtswidrig",
+        "C) Der Vermieter kann strafrechtlich verfolgt werden",
+        "D) Der Mieter der Wohnung hat eine Garantenstellung für den Bauzustand des Balkons"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Der Vermieter hat als Garant eine Verkehrssicherungspflicht und begeht ein unechtes Unterlassungsdelikt."
+    },
+    {
+      "id": 96,
+      "question": "Das Angeben einer falschen Aussage bei der Polizei als Beschuldigter...",
+      "options": [
+        "A) Ist eine Straftat",
+        "B) Ist wie eine falsche Aussage vor Gericht",
+        "C) Ist keine Straftat",
+        "D) Zieht eine Untersuchungshaft nach sich"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Beschuldigte haben das Recht zu schweigen und zu lügen - falsche Aussagen bei der Polizei sind nicht strafbar."
+    },
+    {
+      "id": 97,
+      "question": "Wie unterscheiden sich Delikte?",
+      "options": [
+        "A) Vertragsdelikte",
+        "B) Antragsdelikte",
+        "C) Privatdelikte",
+        "D) Offizialdelikte"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Delikte werden in Antragsdelikte und Offizialdelikte unterschieden."
+    },
+    {
+      "id": 98,
+      "question": "Welche Aussage ist zu §164 – falsche Verdächtigung – StGB korrekt?",
+      "options": [
+        "A) Der Täter muss das Ziel haben, ein behördliches Verfahren oder Maßnahme gegen das Opfer herbeizuführen",
+        "B) Man kann nur bestraft werden, wenn man die andere Person einer rechtswidrigen Tat verdächtigt – wider besseren Wissens",
+        "C) Das Opfer muss das Ziel haben, ein behördliches Verfahren oder Maßnahme gegen den Täter herbeizuführen",
+        "D) Die fahrlässige Begehungsweise ist ebenfalls strafbar"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Falsche Verdächtigung erfordert Vorsatz und das Ziel, behördliche Maßnahmen herbeizuführen."
+    },
+    {
+      "id": 99,
+      "question": "Welche der folgenden Jedermannsrechte kann eine strafbare Handlung nach StGB/StPO rechtfertigen?",
+      "options": [
+        "A) Notwehr",
+        "B) Allgemeine Selbsthilfe",
+        "C) Vorläufige Festnahme",
+        "D) Besitzwehr"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Notwehr (§32 StGB) und vorläufige Festnahme (§127 StPO) sind Jedermannsrechte, die Straftaten rechtfertigen können."
+    },
+    {
+      "id": 100,
+      "question": "Ab wann ist ein \"Diebstahl\" ein \"Diebstahl geringwertiger Sachen\" und wird somit nur auf Antrag verfolgt?",
+      "options": [
+        "A) Ca. 20 €",
+        "B) Ca. 100 €",
+        "C) Ca. 5 €",
+        "D) Ca. 50 €"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Die Geringwertigkeitsgrenze liegt bei etwa 50 Euro."
+    },
+    {
+      "id": 101,
+      "question": "Welches der folgend genannten Möglichkeiten sind Verbrechen?",
+      "options": [
+        "A) Meineid",
+        "B) Gefährliche Körperverletzung",
+        "C) Brandstiftung",
+        "D) Besonders schwerer Fall des Diebstahls"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Meineid (§154) und Brandstiftung (§306) haben Mindeststrafmaß von einem Jahr und sind Verbrechen."
+    },
+    {
+      "id": 102,
+      "question": "Was ist nach §123 StGB strafbar?",
+      "options": [
+        "A) Das Nichtentfernen auf die Aufforderung des Besitzers einer Wohnung wenn man sich ohne Befugnis in der Wohnung aufhält",
+        "B) Widerrechtliches Eindringen in eine Wohnung",
+        "C) Das Betreten einer fremden Wohnung ohne ausdrückliche Genehmigung des Besitzers",
+        "D) Das Aufhalten der sich nach außen öffnenden Tür"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Hausfriedensbruch umfasst das Eindringen und das Nichtentfernen nach Aufforderung."
+    },
+    {
+      "id": 103,
+      "question": "Wer sich unbefugt mit der Ausübung eines öffentlichen Amtes befasst, begeht...",
+      "options": [
+        "A) Ein Missbrauch von Notrufen und Beeinträchtigung von Unfallverhütungs- und Nothilfemitteln - § 145 StGB",
+        "B) Ein Meineid – §154 StGB",
+        "C) Eine Störung des öffentlichen Friedens durch Androhung von Straftaten - §126 StGB",
+        "D) Eine Amtsanmaßung nach §132 StGB"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Die unbefugte Ausübung eines öffentlichen Amtes ist Amtsanmaßung nach §132 StGB."
+    },
+    {
+      "id": 104,
+      "question": "Was beinhaltet §306 StGB?",
+      "options": [
+        "A) Betrug",
+        "B) Sachbeschädigung",
+        "C) Sachbeschädigung durch Brandstiftung",
+        "D) Diebstahl"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§306 StGB regelt die Brandstiftung (nicht Sachbeschädigung durch Brandstiftung - das wäre irreführend)."
+    },
+    {
+      "id": 105,
+      "question": "Welche der folgend aufgeführten Straftatbestände stellen immer ein absolutes Antragsdelikt dar?",
+      "options": [
+        "A) Betrug gem. § 263 StGB",
+        "B) Hausfriedensbruch gem. § 123 StGB",
+        "C) Diebstahl gem. § 242 StGB",
+        "D) Beleidigung gem. § 185 StGB"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Hausfriedensbruch und Beleidigung sind absolute Antragsdelikte."
+    },
+    {
+      "id": 106,
+      "question": "Wer sich ausschließlich eine fremde bewegliche Sache rechtswidrig zueignet, begeht...",
+      "options": [
+        "A) Einen Raub",
+        "B) Eine Unterschlagung",
+        "C) Einen räuberischen Diebstahl",
+        "D) Einen Diebstahl"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Wenn nur Zueignung ohne Wegnahme stattfindet, liegt Unterschlagung nach §246 StGB vor."
+    },
+    {
+      "id": 107,
+      "question": "Was beinhaltet §252 StGB?",
+      "options": [
+        "A) Raub",
+        "B) Räuberischer Diebstahl",
+        "C) Nötigung",
+        "D) Schwerer Raub"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "§252 StGB regelt den räuberischen Diebstahl."
+    },
+    {
+      "id": 108,
+      "question": "Was beinhaltet §240 StGB?",
+      "options": [
+        "A) Nötigung",
+        "B) Besonders schwerer Fall des Diebstahls",
+        "C) Raub",
+        "D) Erpressung"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§240 StGB regelt die Nötigung."
+    },
+    {
+      "id": 109,
+      "question": "Was ist der Unterschied zwischen einem Raub und eine räuberischen Diebstahl?",
+      "options": [
+        "A) Bei einem Raub wird vom Opfer, unter Anwendung von Gewalt oder gegenwärtiger Gefahr für Leib und Leben, erzwungen die Sachen herauszugeben",
+        "B) Bei einem räuberischen Diebstahl findet die Gewaltausübung nach dem eigentlichen Diebstahl statt",
+        "C) Beim Raub werden Waffen genutzt um den Widerstand des Opfers brechen zu können, beim räuberischen Diebstahl nicht",
+        "D) Bei einem Raub findet die Gewaltausübung unmittelbar vor- oder während des Diebstahls statt"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Beim Raub wird Gewalt vor/während der Wegnahme angewendet, beim räuberischen Diebstahl danach."
+    },
+    {
+      "id": 110,
+      "question": "Was beinhaltet §164 StGB?",
+      "options": [
+        "A) Meineid",
+        "B) Falsche uneidliche Aussage",
+        "C) Falsche Verdächtigung",
+        "D) Beleidigung"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§164 StGB regelt die falsche Verdächtigung."
+    },
+    {
+      "id": 111,
+      "question": "Ein Ladendetektiv sieht, wie sich eine Dame mehrmals umschaut und dann ein Handy aus dem Regal nimmt und sich in ihre Tasche steckt. An der Kasse geht sie ohne zu bezahlen weiter. Welche Straftat begeht die Dame?",
+      "options": [
+        "A) Unterschlagung",
+        "B) Sachbeschädigung",
+        "C) Diebstahl",
+        "D) Besonders schwerer Fall des Diebstahls"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Das Wegnehmen der Sache mit Zueignungsabsicht ist Diebstahl nach §242 StGB."
+    },
+    {
+      "id": 112,
+      "question": "Versuchter Diebstahl liegt vor...",
+      "options": [
+        "A) ...Wenn der Täter beispielsweise damit beginnt, mit Hammer und Stemmeisen, einen Zigarettenautomaten aufzubrechen, um an das Geld und die Zigaretten zu gelangen",
+        "B) ...Wenn schon vor der eigentlichen Tat, Vorbereitungshandlungen vorgenommen werden",
+        "C) ...Wenn jemand plant einen Diebstahl auszuführen",
+        "D) ...Wenn der Täter nach seiner Vorstellung von der Tat, unmittelbar zur Tatbestandsverwirklichung ansetzt"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Versuch beginnt mit dem unmittelbaren Ansetzen zur Tatbestandsverwirklichung."
+    },
+    {
+      "id": 113,
+      "question": "Was beinhaltet §185 StGB?",
+      "options": [
+        "A) Meineid",
+        "B) Beleidigung",
+        "C) Falsche Verdächtigung",
+        "D) Falsche uneidliche Aussage"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "§185 StGB regelt die Beleidigung."
+    },
+    {
+      "id": 114,
+      "question": "Welche Aussage/n zu einer \"Putativnotwehr\" ist/sind richtig?",
+      "options": [
+        "A) Kann in Strafbemessung berücksichtigt werden",
+        "B) Putativnotwehr ist die irrtümliche Annahme einer Notwehrlage",
+        "C) Schließt die Schuld als Teil der Straftat aus – man kann somit nicht bestraft werden",
+        "D) Putativnotwehr ist die Überschreitung der Notwehr aus Furcht, Verwirrung oder Schrecken"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Putativnotwehr ist ein Erlaubnistatbestandsirrtum und kann strafmildernd wirken."
+    },
+    {
+      "id": 115,
+      "question": "Subjektive Tatbestandsmerkmale...",
+      "options": [
+        "A) Werden im Strafgesetz nicht unterteilt",
+        "B) Sind für die Beurteilung einer Tat nicht von Bedeutung",
+        "C) Sind u.a. Einstellung, Motivation oder Antrieb",
+        "D) Sind die inneren Beweggründe eines Täters"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Subjektive Tatbestandsmerkmale betreffen die innere Tatseite wie Vorsatz, Absichten und Motive."
+    },
+    {
+      "id": 116,
+      "question": "Welche Aussage/n ist/sind zu §126 StGB – Störung des öffentlichen Friedens durch Androhung von Straftaten korrekt?",
+      "options": [
+        "A) Ist ein Verbrechen",
+        "B) Es muss der öffentliche Frieden gestört werden",
+        "C) Kann z.B. durch Androhung eines Mordes in der Öffentlichkeit begangen werden",
+        "D) Das Äußern einer Morddrohung direkt gegenüber einer Person in Privatem wird ebenfalls unter Strafe gestellt"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "§126 StGB erfordert die Störung des öffentlichen Friedens durch Androhung schwerer Straftaten."
+    },
+    {
+      "id": 117,
+      "question": "Wann ist eine Tat nicht strafbar?",
+      "options": [
+        "A) Wenn der Täter nicht schuldhaft gehandelt hat",
+        "B) Wenn der Täter den Erfolg der Tat nicht aktiv herbeigeführt hat",
+        "C) Wenn ein Rechtfertigungsgrund vorliegt",
+        "D) Wenn der Täter aus Fahrlässigkeit gehandelt hat"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Fehlende Schuld oder Rechtfertigungsgründe schließen die Strafbarkeit aus."
+    },
+    {
+      "id": 118,
+      "question": "Bei einer schweren Körperverletzung nach §226 StGB kann welcher der folgenden Angaben erfüllt sein?",
+      "options": [
+        "A) Die Körperverletzung hat zur Folge, dass das Opfer auf einem Ohr nicht mehr hören kann",
+        "B) Die Körperverletzung hat zur Folge, dass das Opfer die Fortpflanzungsfähigkeit verliert",
+        "C) Die Körperverletzung hat zur Folge, dass das Opfer stirbt",
+        "D) Die Körperverletzung hat zur Folge, dass das Opfer ein Auge verliert"
+      ],
+      "correct_answers": ["A", "B", "C", "D"],
+      "explanation": "Alle genannten Folgen können eine schwere Körperverletzung nach §226 StGB darstellen."
+    },
+    {
+      "id": 119,
+      "question": "Wie unterscheiden sich Diebstahl und Unterschlagung im Wesentlichen voneinander?",
+      "options": [
+        "A) Es gibt keinen Unterschied, außer im Volksmund",
+        "B) Bei einem Diebstahl findet eine Wegnahme statt, bei einer Unterschlagung ist der Täter i.d.R. bereits im Besitz der Sache",
+        "C) Bei der Unterschlagung fehlt das Tatbestandsmerkmal der Wegnahme",
+        "D) Bei der Unterschlagung ist ein Bruch fremden und die Begründung neuen Gewahrsams zwingend erforderlich zur Tatbestandsverwirklichung",
+        "E) Diebstahl ist ausschließlich ein Offizialdelikt, Unterschlagung nur ein Antragsdelikt"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Der Hauptunterschied ist, dass bei Unterschlagung keine Wegnahme stattfindet, da der Täter bereits im Besitz ist."
+    },
+    {
+      "id": 120,
+      "question": "Wer vorsätzlich eine falsche Aussage trotz gerichtlicher Vereidigung trifft...",
+      "options": [
+        "A) Wird mit mind. 1 Jahr Freiheitsstrafe bestraft",
+        "B) Begeht ein Verbrechen",
+        "C) Begeht ein Vergehen",
+        "D) Kann mit Geldstrafe bestraft werden"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Meineid nach §154 StGB ist ein Verbrechen mit Mindeststrafe von einem Jahr Freiheitsstrafe."
+    },
+    {
+      "id": 121,
+      "question": "In welchen Fällen der nachstehenden Beispiele ist die vorläufige Festnahme nach § 127 Abs. 1 StPO zulässig?",
+      "options": [
+        "A) Versuchter Hausfriedensbruch",
+        "B) Fahrlässige Sachbeschädigung",
+        "C) Fahrlässige, gefährliche Körperverletzung",
+        "D) Versuchter Diebstahl"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Nur beim versuchten Diebstahl ist der Versuch strafbar und damit eine vorläufige Festnahme möglich."
+    },
+    {
+      "id": 122,
+      "question": "Der Hausfriedensbruch gem. § 123 StGB nennt als Schutzbereich u.a. das sog. \"befriedete Besitztum\". Befriedetes Besitztum...",
+      "options": [
+        "A) ...Ist ein abgegrenzter räumlicher Bereich, der konkret einer berechtigten Person zuzuordnen ist, wie z.B. ein Geschäftsgrundstück mit erkennbarer Einfriedung",
+        "B) ...Setzt voraus, dass es Teil einer bestehenden Wohnung ist",
+        "C) ...Ist z.B. auch ein Garten eines Privathaushaltes bei leicht übersteigbarer Eingrenzung",
+        "D) ...Ist z.B. ein privates Gelände, das mit wenigen Schildern mit der Aufschrift \"Zutritt verboten\" gekennzeichnet ist"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": "Befriedetes Besitztum ist ein abgegrenzter Bereich mit erkennbarer Einfriedung, auch bei niedriger Umgrenzung."
+    },
+    {
+      "id": 123,
+      "question": "Setzt eine Straftat immer ein \"Handeln\" voraus?",
+      "options": [
+        "A) Nein. Aber nur die unterlassene Hilfeleistung stellt ein \"Unterlassen\" unter Strafe",
+        "B) Nein. Straftaten können auch durch \"Unterlassen\" begangen werden",
+        "C) Ja. Straftaten werden immer nur durch ein \"Handeln\" begangen",
+        "D) Ja, da eine Bestrafung ohne eine strafbare \"Handlung\" nicht möglich ist"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Straftaten können sowohl durch aktives Tun als auch durch Unterlassen begangen werden."
+    },
+    {
+      "id": 124,
+      "question": "Was ist der Unterschied zwischen \"Vergehen\" und \"Verbrechen\"?",
+      "options": [
+        "A) Verbrechen sind Straftaten deren Mindeststrafmaß unter einem Jahr Freiheitsstrafe oder höher liegt",
+        "B) Verbrechen sind Straftaten deren Mindeststrafmaß bei einem Jahr Freiheitsstrafe oder höher liegt",
+        "C) Vergehen sind Straftaten deren Mindeststrafmaß unter einem sechs Monaten Freiheitsstrafe liegt",
+        "D) Vergehen sind Straftaten deren Mindeststrafmaß unter einem Jahr Freiheitsstrafe liegt"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Verbrechen haben ein Mindeststrafmaß von einem Jahr Freiheitsstrafe oder höher, während Vergehen Straftaten mit einem Mindeststrafmaß unter einem Jahr Freiheitsstrafe sind."
+    },
+    {
+      "id": 125,
+      "question": "Was beinhaltet §239 StGB?",
+      "options": [
+        "A) Freiheitsberaubung",
+        "B) Erpressung",
+        "C) Betrug",
+        "D) Nötigung"
+      ],
+      "correct_answers": ["A"],
+      "explanation": "§239 StGB regelt die Freiheitsberaubung."
+    },
+    {
+      "id": 126,
+      "question": "Was beinhaltet §243 StGB?",
+      "options": [
+        "A) Vorsätzliche Körperverletzung",
+        "B) Besonders schwerer Fall des Diebstahls",
+        "C) Diebstahl",
+        "D) Hausfriedensbruch"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "§243 StGB regelt den besonders schweren Fall des Diebstahls."
+    },
+    {
+      "id": 127,
+      "question": "Welche Aussage/n zu §223 StGB – vorsätzliche Körperverletzung sind korrekt?",
+      "options": [
+        "A) Bei einer Körperverletzung muss immer die Körpersubstanz der anderen Person mindestens vorübergehend beschädigt werden",
+        "B) Eine Körperverletzung ist nur die Beschädigung des Körpers einer fremden Person",
+        "C) Eine Körperverletzung ist u.a. die körperliche Misshandlung ohne Substanzverletzung",
+        "D) Eine Körperverletzung kann auch das Hervorrufen extremen Ekelgefühls sein"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Körperverletzung umfasst körperliche Misshandlung und Gesundheitsschädigung, auch durch Ekelgefühle."
+    },
+    {
+      "id": 128,
+      "question": "In welchem Fall / in welchen Fällen ist die vorläufige Festnahme gem. § 127 Abs. 1 StPO rechtmäßig?",
+      "options": [
+        "A) Wenn eine mittels Fahndungsfoto gesuchte Person erkannt wird",
+        "B) Wenn ein Täter auf frischer Tat betroffen wird und seine Identität nicht sofort festgestellt werden kann",
+        "C) Wenn ein namentlich bekannter Mitarbeiter des eigenen Unternehmens auf frischer Tat beim Diebstahl betroffen wird",
+        "D) Wenn jemand fahrlässig beim Ausparken ein anderes Auto beschädigt"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Vorläufige Festnahme ist nur bei frischer Tat und unbekannter Identität oder Fluchtgefahr zulässig."
+    },
+    {
+      "id": 129,
+      "question": "In welchen der folgend genannten Beispiele handelt es sich grundsätzlich nicht um sog. Offizialdelikte?",
+      "options": [
+        "A) Schwere Körperverletzung gem. § 226 StGB",
+        "B) Unbefugter Gebrauch eines Fahrzeugs gem. § 248 StGB",
+        "C) Diebstahl gem. § 242 StGB",
+        "D) Verletzung des persönlichen Lebens- und Geheimbereichs; § 201 Abs.1 und 2, §§ 202, 203 und 204 StGB"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Diese Delikte sind teilweise oder ganz Antragsdelikte, nicht Offizialdelikte."
+    },
+    {
+      "id": 130,
+      "question": "Welches der folgend genannten Möglichkeiten sind Vergehen?",
+      "options": [
+        "A) Totschlag",
+        "B) Schwere Körperverletzung",
+        "C) Fahrlässige Körperverletzung",
+        "D) Diebstahl"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Fahrlässige Körperverletzung und Diebstahl haben Mindeststrafmaß unter einem Jahr und sind Vergehen."
+    },
+    {
+      "id": 131,
+      "question": "Was ist der Unterschied zwischen \"gefährlicher\" und \"schwerer\" Körperverletzung?",
+      "options": [
+        "A) Die schwere Körperverletzung beschreibt die Folgen einer Körperverletzung",
+        "B) Die schwere Körperverletzung beschreibt die Art und Weise wie eine Körperverletzung begangen wird",
+        "C) Die gefährliche Körperverletzung beschreibt die Folgen einer Körperverletzung",
+        "D) Die gefährliche Körperverletzung beschreibt die Art und Weise wie eine Körperverletzung begangen wird"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Gefährliche KV (§224) beschreibt die Tatbegehung, schwere KV (§226) die schweren Folgen."
+    },
+    {
+      "id": 132,
+      "question": "Im Rahmen Ihrer Tätigkeit als Sicherheitskraft stellen Sie bei der Einlasskontrolle fest, wie sich eine Person am Kassenpersonal vorbei schleicht um den Eintrittspreis zu umgehen. Nachdem Sie der Person gefolgt sind und diese mehrfach gebeten haben das Veranstaltungsgelände zu verlassen, verweigerte sich diese, ihrer Aufforderung nachzukommen. Welche Straftatbestände wurden seitens des ungebetenen Gastes erfüllt?",
+      "options": [
+        "A) Erschleichen von Leistungen gem. § 265a StGB",
+        "B) Unterschlagung gem. § 246 StGB",
+        "C) Betrug gem. § 263 StGB",
+        "D) Hausfriedensbruch gem. § 123 StGB"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Das Umgehen der Kasse ist Erschleichen von Leistungen, das Verweigern des Verlassens ist Hausfriedensbruch."
+    },
+    {
+      "id": 133,
+      "question": "Welche Beschreibung trifft auf den Begriff \"Rechtfertigungsgrund\" zu?",
+      "options": [
+        "A) Eine Handlung die normalerweise sowohl den objektiven als auch subjektiven Tatbestand einer Straftat erfüllt, ist bei vorliegen der Voraussetzungen eines Rechtfertigungsgrundes nicht strafbar",
+        "B) Rechtfertigungsgründe schließen bei rechtmäßiger Anwendung die Rechtswidrigkeit nur dann aus, wenn der Täter auch schuldhaft handelt",
+        "C) Es wird eine bestimmte Handlung durch ein Gesetz entschuldigt",
+        "D) Er gestattet in beliebiger Form die Anwendung privaten Zwangs, um eigene Interessen zu schützen",
+        "E) Rechtfertigungsgründe schließen bei rechtmäßiger Anwendung die Rechtswidrigkeit aus"
+      ],
+      "correct_answers": ["A", "E"],
+      "explanation": "Rechtfertigungsgründe schließen die Rechtswidrigkeit aus und machen tatbestandsmäßige Handlungen legal."
+    },
+    {
+      "id": 134,
+      "question": "Bei einem Raub...",
+      "options": [
+        "A) Wird u.a. der Tatbestand des Diebstahls erfüllt",
+        "B) Ist auch der Sicherheitsdienst verpflichtet den Täter zu verfolgen",
+        "C) Handelt es sich um ein Vergehen",
+        "D) Wird mit Gewalt oder unter Androhung mit gegenwärtiger Gefahr für Leib und Leben eine fremde bewegliche Sache weggenommen"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Raub enthält die Merkmale des Diebstahls plus Gewalt/Drohung gegen Leib oder Leben."
+    },
+    {
+      "id": 135,
+      "question": "Das Würgen einer anderen Person ist strafrechtlich/tatbestandlich...",
+      "options": [
+        "A) Eine gefährliche Körperverletzung nach §224 StGB",
+        "B) Eine vorsätzliche Körperverletzung nach § 223 StGB",
+        "C) Nicht relevant da keine Verletzungen hervorgerufen werden",
+        "D) Nur relevant, wenn dies ohne Zustimmung des Opfers passiert"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Würgen erfüllt sowohl vorsätzliche als auch gefährliche Körperverletzung (lebensgefährliche Behandlung)."
+    },
+    {
+      "id": 136,
+      "question": "Straftaten werden in Vergehen und Verbrechen unterschieden. Welche Aussagen hierzu sind richtig?",
+      "options": [
+        "A) Vergehen sind Delikte mit einem Mindeststrafmaß von nicht mehr als einem Freiheitsentzug bis zu drei Jahren oder alternativ einer Geldstrafe",
+        "B) Vergehen sind Delikte mit einem Mindeststrafmaß von beginnend unter einem Jahr Freiheitsentzug und Geldstrafe",
+        "C) Verbrechen sind Delikte mit einem Mindeststrafmaß von nicht weniger als 1 Jahr Freiheitsentzug",
+        "D) Vergehen sind Delikte mit einem Mindeststrafmaß von beginnend unter einem Jahr Freiheitsentzug oder Geldstrafe"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": "Verbrechen haben Mindeststrafmaß ab einem Jahr, Vergehen darunter oder Geldstrafe."
+    },
+    {
+      "id": 137,
+      "question": "Aufgrund Ihrer Tätigkeit als Sicherheitskraft kann es gelegentlich vorkommen, dass Sie sowohl gerichtlich als auch polizeilich als Zeuge geladen werden. Welche Aussage / n hierzu ist / sind richtig?",
+      "options": [
+        "A) Als Zeuge haben Sie nach § 55 StPO ein sog. \"Auskunftsverweigerungsrecht\", wenn Sie sich selbst oder Angehörige mit einer Aussage belasten würden",
+        "B) Als Beschuldigter müssen Sie einer polizeilichen Vorladung nicht direkt Folge leisten",
+        "C) Als Zeuge sind Sie nicht verpflichtet, einer polizeilichen Vorladung zu folgen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Zeugen haben Auskunftsverweigerungsrecht bei Selbstbelastung, Beschuldigte müssen polizeilichen Vorladungen nicht folgen."
+    },
+    {
+      "id": 138,
+      "question": "Welche dieser Personen ist schuldunfähig?",
+      "options": [
+        "A) Der Polizist P der gerade auf dem Weg nachhause ist, fährt bei Rot über eine Ampel und ergreift dabei eine ältere Dame die verletzt wird",
+        "B) Die psychisch-behinderte Person B, der Einsichts-und Steuerungsfähigkeit fehlt, wacht nachts auf und kann die bewachte Klinik verlassen, da gerade keiner aufpasst. Sie schubst dann eine anderen Person vor einen Bus",
+        "C) Der Alkoholiker A betrinkt sich absichtlich bis 3,2 Promille um straffrei seine Frau umbringen zu können",
+        "D) Der 12-jährige Junge J steckt in einem Elektronikmarkt ein Smartphone ist seine Jackentasche und verlässt das Geschäft ohne zu bezahlen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Kinder unter 14 Jahren und Personen ohne Einsichts- und Steuerungsfähigkeit sind schuldunfähig."
+    },
+    {
+      "id": 139,
+      "question": "Was beinhaltet §138 StGB?",
+      "options": [
+        "A) Androhen einer Straftat",
+        "B) Nichtanzeige geplanter Straftaten",
+        "C) Amtsanmaßung",
+        "D) Falsche Verdächtigung"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "§138 StGB regelt die Nichtanzeige geplanter Straftaten."
+    },
+    {
+      "id": 140,
+      "question": "Was beinhaltet §223 StGB?",
+      "options": [
+        "A) Fahrlässige Körperverletzung",
+        "B) Hausfriedensbruch",
+        "C) Körperverletzung",
+        "D) Notwehr"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§223 StGB regelt die vorsätzliche Körperverletzung."
+    },
+    {
+      "id": 141,
+      "question": "Was beinhaltet §126 StGB?",
+      "options": [
+        "A) Nichtanzeige geplanter Straftaten",
+        "B) Störung des öffentlichen Friedens durch Androhung von Straftaten",
+        "C) Missbrauch von Titeln, Berufsbezeichnungen und Abzeichen",
+        "D) Falsche Verdächtigung"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "§126 StGB regelt die Störung des öffentlichen Friedens durch Androhung von Straftaten."
+    },
+    {
+      "id": 142,
+      "question": "Was beinhaltet §242 StGB?",
+      "options": [
+        "A) Hausfriedensbruch",
+        "B) Besonders schwerer Fall des Diebstahls",
+        "C) Diebstahl",
+        "D) Vorsätzliche Körperverletzung"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "§242 StGB regelt den Diebstahl."
+    },
+    {
+      "id": 143,
+      "question": "Was ist ein Diebstahl?",
+      "options": [
+        "A) Die Wegnahme einer fremden beweglichen Sache",
+        "B) Eine Handlung nach §242 StGB",
+        "C) Die Zueignung einer fremden beweglichen Sache",
+        "D) Die Wegnahme einer fremden beweglichen Sache um sie sich, oder einem Dritten rechtswidrig zuzueignen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Diebstahl nach §242 StGB ist die Wegnahme fremder beweglicher Sachen zur rechtswidrigen Zueignung."
+    },
+    {
+      "id": 144,
+      "question": "Welche Strafen sieht die Gesetzgebung der Bundesrepublik Deutschland grundsätzlich vor?",
+      "options": [
+        "A) Ausweisung",
+        "B) Geldstrafe",
+        "C) Freiheitsstrafe",
+        "D) Strafarbeit"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": "Das deutsche Strafrecht kennt nur Geld- und Freiheitsstrafe als Hauptstrafen."
+    },
+    {
+      "id": 145,
+      "question": "Entschuldigungsgründe ...",
+      "options": [
+        "A) Rechtfertigen eine strafbare Handlung",
+        "B) Entschuldigen eine strafbare Handlung",
+        "C) Schließen die Schuld bei einer strafbaren Handlung völlig aus",
+        "D) Sind im StGB und BGB festgehalten"
+      ],
+      "correct_answers": ["C"],
+      "explanation": "Entschuldigungsgründe schließen die Schuld aus, obwohl die Tat tatbestandsmäßig und rechtswidrig ist."
+    },
+    {
+      "id": 146,
+      "question": "Was versteht man unter dem \"Legalitätsprinzip\"?",
+      "options": [
+        "A) Der Staat muss bestimmte Straftaten, die ihm bekannt werden, verfolgen",
+        "B) Der Staat muss alle Straftaten, die ihm bekannt werden, verfolgen",
+        "C) Das Opfer kann sich entscheiden ob die Straftat von ihm verfolgt wird oder nicht",
+        "D) Offizialdelikte müssen vom Staat verfolgt werden, sobald dieser Kenntnis von Ihnen erlangt"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": "Das Legalitätsprinzip verpflichtet den Staat zur Verfolgung aller bekannt gewordenen Straftaten."
+    },
+    {
+      "id": 147,
+      "question": "Objektive Tatbestandsmerkmale ...",
+      "options": [
+        "A) Sind Merkmale die \"von außen wahrgenommen\" werden können",
+        "B) Sind im Inneren des Täters verborgen",
+        "C) Sind Vorsatz und Fahrlässigkeit",
+        "D) Müssen bei einer Handlung immer vorhanden sein, damit diese bestraft werden kann"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": "Objektive Tatbestandsmerkmale sind äußerlich wahrnehmbar und müssen für die Strafbarkeit erfüllt sein."
+    },
+    {
+      "id": 148,
+      "question": "Welche Gesetzbücher bilden, zum Großteil, das Straf- und Verfahrensrecht?",
+      "options": [
+        "A) BGB und GG",
+        "B) BGB und StPO",
+        "C) StGB – Allgemeiner und Besonderer Teil",
+        "D) StGB und StPO"
+      ],
+      "correct_answers": ["D"],
+      "explanation": "Das Straf- und Verfahrensrecht wird hauptsächlich durch StGB (materielles Recht) und StPO (Verfahrensrecht) gebildet."
+    }
+  ]
+}

@@ -1,0 +1,1322 @@
+{
+  "quiz_title": "Sachkundeprüfung 34a - Unfallverhütungsvorschriften",
+  "total_questions": 110,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Gebotszeichen...",
+      "options": [
+        "A) Sind viereckig mit weißem Zeichen auf blauem Grund",
+        "B) Zeigen Rettungs- und Nothilfemittel an",
+        "C) Sind rechtlich verpflichtend",
+        "D) Müssen durch Mitarbeiter beachtet werden"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 2,
+      "question": "Wann muss ein Sicherheitsmitarbeiter unterwiesen werden?",
+      "options": [
+        "A) Regelmäßig nach Aufnahme der Tätigkeit",
+        "B) Vor Beginn der Tätigkeit",
+        "C) Mindestens 1x pro Quartal",
+        "D) Innerhalb der ersten Woche nach Aufnahme der Tätigkeit"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 3,
+      "question": "Die Tätigkeiten von Sicherheitskräften, welche besonderen Gefahren während ihrer Tätigkeit ausgesetzt sind, sind gemäß den geltenden Unfallverhütungsvorschriften entsprechend zu überwachen. Was muss in Bezug auf die Mitarbeiter und deren Tätigkeit durch den Gewerbetreibenden überwacht werden?",
+      "options": [
+        "A) Zustand und Funktionstüchtigkeit der entsprechenden Ausrüstungsgegenstände",
+        "B) Arbeitsrechtskonformes, berufliches Agieren und Handeln",
+        "C) Das sicherheitsgerechte Verhalten der Mitarbeiter",
+        "D) Optisches Erscheinungsbild und individuelles Auftreten Dritten gegenüber"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 4,
+      "question": "Was enthält § 13 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Hunde",
+        "B) Hundezwinger",
+        "C) Hundeführer"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 5,
+      "question": "Was müssen Brillen- und / oder Kontaktlinsenträger gem. DGUV-Vorschrift 23 während ihrer dienstlichen Tätigkeit beachten?",
+      "options": [
+        "A) Brillenträger müssen während ihres Dienstes ihre Brille durch ein Haftband sichern oder eine Ersatzbrille mit sich führen",
+        "B) Kontaktlinsenträger müssen während des Dienstes eine Ersatzbrille oder Ersatzlinsen mit sich führen",
+        "C) Kontaktlinsenträger müssen während ihres Dienstes eine Ersatzbrille mit sich führen",
+        "D) Brillenträger müssen während des Dienstes ihre Brille durch ein Haftband sichern und eine Ersatzbrille mit sich führen"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 6,
+      "question": "Was ist in Bezug auf Hunde gemäß der DGUV VORSCHRIFT 23 zu beachten?",
+      "options": [
+        "A) Hunde dürfen maximal 10h am Stück eingesetzt werden",
+        "B) Hunde sollten im Einsatz ausreichend Pausen bekommen",
+        "C) Ein Hund sollte nur durch geeignete Hundeführer geführt werden",
+        "D) Jeder Sicherheitsmitarbeiter eines Unternehmens muss sich mit dem Hund vertraut machen, da jeder mit diesem arbeiten können muss"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 7,
+      "question": "Was enthält § 24 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Aufbewahrung von Schusswaffen",
+        "B) Eignung für Geldtransporte",
+        "C) Ausrüstung mit Schusswaffen",
+        "D) Geldtransporte durch Boten"
+      ],
+      "correct_answers": ["B"],
+      "explanation": ""
+    },
+    {
+      "id": 8,
+      "question": "Welche Aussage/n im Sinne des § 15 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Hundeführer müssen der zuständigen Berufsgenossenschaft ihre Befähigung nachweisen",
+        "B) Hundeführer müssen dem Unternehmer ihre Befähigung nachweisen",
+        "C) Der Hundeführer kann seine Prüfung der Befähigung auch freiwillig bei der zuständigen Polizeidienststelle durchführen lassen",
+        "D) Die Befähigung des Hundeführers wird mind. 1x jährlich geprüft"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 9,
+      "question": "Ein Sicherheitsmitarbeiter geht an einem freien Samstagabend mit seinem Kumpel feiern. Am nächsten Mittag muss er wieder als Citystreife arbeiten obwohl er noch 0,3 Promille Restalkohol im Blut hat. Dennoch geht er zum Dienst.",
+      "options": [
+        "A) Die Grenze von 0,3 ist nicht überschritten. Daher darf der Mitarbeiter seinen Dienst antreten",
+        "B) Der Sicherheitsmitarbeiter begeht eine Ordnungswidrigkeit und muss dafür ein Bußgeld zahlen",
+        "C) Der Mitarbeiter darf den Dienst nicht antreten",
+        "D) Sicherheitsmitarbeiter dürfen dauerhaft keinen Alkohol trinken, da dies zu einer Unverlässigkeit im gewerberechtlichen Sinne führt"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 10,
+      "question": "Welche Verpflichtungen haben Sicherheitsmitarbeiter?",
+      "options": [
+        "A) Defekte an Arbeitsmitteln beseitigen oder melden",
+        "B) Kollegen auf Arbeitsschutzmaßnahmen prüfen",
+        "C) Aufzeichnungen über an teilgenommenen Unterweisungen führen",
+        "D) Gefahren in Objekten melden"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 11,
+      "question": "Die speziellen Unfallverhütungsvorschriften für das Wach- und Sicherheitsgewerbe findet man in...",
+      "options": [
+        "A) DGUV Vorschrift 1",
+        "B) DGUV Vorschrift 23",
+        "C) DGUV Vorschrift 8",
+        "D) ASR A1.3"
+      ],
+      "correct_answers": ["B"],
+      "explanation": "Die speziellen Unfallverhütungsvorschriften für das Wach- und Sicherheitsgewerbe findet man in der DGUV Vorschrift 23. Diese Vorschrift enthält die Regeln und Maßnahmen zur Verhütung von Unfällen im Bereich des Wach- und Sicherheitsgewerbes. Sie legt unter anderem fest, welche Sicherheitsmaßnahmen getroffen werden müssen, um Gefahren für die Mitarbeiter in diesem Bereich zu minimieren."
+    },
+    {
+      "id": 12,
+      "question": "Schusswaffen...",
+      "options": [
+        "A) Sind immer im geladenen Zustand zu übergeben",
+        "B) Sind Mitarbeitern umgehend zu entziehen wenn die waffenrechtlichen Voraussetzungen des Mitarbeiters nicht mehr gegeben sind",
+        "C) Müssen in geeigneten Trageeinrichtungen geführt werden",
+        "D) Müssen mind. 2x pro Jahr auf ihre Funktionstüchtigkeit von einem Sachkundigen geprüft werden"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 13,
+      "question": "Warnzeichen...",
+      "options": [
+        "A) ... sind ein gelbes Dreieck mit schwarzen Symbolen",
+        "B) ... warnen vor bestimmten Gefahren",
+        "C) ... verpflichten zur Einhaltung eines Gebotes",
+        "D) ... sind ein blaues Kreis mit weißen Symbolen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 14,
+      "question": "Was beinhaltet die DGUV Vorschrift 23?",
+      "options": [
+        "A) Sicherheits- und Gesundheitsschutzkennzeichnungen am Arbeitsplatz",
+        "B) Grundsätze der Prävention",
+        "C) Unfallverhütungsvorschriften für das Bewachungsgewerbe",
+        "D) Vorgaben der Berufsgenossenschaften für Sicherheitsmitarbeiter"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 15,
+      "question": "Der Geldbote...",
+      "options": [
+        "A) Kann sich je nach Gefahr des Auftrages mit dem Transportbehältnis fest verbinden",
+        "B) Darf sich auf keinen Fall mit dem Transportbehältnis fest verbinden",
+        "C) Darf nie alleine unterwegs sein",
+        "D) Muss sich mit dem Transportbehältnis fest verbinden (z.B. Handschellen)"
+      ],
+      "correct_answers": ["B"],
+      "explanation": ""
+    },
+    {
+      "id": 16,
+      "question": "Was ist ein Fluchtweg?",
+      "options": [
+        "A) Der Weg, den betroffene Personen im Notfall benutzen können, um sicher und schnellstmöglich aus dem Gebäude zu gelangen",
+        "B) Ein Fluchtweg ist immer der kürzeste Weg aus einem Gebäude",
+        "C) Der Weg, den die Rettungskräfte nutzen, um in das Gebäude zu gelangen",
+        "D) Der Fluchtweg ist mit viereckigen Schildern mit weißen Symbolen auf grünem Hintergrund ausgeschildert"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 17,
+      "question": "Was müssen Brillenträger im Wachgewerbe gemäß § 11 DGUV VORSCHRIFT 23 beachten?",
+      "options": [
+        "A) Sie können auch eine Ersatzbrille mitführen",
+        "B) Sie können sich auf Kosten der Berufsgenossenschaft eine Dienstbrille zulegen",
+        "C) Sie müssen im Dienst Kontaktlinsen tragen",
+        "D) Sie müssen im Dienst Kontaktlinsen tragen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 18,
+      "question": "Was enthält § 7 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Dienstanweisung",
+        "B) Objekteinweisung",
+        "C) Verbot berauschender Mittel",
+        "D) Tätigkeit mit besonderen Gefahren"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 19,
+      "question": "Was enthält § 21 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Führen von Schusswaffen und Munition",
+        "B) Übergabe von Schusswaffen",
+        "C) Ausrüstung mit Schusswaffen",
+        "D) Aufbewahrung von Schusswaffen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": ""
+    },
+    {
+      "id": 20,
+      "question": "Was bedeutet \"VBG\"?",
+      "options": [
+        "A) Verwendungsberufsgenossenschaft",
+        "B) Verwaltungsberufsgenossenschaft",
+        "C) Verwalterlsche Berufsgenossenschaft",
+        "D) Verarbeitungsberufsgenossenschaft"
+      ],
+      "correct_answers": ["B"],
+      "explanation": ""
+    },
+    {
+      "id": 21,
+      "question": "Wann müssen Sicherheitsmitarbeiter unterwiesen werden?",
+      "options": [
+        "A) Bei Tätigkeiten die nachts ausgeführt werden, zusätzlich zur Einweisung in der Nacht auch einmal zur Tagzeit",
+        "B) Mindestens zweimal jährlich",
+        "C) Bei einer neuen Tätigkeit, zu Beginn dieser",
+        "D) Immer zu Dienstbeginn durch den vorherigen Kollegen"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 22,
+      "question": "Gebotszeichen...",
+      "options": [
+        "A) ... warnen vor bestimmten Gefahren",
+        "B) ... sind ein blauer Kreis mit weißen Symbolen",
+        "C) ... sind ein gelbes Dreieck mit schwarzen Symbolen",
+        "D) ... verpflichten zur Einhaltung eines Gebotes"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 23,
+      "question": "Welche Aussage/n im Sinne des § 20 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Kommt eine Schusswaffe zum Einsatz, kann diese ausnahmsweise entschieden werden",
+        "B) Munition muss an der Bewachungsperson getragen werden",
+        "C) Die Trageeinrichtung für Schusswaffen muss so beschaffen sein, dass die Waffe gegen Abgleiten oder Rausfallen gesichert ist",
+        "D) Schusswaffen müssen immer gesichert sein, wenn diese benutzt werden"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 24,
+      "question": "Welche Aussage/n im Sinne des § 18 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Der Unternehmer muss einem Mitarbeiter, bei dem die Voraussetzungen für das Führen einer Waffe nicht mehr gegeben sind, diese innerhalb der ersten 72 Stunden danach entziehen",
+        "B) Mitarbeiter, die sich besonders bedroht fühlen, können selbstständig entscheiden ob sie eine Waffe zum Dienst tragen",
+        "C) Der Unternehmer muss über die Schießfertigkeit und Schießübungen seiner Mitarbeiter Aufzeichnungen führen",
+        "D) Der Unternehmer muss sicherstellen, dass nur Mitarbeiter eine Waffe für den Dienst ausgehändigt bekommen, die die erforderliche Zuverlässigkeit, Sachkunde und Ausbildung an der Waffe besitzen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 25,
+      "question": "Was enthält § 20 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Aufbewahrung von Schusswaffen",
+        "B) Ausrüstung mit Schusswaffen",
+        "C) Führen von Schusswaffen und Munition",
+        "D) Übergabe von Schusswaffen"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 26,
+      "question": "Welche Aussage/n im Sinne des § 24 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Der Sicherheitsunternehmer muss seine Mitarbeiter im Geld- und Werttransport selbst unterweisen",
+        "B) Es kann jeder Mitarbeiter eines Sicherheitsunternehmens als Geld- und Werttransportfahrer eingesetzt werden",
+        "C) Mitarbeiter die im Geld- und Werttransport arbeiten müssen mind. 18 Jahre alt sein",
+        "D) Mitarbeiter im Geld- und Werttransport benötigen eine besondere Ausbildung und Unterweisung um in diesem Bereich arbeiten zu dürfen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 27,
+      "question": "Was hat ein Unternehmer bezüglich der Ausrüstung seiner Mitarbeiter zu beachten?",
+      "options": [
+        "A) Die Ausrüstung darf nicht gebraucht gekauft werden",
+        "B) Die Ausrüstung muss nach 2 Jahren Benutzung ausgetauscht werden",
+        "C) Der Unternehmer muss gewährleisten, dass seine Mitarbeiter mit entsprechendem Schutzwerk und Taschenlampen arbeiten",
+        "D) Die Bewegungsfreiheit der Mitarbeiter darf nicht zu stark eingeschränkt sein"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 28,
+      "question": "Ein SMA entdeckt eine nicht abgesicherte Gefahrenstelle. Wozu ist er in jedem Fall verpflichtet?",
+      "options": [
+        "A) Der SMA ist zu nichts verpflichtet, da die Beseitigung von Gefahrenstellen ausschließlich in der Verantwortung des Auftraggebers liegt",
+        "B) Der SMA hat die Gefahrenstelle sofort und in jedem Fall selbst abzusichern, sofern sich keine Gefahr daraus ergibt",
+        "C) Der SMA muss die Gefahrenstelle sofort an einen Vorgesetzten oder an eine andere, hierfür zuständige Stelle melden"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 29,
+      "question": "Die erste Hilfe...",
+      "options": [
+        "A) Muss immer durch mindestens einen Firmenanäter gewährleistet werden",
+        "B) Ist nur Aufgabe der Berufsgenossenschaften und des Unfallbeauftragten der Sicherheitsfirma",
+        "C) Muss durch die Mitarbeiter unterstützt werden",
+        "D) Muss durch den Unternehmer gewährleistet werden"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 30,
+      "question": "Für wen gelten die allgemeinen Unfallverhütungsvorschriften?",
+      "options": [
+        "A) Nur für Unternehmer und Mitarbeiter bestimmter Branchen",
+        "B) Für Unternehmer",
+        "C) Nur für Sicherheitsunternehmer und ihre Mitarbeiter",
+        "D) Nur für Sicherheitsunternehmer und ihre Mitarbeiter"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 31,
+      "question": "Bei der Aufbewahrung von Schusswaffen ist darauf zu achten, dass...",
+      "options": [
+        "A) Der Ort der Aufbewahrung rund um die Uhr bewacht wird",
+        "B) Diese gegen Abhandenkommen und unbefugten Zugriff Dritter gesichert sind",
+        "C) Pro Sicherheitsschrank nicht mehr als 3 Waffen gleichzeitig aufbewahrt werden",
+        "D) Waffen und Munition getrennt voneinander aufbewahrt werden"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 32,
+      "question": "Was beinhaltet die ASR A1.3?",
+      "options": [
+        "A) Allgemeine Vorgaben der Berufsgenossenschaften für alle Branchen",
+        "B) Grundsätze der Prävention",
+        "C) Sicherheits- und Gesundheitsschutzkennzeichnungen am Arbeitsplatz",
+        "D) Unfallverhütungsvorschriften für das Bewachungsgewerbe"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 33,
+      "question": "Was sind u.a. Pflichten des Unternehmers?",
+      "options": [
+        "A) Der Unternehmer muss seinen Mitarbeitern einen Abdruck der DGUV Vorschrift 1 und 23 sowie der ASR A1.3 aushändigen",
+        "B) Der Unternehmer muss eine Gefährdungsbeurteilung durchführen",
+        "C) Der Unternehmer muss eine Gefährdungsbeurteilung sowohl für die Berufsgenossenschaft, als auch das Ordnungsamt und Zoll dokumentieren",
+        "D) Der Unternehmer darf keine sicherheitswidrigen Weisungen erteilen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 34,
+      "question": "Welche Aussage/n im Sinne des § 25 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Zur Sicherung der Werte sollte der Koffer fest mit dem Boten verbunden sein",
+        "B) Grundsätzlich muss der Geldtransport durch Boten im öffentlichen Bereich mit mindestens zwei Sicherheitsmitarbeitern durchgeführt werden",
+        "C) Zur schnelleren und unauffälligeren Bearbeitung können beide Sicherheitsmitarbeiter Koffer oder Werte tragen",
+        "D) Wenn Geld unauffällig in bürgerlicher Kleidung transportiert wird, kann den Transport auch ein Mitarbeiter allein übernehmen"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 35,
+      "question": "Der Gewerbetreibende ist dazu verpflichtet, jedem neu eingestellten Sicherheitsmitarbeiter, gegen Unterschrift die allgemeine Dienstanweisung, sowie die Unfallverhütungsvorschriften auszuhändigen. Welche Inhalte müssen zwingend in einer allgemeinen Dienstanweisung enthalten sein?",
+      "options": [
+        "A) Das Verbot betäublicher Befugnisse",
+        "B) Anweisungen über Notwendigkeiten etc.",
+        "C) Spezifische, Objekt- und / oder aufgabenbezogene Anweisungen und Handlungsabläufe"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 36,
+      "question": "Wie sehen Warnzeichen aus?",
+      "options": [
+        "A) Quadratisches oder rechteckiges Schild mit weißem Symbol auf rotem Hintergrund",
+        "B) Schwarzer Rand und schwarzes Piktogramm auf gelbem Hintergrund",
+        "C) Rundes Schild mit schwarzem Symbol auf weißem Hintergrund mit rotem Rand und einem roten Querstrich",
+        "D) Rundes Schild mit weißem Symbol auf blauem Hintergrund"
+      ],
+      "correct_answers": ["B"],
+      "explanation": ""
+    },
+    {
+      "id": 37,
+      "question": "Verbotszeichen...",
+      "options": [
+        "A) ... verpflichten zur Einhaltung eines Gebotes",
+        "B) ... sind ein blauer Kreis mit weißen Symbolen",
+        "C) ... sind weiße Kreise mit schwarzen Symbolen und rotem Kreis mit Querstrich",
+        "D) ... verbieten ein bestimmtes Verhalten"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 38,
+      "question": "Welchen Zweck haben die Berufsgenossenschaften?",
+      "options": [
+        "A) Durchführung von Erste-Hilfe-Maßnahmen am Arbeitsort",
+        "B) Gesetzgebung auf EU-weiter Ebene",
+        "C) Unfallversicherung der Arbeitnehmer für berufliche Tätigkeiten",
+        "D) Förderung der Verhütung von Arbeitsunfällen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 39,
+      "question": "Für wen gelten die allgemeinen Unfallverhütungsvorschriften?",
+      "options": [
+        "A) Für alle Arbeitnehmer und Arbeitgeber in Deutschland",
+        "B) Nur für Mitarbeiter und Arbeitgeber des Bewachungsgewerbes",
+        "C) Nur deutsche Arbeitgeber",
+        "D) Nur deutsche Arbeitnehmer"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 40,
+      "question": "Was sind u.a. Pflichten der Mitarbeiter?",
+      "options": [
+        "A) Mindestens halbjährlich einen Abdruck der DGUV Vorschrift 1 und 23, sowie der ASR A1.3 unterzeichnen",
+        "B) Gefahren in einem Objekt sind sofort zu melden",
+        "C) Jeden Alkoholkonsum dem Unternehmer anzeigen",
+        "D) Arbeitsmittel dürfen nur entsprechend der Anweisung genutzt werden"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 41,
+      "question": "Was sind die Folgen eines Verstoßes gegen die berufsgenossenschaftlichen Vorschriften?",
+      "options": [
+        "A) Ordnungswidrigkeitenverfahren",
+        "B) Kündigung des Arbeitsverhältnisses bei Mitarbeiter",
+        "C) Entzug der Gewerbeerlaubnis bei Unternehmen",
+        "D) Strafverfahren"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 42,
+      "question": "Was enthält § 11 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Hundezwinger",
+        "B) Objekteinweisung",
+        "C) Brillenträger",
+        "D) Ausrüstung des Wach- und Sicherheitspersonals"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 43,
+      "question": "Welche Verstöße können von den Berufsgenossenschaften nur geahndet werden?",
+      "options": [
+        "A) Vorsätzliche und fahrlässige Verstöße gegen die berufsgenossenschaftlichen Vorschriften",
+        "B) Im Dienst begangene Straftaten",
+        "C) Nur vorsätzliche Verstöße gegen die berufsgenossenschaftlichen Vorschriften",
+        "D) Alle Taten, die andere Menschen verletzen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 44,
+      "question": "Welche dieser Personen darf als Bote im Geld- und Werttransport arbeiten?",
+      "options": [
+        "A) 56-jähriger, 34a Sachkundenachweis, zuverlässig, geeignet und unterwiesen",
+        "B) 21-jähriger, 40-stündige Unterrichtung, zuverlässig, geeignet und unterwiesen",
+        "C) 17-jähriger, Fachkraft für Schutz und Sicherheit, zuverlässig, geeignet und unterwiesen",
+        "D) 24-jähriger, 80-stündige Unterrichtung, unzuverlässig, geeignet und unterwiesen"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": "Für den Geld- und Werttransport müssen Mitarbeiter mindestens 18 Jahre alt sein, zuverlässig, geeignet und entsprechend unterwiesen sein. Sowohl der 34a Sachkundenachweis als auch die 40-stündige Unterrichtung sind ausreichende Qualifikationen. Der 17-jährige ist zu jung, der 24-jährige ist unzuverlässig."
+    },
+    {
+      "id": 45,
+      "question": "Müssen Geldtransporte durch Boten immer von zwei Sicherheitsmitarbeitern durchgeführt werden?",
+      "options": [
+        "A) Ja, ausnahmslos",
+        "B) Nein, wenn das Geld unauffällig in ziviler Kleidung getragen wird",
+        "C) Nein, wenn die Sicherheitsmitarbeiter schusssichere Schutzwesten bei sich tragen",
+        "D) Nein, wenn ausschließlich Hartgeld transportiert wird und dies für Außenstehende auch erkennbar ist"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 46,
+      "question": "Wann dürfen Hunde auch ohne entsprechende Schutzhundeausbildung im Sicherheits- und Wachgewerbe eingesetzt werden?",
+      "options": [
+        "A) Wenn diese mindestens alle 30 Minuten eine Pause erhalten",
+        "B) Wenn diese nur zu Wahrnehmungs- und Meldeaufgaben eingesetzt werden",
+        "C) Wenn diese mind. 5 Jahre alt sind",
+        "D) Wenn zwei Hunde gleichzeitig eingesetzt werden"
+      ],
+      "correct_answers": ["B"],
+      "explanation": ""
+    },
+    {
+      "id": 47,
+      "question": "DGUV steht für...",
+      "options": [
+        "A) ...Deutsche Gesetzliche Unfallversicherung",
+        "B) ...Deutsche Gemeinschaft für Unfallverhütungsvorschriften",
+        "C) ...Deutsche Gesellschaft für Unfallverhütung"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 48,
+      "question": "Welche Aussage/n im Sinne des § 4 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Das sicherheitsgerechte Verhalten bei besonderen Gefahren ist so weit wie möglich zu üben",
+        "B) Die Mitarbeiter müssen mindestens 2x pro Jahr anhand der Dienstanweisung unterwiesen werden",
+        "C) Die Dienstanweisung muss enthalten, dass allein der Unternehmer für den Arbeitsschutz verantwortlich ist",
+        "D) Der Unternehmer hat eine Dienstanweisung zu erstellen, in der festgelegt sein muss, dass seine Mitarbeiter Mängel und Gefahren bei der Arbeit weiter zu melden haben"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 49,
+      "question": "Wer ist nach dem Sozialgesetzbuch VII kraft Gesetz unfallversichert?",
+      "options": [
+        "A) Beschäftigte",
+        "B) Familienangehörige des Beschäftigten",
+        "C) Arbeitgeber",
+        "D) Personen die bei Unglücksfällen Hilfe leisten"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 50,
+      "question": "Welche Aussage/n im Sinne des § 6 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Ein Unternehmer darf einen Bewachungsauftrag erst übernehmen, wenn Gefahrenstellen im und am Objekt beseitigt oder ausreichend abgesichert sind",
+        "B) Ein Unternehmer darf einen Bewachungsauftrag erst übernehmen, wenn Gefahrenstellen im und am Objekt bekannt und dokumentiert sind",
+        "C) Der Sicherheitsmitarbeiter muss die Durchführung von Nebentätigkeiten dokumentieren",
+        "D) Nebentätigkeiten von Sicherheitsmitarbeitern im Dienst, müssen festgehalten sein"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 51,
+      "question": "Die DGUV Vorschrift 23 fordert den Gewerbetreibenden auf, zum Zwecke der Unfallverhütung, für bestimmte Dienste, Regelungen für das Tragen von Schutzwerk aufzustellen. Dies bedeutet dass...",
+      "options": [
+        "A) ...Der SMA in unwegsamen Gelände festes Schuhwerk tragen muss, dass widerstandsfähig gegen mögliche, mechanische Belastungen ist und das zusätzlich ggf. mit einem Knöchelschutz und rutschhemmenden Profilsohlen versehen ist",
+        "B) ...Der Gewerbetreibende darauf hinweisen muss, dass seine SMA geeignetes Schuhwerk tragen müssen, dass den Witterungsverhältnissen angepasst sein muss",
+        "C) ...Der SMA für sich selbst entscheidet, welche Schuhe er im Dienst trägt, z.B. Sandalen",
+        "D) ...Der SMA nur dann die Anweisungen des Sicherheitsdienstleisters befolgen muss, wenn dieser als sein Arbeitgeber die Kosten für die zu tragenden Schuhe übernimmt"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 52,
+      "question": "Wie kann sich ein Unternehmer über die Unversehrtheit seiner Mitarbeiter in einem Objekt mit besonderen Gefahren vergewissern?",
+      "options": [
+        "A) Personenmessgerätanlage (PMA)",
+        "B) Übergangsbestätigung durch nachfolgenden Sicherheitsmitarbeiter",
+        "C) Regelmäßige telefonische Meldung",
+        "D) Eintragung des Mitarbeiters in ein Wachbuch zu Dienstbeginn und -ende"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 53,
+      "question": "In einer allgemeinen und in einer objektbezogenen Dienstanweisung sollen gem. der DGUV Vorschrift 23 (ehemals BGV C7) Anforderungen an die Sicherheitsmitarbeiter festgelegt werden, um die Schutzziele der Unfallverhütung zu erreichen. Welche der nachstehenden Beispiele sind grundsätzlich der „allgemeinen Dienstanweisung zu entnehmen?",
+      "options": [
+        "A) Äußeres Erscheinungsbild und Zuverlässigkeit",
+        "B) Verbot berauschender Mittel",
+        "C) Festschreibung der Weisungsbefugnisse und Unterstellungsverhältnisse",
+        "D) Beschreibung der Aufgaben im Tor- und Pfortendienst"
+      ],
+      "correct_answers": ["A", "B"],
+      "explanation": ""
+    },
+    {
+      "id": 54,
+      "question": "Welche Aussage/n im Sinne des § 11 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Brillenträger müssen eine Ersatzbrille mitführen, wenn sie ihre Brille nicht gegen Verlieren sichern",
+        "B) Mitarbeiter die eine Brille tragen, müssen immer eine Ersatzbrille mit sich führen",
+        "C) Die maximal zulässige Dioptrinzahl für Sicherheitsmitarbeiter beträgt +/-5",
+        "D) Mitarbeiter die eine Brille tragen, müssen diese gegen Verlieren sichern"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 55,
+      "question": "Eine Sicherheitsfirma bekommt ein neues Objekt welches von Revierfahrern mehrmals pro Nacht angefahren werden soll. Was muss der Sicherheitsunternehmer veranlassen?",
+      "options": [
+        "A) Es muss eine Überprüfung des Objekts auf Gefahren für die Gesundheit der Sicherheitsmitarbeiter erfolgen",
+        "B) Er muss keine besonderen Maßnahmen ergreifen",
+        "C) Mögliche Gefahren für seine Sicherheitsmitarbeiter müssen abgestellt werden",
+        "D) Er muss die Mitarbeiter mind. eine Woche lang in das Objekt einarbeiten lassen"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 56,
+      "question": "Was sollte in einer objektbezogenen Dienstanweisung enthalten sein?",
+      "options": [
+        "A) Durchzuführende Nebentätigkeiten sollten schriftlich festgehalten sein",
+        "B) Gefahren im Objekt brauchen nicht schriftlich festgehalten werden",
+        "C) Die Weitergabe der Informationen kann mündlich erfolgen",
+        "D) Möglichst genauer Ablauf der Tätigkeiten, die Sicherheitsmitarbeiter während des Dienstes durchzuführen haben, sollte erfasst sein"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 57,
+      "question": "Gemäß DGUV VORSCHRIFT 23, ist das Führen von...",
+      "options": [
+        "A) Reizstoffsprühgeräten im Dienst nicht erlaubt",
+        "B) Waffen aller Art im Dienst untersagt",
+        "C) Feuerwaffen im Dienst verboten",
+        "D) Schreck- und Gasschusswaffen im Dienst unzulässig"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 58,
+      "question": "Was ist ein Arbeitsunfall/Wegeunfall?",
+      "options": [
+        "A) Nur Unfälle, die während der Ausführung eines dienstlichen Auftrags geschehen und eine Berufsunfähigkeit von mehr als 3 Tagen zur Folge haben",
+        "B) Ein Unfall der während der Ausübung des Dienstes geschieht",
+        "C) Ein Unfall der auf dem Weg eines Mitarbeiters zur Arbeitsstätte passiert",
+        "D) Jeder Unfall der während der Dienstzeit passiert"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 59,
+      "question": "Welche Aussage/n im Sinne des § 3 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Die Aufzeichnungen über die entsprechenden Belehrungen sind auf Anfrage an das zuständige Ordnungsamt zu senden",
+        "B) Der Unternehmer muss Aufzeichnungen erstellen, in denen festgehalten ist, dass die Mitarbeiter die für ihre Aufgabe entsprechenden Belehrungen besitzen",
+        "C) Der Unternehmer hat dafür zu sorgen, dass die Mitarbeiter für die entsprechende Tätigkeit körperlich und psychisch geeignet sind",
+        "D) Ein Sicherheitsunternehmer muss sicherstellen, dass alle Sicherheitsmitarbeiter, die im Veranstaltungsschutz arbeiten, eine Erste-Hilfe-Ausbildung besitzen"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 60,
+      "question": "Was enthält § 3 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Pflichten der Unternehmer",
+        "B) Pflichten der Versicherten",
+        "C) Voraussetzungen für Unternehmer"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 61,
+      "question": "Für wen gilt die DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Nur für Bewachungsunternehmen, die im Objektwachdienst tätig sind",
+        "B) Nur für Tätigkeiten, die die Sachkundeprüfung nach §34a GewO erfordern",
+        "C) In allen Sicherheitsdienstleistungsbereichen nach §34a GewO",
+        "D) Im Geld- und Werttransport"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 62,
+      "question": "Was enthält § 12 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Hunde",
+        "B) Hundeführer",
+        "C) Hundehaltung in Objekten",
+        "D) Hundezwinger"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 63,
+      "question": "Was enthält § 19 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Aufbewahrung von Schusswaffen",
+        "B) Führen von Schusswaffen und Munition",
+        "C) Schusswaffen",
+        "D) Übergabe von Schusswaffen"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 64,
+      "question": "Was haben Brillenträger im Sicherheitsgewerbe zu beachten?",
+      "options": [
+        "A) Die Brille ist gegen Verlust zu sichern, oder es ist eine Ersatzbrille mitzuführen",
+        "B) Die Tauglichkeit der Brille für die Tätigkeit im Sicherheitsgewerbe muss vor Beginn der Tätigkeit bei der zuständigen Berufsgenossenschaft geprüft werden",
+        "C) Die Gläser ihrer Dienstbrille müssen mit einem speziellen splitter- und bruchsicheren Glas versehen sein",
+        "D) Brillenträger müssen zwei Ersatzbrillen mitführen, für den Fall, dass auch die erste Ersatzbrille beschädigt werden sollte"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 65,
+      "question": "Was enthält § 25 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Ausrüstung mit Schusswaffen",
+        "B) Geldtransporte durch Boten",
+        "C) Eignung für Geldtransporte",
+        "D) Aufbewahrung von Schusswaffen"
+      ],
+      "correct_answers": ["B"],
+      "explanation": ""
+    },
+    {
+      "id": 66,
+      "question": "Die Unfallverhütungsvorschriften für das Bewachungsgewerbe werden in verschiedenen, berufsgenossenschaftlichen Vorschriften festgehalten. Welche der nachfolgenden Aussagen in Bezug auf die UVV trifft zu?",
+      "options": [
+        "A) In der DGUV Vorschrift 9 geht es um die Sicherheitskennzeichen und ihre Funktionen",
+        "B) Brillen sind laut DGUV Vorschrift 1 gegen Verlust zu sichern oder es ist eine Ersatzbrille bei sich zu führen als SMA",
+        "C) Gemäß DGUV Vorschrift 23 müssen Sicherheitsmitarbeiter die während ihrer Tätigkeit besonderen Gefahren ausgesetzt sind, überwacht werden",
+        "D) Laut der Bewachungsverordnung muss dem SMA ein Exemplar der DGUV Vorschrift 23 sowie Dienstbekleidung gegen Unterschrift ausgehändigt werden"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 67,
+      "question": "Welche Aussage/n im Sinne des § 8 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Der Unternehmer kann vom Kunden verlangen, dass entsprechende Gefahrenstellen beseitigt oder abgesichert werden. Sollte der Kunde diesem nicht nachkommen, muss der Unternehmer den Bewachungsauftrag sofort abbrechen und die zuständige Berufsgenossenschaft informieren",
+        "B) Die erstmalige Prüfung eines Objektes muss dokumentiert werden, alle weiteren Prüfungen innerhalb des Folgejahres müssen nicht dokumentiert werden",
+        "C) Der Unternehmer kann vom Kunden verlangen, dass entsprechende Gefahrenstellen beseitigt oder abgesichert werden",
+        "D) Der Unternehmer muss Kundenobjekte regelmäßig auf Gefahrenstellen für seine Mitarbeiter überprüfen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 68,
+      "question": "Was enthält § 16 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Übergabe von Schusswaffen",
+        "B) Führen von Schusswaffen und Munition",
+        "C) Ausrüstung mit Schusswaffen",
+        "D) Aufbewahrung von Schusswaffen"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 69,
+      "question": "Welche Aussage/n im Sinne des § 12 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Hunde dürfen grundsätzlich nicht alleine ohne Hundeführer eingesetzt werden",
+        "B) Der Einsatz von Hunden bedarf einer Prüfung durch die zuständige Berufsgenossenschaft",
+        "C) Hund und Hundeführer müssen mindestens eine einjährige Ausbildung in einer Hundeschule vorweisen können",
+        "D) Ältere Hunde mit geringer Leistung dürfen nicht mehr für Bewachungsaufgaben eingesetzt werden"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 70,
+      "question": "Was enthält § 15 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Hundeführer",
+        "B) Hundezwinger",
+        "C) Hunde",
+        "D) Hundehaltung in Objekten"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 71,
+      "question": "Was muss der Unternehmer gemäß § 10 DGUV VORSCHRIFT 23 gewährleisten?",
+      "options": [
+        "A) Dass seine Mitarbeiter, bei denen Schäden an Arbeitsmitteln entstehen, für den Schaden aufkommen müssen",
+        "B) Dass seine Mitarbeiter nach jedem Dienst die ausgegebenen Gegenstände persönlich zurück in die Firma bringen",
+        "C) Dass seine Mitarbeiter Schutzwerk tragen, welches den Gefahren der jeweiligen Wachtätigkeit angemessen ist (z.B. Schutz mit Stahlkappen)",
+        "D) Dass seine Mitarbeiter, die Arbeit im Dunkeln versehen, mit leistungsfähigen Handleuchten ausgestattet sind"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 72,
+      "question": "Was enthält § 8 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Überprüfung von Objekten",
+        "B) Dienstanweisung",
+        "C) Übernahme von Objekten",
+        "D) Objekteinweisung"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 73,
+      "question": "Was stellen Verstöße gegen die berufsgenossenschaftlichen Verordnungen dar?",
+      "options": [
+        "A) Straftaten",
+        "B) Ordnungswidrigkeiten",
+        "C) Weder Ordnungswidrigkeiten noch Straftaten",
+        "D) Verstöße, die mit einem Bußgeld geahndet werden können"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 74,
+      "question": "Was ist ein Rettungsweg?",
+      "options": [
+        "A) Ein Rettungsweg ist immer der kürzeste Weg in ein Gebäude",
+        "B) Der Rettungsweg ist mit viereckigen Schildern mit weißen Symbolen auf rotem Hintergrund ausgeschildert",
+        "C) Der Weg, den betroffene Personen im Notfall benutzen können, um sicher und schnellstmöglich aus dem Gebäude zu gelangen",
+        "D) Der Weg, den die Rettungskräfte nutzen um in das Gebäude zu gelangen"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 75,
+      "question": "Welche Aussage/n im Sinne des § 10 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Ein Sicherheitsmitarbeiter kann nach eigenem Ermessen entscheiden, wann er welche Schutzausrüstung benutzt",
+        "B) Wenn Ausrüstung oder Hilfsmittel angelegt werden, darf die Bewegungsfreiheit, insbesondere der Hände, nicht zu stark beeinträchtigt sein",
+        "C) Stellt der Unternehmer Arbeitsmittel oder Schutzausrüstung zur Verfügung, hat der Mitarbeiter diese zu nutzen",
+        "D) Jeder Mitarbeiter muss mit einer Taschenlampe ausgerüstet sein"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 76,
+      "question": "Welche Aussage/n im Sinne des § 7 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Der Sicherheitsunternehmer hat sicherzustellen, dass seine Mitarbeiter ggf. bei der Ausübung des Dienstes überwacht werden",
+        "B) Ein Sicherheitsunternehmer muss sich Mitarbeiter zu Dienstbeginn immer anmelden, und zu Dienstende immer abmelden lassen",
+        "C) Der Mitarbeiter muss Arbeitsschutzmaßnahmen des Arbeitgebers nur dulden, wenn er damit einverstanden ist",
+        "D) Der Unternehmer muss dem Einsatzleiter die Befugnis erteilen, die Mitarbeiter zu überwachen und ggf. auf ihre Fehler im Dienst hinzuweisen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 77,
+      "question": "Welche Aussage/n im Sinne des § 13 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Es muss möglich sein, Hunde einzeln zu halten, wenn diese in Zwingern gehalten werden",
+        "B) Der Eingang des Zwingers muss zweigleisig mit einem Vorhangschloss gesichert werden",
+        "C) Der Unternehmer muss den Zwinger mit einem Warnzeichen Achtung, bissiger Hund sichern",
+        "D) Der Zwinger darf nur vom Hundeführer, oder beauftragten Personen, die dem Hund vertraut sind, betreten werden"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 78,
+      "question": "Was müssen Sicherheitsmitarbeiter beachten?",
+      "options": [
+        "A) Verstöße gegen die berufsgenossenschaftlichen Vorschriften können u.a. Bußgeldverfahren mit sich bringen",
+        "B) Sie müssen eine Objektanweisung mindestens 2x jährlich lesen und unterschreiben",
+        "C) Medikamente können die rechtlich geforderte Nüchternheit zu Dienstbeginn beeinflussen",
+        "D) Sie müssen Maßnahmen zum Arbeitsschutz für den Unternehmer aufzeichnen"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 79,
+      "question": "Wie viele Sicherheitsmitarbeiter sollen einen Geld- und Werttransport grundsätzlich übernehmen?",
+      "options": [
+        "A) 1",
+        "B) 2",
+        "C) 3",
+        "D) 4"
+      ],
+      "correct_answers": ["B"],
+      "explanation": ""
+    },
+    {
+      "id": 80,
+      "question": "Rettungszeichen...",
+      "options": [
+        "A) ... sind ein quadratisches oder rechteckiges Schild mit weißem Symbol auf rotem Hintergrund",
+        "B) ... sind ein rechteckiges oder quadratisches Schild mit weißem Symbol auf grünem Hintergrund",
+        "C) ... zeigen Mittel zur Meldung, Bekämpfung oder Flucht vor Bränden an",
+        "D) ... weisen einem die Rettungswege aus"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 81,
+      "question": "Was beinhaltet die DGUV Vorschrift 1?",
+      "options": [
+        "A) Grundsätze der Prävention",
+        "B) Unfallverhütungsvorschriften für das Bewachungsgewerbe",
+        "C) Sicherheits- und Gesundheitsschutzkennzeichnungen am Arbeitsplatz",
+        "D) Allgemeine Vorgaben der Berufsgenossenschaften für alle Branchen"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 82,
+      "question": "Wenn ein Unternehmer Schusswaffen in seinem Unternehmen einsetzt, muss er sicherstellen, dass...",
+      "options": [
+        "A) Jeder Sicherheitsmitarbeiter darf nur seine eigene Schusswaffe benutzen",
+        "B) Er hat dafür zu sorgen, dass die Schusswaffen nur außerhalb von geschlossenen Räumen geladen werden",
+        "C) Die Munition muss den waffenrechtlichen Vorschriften entsprechend aufbewahrt werden",
+        "D) Er hat dafür zu sorgen, dass nur Mitarbeiter eine Schusswaffe ausgehändigt bekommen, die die entsprechende Eignung und Genehmigung dafür haben"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 83,
+      "question": "Darf ein Sicherheitsmitarbeiter, gemäß DGUV VORSCHRIFT 23, berauschende Mittel zu sich nehmen?",
+      "options": [
+        "A) Ja, allerdings nicht im Dienst und auch nicht in angemessenem Zeitraum vor Dienstbeginn",
+        "B) Nein, Sicherheitsmitarbeiter dürfen nie trinken - außerdem muss der Arbeitgeber vor jeder Schicht eine Atemprobe entnehmen",
+        "C) Ja, bei Dienstantritt muss aber Nüchternheit vorliegen",
+        "D) Nein, Sicherheitsmitarbeiter haben eine besondere Verantwortung gegenüber der Öffentlichkeit. Daher dürfen Sie nie berauschende Mittel zu sich nehmen"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 84,
+      "question": "Was können Berufsgenossenschaften tun?",
+      "options": [
+        "A) Unternehmer verpflichtend zu Weiterbildungen zum Thema Arbeitsschutz einfordern",
+        "B) Mitgliedsunternehmen prüfen",
+        "C) Anordnungen für Unternehmen treffen",
+        "D) Mitgliedsunternehmen, in denen zu viele Arbeitsunfälle passieren, kündigen"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 85,
+      "question": "Wie können Arbeitsunfälle vermieden / verhindert werden?",
+      "options": [
+        "A) Sicherheitsmitarbeiter werden allgemein darauf hingewiesen, dass sie zu Arbeitsunfällen kommen kann",
+        "B) Mensch und Gefahr werden durch entsprechende Schutzmaßnahmen voneinander getrennt (z.B. durch Zutrittsverbote)",
+        "C) Der SMA fordert seine Kollegen auf, sich nach Möglichkeit an die Bestimmungen der Unfallverhütungsvorschriften zu halten",
+        "D) Die Gefahr wird vom SMA erkannt und sofort beseitigt sofern möglich"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 86,
+      "question": "Schusswaffen müssen...",
+      "options": [
+        "A) Beim Tragen nicht gesichert werden",
+        "B) In geeigneten Trageeinrichtungen geführt werden",
+        "C) Gegen Abgleiten und Herausfallen gesichert sein"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 87,
+      "question": "Was enthält § 5 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Dienstanweisung",
+        "B) Objekteinweisung",
+        "C) Tätigkeit mit besonderen Gefahren",
+        "D) Verbot berauschender Mittel"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 88,
+      "question": "Welche Aussage/n im Sinne des § 9 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Der Unternehmer hat dafür zu sorgen, dass seine Mitarbeiter in das zu sichernde Objekt und die entsprechenden Gefahren eingewiesen werden",
+        "B) Eine Objekteinweisung hat einmalig zu beteiligten Tages- oder Nachtzeit zu erfolgen",
+        "C) Bei einer Objekteinweisung muss mindestens ein Dritter anwesend sein, der die Unterweisung bezeugen kann",
+        "D) Werden Hunde in einem Objekt eingesetzt, müssen die Mitarbeiter über das Verhalten bei der Begegnung mit diesen Hunden unterwiesen werden"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 89,
+      "question": "Wie sind dauerhaft gekennzeichnete Gefahrenstellen erkennbar?",
+      "options": [
+        "A) Gelb-schwarz gestreifte Markierung",
+        "B) Grün-weiß gestreifte Markierung",
+        "C) Blau-weiß gestreifte Markierung",
+        "D) Rot-weiß gestreifte Markierung"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 90,
+      "question": "Welche Aussage/n im Sinne des § 21 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Jedes Hantieren mit einer Waffe muss so erfolgen, dass keine anderen Personen durch einen Schuss verletzt werden können",
+        "B) Nach Dienstende und der Einlagerung der Waffe muss diese bis zum Beginn der nächsten Schicht nicht entladen werden",
+        "C) Über einer Kugelfangeinrichtung kann eine Waffe auch im geladenen Zustand übergeben werden",
+        "D) Schusswaffen dürfen nur im entladenen Zustand übergeben werden"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 91,
+      "question": "Was enthält § 6 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Eignung der Versicherten",
+        "B) Verbot berauschender Mittel",
+        "C) Übernahme von Wachaufgaben",
+        "D) Dienstanweisung"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 92,
+      "question": "Welche Aussagen zur Objekteinweisung sind korrekt?",
+      "options": [
+        "A) Wird keine Objekteinweisung durchgeführt, müssen immer zwei Sicherheitsmitarbeiter den Dienst versehen",
+        "B) Eine Objekteinweisung muss immer durch den Unternehmer persönlich durchgeführt werden",
+        "C) Der Unternehmer hat dafür zu sorgen, dass seine Mitarbeiter in das Objekt und die objektspezifischen Gefahren eingewiesen werden",
+        "D) Eine Einweisung in ein Objekt muss zu der Zeit, zu der der Dienst geleistet wird, erfolgen"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 93,
+      "question": "Wer erlässt und genehmigt die Unfallverhütungsvorschriften für das Bewachungsgewerbe?",
+      "options": [
+        "A) Erlassen werden die Unfallverhütungsvorschriften durch das Bundesministerium für Arbeit und Sozialordnung. Genehmigt werden diese durch die zuständige Berufsgenossenschaft (im Bewachungsgewerbe die VBG)",
+        "B) Erlassen werden die Unfallverhütungsvorschriften durch die zuständigen Krankenkassen und genehmigt durch die für das Bewachungsgewerbe zuständige Verwaltungsberufsgenossenschaft (VBG)",
+        "C) Erlassen werden die Unfallverhütungsvorschriften durch die zuständige Berufsgenossenschaft (im Bewachungsgewerbe die VBG). Genehmigt werden diese durch das Bundesministerium für Arbeit und Sozialordnung"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 94,
+      "question": "Welche Aussage/n im Sinne des § 5 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Sicherheitsmitarbeiter dürfen im Dienst keine Zigaretten konsumieren, da diese nach DGUV VORSCHRIFT 23 als Rauschmittel gelten",
+        "B) Sicherheitsmitarbeiter dürfen während der Ausübung ihres Dienstes nicht unter dem Einfluss berauschender Mittel stehen",
+        "C) Sicherheitsmitarbeiter dürfen nie berauschende Mittel zu sich nehmen",
+        "D) Der Mitarbeiter darf im angemessenen Zeitraum vor Dienstbeginn berauschende Mittel zu sich nehmen, wenn der Abbau bis Dienstende erfolgt ist"
+      ],
+      "correct_answers": ["B"],
+      "explanation": ""
+    },
+    {
+      "id": 95,
+      "question": "Was enthält § 9 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Objekteinweisung",
+        "B) Übernahme von Objekten",
+        "C) Dienstanweisung",
+        "D) Tätigkeiten mit besonderen Gefahren"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 96,
+      "question": "Was enthält § 10 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Objekteinweisung",
+        "B) Hundezwinger",
+        "C) Ausrüstung des Wach- und Sicherheitspersonals",
+        "D) Brillenträger"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    },
+    {
+      "id": 97,
+      "question": "Welche Aussage/n im Sinne des § 19 DGUV VORSCHRIFT 23 ist/sind korrekt?",
+      "options": [
+        "A) Die Instandsetzung von Schusswaffen muss der Unternehmer von einer berechtigten Person durchführen lassen",
+        "B) Dienstliche Schusswaffen müssen alle 2 Jahre von einem Sachkundigen auf ihre Handhabungssicherheit geprüft werden",
+        "C) Es kann jede Art von Schusswaffen, außer den verbotenen Waffen im Dienst geführt werden",
+        "D) Der Unternehmer darf Schusswaffen, die in einem beliebigen Land der Europäischen Union angemeldet sind, für Bewachungsaufträge nutzen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 98,
+      "question": "Wie werden Verstöße gegen bestimmte Verordnungen aus der DGUV Vorschrift 1 geahndet?",
+      "options": [
+        "A) Freiheitsstrafe",
+        "B) Schadensersatz",
+        "C) Geldstrafe",
+        "D) Bußgeld"
+      ],
+      "correct_answers": ["D"],
+      "explanation": ""
+    },
+    {
+      "id": 99,
+      "question": "Was sind im Sinne der DGUV Vorschrift 23 Nebentätigkeiten?",
+      "options": [
+        "A) Andere, gewerbliche Tätigkeiten während der Leerlaufzeiten im Wachdienst",
+        "B) Sicherheitstätigkeiten nach eigenem Ermessen und in eigener Verantwortung",
+        "C) Mündliche und individuelle Absprachen"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 100,
+      "question": "Was muss ein Unternehmer tun, bevor er ein Kundenobjekt zur Bewachung übernimmt?",
+      "options": [
+        "A) Überprüfung des Objektes auf gesundheitliche Gefahren für seine Mitarbeiter",
+        "B) Kontrolle des Objektes zu mindestens drei unterschiedlichen Zeiten innerhalb von 24 Stunden",
+        "C) Gegebenenfalls den Kunden informieren, damit dieser bestimmte Gefahren für die Mitarbeiter des Sicherheitsdienstes abstellen kann",
+        "D) Persönliche Kontrolle des kompletten Objektes"
+      ],
+      "correct_answers": ["A", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 101,
+      "question": "Was ist ein Arbeitsunfall?",
+      "options": [
+        "A) Jegliche Verletzung eines Mitarbeiters",
+        "B) Ein Unfall einer versicherten Person bei einer versicherten Tätigkeit",
+        "C) Ein Unfall, der bei der privaten Arbeit im Garten passiert",
+        "D) Ein Unfall eines Mitarbeiters einer Firma in der Pause zwischen einer beruflichen Tätigkeit"
+      ],
+      "correct_answers": ["B", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 102,
+      "question": "Brandschutzzeichen...",
+      "options": [
+        "A) ... sind ein quadratisches oder rechteckiges Schild mit weißem Symbol auf rotem Hintergrund",
+        "B) ... weisen einem die Rettungswege aus",
+        "C) ... sind ein rechteckiges oder quadratisches Schild mit weißem Symbol auf grünem Hintergrund",
+        "D) ... zeigen Mittel zur Meldung, Bekämpfung oder Flucht vor Bränden an"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 103,
+      "question": "Was bedeutet in Zusammenhang mit dem Transport von Geld -, in gutbürgerlicher Kleidung?",
+      "options": [
+        "A) Es ist keine uniformähnliche Dienstkleidung zu tragen",
+        "B) Es ist Jeans, T-Shirt oder Pullover sowie eine Jacke zu tragen",
+        "C) Es ist jeden Tag die gleiche Kleidung zu tragen",
+        "D) Auf der Kleidung darf kein Hinweis auf das Sicherheitsunternehmen zu sehen sein"
+      ],
+      "correct_answers": ["A", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 104,
+      "question": "Schusswaffen ...",
+      "options": [
+        "A) Dürfen im Einsatz nicht benutzt werden, da keine Sicherheitserlaubnis vorliegt",
+        "B) Müssen immer im entladenen Zustand übergeben werden",
+        "C) Müssen auf eine Kugelfangeinrichtung gerichtet, geladen und entladen werden",
+        "D) Dürfen niemals entsichert werden"
+      ],
+      "correct_answers": ["B", "C"],
+      "explanation": ""
+    },
+    {
+      "id": 105,
+      "question": "Sicherheitszeichen sind Beschilderungen / Zeichen, dass durch die Kombination von geometrischen Formen und Farben, sowie graphischen Symbolen, bestimmte Sicherheits- und Gesundheitsschutzkennzeichnungen ermöglichen. Warnzeichen sind...",
+      "options": [
+        "A) ...Sind Sicherheitszeichen, welche vor Risiken und Gefahren warnen. Diese sind von der Form her dreieckig und gelb",
+        "B) ...Sind Sicherheitszeichen die ein bestimmtes Verhalten vorschreiben und sind von der Form her rund und blau",
+        "C) ...Sind Sicherheitszeichen, welche Flucht- und Rettungswege, Notausgänge, den Weg zu Erste Hilfe - Einrichtungen oder diese Einrichtungen selbst kennzeichnen. Sie sind von der Form her rechteckig und grün",
+        "D) ...Sind Sicherheitszeichen, welche ein Verhalten, durch das eine Gefahr entstehen kann untersagt. Diese sind von der Form her rund und rot",
+        "E) ...Sind Sicherheitszeichen, die Standorte von Feuermelde- und Feuerlöscheinrichtungen kennzeichnen und sind von der Form her quadratisch und rot"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 106,
+      "question": "Was dürfen Sicherheitsmitarbeiter während des Dienstes nicht?",
+      "options": [
+        "A) Im Dunkeln arbeiten",
+        "B) Ersatzbrille mittragen",
+        "C) Schutzkleidung in Bereichen ablegen wo das Tragen angewiesen ist",
+        "D) Rauschmittel konsumieren"
+      ],
+      "correct_answers": ["C", "D"],
+      "explanation": ""
+    },
+    {
+      "id": 107,
+      "question": "Dürfen ungeprüfte Hunde im Sicherheitsdienst eingesetzt werden?",
+      "options": [
+        "A) Grundsätzlich zwar nicht, jedoch dürfen ungeprüfte Hunde nur zu sog. Meldezwecken eingesetzt werden",
+        "B) Nein, es dürfen ausschließlich nur angemessen ausgebildete und geprüfte Diensthunde eingesetzt werden",
+        "C) Ein ungeprüfter Hund darf uneingeschränkt nur mit einem ausgebildeten Diensthundeführer eingesetzt werden"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 108,
+      "question": "Was enthält § 4 DGUV VORSCHRIFT 23?",
+      "options": [
+        "A) Verbot berauschender Mittel",
+        "B) Dienstanweisung",
+        "C) Übernahme von Wachaufgaben",
+        "D) Eignung der Versicherten"
+      ],
+      "correct_answers": ["B"],
+      "explanation": ""
+    },
+    {
+      "id": 109,
+      "question": "Wann müssen Arbeitsunfälle gemeldet werden und wer ist der entsprechend Ansprechpartner?",
+      "options": [
+        "A) Ein Arbeitsunfall muss der zuständigen Berufsgenossenschaft dann gemeldet werden, wenn dabei ein Mitarbeiter getötet, oder so verletzt wurde, dass er mindestens mehr als 3 Tage arbeitsunfähig ist",
+        "B) Der zuständigen Berufsgenossenschaft muss ein Arbeitsunfall erst dann gemeldet werden, wenn durch diesen eine Arbeitsunfähigkeit von länger als eine Woche verursacht wird",
+        "C) Jeder Arbeitsunfall muss der entsprechend zuständigen Berufsgenossenschaft gemeldet werden",
+        "D) Ein Arbeitsunfall muss der zuständigen Krankenkasse dann gemeldet werden, wenn dabei ein Mitarbeiter getötet, oder so verletzt wurde, dass er mindestens mehr als 3 Tage arbeitsunfähig ist"
+      ],
+      "correct_answers": ["A"],
+      "explanation": ""
+    },
+    {
+      "id": 110,
+      "question": "Wer überwacht die Einhaltung der UVV (Unfallverhütungsvorschriften) nach dem Sozialgesetzbuch VII?",
+      "options": [
+        "A) Polizeibeamte",
+        "B) Beamte des Gewerbeamtes",
+        "C) Technische Aufsichtsbeamte",
+        "D) Beamte des Gewerbaufsichtsamtes"
+      ],
+      "correct_answers": ["C"],
+      "explanation": ""
+    }
+  ]
+}
+
+
+
+

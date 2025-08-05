@@ -31,20 +31,34 @@ const allowedOrigins = [
   'https://teilnehmerportal.bad-kursmanager.de',
   'https://verwaltung.bad-kursmanager.de',
   'https://www.youtube.com/',
+  'https://eval.bad-kursmanager.de',
+  'https://api.bad-kursmanager.de',
 ];
 
 // CORS configuration
 app.use((req, res, next) => {
     const origin = req.headers.origin;
     
-    // Allow localhost development
+    // Allow localhost development and whitelisted origins
     if (origin && (origin.startsWith('http://localhost:') || origin.startsWith('http://127.0.0.1:') || allowedOrigins.includes(origin))) {
         res.header('Access-Control-Allow-Origin', origin);
+        res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+        res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
         res.header('Access-Control-Allow-Credentials', 'true');
-        res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
-        res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-        res.header('Access-Control-Expose-Headers', 'Content-Disposition');
     }
+
+    // Set security headers for iframe and cross-origin access
+    res.header('X-Frame-Options', 'SAMEORIGIN');
+    res.header('Content-Security-Policy', 
+        "default-src 'self'; " +
+        "frame-src 'self' https://www.youtube.com; " +
+        "frame-ancestors 'self' https://www.youtube.com; " +
+        "img-src 'self' data: https: http:; " +
+        "media-src 'self' https://www.youtube.com; " +
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com"
+    );
+    res.header('X-Content-Type-Options', 'nosniff');
+    res.header('Referrer-Policy', 'strict-origin-when-cross-origin');
 
     if (req.method === 'OPTIONS') {
         return res.sendStatus(200);

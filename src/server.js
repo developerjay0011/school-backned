@@ -29,7 +29,8 @@ const allowedOrigins = [
   'http://teilnehmerportal.bad-kursmanager.de',
   'http://verwaltung.bad-kursmanager.de',
   'https://teilnehmerportal.bad-kursmanager.de',
-  'https://verwaltung.bad-kursmanager.de'
+  'https://verwaltung.bad-kursmanager.de',
+  'https://www.youtube.com/',
 ];
 
 // CORS configuration

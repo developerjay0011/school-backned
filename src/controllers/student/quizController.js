@@ -40,18 +40,53 @@ class QuizController {
     async getRandomQuestions(req, res) {
         try {
             const { topic } = req.params;
+            const { isExam } = req.query;
             const count = parseInt(req.query.count) || 10;
 
-            // If topic is 'all', pass null to get questions from all topics
-            const questions = await quizService.getRandomQuestions(topic === 'all' ? null : topic, count);
+            // If isExam=true, get exam questions with specific counts and weightages per topic
+            const questions = await quizService.getRandomQuestions(
+                topic === 'all' ? null : topic,
+                count,
+                isExam === 'true'
+            );
+
             if (!questions) {
                 return res.status(404).json({ error: 'Quiz not found' });
             }
 
-            res.json({ questions });
+            res.json({ 
+                questions,
+                totalQuestions: questions.length,
+                isExam: isExam === 'true'
+            });
         } catch (error) {
             console.error('Error getting random questions:', error);
             res.status(500).json({ error: 'Internal server error' });
+        }
+    }
+
+    async getResults(req, res) {
+        try {
+            // Validate student from auth token
+            if (!req.user || !req.user.student_id) {
+                return res.status(401).json({ error: 'No student ID found in auth token' });
+            }
+            
+            const studentId = req.user.student_id; // From auth middleware
+            
+            // Get all results grouped by topic
+            const results = await QuizAttempt.getStudentResults(studentId);
+            
+            return res.json({
+                success: true,
+                results
+            });
+        } catch (error) {
+            console.error('Error getting quiz results:', error);
+            return res.status(500).json({
+                error: 'Internal server error',
+                details: 'Failed to get quiz results'
+            });
         }
     }
 
@@ -93,17 +128,54 @@ class QuizController {
                 return res.status(400).json({ error: 'Answers must be an array' });
             }
 
+            console.log('Full request body:', JSON.stringify(req.body, null, 2));
+
             // Validate answer format
-            const invalidAnswerFormat = answers.some(answer => {
-                return !answer || 
-                       typeof answer.questionId !== 'string' || 
-                       typeof answer.selectedOption !== 'string';
+            const invalidAnswers = answers.filter(answer => {
+                console.log('\nValidating answer:', JSON.stringify(answer, null, 2));
+                
+                // Check if answer is properly structured
+                if (!answer || typeof answer !== 'object') {
+                    console.log('Invalid: answer is not an object');
+                    return true;
+                }
+
+                // Check questionId
+                if (typeof answer.questionId !== 'string') {
+                    console.log('Invalid: questionId is not a string, got:', typeof answer.questionId);
+                    console.log('questionId value:', answer.questionId);
+                    return true;
+                }
+
+                // Initialize selectedOptions as empty array if missing
+                if (!answer.selectedOptions) {
+                    answer.selectedOptions = [];
+                }
+                
+                // Ensure selectedOptions is an array
+                if (!Array.isArray(answer.selectedOptions)) {
+                    console.log('Invalid: selectedOptions is not an array, got:', typeof answer.selectedOptions);
+                    console.log('selectedOptions value:', answer.selectedOptions);
+                    return true;
+                }
+
+                // Check array elements are strings
+                if (answer.selectedOptions.length > 0 && 
+                    answer.selectedOptions.some(opt => typeof opt !== 'string')) {
+                    console.log('Invalid: some options are not strings');
+                    console.log('selectedOptions:', answer.selectedOptions);
+                    return true;
+                }
+
+                console.log('Answer is valid');
+                return false;
             });
 
-            if (invalidAnswerFormat) {
+            if (invalidAnswers.length > 0) {
+                const invalidQuestionIds = invalidAnswers.map(a => a.questionId).join(', ');
                 return res.status(400).json({
                     error: 'Invalid answer format',
-                    details: 'Each answer must have a questionId (string) and selectedOption (string)'
+                    details: `Each answer must include: questionId (string) and selectedOptions (array of strings). Invalid answers for questions: ${invalidQuestionIds}`
                 });
             }
 
@@ -123,108 +195,161 @@ class QuizController {
                 answersToProcess = answers;
             }
 
-            // Let the quiz service handle topic inference and validation
-            const results = await quizService.validateAnswers(topic, answersToProcess);
-            if (!results) {
+            // For multi-topic submissions, pass null as topic
+            const validationResult = await quizService.validateAnswers(topic || null, answersToProcess, isExam);
+            if (!validationResult || !validationResult.results || !Array.isArray(validationResult.results)) {
                 return res.status(400).json({
-                    error: 'Failed to validate answers',
-                    details: 'Could not validate some answers. Please check question IDs.'
+                    error: 'Validation error',
+                    details: 'Invalid response from quiz validation'
                 });
             }
 
-            let totalScore = results.score;
-            let totalQuestions = results.total;
-            const allResults = topic ? [{
-                topic,
-                score: results.score,
-                total: results.total,
-                results: results.results
-            }] : results.results;
+            // Get scores and results from validation
+            const { results: questionResults } = validationResult;
 
-            // For storing attempts, group answers by topic
-            const answersByTopic = {};
-            if (topic) {
-                answersByTopic[topic] = answersToProcess;
-            } else {
-                // Group by inferred topics
-                for (const result of allResults) {
-                    if (!answersByTopic[result.topic]) {
-                        answersByTopic[result.topic] = [];
-                    }
-                    // Find corresponding answers
-                    const topicAnswers = answersToProcess.filter(a => {
-                        const questionTopic = a.topic || quizService.getTopicFromQuestionId(a.questionId);
-                        return questionTopic === result.topic;
-                    });
-                    answersByTopic[result.topic].push(...topicAnswers);
+            if (!questionResults || questionResults.length === 0) {
+                return res.status(400).json({
+                    error: 'No answers provided',
+                    details: 'You must submit at least one answer'
+                });
+            }
+
+            // Group results by topic
+            const resultsByTopic = {};
+            for (const result of questionResults) {
+                if (!result.topic) {
+                    console.warn('Question result missing topic:', result);
+                    continue;
+                }
+                
+                if (!resultsByTopic[result.topic]) {
+                    resultsByTopic[result.topic] = {
+                        topic: result.topic,
+                        score: 0,
+                        total: 0,
+                        results: [],
+                        unattemptedQuestions: []
+                    };
+                }
+                
+                // Add to topic totals
+                const weightage = result.weightage || 1;
+                resultsByTopic[result.topic].total += weightage;
+                
+                // Add score if question was answered correctly
+                if (result.isCorrect || result.isPartiallyCorrect) {
+                    resultsByTopic[result.topic].score += result.score || 0;
+                }
+                
+                resultsByTopic[result.topic].results.push(result);
+                
+                // Track unattempted questions
+                if (!result.selectedAnswers || result.selectedAnswers.length === 0) {
+                    resultsByTopic[result.topic].unattemptedQuestions.push(result.questionId);
                 }
             }
 
-            // Save attempt to database with retry logic
-            const maxRetries = 3;
-            let attempt = 0;
-            let attemptSaved = false;
+            // Convert to array and calculate percentages
+            const allResults = Object.values(resultsByTopic)
+                .filter(topicResult => topicResult.total > 0) // Only include topics with questions
+                .map(topicResult => ({
+                    topic: topicResult.topic,
+                    score: topicResult.score,
+                    total: topicResult.total,
+                    percentage: (topicResult.score / topicResult.total) * 100,
+                    results: topicResult.results,
+                    unattemptedQuestions: topicResult.unattemptedQuestions
+                }));
 
-            while (attempt < maxRetries && !attemptSaved) {
+            // Save attempts with retry logic
+            let attemptSaved = false;
+            let attempt = 0;
+            const maxAttempts = 3;
+
+            while (!attemptSaved && attempt < maxAttempts) {
                 try {
-                    await QuizAttempt.create({
-                        student_id: studentId,
-                        topic: topic || 'multiple', // Use 'multiple' for multi-topic quizzes
-                        score: totalScore,
-                        total_questions: totalQuestions,
-                        is_exam: isExam,
-                        attempt_date: new Date()
-                    });
+                    if (isExam) {
+                        // For exam attempts, combine all results into one attempt
+                        const totalScore = allResults.reduce((sum, result) => sum + result.score, 0);
+                        const totalQuestions = allResults.reduce((sum, result) => sum + result.total, 0);
+                        const allUnattempted = allResults.reduce((all, result) => 
+                            [...all, ...result.unattemptedQuestions], []);
+
+                        console.log('Saving exam attempt:', {
+                            score: totalScore,
+                            total: totalQuestions,
+                            unattemptedCount: allUnattempted.length
+                        });
+
+                        await QuizAttempt.create({
+                            student_id: studentId,
+                            score: totalScore,
+                            total_questions: totalQuestions,
+                            is_exam: true,
+                            topic: "exam",
+                            unattempted_questions: allUnattempted,
+                            attempt_date: new Date()
+                        });
+                    } else {
+                        // For practice attempts, save each topic separately
+                        for (const topicResult of allResults) {
+                            console.log('Saving practice attempt for topic:', {
+                                topic: topicResult.topic,
+                                score: topicResult.score,
+                                total: topicResult.total,
+                                unattemptedCount: topicResult.unattemptedQuestions.length
+                            });
+
+                            await QuizAttempt.create({
+                                student_id: studentId,
+                                topic: topicResult.topic,
+                                score: topicResult.score,
+                                total_questions: topicResult.total,
+                                is_exam: false,
+                                unattempted_questions: topicResult.unattemptedQuestions,
+                                attempt_date: new Date()
+                            });
+                        }
+                    }
                     attemptSaved = true;
                 } catch (error) {
                     attempt++;
-                    if (attempt === maxRetries) {
-                        console.error('Failed to save quiz attempt after retries:', error);
+                    console.error('Quiz attempt save error details:', {
+                        error: error.message,
+                        stack: error.stack,
+                        code: error.code,
+                        sqlMessage: error.sqlMessage,
+                        sqlState: error.sqlState
+                    });
+
+                    if (attempt === maxAttempts - 1) {
                         return res.status(500).json({
-                            error: 'Database error',
-                            details: 'Failed to save quiz attempt. Please try again.'
+                            error: 'Failed to save quiz attempt',
+                            details: error.message
                         });
                     }
-                    // Wait before retrying (exponential backoff)
-                    await new Promise(resolve => setTimeout(resolve, Math.pow(2, attempt) * 100));
+
+                    // Wait before retrying
+                    await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
                 }
             }
 
-            // Get all attempts for all topics
-            const attempts = {};
-            const bestScores = {};
-            for (const topicName of Object.keys(answersByTopic)) {
-                attempts[topicName] = await QuizAttempt.getStudentAttempts(studentId, topicName);
-                bestScores[topicName] = await QuizAttempt.getBestScore(studentId, topicName);
-            }
+            // Calculate total scores for response
+            const totalScore = allResults.reduce((sum, result) => sum + result.score, 0);
+            const totalQuestions = allResults.reduce((sum, result) => sum + result.total, 0);
+            const allUnattempted = allResults.reduce((all, result) => 
+                [...all, ...result.unattemptedQuestions], []);
+            const scorePercentage = totalQuestions > 0 ? (totalScore / totalQuestions) * 100 : 0;
 
-            // For topic-specific endpoint, simplify the response
-            if (topic) {
-                if (allResults.length === 0) {
-                    return res.status(404).json({ error: 'No results found for the given topic' });
-                }
-                const topicResults = allResults[0];
-                if (!topicResults) {
-                    return res.status(404).json({ error: 'No results found for the given topic' });
-                }
-                return res.json({
-                    score: topicResults.score,
-                    total: topicResults.total,
-                    results: topicResults.results,
-                    bestScore: bestScores[topic] || { score: 0, total_questions: 0 },
-                    attempts: attempts[topic] || [],
-                    isExam
-                });
-            }
-
-            // For multi-topic endpoint, return full response
-            return res.json({
-                totalScore,
-                totalQuestions,
-                results: allResults,
-                bestScores,
-                attempts,
-                isExam
+            // Return success response with results
+            return res.status(200).json({
+                message: 'Quiz attempt saved successfully',
+                score: totalScore,
+                total: totalQuestions,
+                passed: scorePercentage >= 50,
+                scorePercentage,
+                unattemptedCount: allUnattempted.length,
+                results: allResults.flatMap(result => result.results)
             });
         } catch (error) {
             console.error('Error submitting answers:', error);

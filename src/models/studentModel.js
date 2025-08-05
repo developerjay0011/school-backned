@@ -168,9 +168,10 @@ class Student {
     }
 
     static async getByStudentId(studentId) {
+        const connection = await db.getConnection();
         try {
             // Get student basic info with contact details, authority, and settings in a single query
-            const [rows] = await db.query(
+            const [rows] = await connection.query(
                 `SELECT 
                     s.*,
                     m.measures_number,
@@ -246,7 +247,7 @@ class Student {
             console.log('Full day absences count:', data.full_day_absences);
             
             // Check raw attendance records
-            const [attendanceRecords] = await db.query(
+            const [attendanceRecords] = await connection.query(
                 `SELECT 
                     attendance_date,
                     morning_attendance,

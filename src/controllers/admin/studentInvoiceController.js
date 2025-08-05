@@ -1,3 +1,4 @@
+const path = require('path');
 const StudentInvoice = require('../../models/studentInvoiceModel');
 const db = require('../../config/database');
 const StudentModel = require('../../models/studentModel');
@@ -80,6 +81,7 @@ class StudentInvoiceController {
                 invoice_number: req.body.invoice_number,
                 invoice_date: req.body.invoice_date,
                 invoice_amount: req.body.amount,
+                invoice_type: req.body.invoice_type,
                 measures_number: studentData.measures_number || '',
                 measures: studentData.measures_title || '',
                 reminder_number: 1,
@@ -162,6 +164,7 @@ class StudentInvoiceController {
                 invoice_number: req.body.invoice_number,
                 invoice_date: req.body.invoice_date,
                 invoice_amount: req.body.amount,
+                invoice_type: req.body.invoice_type,
                 measures_number: studentData.measures_number || '',
                 measures: studentData.measures_title || '',
                 reminder_number: 1,
@@ -198,13 +201,16 @@ class StudentInvoiceController {
             const { id } = req.params;
 
             const invoice = await StudentInvoice.getById(id);
+            console.log('Invoice from getById:', invoice);
             if (!invoice) {
                 return res.status(404).json({
                     success: false,
                     message: 'Invoice not found'
                 });
             }
+            console.log('Student ID from invoice:', invoice.student_id);
             const studentData = await StudentModel.getByStudentId(invoice.student_id);
+            console.log('Student data:', studentData);
             console.log("studentinvoiceData",invoice);
             const pdfdata = {
                 authority_name: studentData.invoice_company || studentData.authority.name,
@@ -227,17 +233,17 @@ class StudentInvoiceController {
             const updatedInvoice = await StudentInvoice.getById(id);
 
             // Send invoice reminder email
-            console.log("studentData",studentData.authority_email);
-            if (studentData.authority_email) {
+            console.log("studentData",studentData.authority.email);
+            if (studentData.authority.email) {
                 try {
                     await EmailService.sendInvoiceReminderEmail({
-                        email: studentData.authority_email,
+                        email: studentData.authority.email,
                         invoiceNumber: invoice.invoice_number,
-                        bgNumber: studentData.bg_number,
+                        bgNumber: studentData.authority.bg_number,
                         invoiceDate: invoice.invoice_date,
                         dueDate: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toLocaleDateString('de-DE'),
                         amount: invoice.amount.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }),
-                        pdfPath: path.join(__dirname, '../..', pdfResult.url)
+                        pdfPath: path.join(process.cwd(), 'uploads', 'mahnung', path.basename(pdfResult.url))
                     });
                     console.log('Invoice reminder email sent successfully');
                 } catch (emailError) {
@@ -291,6 +297,61 @@ class StudentInvoiceController {
                 success: false,
                 message: 'Error deleting invoice',
                 error: error.message
+            });
+        } finally {
+            connection.release();
+        }
+    }
+
+    static async cancel(req, res) {
+        const connection = await db.getConnection();
+        try {
+            const { id } = req.params;
+
+            // Cancel the invoice
+            const invoice = await StudentInvoice.cancel(id);
+
+            // Get student data for PDF generation
+            const studentData = await StudentModel.getByStudentId(invoice.student_id);
+
+            // Generate storno PDF
+            const pdfdata = {
+                authority_name: studentData.invoice_company || studentData.authority.name,
+                authority_bg_number: studentData.authority.bg_number,
+                authority_street: studentData.invoice_street || studentData.authority.street,
+                authority_city: studentData.invoice_city || studentData.authority.city,
+                authority_contact_person: studentData.invoice_contact_person || studentData.authority.contact_person,
+                authority_postal_code: studentData.invoice_postal_code || studentData.authority.postal_code,
+                student_name: studentData.first_name + ' ' + studentData.last_name,
+                invoice_number: invoice.invoice_number,
+                invoice_date: invoice.invoice_date,
+                invoice_amount: invoice.amount,
+                invoice_type: invoice.invoice_type,
+                measures_number: studentData.measures_number || '',
+                measures: studentData.measures_title || '',
+                isStorno: true
+            };
+
+            const pdfResult = await PDFGenerator.generateBAD(pdfdata);
+
+            // Update invoice with storno PDF URL
+            await StudentInvoice.update(id, {
+                storno_pdf_url:  process.env.BACKEND_URL + pdfResult.pdf.url
+            });
+
+            // Get updated invoice data
+            const updatedInvoice = await StudentInvoice.getById(id);
+
+            res.json({
+                success: true,
+                message: 'Invoice cancelled successfully',
+                data: updatedInvoice
+            });
+        } catch (error) {
+            console.error('Error cancelling invoice:', error);
+            res.status(error.message.includes('not found') ? 404 : 500).json({
+                success: false,
+                message: error.message || 'Error cancelling invoice'
             });
         } finally {
             connection.release();

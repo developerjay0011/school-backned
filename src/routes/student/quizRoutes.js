@@ -8,8 +8,13 @@ router.use(authenticateStudentToken);
 // Get all quiz topics
 router.get('/topics', quizController.getTopics);
 
+// Get all quiz results for the authenticated student
+// Example: GET /api/student/quizzes/results
+router.get('/results', quizController.getResults);
+
 // Get random questions from all topics
-// Example: GET /api/student/quizzes/questions?count=10
+// Example: GET /api/student/quizzes/questions?count=10&isExam=true
+// If isExam=true, returns 82 questions with specific counts and weightages per topic
 router.get('/questions', quizController.getRandomQuestions);
 
 // Get quiz info by topic
@@ -17,7 +22,8 @@ router.get('/questions', quizController.getRandomQuestions);
 router.get('/:topic', quizController.getQuizByTopic);
 
 // Get random questions from a specific topic
-// Example: GET /api/student/quizzes/Topic1/questions?count=10
+// Example: GET /api/student/quizzes/Topic1/questions?count=10&isExam=true
+// If isExam=true, returns topic-specific number of questions with weightages
 router.get('/:topic/questions', quizController.getRandomQuestions);
 
 // Submit answers for any topic

@@ -15,6 +15,8 @@ const monthlyReportRoutes = require('./routes/lecturer/monthlyReportRoutes');
 const adminRoutes = require('./routes/admin');
 const studentFileRoutes = require('./routes/admin/studentFileRoutes');
 const quizRoutes = require('./routes/student/quizRoutes');
+const studentVideoLogRoutes = require('./routes/student/videoLogRoutes');
+const adminVideoLogRoutes = require('./routes/admin/videoLogRoutes');
 
 const app = express();
 
@@ -30,7 +32,9 @@ app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 app.use('/api/lecturer', monthlyReportRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/admin', studentFileRoutes);
+app.use('/api/admin', adminVideoLogRoutes);
 app.use('/api/student/quizzes', quizRoutes);
+app.use('/api/student', studentVideoLogRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

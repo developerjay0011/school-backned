@@ -45,7 +45,10 @@ class StudentInvoice {
             const updateFields = [];
             const updateValues = [];
 
-            Object.entries(invoiceData).forEach(([key, value]) => {
+            // Remove reminder-related fields that are computed
+            const { reminder_list, reminders, ...cleanData } = invoiceData;
+
+            Object.entries(cleanData).forEach(([key, value]) => {
                 if (value !== undefined) {
                     updateFields.push(`${key} = ?`);
                     updateValues.push(value);
@@ -62,6 +65,42 @@ class StudentInvoice {
             );
 
             await connection.commit();
+        } catch (error) {
+            await connection.rollback();
+            throw error;
+        } finally {
+            connection.release();
+        }
+    }
+
+    static async cancel(id) {
+        const connection = await db.getConnection();
+        try {
+            await connection.beginTransaction();
+
+            // Get the invoice details
+            const [invoices] = await connection.execute(
+                'SELECT * FROM student_invoices WHERE id = ?',
+                [id]
+            );
+
+            if (invoices.length === 0) {
+                throw new Error('Invoice not found');
+            }
+
+            const invoice = invoices[0];
+            if (invoice.cancelled) {
+                throw new Error('Invoice is already cancelled');
+            }
+
+            // Update the invoice as cancelled
+            await connection.execute(
+                'UPDATE student_invoices SET cancelled = TRUE, cancelled_date = NOW() WHERE id = ?',
+                [id]
+            );
+
+            await connection.commit();
+            return invoice;
         } catch (error) {
             await connection.rollback();
             throw error;
@@ -100,7 +139,7 @@ class StudentInvoice {
                                 )
                             )
                         ELSE NULL
-                    END as reminders
+                    END as reminder_list
                 FROM student_invoices i
                 LEFT JOIN invoice_reminders r ON i.id = r.invoice_id
                 WHERE i.id = ?
@@ -111,8 +150,8 @@ class StudentInvoice {
             if (!invoices[0]) return null;
 
             const invoice = invoices[0];
-            invoice.reminders = invoice.reminders 
-                ? JSON.parse(`[${invoice.reminders}]`)
+            invoice.reminders = invoice.reminder_list 
+                ? JSON.parse(`[${invoice.reminder_list}]`)
                 : [];
 
             return invoice;
@@ -137,7 +176,7 @@ class StudentInvoice {
                                 )
                             )
                         ELSE NULL
-                    END as reminders
+                    END as reminder_list
                 FROM student_invoices i
                 LEFT JOIN invoice_reminders r ON i.id = r.invoice_id
                 WHERE i.student_id = ?
@@ -148,8 +187,8 @@ class StudentInvoice {
 
             return invoices.map(invoice => ({
                 ...invoice,
-                reminders: invoice.reminders 
-                    ? JSON.parse(`[${invoice.reminders}]`)
+                reminders: invoice.reminder_list 
+                    ? JSON.parse(`[${invoice.reminder_list}]`)
                     : []
             }));
         } finally {
@@ -173,7 +212,7 @@ class StudentInvoice {
                                 )
                             )
                         ELSE NULL
-                    END as reminders
+                    END as reminder_list
                 FROM student_invoices i
                 LEFT JOIN invoice_reminders r ON i.id = r.invoice_id
                 GROUP BY i.id
@@ -183,8 +222,8 @@ class StudentInvoice {
 
             return invoices.map(invoice => ({
                 ...invoice,
-                reminders: invoice.reminders 
-                    ? JSON.parse(`[${invoice.reminders}]`)
+                reminders: invoice.reminder_list 
+                    ? JSON.parse(`[${invoice.reminder_list}]`)
                     : []
             }));
         } finally {

@@ -12,7 +12,8 @@ const studentResultSheetRoutes = require('./studentFeedbackRoutes');
 const courseFeedbackRoutes = require('./courseFeedbackRoutes');
 const studentZoomLinksRoutes = require('./studentZoomLinksRoutes');
 const quizRoutes = require('./quizRoutes');
-
+const courseContentRoutes = require('./courseContentRoutes');
+const videoLogRoutes = require('./videoLogRoutes');
 // Mount routes
 router.use('/', assessmentRoutes);
 router.use('/', dataCollectionRoutes);
@@ -24,4 +25,6 @@ router.use('/', studentResultSheetRoutes);
 router.use('/', courseFeedbackRoutes);
 router.use('/zoom-links', studentZoomLinksRoutes);
 router.use('/quizzes', quizRoutes);
+router.use('/', courseContentRoutes);
+router.use('/', videoLogRoutes);
 module.exports = router;

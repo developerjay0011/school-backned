@@ -30,6 +30,8 @@ const successPlacementStatisticsRoutes = require('./successPlacementStatisticsRo
 const documentsRoutes = require('./documents');
 const missingSignaturesRoutes = require('./missingSignaturesRoutes');
 const studentFileRoutes = require('./studentFileRoutes');
+const quizRoutes = require('./quizRoutes');
+const videoLogRoutes = require('./videoLogRoutes');
 // Mount routes
 router.use('/', userRoutes); // This includes the /login endpoint for both admin and lecturer
 
@@ -63,5 +65,6 @@ router.use('/success-placement-statistics', successPlacementStatisticsRoutes);
 router.use('/documents', documentsRoutes);
 router.use('/', studentFileRoutes);
 router.use('/missing-signatures', missingSignaturesRoutes);
-
+router.use('/quizzes', quizRoutes);
+router.use('/', videoLogRoutes);
 module.exports = router;

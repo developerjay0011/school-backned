@@ -378,6 +378,26 @@ class PDFGenerator {
         const existingPdfBytes = fs.readFileSync(templatePath);
 
         const pdfDoc = await PDFDocument.load(existingPdfBytes);
+
+        // Add storno overlay if requested
+        if (data.isStorno) {
+            const stornoPath = path.join(__dirname, '../assets/Storno.png');
+            const stornoBytes = fs.readFileSync(stornoPath);
+            const stornoImage = await pdfDoc.embedPng(stornoBytes);
+            const { width, height } = stornoImage.scale(0.2); // Scale down the image
+
+            const page = pdfDoc.getPage(0);
+            const { width: pageWidth, height: pageHeight } = page.getSize();
+            
+            // Center the storno image on the page
+            page.drawImage(stornoImage, {
+                x: (pageWidth - width) - 70,
+                y: (pageHeight - height) - 70,
+                width,
+                height,
+                opacity: 0.5
+            });
+        }
         const formattedDate = new Date(data.invoice_date).toLocaleDateString('de-DE', {
             day: '2-digit',
             month: '2-digit',
@@ -434,6 +454,13 @@ class PDFGenerator {
         })
         pdfDoc.getPage(0).drawText(data.measures || '', {
             x: 80,
+            y: 385,
+            size: 10,
+            maxWidth: 145,
+            lineHeight: 15
+        })
+        pdfDoc.getPage(0).drawText(data.invoice_type || '', {
+            x: 300,
             y: 385,
             size: 10,
             maxWidth: 145,

@@ -18,6 +18,9 @@ router.get('/invoices/:id/mahnung', StudentInvoiceController.mahnungPDF);
 // Create manual reminder for an invoice
 router.post('/invoices/:id/reminder', StudentInvoiceController.createReminder);
 
+// Cancel invoice and generate storno PDF
+router.post('/invoices/:id/cancel', StudentInvoiceController.cancel);
+
 // Toggle auto-dispatch for reminders
 router.put('/invoices/:id/auto-dispatch',
     validate(studentInvoiceValidation.toggleAutoDispatch),

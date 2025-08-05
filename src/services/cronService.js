@@ -54,7 +54,7 @@ class CronService {
                     if (student.authority_email) {
                         await EmailService.sendAttendanceListEmail({
                             email: student.authority_email,
-                            cc: 'info@bad.de',
+                            cc: 'info@bildungsakademie-deutschland.com',
                             bgNumber: student.bg_number,
                             studentName: `${student.first_name} ${student.last_name}`,
                             startDate,

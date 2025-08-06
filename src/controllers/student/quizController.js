@@ -115,10 +115,18 @@ class QuizController {
             const answerValidationErrors = answers.filter(answer => {
                 return !answer || 
                     typeof answer.questionId === 'undefined' || 
-                    !answer.selectedAnswers || 
                     !Array.isArray(answer.selectedAnswers);
             });
 
+            if (answerValidationErrors.length > 0) {
+                return res.status(400).json({
+                    error: 'Invalid answer format',
+                    details: 'Each answer must have a questionId and selectedAnswers array'
+                });
+            }
+
+            // In exam mode, require at least one answer for each question
+   
             if (answerValidationErrors.length > 0) {
                 return res.status(400).json({
                     error: 'Invalid answer format',
@@ -132,12 +140,7 @@ class QuizController {
                     !answer.selectedAnswers || answer.selectedAnswers.length === 0
                 );
 
-                if (emptyAnswers.length > 0) {
-                    return res.status(400).json({
-                        error: 'Empty answers found',
-                        details: 'Each answer must have at least one selected option in practice mode'
-                    });
-                }
+            
             }
             
             // Validate student from auth token

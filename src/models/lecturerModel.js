@@ -76,12 +76,13 @@ class LecturerModel {
             const nextId = maxIdResult[0].maxId ? maxIdResult[0].maxId + 1 : 1122001;
 
             // Generate password with BAD prefix
-            const password = `BAD${nextId}`;
+            const plainPassword = `BAD${nextId}`;
+            const hashedPassword = await bcrypt.hash(plainPassword, 10);
 
             // Insert with the next ID
             const result = await db.query(
                 'INSERT INTO lecturers (lecturer_id, first_name, last_name, start_time, end_time, course, joining_date, photo, certificates, password, measures_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
-                [nextId, lecturerData.first_name, lecturerData.last_name, lecturerData.start_time, lecturerData.end_time, lecturerData.course, lecturerData.joining_date, lecturerData.photo, JSON.stringify(lecturerData.certificates), password, lecturerData.measures_id || null]
+                [nextId, lecturerData.first_name, lecturerData.last_name, lecturerData.start_time, lecturerData.end_time, lecturerData.course, lecturerData.joining_date, lecturerData.photo, JSON.stringify(lecturerData.certificates), hashedPassword, lecturerData.measures_id || null]
             );
             return nextId;
         } catch (error) {
@@ -174,10 +175,19 @@ class LecturerModel {
                 return null;
             }
 
-            // Compare hashed password
+            // If password is not hashed (legacy), hash it first
+            if (rows[0].password && !rows[0].password.startsWith('$2')) {
+                console.log('Legacy password found, hashing it...');
+                const hashedPassword = await bcrypt.hash(rows[0].password, 10);
+                await db.query(
+                    'UPDATE lecturers SET password = ? WHERE lecturer_id = ?',
+                    [hashedPassword, lecturer_id]
+                );
+                rows[0].password = hashedPassword;
+            }
+
+            // Compare password
             console.log('Attempting password comparison...');
-            console.log('Input password:', password);
-            console.log('Stored hash:', rows[0].password);
             try {
                 const isValidPassword = await bcrypt.compare(password, rows[0].password);
                 console.log('Password comparison result:', isValidPassword);
@@ -190,9 +200,7 @@ class LecturerModel {
                 throw error;
             }
 
-            const lecturer = rows[0];
             console.log('Authentication successful, returning lecturer data');
-
             return {
                 ...rows[0],
                 lecturer_id: String(rows[0].lecturer_id).padStart(7, '0'),

@@ -259,7 +259,8 @@ class QuizService {
                 // Calculate partial credit for multiple correct answers
                 const correctAnswers = question.correct_answers || [];
                 
-                // Empty array is a wrong answer (no selection made)
+                // For exam mode, empty answers are counted as unattempted
+                // For practice mode, empty answers are counted as wrong
                 let result;
                 if (selectedAnswers.length === 0) {
                     result = {
@@ -268,9 +269,10 @@ class QuizService {
                         isPartiallyCorrect: false,
                         score: 0,
                         selectedAnswers: [],
-                        correctAnswers: correctAnswers,
-                        explanation: 'No answer selected',
-                        weightage
+                        correctAnswers: isExam ? [] : correctAnswers, // Don't show correct answers in exam mode
+                        explanation: isExam ? 'Question not attempted' : 'No answer selected',
+                        weightage,
+                        isUnattempted: isExam // Mark as unattempted in exam mode
                     };
                 } else {
                     // Calculate score based on correct selections and avoiding wrong ones

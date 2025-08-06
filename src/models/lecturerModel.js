@@ -162,13 +162,10 @@ class LecturerModel {
     static async login(lecturer_id, password) {
         try {
             console.log('Looking up lecturer with ID:', lecturer_id);
-            // Remove leading zeros for DB query
-            const numericId = parseInt(lecturer_id.toString().replace(/^0+/, ''));
-            console.log('Numeric ID for query:', numericId);
-
+            // Keep the original ID format for the query
             const [rows] = await db.query(
                 'SELECT * FROM lecturers WHERE lecturer_id = ? AND deleted_at IS NULL',
-                [numericId]
+                [lecturer_id]
             );
             console.log('Found lecturer rows:', rows);
 

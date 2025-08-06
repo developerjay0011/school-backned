@@ -76,7 +76,7 @@ class LecturerModel {
             const nextId = maxIdResult[0].maxId ? maxIdResult[0].maxId + 1 : 1122001;
 
             // Generate password with BAD prefix
-            const plainPassword = `BAD${nextId}`;
+            const plainPassword = `BAD0${nextId}`;
             const hashedPassword = await bcrypt.hash(plainPassword, 10);
 
             // Insert with the next ID

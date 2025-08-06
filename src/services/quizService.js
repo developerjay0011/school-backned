@@ -35,20 +35,20 @@ class QuizService {
             
             // Topic mapping for file names and quiz titles
             const topicMap = {
-                'Topic 1. Öffentliche Sicherheit und Ordnung.json': 'Topic 1. Öffentliche Sicherheit und Ordnung',
-                'Topic 2. Umgang mit Menschen.json': 'Topic 2. Umgang mit Menschen',
-                'Topic 3. Datenschutz.json': 'Topic 3. Datenschutz',
-                'Topic 4. Gewerberecht.json': 'Topic 4. Gewerberecht',
-                'Topic 5. Strafgesetzbuch.json': 'Topic 5. Strafgesetzbuch',
-                'Topic 6. Bürgeleriches Gesetzbuch.json': 'Topic 6. Bürgeleriches Gesetzbuch',
-                'Topic 7. Sicherheitstechnik.json': 'Topic 7. Sicherheitstechnik',
-                'Topic 8. Unfallverhütungsvorschriften.json': 'Topic 8. Unfallverhütungsvorschriften',
-                'Topic 9. Umgang mit Verteidigungswaffen.json': 'Topic 9. Umgang mit Verteidigungswaffen',
+                'Topic 1. Öffentliche Sicherheit und Ordnung.json': 'Fachbereich 1. Öffentliche Sicherheit und Ordnung',
+                'Topic 2. Umgang mit Menschen.json': 'Fachbereich 2. Umgang mit Menschen',
+                'Topic 3. Datenschutz.json': 'Fachbereich 3. Datenschutz',
+                'Topic 4. Gewerberecht.json': 'Fachbereich 4. Gewerberecht',
+                'Topic 5. Strafgesetzbuch.json': 'Fachbereich 5. Strafgesetzbuch',
+                'Topic 6. Bürgeleriches Gesetzbuch.json': 'Fachbereich 6. Bürgeleriches Gesetzbuch',
+                'Topic 7. Sicherheitstechnik.json': 'Fachbereich 7. Sicherheitstechnik',
+                'Topic 8. Unfallverhütungsvorschriften.json': 'Fachbereich 8. Unfallverhütungsvorschriften',
+                'Topic 9. Umgang mit Verteidigungswaffen.json': 'Fachbereich 9. Umgang mit Verteidigungswaffen',
             };
 
             // Title to topic mapping
             const titleMap = {
-                'Sachkundeprüfung 34a - Öffentliche Sicherheit und Ordnung': 'Topic 1. Öffentliche Sicherheit und Ordnung'
+                'Sachkundeprüfung 34a - Öffentliche Sicherheit und Ordnung': 'Fachbereich 1. Öffentliche Sicherheit und Ordnung'
             };
             
             for (const file of files) {

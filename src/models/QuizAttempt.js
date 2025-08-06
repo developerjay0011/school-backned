@@ -137,6 +137,7 @@ class QuizAttempt {
                     status: attempt.percentage > 50 ? 'pass' : 'fail',
                     is_exam: attempt.is_exam === 1,
                     unattempted_questions_count: attempt.unattempted_questions_count,
+                    wrong_questions_count: attempt.total_questions - attempt.score - attempt.unattempted_questions_count,
                     created_at: attempt.created_at,
                     updated_at: attempt.updated_at
                 };

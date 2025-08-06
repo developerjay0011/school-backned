@@ -269,8 +269,8 @@ class QuizService {
                         isPartiallyCorrect: false,
                         score: 0,
                         selectedAnswers: [],
-                        correctAnswers: isExam ? [] : correctAnswers, // Don't show correct answers in exam mode
-                        explanation: isExam ? 'Question not attempted' : 'No answer selected',
+                        correctAnswers: correctAnswers, // Don't show correct answers in exam mode
+                        explanation: isExam ? '' : 'No answer selected',
                         weightage,
                         isUnattempted: isExam // Mark as unattempted in exam mode
                     };

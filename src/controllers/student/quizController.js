@@ -95,6 +95,51 @@ class QuizController {
             const { topic } = req.params;
             const { answers, isExam = false } = req.body;
             
+            // Validate answers array
+            if (!answers || !Array.isArray(answers)) {
+                return res.status(400).json({
+                    error: 'Invalid answers format',
+                    details: 'Answers must be provided as an array'
+                });
+            }
+
+            // Check for empty answers array
+            if (answers.length === 0) {
+                return res.status(400).json({
+                    error: 'No answers provided',
+                    details: 'You must submit at least one answer'
+                });
+            }
+
+            // Validate each answer has required fields and proper format
+            const answerValidationErrors = answers.filter(answer => {
+                return !answer || 
+                    typeof answer.questionId === 'undefined' || 
+                    !answer.selectedAnswers || 
+                    !Array.isArray(answer.selectedAnswers);
+            });
+
+            if (answerValidationErrors.length > 0) {
+                return res.status(400).json({
+                    error: 'Invalid answer format',
+                    details: 'Each answer must have questionId and selectedAnswers array'
+                });
+            }
+
+            // For practice mode, validate that answers are not empty
+            if (!isExam) {
+                const emptyAnswers = answers.filter(answer => 
+                    !answer.selectedAnswers || answer.selectedAnswers.length === 0
+                );
+
+                if (emptyAnswers.length > 0) {
+                    return res.status(400).json({
+                        error: 'Empty answers found',
+                        details: 'Each answer must have at least one selected option in practice mode'
+                    });
+                }
+            }
+            
             // Validate student from auth token
             if (!req.user || !req.user.student_id) {
                 return res.status(401).json({ error: 'No student ID found in auth token' });

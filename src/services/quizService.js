@@ -4,6 +4,7 @@ const path = require('path');
 class QuizService {
     constructor() {
         this.quizzes = new Map();
+        this.questionTopicMap = new Map(); // Cache for question-topic mapping
         this.quizzesDir = path.join(__dirname, '../data/quizzes');
         this.initialized = false;
 
@@ -69,11 +70,15 @@ class QuizService {
                     }
                     
                     // Add topic prefix to question IDs to make them unique across all topics
-                    const topicPrefix = topic.split('.')[0].trim(); // e.g., 'Topic 1'
-                    quiz.questions = quiz.questions.map((q, index) => ({
-                        ...q,
-                        id: `${topicPrefix}_${index + 1}` // e.g., 'Topic 1_1', 'Topic 1_2', etc.
-                    }));
+                    const topicNumber = topic.split('.')[0].split(' ')[1]; // e.g., '1' from 'Fachbereich 1'
+                    quiz.questions = quiz.questions.map((q, index) => {
+                        const questionId = `Fachbereich ${topicNumber}_${index + 1}`; // e.g., 'Fachbereich 1_1'
+                        this.questionTopicMap.set(questionId, topic); // Cache the mapping
+                        return {
+                            ...q,
+                            id: questionId
+                        };
+                    });
                     
                     this.quizzes.set(topic, quiz);
                     console.log(`Loaded quiz: ${topic} with ${quiz.questions.length} questions`);
@@ -164,24 +169,33 @@ class QuizService {
     }
 
     getTopicFromQuestionId(questionId) {
-        // Extract topic number from question ID (e.g., 'Topic 2_6' -> 'Topic 2')
-        const match = questionId.match(/^Topic (\d+)/i);
+        // First check the cache
+        if (this.questionTopicMap.has(questionId)) {
+            return this.questionTopicMap.get(questionId);
+        }
+
+        // If not in cache, try to determine from question ID
+        const match = questionId.match(/^Fachbereich (\d+)/i);
         if (!match) return null;
 
         // Map topic numbers to full topic names
         const topicMap = {
-            '1': 'Topic 1. Öffentliche Sicherheit und Ordnung',
-            '2': 'Topic 2. Umgang mit Menschen',
-            '3': 'Topic 3. Datenschutz',
-            '4': 'Topic 4. Gewerberecht',
-            '5': 'Topic 5. Strafgesetzbuch',
-            '6': 'Topic 6. Bürgeleriches Gesetzbuch',
-            '7': 'Topic 7. Sicherheitstechnik',
-            '8': 'Topic 8. Unfallverhütungsvorschriften',
-            '9': 'Topic 9. Umgang mit Verteidigungswaffen'
+            '1': 'Fachbereich 1. Öffentliche Sicherheit und Ordnung',
+            '2': 'Fachbereich 2. Umgang mit Menschen',
+            '3': 'Fachbereich 3. Datenschutz',
+            '4': 'Fachbereich 4. Gewerberecht',
+            '5': 'Fachbereich 5. Strafgesetzbuch',
+            '6': 'Fachbereich 6. Bürgeleriches Gesetzbuch',
+            '7': 'Fachbereich 7. Sicherheitstechnik',
+            '8': 'Fachbereich 8. Unfallverhütungsvorschriften',
+            '9': 'Fachbereich 9. Umgang mit Verteidigungswaffen'
         };
 
-        return topicMap[match[1]] || null;
+        const topic = topicMap[match[1]] || null;
+        if (topic) {
+            this.questionTopicMap.set(questionId, topic); // Cache for future use
+        }
+        return topic;
     }
 
     async validateAnswers(topic, answers, isExam = false) {

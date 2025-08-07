@@ -53,7 +53,6 @@ class Student {
     static async getFullDayAbsences(studentId, dateOfEntry) {
         const connection = await db.getConnection();
         try {
-            // Use a single query to get both absences and sick leave days
             const query = `WITH RECURSIVE date_series AS (
                 -- Initial row from student's entry date
                 SELECT ? as student_id, ? as date
@@ -76,57 +75,31 @@ class Student {
             ),
             -- Calculate absences from workdays
             absences AS (
-                SELECT w.date
+                SELECT COUNT(*) as total_absences
                 FROM workdays w
                 LEFT JOIN student_attendance sa ON sa.student_id = w.student_id AND sa.attendance_date = w.date
                 WHERE (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
                 AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
-            )
-            SELECT COUNT(*) as total_absences
-            FROM absences`;
-
-            const [absenceResult] = await db.query(absenceQuery, [studentId, dateOfEntry]);
-
-            // Then get sick leave days
-            const sickLeaveQuery = `WITH RECURSIVE date_series AS (
-                -- Initial row from student's entry date
-                SELECT ? as student_id, ? as date
-                
-                UNION ALL
-                
-                -- Generate subsequent dates
-                SELECT student_id, DATE_ADD(date, INTERVAL 1 DAY)
-                FROM date_series
-                WHERE date < CURDATE()
             ),
-            -- Get workdays first (excluding weekends and bridge days)
-            workdays AS (
-                SELECT d.student_id, d.date
-                FROM date_series d
-                LEFT JOIN bridge_days bd ON d.date = bd.date
-                WHERE DAYOFWEEK(d.date) NOT IN (1, 7) -- Exclude weekends
-                AND bd.date IS NULL -- Exclude bridge days
-                AND d.date <= CURDATE() -- Ensure no future dates
-            ),
-            -- Then get sick leave days that overlap with workdays
-            sick_leave_days AS (
-                SELECT DISTINCT w.date
+            -- Calculate sick leave days
+            sick_leave AS (
+                SELECT COUNT(DISTINCT w.date) as sick_days
                 FROM workdays w
                 INNER JOIN student_sick_leave sl ON w.student_id = sl.student_id
                 WHERE w.date BETWEEN sl.date_from AND sl.date_until
-            ) -- Get all days that fall within any sick leave period
-            SELECT COUNT(*) as sick_days
-            FROM sick_leave_days`;
+            )
+            -- Return total absences minus sick leave days
+            SELECT GREATEST(0, COALESCE(a.total_absences, 0) - COALESCE(sl.sick_days, 0)) as net_absences
+            FROM absences a
+            LEFT JOIN sick_leave sl ON 1=1`;
 
-            const [sickLeaveResult] = await db.query(sickLeaveQuery, [studentId, dateOfEntry]);
-
-            const totalAbsences = absenceResult[0].total_absences || 0;
-            const sickDays = sickLeaveResult[0].sick_days || 0;
-
-            return Math.max(0, totalAbsences - sickDays);
+            const [result] = await connection.query(query, [studentId, dateOfEntry]);
+            return result[0].net_absences;
         } catch (error) {
             console.error('Error calculating full day absences:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 

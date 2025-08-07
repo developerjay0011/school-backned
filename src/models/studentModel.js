@@ -51,9 +51,10 @@ const FULL_DAY_ABSENCES_SQL = `
 
 class Student {
     static async getFullDayAbsences(studentId, dateOfEntry) {
+        const connection = await db.getConnection();
         try {
-            // First get total absences
-            const absenceQuery = `WITH RECURSIVE date_series AS (
+            // Use a single query to get both absences and sick leave days
+            const query = `WITH RECURSIVE date_series AS (
                 -- Initial row from student's entry date
                 SELECT ? as student_id, ? as date
                 
@@ -708,11 +709,18 @@ class Student {
                 `
             );
             console.log("studentsstudents",students)
-            // Calculate full day absences for each student
-            const studentsWithAbsences = await Promise.all(students.map(async student => {
-                const absences = await Student.getFullDayAbsences(student.student_id, student.date_of_entry);
-                return { ...student, full_day_absences: absences };
-            }));
+            // Calculate full day absences for each student in batches of 3
+            const batchSize = 3;
+            const studentsWithAbsences = [];
+            
+            for (let i = 0; i < students.length; i += batchSize) {
+                const batch = students.slice(i, i + batchSize);
+                const batchResults = await Promise.all(batch.map(async student => {
+                    const absences = await Student.getFullDayAbsences(student.student_id, student.date_of_entry);
+                    return { ...student, full_day_absences: absences };
+                }));
+                studentsWithAbsences.push(...batchResults);
+            }
 
             // Transform the results to include nested objects
             const transformedStudents = studentsWithAbsences.map(student => ({

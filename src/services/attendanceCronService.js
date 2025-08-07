@@ -5,6 +5,7 @@ const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class AttendanceCronService {
     static async getFirstDayAttendance() {
+        const connection = await db.getConnection();
         const query = `
             SELECT s.student_id, au.bg_number, au.email,s.date_of_entry, a.created_at, a.morning_attendance, a.afternoon_attendance
             FROM student s
@@ -20,24 +21,29 @@ class AttendanceCronService {
            `;
 
         try {
-            const [results] = await db.query(query,[DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime())]);
+            const [results] = await connection.query(query,[DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime())]);
             return results;
         } catch (error) {
             console.error('Error fetching first day attendance:', error);
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async markNotificationSent(studentId) {
+        const connection = await db.getConnection();
         const query = `
             INSERT INTO attendance_notifications (student_id, notification_type, sent_at)
             VALUES (?, 'first_day', ?)`;
 
         try {
-            await db.query(query, [studentId,DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime())]);
+            await connection.query(query, [studentId,DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime())]);
         } catch (error) {
             console.error('Error marking notification as sent:', error);
             throw error;
+        }finally {
+            connection.release();
         }
     }
 

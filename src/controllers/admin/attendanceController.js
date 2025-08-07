@@ -3,6 +3,7 @@ const AttendanceModel = require('../../models/attendanceModel');
 const AdminAttendanceController = {
     getAttendanceStats: async function(req, res) {
         const { period } = req.params;
+        const connection = await require('../../config/database').getConnection();
 
         try {
             // Validate period
@@ -34,11 +35,14 @@ const AdminAttendanceController = {
                 message: 'Error getting attendance statistics',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     },
     markAttendance: async function(req, res) {
         const { studentId } = req.params;
         const { date, slots } = req.body;
+        const connection = await require('../../config/database').getConnection();
 
         try {
             // Validate student ID
@@ -94,10 +98,13 @@ const AdminAttendanceController = {
                 message: 'Error marking attendance',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     },
     getFullDayAbsences: async function(req, res) {
         const { studentId } = req.params;
+        const connection = await require('../../config/database').getConnection();
 
         try {
             // Validate student ID
@@ -122,9 +129,12 @@ const AdminAttendanceController = {
                 message: 'Error retrieving full day absences',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     },
     getAttendanceList: async function(req, res) {
+        const connection = await require('../../config/database').getConnection();
         try {
             let { start_date, end_date, student_id } = req.query;
 
@@ -174,8 +184,11 @@ const AdminAttendanceController = {
             console.error('Error fetching attendance list:', error);
             res.status(500).json({
                 success: false,
-                message: 'Error fetching attendance list'
+                message: 'Error fetching attendance list',
+                error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 };

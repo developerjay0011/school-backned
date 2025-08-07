@@ -3,8 +3,9 @@ const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class SuccessPlacementStatisticsModel {
     static async getAll() {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.query(
+            const [rows] = await connection.query(
                 `SELECT s.*, m.measures_number, m.measures_title 
                 FROM success_placement_statistics s
                 JOIN measurements m ON s.measures_id = m.id 
@@ -13,13 +14,16 @@ class SuccessPlacementStatisticsModel {
             return rows;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
 
     static async create(data) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 `INSERT INTO success_placement_statistics 
                 (year, measures_id, pdf_url, description, created_at) 
                 VALUES (?, ?, ?, ?, ?)`,
@@ -28,12 +32,15 @@ class SuccessPlacementStatisticsModel {
             return result.insertId;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async getAll() {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.query(
+            const [rows] = await connection.query(
                 `SELECT sps.*, m.measures_number, m.measures_title 
                 FROM success_placement_statistics sps 
                 JOIN measurements m ON sps.measures_id = m.id 
@@ -42,12 +49,15 @@ class SuccessPlacementStatisticsModel {
             return rows;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async getById(id) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.query(
+            const [rows] = await connection.query(
                 `SELECT sps.*, m.measures_number, m.measures_title 
                 FROM success_placement_statistics sps 
                 JOIN measurements m ON sps.measures_id = m.id 
@@ -57,27 +67,33 @@ class SuccessPlacementStatisticsModel {
             return rows[0];
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async deleteById(id) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 'DELETE FROM success_placement_statistics WHERE id = ?',
                 [id]
             );
             return result.affectedRows > 0;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async getStatisticsData(measureId, year) {
+        const connection = await db.getConnection();
         try {
             console.log('Getting stats for:', { measureId, year });
 
             // Debug query to check student data
-            const [studentCheck] = await db.query(
+            const [studentCheck] = await connection.query(
                 `SELECT s.student_id, s.date_of_entry, s.date_of_exit, s.measures_id 
                 FROM student s 
                 WHERE s.measures_id = ?`,
@@ -86,7 +102,7 @@ class SuccessPlacementStatisticsModel {
             console.log('Students found:', studentCheck);
 
             // Debug query to check measures
-            const [measuresCheck] = await db.query(
+            const [measuresCheck] = await connection.query(
                 `SELECT DISTINCT measures_id FROM student`
             );
             console.log('Available measure IDs:', measuresCheck);
@@ -112,11 +128,11 @@ class SuccessPlacementStatisticsModel {
                 GROUP BY s.date_of_entry, s.date_of_exit
                 ORDER BY s.date_of_entry`;
             console.log('Quarterly Query:', quarterlyQuery);
-            const [rows] = await db.query(quarterlyQuery, [measureId, year]);
+            const [rows] = await connection.query(quarterlyQuery, [measureId, year]);
             console.log('Quarterly Results:', rows);
 
             // Calculate totals
-            const [totals] = await db.query(
+            const [totals] = await connection.query(
                 `SELECT 
                     COUNT(DISTINCT s.student_id) as total_students,
                     COALESCE(SUM(CASE WHEN EXISTS (SELECT 1 FROM student_reports sr WHERE sr.student_id = s.student_id AND sr.report_type IN ('termination', 'discharge')) THEN 1 ELSE 0 END), 0) as dropouts,
@@ -132,7 +148,7 @@ class SuccessPlacementStatisticsModel {
                 AND YEAR(s.date_of_entry) = ?`,
                 [measureId, year]
             );
-
+            connection.release();
             return {
                 quarterlyData: rows.map(row => ({
                     ...row,

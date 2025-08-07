@@ -3,8 +3,12 @@ const bcrypt = require('bcrypt');
 
 class LecturerModel {
     static async getAllLecturers() {
+        let connection;
         try {
-            const [rows] = await db.query(`
+            // Get a connection from the pool
+            connection = await db.getConnection();
+            
+            const [rows] = await connection.query(`
                 SELECT l.*, m.measures_number, m.measures_title 
                 FROM lecturers l
                 LEFT JOIN measurements m ON l.measures_id = m.id
@@ -20,14 +24,24 @@ class LecturerModel {
                 certificates: JSON.parse(row.certificates || '[]').map(cert => process.env.BACKEND_URL + cert)
             }));
         } catch (error) {
+            console.error('Error getting all lecturers:', error);
             throw error;
+        } finally {
+            // Always release the connection back to the pool
+            if (connection) {
+                connection.release();
+            }
         }
     }
 
     static async getByLecturerId(id) {
+        let connection;
         try {
             console.log('Looking up lecturer with ID:', id);
-            const [rows] = await db.query(
+            // Get a connection from the pool
+            connection = await db.getConnection();
+            
+            const [rows] = await connection.query(
                 `SELECT l.*, m.measures_number, m.measures_title 
                  FROM lecturers l
                  LEFT JOIN measurements m ON l.measures_id = m.id
@@ -43,12 +57,21 @@ class LecturerModel {
         } catch (error) {
             console.error('Error in getByLecturerId:', error);
             throw error;
+        } finally {
+            // Always release the connection back to the pool
+            if (connection) {
+                connection.release();
+            }
         }
     }
 
     static async getLecturerById(id) {
+        let connection;
         try {
-            const [rows] = await db.query(
+            // Get a connection from the pool
+            connection = await db.getConnection();
+            
+            const [rows] = await connection.query(
                 `SELECT l.*, m.measures_number, m.measures_title 
                  FROM lecturers l
                  LEFT JOIN measurements m ON l.measures_id = m.id
@@ -65,14 +88,24 @@ class LecturerModel {
                 )
             };
         } catch (error) {
+            console.error('Error in getLecturerById:', error);
             throw error;
+        } finally {
+            // Always release the connection back to the pool
+            if (connection) {
+                connection.release();
+            }
         }
     }
 
     static async createLecturer(lecturerData) {
+        let connection;
         try {
+            // Get a connection from the pool
+            connection = await db.getConnection();
+            
             // Get the next available ID
-            const [maxIdResult] = await db.query('SELECT MAX(lecturer_id) as maxId FROM lecturers');
+            const [maxIdResult] = await connection.query('SELECT MAX(lecturer_id) as maxId FROM lecturers');
             const nextId = maxIdResult[0].maxId ? maxIdResult[0].maxId + 1 : 1122001;
 
             // Generate password with BAD prefix
@@ -80,54 +113,100 @@ class LecturerModel {
             const hashedPassword = await bcrypt.hash(plainPassword, 10);
 
             // Insert with the next ID
-            const result = await db.query(
+            const result = await connection.query(
                 'INSERT INTO lecturers (lecturer_id, first_name, last_name, start_time, end_time, course, joining_date, photo, certificates, password, measures_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
                 [nextId, lecturerData.first_name, lecturerData.last_name, lecturerData.start_time, lecturerData.end_time, lecturerData.course, lecturerData.joining_date, lecturerData.photo, JSON.stringify(lecturerData.certificates), hashedPassword, lecturerData.measures_id || null]
             );
             return nextId;
         } catch (error) {
+            console.error('Error creating lecturer:', error);
             throw error;
+        } finally {
+            // Always release the connection back to the pool
+            if (connection) {
+                connection.release();
+            }
         }
     }
 
     static async updateLecturer(id, lecturerData) {
+        let connection;
         try {
             console.log("lecturerData", lecturerData);
+            // Get a connection from the pool
+            connection = await db.getConnection();
+            
             // If password is provided, use it, otherwise keep existing
-            let query = 'UPDATE lecturers SET first_name = ?, last_name = ?, start_time = ?, end_time = ?, course = ?, joining_date = ?, photo = ?, certificates = ?, measures_id = ?';
-            let params = [lecturerData.first_name, lecturerData.last_name, lecturerData.start_time, lecturerData.end_time, lecturerData.course, lecturerData.joining_date, lecturerData.photo, JSON.stringify(lecturerData.certificates), lecturerData.measures_id || null];
-
-            if (lecturerData.password) {
-                query += ', password = ?';
-                params.push(lecturerData.password);
-            }
-
-            query += ' WHERE lecturer_id = ?';
-            params.push(id);
-
-            const result = await db.query(query, params);
-            return result[0].affectedRows > 0;
+            let passwordClause = '';
+            let params = [
+                lecturerData.first_name,
+                lecturerData.last_name,
+                lecturerData.start_time,
+                lecturerData.end_time,
+                lecturerData.course,
+                lecturerData.joining_date,
+                lecturerData.photo,
+                JSON.stringify(lecturerData.certificates),
+                lecturerData.measures_id || null,
+                id
+            ];
+            
+            const [result] = await connection.query(
+                `UPDATE lecturers SET 
+                first_name = ?, 
+                last_name = ?, 
+                start_time = ?, 
+                end_time = ?, 
+                course = ?, 
+                joining_date = ?, 
+                photo = ?, 
+                certificates = ?,
+                measures_id = ?
+                WHERE lecturer_id = ?`,
+                params
+            );
+            return result.affectedRows > 0;
         } catch (error) {
+            console.error('Error updating lecturer:', error);
             throw error;
+        } finally {
+            // Always release the connection back to the pool
+            if (connection) {
+                connection.release();
+            }
         }
     }
 
     static async deleteLecturer(id) {
+        let connection;
         try {
-            const [result] = await db.query(
+            // Get a connection from the pool
+            connection = await db.getConnection();
+            
+            const [result] = await connection.query(
                 'UPDATE lecturers SET deleted_at = CURRENT_TIMESTAMP WHERE lecturer_id = ? AND deleted_at IS NULL',
                 [id]
             );
             return result.affectedRows > 0;
         } catch (error) {
+            console.error('Error deleting lecturer:', error);
             throw error;
+        } finally {
+            // Always release the connection back to the pool
+            if (connection) {
+                connection.release();
+            }
         }
     }
 
     static async deleteCertificate(lecturerId, certificateUrl) {
+        let connection;
         try {
+            // Get a connection from the pool
+            connection = await db.getConnection();
+            
             // Get current certificates
-            const [rows] = await db.query('SELECT certificates FROM lecturers WHERE lecturer_id = ?', [lecturerId]);
+            const [rows] = await connection.query('SELECT certificates FROM lecturers WHERE lecturer_id = ?', [lecturerId]);
             if (!rows[0]) return false;
 
             // Parse certificates array
@@ -137,34 +216,54 @@ class LecturerModel {
             const updatedCertificates = certificates.filter(cert => cert !== certificateUrl);
             
             // Update the lecturer record
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 'UPDATE lecturers SET certificates = ? WHERE lecturer_id = ?',
                 [JSON.stringify(updatedCertificates), lecturerId]
             );
 
             return result.affectedRows > 0;
         } catch (error) {
+            console.error('Error deleting certificate:', error);
             throw error;
+        } finally {
+            // Always release the connection back to the pool
+            if (connection) {
+                connection.release();
+            }
         }
     }
     static async updatePassword(id, password) {
+        let connection;
         try {
+            // Get a connection from the pool
+            connection = await db.getConnection();
+            
             // Password should already be hashed by the controller
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 'UPDATE lecturers SET password = ? WHERE lecturer_id = ? AND deleted_at IS NULL',
                 [password, id]
             );
             return result.affectedRows > 0;
         } catch (error) {
+            console.error('Error updating password:', error);
             throw error;
+        } finally {
+            // Always release the connection back to the pool
+            if (connection) {
+                connection.release();
+            }
         }
     }
 
     static async login(lecturer_id, password) {
+        let connection;
         try {
             console.log('Looking up lecturer with ID:', lecturer_id);
+            // Get a connection from the pool
+            connection = await db.getConnection();
+            
             // Keep the original ID format for the query
-            const [rows] = await db.query(
+            const [rows] = await connection.query(
                 'SELECT * FROM lecturers WHERE lecturer_id = ? AND deleted_at IS NULL',
                 [lecturer_id]
             );
@@ -179,7 +278,7 @@ class LecturerModel {
             if (rows[0].password && !rows[0].password.startsWith('$2')) {
                 console.log('Legacy password found, hashing it...');
                 const hashedPassword = await bcrypt.hash(rows[0].password, 10);
-                await db.query(
+                await connection.query(
                     'UPDATE lecturers SET password = ? WHERE lecturer_id = ?',
                     [hashedPassword, lecturer_id]
                 );
@@ -210,7 +309,13 @@ class LecturerModel {
                 )
             };
         } catch (error) {
+            console.error('Error in lecturer login:', error);
             throw error;
+        } finally {
+            // Always release the connection back to the pool
+            if (connection) {
+                connection.release();
+            }
         }
     }
 }

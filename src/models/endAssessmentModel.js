@@ -2,6 +2,7 @@ const db = require('../config/database');
 
 class EndAssessmentModel {
     static async create(data) {
+        const connection = await db.getConnection();
         try {
             const {
                 student_id,
@@ -20,7 +21,7 @@ class EndAssessmentModel {
             } = data;
 
             // First verify if the student belongs to this lecturer
-            const [student] = await db.execute(`
+            const [student] = await connection.execute(`
                 SELECT student_id 
                 FROM student s
                 WHERE s.student_id = ?
@@ -33,7 +34,7 @@ class EndAssessmentModel {
             }
 
             // Check if assessment already exists
-            const [existing] = await db.execute(`
+            const [existing] = await connection.execute(`
                 SELECT id 
                 FROM end_assessment 
                 WHERE student_id = ? 
@@ -47,7 +48,7 @@ class EndAssessmentModel {
                 return existing[0].id;
             }
 
-            const [result] = await db.execute(`
+            const [result] = await connection.execute(`
                 INSERT INTO end_assessment (
                     student_id,
                     lecturer_id,
@@ -83,10 +84,13 @@ class EndAssessmentModel {
         } catch (error) {
             console.error('Error creating end assessment:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async update(id, lecturerId, data) {
+        const connection = await db.getConnection();
         try {
             const {
                 greatest_success_experience,
@@ -102,7 +106,7 @@ class EndAssessmentModel {
                 participant_name
             } = data;
 
-            const [result] = await db.execute(`
+            const [result] = await connection.execute(`
                 UPDATE end_assessment 
                 SET 
                     greatest_success_experience = ?,
@@ -144,10 +148,11 @@ class EndAssessmentModel {
     }
 
     static async storePdf(assessmentId, data) {
+        const connection = await db.getConnection();
         try {
             const { student_id, lecturer_id, pdf_url, description } = data;
             
-            const [result] = await db.execute(
+            const [result] = await connection.execute(
                 `INSERT INTO end_assessment_pdfs (
                     assessment_id,
                     student_id,
@@ -162,12 +167,15 @@ class EndAssessmentModel {
         } catch (error) {
             console.error('Error storing PDF:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getPdfsByAssessmentId(assessmentId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(
+            const [rows] = await connection.execute(
                 `SELECT * FROM end_assessment_pdfs
                 WHERE assessment_id = ?
                     AND deleted_at IS NULL
@@ -179,12 +187,15 @@ class EndAssessmentModel {
         } catch (error) {
             console.error('Error getting PDFs:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getByStudentId(studentId, lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(`
+            const [rows] = await connection.execute(`
                 SELECT 
                     ea.*,
                     s.first_name,
@@ -203,12 +214,15 @@ class EndAssessmentModel {
         } catch (error) {
             console.error('Error getting end assessment:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getByLecturerId(lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(`
+            const [rows] = await connection.execute(`
                 SELECT 
                     ea.*,
                     s.first_name,
@@ -231,8 +245,9 @@ class EndAssessmentModel {
     }
 
     static async getAllPdfsByStudentId(studentId, lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(`
+            const [rows] = await connection.execute(`
                 SELECT 
                     eap.*,
                     ea.student_id,
@@ -255,12 +270,15 @@ class EndAssessmentModel {
         } catch (error) {
             console.error('Error getting PDFs by student ID:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async delete(id, lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.execute(`
+            const [result] = await connection.execute(`
                 UPDATE end_assessment 
                 SET deleted_at = CURRENT_TIMESTAMP
                 WHERE id = ? AND lecturer_id = ?
@@ -270,6 +288,8 @@ class EndAssessmentModel {
         } catch (error) {
             console.error('Error deleting end assessment:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

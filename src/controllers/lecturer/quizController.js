@@ -2,6 +2,7 @@ const QuizAttempt = require('../../models/QuizAttempt');
 const db = require('../../config/database');
 
 async function getStudentResults(req, res) {
+    const connection = await db.getConnection();
     try {
         const { studentId } = req.params;
         if (!studentId) {
@@ -12,7 +13,7 @@ async function getStudentResults(req, res) {
         }
 
         // Verify student exists
-        let [students] = await db.execute(
+        let [students] = await connection.execute(
             'SELECT student_id FROM student WHERE student_id = ?',
             [studentId]
         );
@@ -34,10 +35,13 @@ async function getStudentResults(req, res) {
         });
     } catch (error) {
         console.error('Error getting student quiz results:', error);
+        connection.release();
         return res.status(500).json({
             error: 'Internal server error',
             details: 'Failed to get quiz results'
         });
+    } finally {
+        connection.release();
     }
 }
 

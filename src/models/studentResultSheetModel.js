@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class StudentResultSheetModel {
     static async getByStudentId(studentId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.query(
+            const [rows] = await connection.query(
                 'SELECT * FROM student_result_sheet WHERE student_id = ?',
                 [studentId]
             );
@@ -26,11 +27,16 @@ class StudentResultSheetModel {
             };
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async create(data) {
+        const connection = await db.getConnection();
         try {
+            await connection.beginTransaction();
+            
             const { 
                 student_id, 
                 skills, 
@@ -47,7 +53,7 @@ class StudentResultSheetModel {
                 signature
             } = data;
 
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 `INSERT INTO student_result_sheet 
                 (student_id, skills, language_skills, it_skills, mobility, internships, applications, 
                 future_application, alternatives, other_comments, signature,
@@ -69,16 +75,23 @@ class StudentResultSheetModel {
                     reference_no || ''
                 ]
             );
-
+            
+            await connection.commit();
             return result.insertId;
         } catch (error) {
+            await connection.rollback();
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async update(data) {
-        const { student_id, ...updateData } = data;
+        const connection = await db.getConnection();
         try {
+            await connection.beginTransaction();
+            
+            const { student_id, ...updateData } = data;
             const { 
                 skills, 
                 language_skills,
@@ -148,28 +161,38 @@ class StudentResultSheetModel {
             if (updateFields.length === 0) return false;
 
             values.push(student_id);
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 `UPDATE student_result_sheet SET ${updateFields.join(', ')} WHERE student_id = ?`,
                 values
             );
-
-            return result.affectedRows > 0;
-
+            
+            await connection.commit();
             return result.affectedRows > 0;
         } catch (error) {
+            await connection.rollback();
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async delete(studentId) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.query(
+            await connection.beginTransaction();
+            
+            const [result] = await connection.query(
                 'DELETE FROM student_result_sheet WHERE student_id = ?',
                 [studentId]
             );
+            
+            await connection.commit();
             return result.affectedRows > 0;
         } catch (error) {
+            await connection.rollback();
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

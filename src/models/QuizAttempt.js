@@ -51,10 +51,14 @@ class QuizAttempt {
         // Add retry logic for connection issues
         let retries = 3;
         let lastError;
+        let connection;
 
         while (retries > 0) {
             try {
-                const [result] = await db.execute(query, [
+                connection = await db.getConnection();
+                await connection.beginTransaction();
+                
+                const [result] = await connection.execute(query, [
                     student_id,
                     topic,
                     score,
@@ -63,8 +67,18 @@ class QuizAttempt {
                     Array.isArray(unattempted_questions) ? unattempted_questions.length : 0,
                     attempt_date
                 ]);
+                
+                await connection.commit();
                 return result.insertId;
             } catch (error) {
+                if (connection) {
+                    try {
+                        await connection.rollback();
+                    } catch (rollbackError) {
+                        console.error('Error rolling back transaction:', rollbackError);
+                    }
+                }
+                
                 lastError = error;
                 if (error.code === 'ECONNRESET' && retries > 1) {
                     // Wait for a short time before retrying
@@ -73,6 +87,14 @@ class QuizAttempt {
                     continue;
                 }
                 break;
+            } finally {
+                if (connection) {
+                    try {
+                        connection.release();
+                    } catch (releaseError) {
+                        console.error('Error releasing connection:', releaseError);
+                    }
+                }
             }
         }
 
@@ -81,47 +103,63 @@ class QuizAttempt {
     }
 
     static async getStudentAttempts(studentId, quizTopic) {
-        const query = `
-            SELECT * FROM quiz_attempts
-            WHERE student_id = ? AND quiz_topic = ?
-            ORDER BY created_at DESC
-        `;
-        const [attempts] = await db.execute(query, [studentId, quizTopic]);
-        return attempts;
+        const connection = await db.getConnection();
+        try {
+            const query = `
+                SELECT * FROM quiz_attempts
+                WHERE student_id = ? AND quiz_topic = ?
+                ORDER BY created_at DESC
+            `;
+            const [attempts] = await connection.execute(query, [studentId, quizTopic]);
+            return attempts;
+        } finally {
+            connection.release();
+        }
     }
 
     static async hasExamAttempt(studentId, quizTopic) {
-        const query = `
-            SELECT COUNT(*) as count FROM quiz_attempts
-            WHERE student_id = ? AND quiz_topic = ? AND is_exam = TRUE
-        `;
-        const [[result]] = await db.execute(query, [studentId, quizTopic]);
-        return result.count > 0;
+        const connection = await db.getConnection();
+        try {
+            const query = `
+                SELECT COUNT(*) as count FROM quiz_attempts
+                WHERE student_id = ? AND quiz_topic = ? AND is_exam = TRUE
+            `;
+            const [[result]] = await connection.execute(query, [studentId, quizTopic]);
+            return result.count > 0;
+        } finally {
+            connection.release();
+        }
     }
 
     static async getBestScore(studentId, quizTopic) {
-        const query = `
-            SELECT score, total_questions FROM quiz_attempts
-            WHERE student_id = ? AND quiz_topic = ?
-            ORDER BY (score / total_questions) DESC
-            LIMIT 1
-        `;
-        const [[result]] = await db.execute(query, [studentId, quizTopic]);
-        return result;
+        const connection = await db.getConnection();
+        try {
+            const query = `
+                SELECT score, total_questions FROM quiz_attempts
+                WHERE student_id = ? AND quiz_topic = ?
+                ORDER BY (score / total_questions) DESC
+                LIMIT 1
+            `;
+            const [[result]] = await connection.execute(query, [studentId, quizTopic]);
+            return result;
+        } finally {
+            connection.release();
+        }
     }
 
     static async getStudentResults(studentId) {
-        const query = `
-            SELECT
-                qa.*,
-                ROUND((qa.score / qa.total_questions) * 100, 2) as percentage
-            FROM quiz_attempts qa
-            WHERE qa.student_id = ?
-            ORDER BY qa.created_at DESC
-        `;
-
+        const connection = await db.getConnection();
         try {
-            const [attempts] = await db.execute(query, [studentId]);
+            const query = `
+                SELECT
+                    qa.*,
+                    ROUND((qa.score / qa.total_questions) * 100, 2) as percentage
+                FROM quiz_attempts qa
+                WHERE qa.student_id = ?
+                ORDER BY qa.created_at DESC
+            `;
+
+            const [attempts] = await connection.execute(query, [studentId]);
             
             // Separate exam and practice attempts
             const examAttempts = [];
@@ -163,6 +201,8 @@ class QuizAttempt {
         } catch (error) {
             console.error('Error getting student results:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

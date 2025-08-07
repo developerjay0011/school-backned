@@ -4,44 +4,58 @@ const bcrypt = require('bcryptjs');
 class User {
   static async create(userData) {
     const salt = await bcrypt.genSalt(10);
+    const connection = await db.getConnection();
     const hashedPassword = await bcrypt.hash(userData.password, salt);
-    const [result] = await db.execute(
+    const [result] = await connection.execute(
       'INSERT INTO admin_users (first_name, last_name, phone_number, email, address, password, role, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
       [userData.firstName, userData.lastName, userData.phoneNumber, userData.email, userData.address, hashedPassword, userData.role || 'admin', userData.status]
     );
+    connection.release();
     return result.insertId;
   }
 
   static async findByEmail(email) {
-    const [rows] = await db.execute('SELECT * FROM admin_users WHERE email = ?', [email]);
+    const connection = await db.getConnection();
+    const [rows] = await connection.execute('SELECT * FROM admin_users WHERE email = ?', [email]);
+    connection.release();
     return rows[0];
   }
 
   static async findById(id) {
-    const [rows] = await db.execute('SELECT id, first_name, last_name, phone_number, email, address, role, status FROM admin_users WHERE id = ?', [id]);
+    const connection = await db.getConnection();
+    const [rows] = await connection.execute('SELECT id, first_name, last_name, phone_number, email, address, role, status FROM admin_users WHERE id = ?', [id]);
+    connection.release();
     return rows[0];
   }
 
   static async findAll() {
-    const [rows] = await db.execute('SELECT id, first_name, last_name, phone_number, email, address, role, status FROM admin_users');
+    const connection = await db.getConnection();
+    const [rows] = await connection.execute('SELECT id, first_name, last_name, phone_number, email, address, role, status FROM admin_users');
+    connection.release();
     return rows;
   }
 
   static async update(id, userData) {
-    const [result] = await db.execute(
+    const connection = await db.getConnection();
+    const [result] = await connection.execute(
       'UPDATE admin_users SET first_name = ?, last_name = ?, phone_number = ?, email = ?, address = ?, status = ? WHERE id = ?',
       [userData.firstName, userData.lastName, userData.phoneNumber, userData.email, userData.address, userData.status, id]
     );
+    connection.release();
     return result.affectedRows > 0;
   }
 
   static async delete(id) {
-    const [result] = await db.execute('DELETE FROM admin_users WHERE id = ?', [id]);
+    const connection = await db.getConnection();
+    const [result] = await connection.execute('DELETE FROM admin_users WHERE id = ?', [id]);
+    connection.release();
     return result.affectedRows > 0;
   }
 
   static async changePassword(id, hashedPassword) {
-    const [result] = await db.execute('UPDATE admin_users SET password = ? WHERE id = ?', [hashedPassword, id]);
+    const connection = await db.getConnection();
+    const [result] = await connection.execute('UPDATE admin_users SET password = ? WHERE id = ?', [hashedPassword, id]);
+    connection.release();
     return result.affectedRows > 0;
   }
 }

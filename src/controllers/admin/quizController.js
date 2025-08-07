@@ -3,11 +3,12 @@ const db = require('../../config/database');
 
 class AdminQuizController {
     async getStudentResults(req, res) {
+        const connection = await db.getConnection();
         try {
             const { studentId } = req.params;
             
             // Verify student exists
-            let [students] = await db.execute(
+            let [students] = await connection.execute(
                 'SELECT student_id FROM student WHERE student_id = ?',
                 [studentId]
             );
@@ -29,14 +30,18 @@ class AdminQuizController {
             });
         } catch (error) {
             console.error('Error getting quiz results:', error);
+            connection.release();
             return res.status(500).json({
                 error: 'Internal server error',
                 details: 'Failed to get quiz results'
             });
+        } finally {
+            connection.release();
         }
     }
 
     async getAllResults(req, res) {
+        const connection = await db.getConnection();
         try {
             // Optional query parameters for filtering
             const { topic, isExam, startDate, endDate } = req.query;
@@ -89,14 +94,14 @@ class AdminQuizController {
             params.push(limit, offset);
 
             // Execute query
-            const [results] = await db.execute(query, params);
+            const [results] = await connection.execute(query, params);
 
             // Get total count for pagination
             let countQuery = 'SELECT COUNT(*) as total FROM quiz_attempts qa';
             if (conditions.length > 0) {
                 countQuery += ' WHERE ' + conditions.join(' AND ');
             }
-            const [[{ total }]] = await db.execute(countQuery, params.slice(0, -2));
+            const [[{ total }]] = await connection.execute(countQuery, params.slice(0, -2));
 
             // Separate exam and practice attempts
             const examAttempts = [];
@@ -128,10 +133,13 @@ class AdminQuizController {
             });
         } catch (error) {
             console.error('Error getting all quiz results:', error);
+                connection.release();
             return res.status(500).json({
                 error: 'Internal server error',
                 details: 'Failed to get quiz results'
             });
+        } finally {
+            connection.release();
         }
     }
 }

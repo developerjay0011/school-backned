@@ -9,12 +9,15 @@ class AttendanceList {
             VALUES (?, ?, ?, ?, ?)
         `;
         
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.execute(query, [datetime, start_date, end_date, pdf_url, student_id]);
+            const [result] = await connection.execute(query, [datetime, start_date, end_date, pdf_url, student_id]);
             return result.insertId;
         } catch (error) {
             console.error('Error creating attendance list record:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
@@ -27,8 +30,9 @@ class AttendanceList {
             ORDER BY al.datetime DESC
         `;
 
+        const connection = await db.getConnection();
         try {
-            const [results] = await db.query(query, [studentId]);
+            const [results] = await connection.execute(query, [studentId]);
             return results.map(row => ({
                 id: row.id,
                 datetime: row.datetime,
@@ -45,6 +49,8 @@ class AttendanceList {
         } catch (error) {
             console.error('Error fetching attendance lists by student ID:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
@@ -55,12 +61,15 @@ class AttendanceList {
             ORDER BY datetime DESC
         `;
 
+        const connection = await db.getConnection();
         try {
-            const [results] = await db.query(query);
+            const [results] = await connection.execute(query);
             return results;
         } catch (error) {
             console.error('Error fetching attendance lists:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
@@ -76,8 +85,9 @@ class AttendanceList {
             ORDER BY a.date ASC
         `;
 
+        const connection = await db.getConnection();
         try {
-            const [results] = await db.query(query, [studentId, startDate, endDate]);
+            const [results] = await connection.execute(query, [studentId, startDate, endDate]);
             return results.map(row => ({
                 id: row.id,
                 date: row.date,
@@ -95,6 +105,8 @@ class AttendanceList {
         } catch (error) {
             console.error('Error fetching attendance by student and date range:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

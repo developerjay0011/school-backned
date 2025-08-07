@@ -4,41 +4,51 @@ const fs = require('fs');
 
 class QualificationMatrix {
     static async create(description, pdfUrl) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 'INSERT INTO qualification_matrix (description, pdf_url) VALUES (?, ?)',
                 [description, pdfUrl]
             );
             return result.insertId;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async getAll() {
+        const connection = await db.getConnection();
         try {
-            const [matrices] = await db.query(
+            const [matrices] = await connection.query(
                 'SELECT * FROM qualification_matrix ORDER BY created_at DESC'
             );
             return matrices;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async getById(id) {
+        const connection = await db.getConnection();
         try {
-            const [matrices] = await db.query(
+            const [matrices] = await connection.query(
                 'SELECT * FROM qualification_matrix WHERE id = ?',
                 [id]
             );
             return matrices[0];
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async delete(id) {
+        const connection = await db.getConnection();
         try {
             const matrix = await this.getById(id);
             if (!matrix) {
@@ -46,7 +56,7 @@ class QualificationMatrix {
             }
 
             // Delete from database
-            await db.query('DELETE FROM qualification_matrix WHERE id = ?', [id]);
+            await connection.query('DELETE FROM qualification_matrix WHERE id = ?', [id]);
 
             // Get PDF path
             const pdfPath = matrix.pdf_url.split('/uploads')[1];
@@ -60,6 +70,8 @@ class QualificationMatrix {
             return { success: true, message: 'Matrix deleted successfully' };
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 }

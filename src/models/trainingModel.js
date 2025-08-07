@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class Training {
     static async create(userId, trainingData) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 `INSERT INTO trainings (
                     user_id,
                     topic,
@@ -28,28 +29,34 @@ class Training {
             return result.insertId;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async getByUserId(userId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.query(
+            const [rows] = await connection.query(
                 'SELECT * FROM trainings WHERE user_id = ? ORDER BY actual_date DESC',
                 [userId]
             );
             return rows;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async getTrainingsByDateRange(startYear, endYear) {
+        const connection = await db.getConnection();
         try {
             // Convert years to full dates (Jan 1st to Dec 31st)
             const startDate = new Date(parseInt(startYear), 0, 1);
             const endDate = new Date(parseInt(endYear), 11, 31);
 
-            const [rows] = await db.query(
+            const [rows] = await connection.query(
                 `SELECT 
                     t.*,
                     au.first_name,
@@ -74,12 +81,15 @@ class Training {
             }));
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async update(trainingId, trainingData) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 `UPDATE trainings SET
                     topic = ?,
                     quarter = ?,
@@ -103,18 +113,23 @@ class Training {
             return result.affectedRows > 0;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async delete(trainingId) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 'DELETE FROM trainings WHERE id = ?',
                 [trainingId]
             );
             return result.affectedRows > 0;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 }

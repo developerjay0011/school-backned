@@ -8,6 +8,7 @@ const EmailService = require('../../utils/emailService');
 
 class StudentReportController {
     static async createDischargeReport(req, res) {
+        const connection = await db.getConnection();
         try {
             const { studentId } = req.params;
             
@@ -31,7 +32,7 @@ class StudentReportController {
 
             // Get authority data
             console.log('Getting authority data for student:', studentId);
-            const [authorities] = await db.query(
+            const [authorities] = await connection.query(
                 'SELECT * FROM authorities WHERE student_id = ?',
                 [studentId]
             );
@@ -104,10 +105,13 @@ class StudentReportController {
                 success: false,
                 message: 'Error creating discharge report'
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async createTerminationReport(req, res) {
+        const connection = await db.getConnection();
         try {
             const { studentId } = req.params;
             
@@ -131,7 +135,7 @@ class StudentReportController {
             console.log('student PDF data:', student);
             // Get authority data
             console.log('Getting authority data for student:', studentId);
-            const [authorities] = await db.query(
+            const [authorities] = await connection.query(
                 'SELECT * FROM authorities WHERE student_id = ?',
                 [studentId]
             );
@@ -204,10 +208,13 @@ class StudentReportController {
                 success: false,
                 message: 'Error creating termination report'
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async getStudentReports(req, res) {
+        const connection = await db.getConnection();
         try {
             const { studentId } = req.params;
             
@@ -232,9 +239,12 @@ class StudentReportController {
                 success: false,
                 message: 'Error getting student reports'
             });
+        } finally {
+            connection.release();
         }
     }
     static async deleteReport(req, res) {
+        const connection = await db.getConnection();
         try {
             const { reportId } = req.params;
             
@@ -264,6 +274,8 @@ class StudentReportController {
                 success: false,
                 message: 'Error deleting report'
             });
+        } finally {
+            connection.release();
         }
     }
 }

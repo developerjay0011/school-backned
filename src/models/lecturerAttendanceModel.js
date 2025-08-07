@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class LecturerAttendanceModel {
     static async getAttendanceList(lecturerId, date) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(`
+            const [rows] = await connection.execute(`
                 SELECT 
                     s.student_id,
                     s.first_name,
@@ -31,14 +32,19 @@ class LecturerAttendanceModel {
         } catch (error) {
             console.error('Error getting attendance list:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async markAttendance(data) {
         const { student_id, date, slot, is_present } = data;
+        const connection = await db.getConnection();
         try {
+            await connection.beginTransaction();
+            
             // First check if attendance record exists
-            const [existing] = await db.execute(
+            const [existing] = await connection.execute(
                 'SELECT id FROM student_attendance WHERE student_id = ? AND attendance_date = ?',
                 [student_id, date]
             );
@@ -47,10 +53,12 @@ class LecturerAttendanceModel {
                 // Update existing record
                 const slotColumn = slot === 'morning' ? 'morning_attendance' : 'afternoon_attendance';
                 const timeColumn = slot === 'morning' ? 'morning_attendance_time' : 'afternoon_attendance_time';
-                await db.execute(
+                await connection.execute(
                     `UPDATE student_attendance SET ${slotColumn} = ?, ${timeColumn} = ? WHERE student_id = ? AND attendance_date = ?`,
                     [is_present ? 1 : 0, is_present ? new Date() : null, student_id, date]
                 );
+                
+                await connection.commit();
                 return existing[0].id;
             } else {
                 // Create new record
@@ -59,15 +67,20 @@ class LecturerAttendanceModel {
                 const afternoon_attendance = slot === 'evening' ? (is_present ? 1 : 0) : null;
                 const afternoon_time = slot === 'evening' && is_present ? new Date() : null;
                 
-                const [result] = await db.execute(
+                const [result] = await connection.execute(
                     'INSERT INTO student_attendance (student_id, attendance_date, morning_attendance, morning_attendance_time, afternoon_attendance, afternoon_attendance_time) VALUES (?, ?, ?, ?, ?, ?)',
                     [student_id, date, morning_attendance, morning_time, afternoon_attendance, afternoon_time]
                 );
+                
+                await connection.commit();
                 return result.insertId;
             }
         } catch (error) {
+            await connection.rollback();
             console.error('Error marking attendance:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

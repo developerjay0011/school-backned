@@ -2,6 +2,7 @@ const db = require('../config/database');
 
 class StudentReport {
     static async createDischargeReport(studentId, reportData, pdfUrl) {
+        const connection = await db.getConnection();
         try {
             console.log('Creating discharge report with:', { studentId, reportData, pdfUrl });
             
@@ -10,7 +11,7 @@ class StudentReport {
                 throw new Error('Missing required parameters');
             }
 
-            const [result] = await db.query(
+            const [result] = await connection.execute(
                 `INSERT INTO student_reports (
                     student_id,
                     report_type,
@@ -40,10 +41,13 @@ class StudentReport {
         } catch (error) {
             console.error('Error creating discharge report:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async createTerminationReport(studentId, reportData, pdfUrl) {
+        const connection = await db.getConnection();
         try {
             console.log('Creating termination report with:', { studentId, reportData, pdfUrl });
             
@@ -52,7 +56,7 @@ class StudentReport {
                 throw new Error('Missing required parameters');
             }
 
-            const [result] = await db.query(
+            const [result] = await connection.execute(
                 `INSERT INTO student_reports (
                     student_id,
                     report_type,
@@ -85,12 +89,15 @@ class StudentReport {
             return result.insertId;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getStudentReports(studentId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.query(
+            const [rows] = await connection.execute(
                 `SELECT 
                     sr.*,
                     s.student_id,
@@ -105,24 +112,30 @@ class StudentReport {
             return rows;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getReportById(reportId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.query(
+            const [rows] = await connection.execute(
                 'SELECT * FROM student_reports WHERE id = ?',
                 [reportId]
             );
             return rows[0];
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getById(reportId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.query(
+            const [rows] = await connection.execute(
                 'SELECT * FROM student_reports WHERE id = ?',
                 [reportId]
             );
@@ -131,12 +144,15 @@ class StudentReport {
         } catch (error) {
             console.error('Error getting report:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
     static async deleteReport(reportId) {
+        const connection = await db.getConnection();
         try {
             // First get the report to check if it exists and get the pdf_url
-            const [reports] = await db.query(
+            const [reports] = await connection.execute(
                 'SELECT * FROM student_reports WHERE id = ?',
                 [reportId]
             );
@@ -146,7 +162,7 @@ class StudentReport {
             }
 
             // Delete the report from database
-            const [result] = await db.query(
+            const [result] = await connection.execute(
                 'DELETE FROM student_reports WHERE id = ?',
                 [reportId]
             );
@@ -158,6 +174,8 @@ class StudentReport {
         } catch (error) {
             console.error('Error deleting report:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

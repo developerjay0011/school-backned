@@ -3,11 +3,12 @@ const db = require('../../config/database');
 
 class ContactController {
     static async getByStudent(req, res) {
+        const connection = await db.getConnection();
         try {
             const studentId = req.params.studentId;
 
             // Check if student exists
-            const [student] = await db.execute(
+            const [student] = await connection.execute(
                 'SELECT * FROM student WHERE student_id = ?',
                 [studentId]
             );
@@ -34,20 +35,24 @@ class ContactController {
             });
         } catch (error) {
             console.error('Error fetching contact details:', error);
+            connection.release();
             res.status(500).json({
                 success: false,
                 message: 'Error fetching contact details',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async update(req, res) {
+        const connection = await db.getConnection();
         try {
             const studentId = req.params.studentId;
 
             // Check if student exists
-            const [student] = await db.execute(
+            const [student] = await connection.execute(
                 'SELECT * FROM student WHERE student_id = ?',
                 [studentId]
             );
@@ -79,11 +84,14 @@ class ContactController {
             });
         } catch (error) {
             console.error('Error updating contact details:', error);
+                connection.release();
             res.status(500).json({
                 success: false,
                 message: 'Error updating contact details',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 }

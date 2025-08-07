@@ -2,6 +2,7 @@ const db = require('../config/database');
 
 class CertificateOfAbsence {
     static async getByStudentId(studentId) {
+        const connection = await db.getConnection();
         const query = `
             SELECT *
             FROM certificate_of_absence
@@ -10,7 +11,7 @@ class CertificateOfAbsence {
         `;
 
         try {
-            const [results] = await db.query(query, [studentId]);
+            const [results] = await connection.query(query, [studentId]);
             return results.map(row => ({
                 id: row.id,
                 date: row.date,
@@ -22,20 +23,26 @@ class CertificateOfAbsence {
         } catch (error) {
             console.error('Error fetching certificates by student ID:', error);
             throw error;
+        }finally {
+            connection.release();
         }
     }
     static async delete(id) {
+        const connection = await db.getConnection();
         const query = 'DELETE FROM certificate_of_absence WHERE id = ?';
         
         try {
-            const [result] = await db.execute(query, [id]);
+            const [result] = await connection.execute(query, [id]);
             return result.affectedRows > 0;
         } catch (error) {
             console.error('Error deleting certificate:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
     static async getAll() {
+        const connection = await db.getConnection();
         const query = `
             SELECT *
             FROM certificate_of_absence
@@ -43,7 +50,7 @@ class CertificateOfAbsence {
         `;
 
         try {
-            const [results] = await db.query(query);
+            const [results] = await connection.query(query);
             return results.map(row => ({
                 id: row.id,
                 date: row.date,
@@ -55,11 +62,14 @@ class CertificateOfAbsence {
         } catch (error) {
             console.error('Error fetching certificates:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async create(data) {
         const { date, description, sent_to, pdf_url, student_id } = data;
+        const connection = await db.getConnection();
         
         const query = `
             INSERT INTO certificate_of_absence (date, description, sent_to, pdf_url, student_id)
@@ -67,11 +77,13 @@ class CertificateOfAbsence {
         `;
         
         try {
-            const [result] = await db.execute(query, [date, description, sent_to, pdf_url, student_id]);
+            const [result] = await connection.execute(query, [date, description, sent_to, pdf_url, student_id]);
             return result.insertId;
         } catch (error) {
             console.error('Error creating certificate record:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

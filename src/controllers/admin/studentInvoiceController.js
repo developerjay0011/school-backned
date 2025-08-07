@@ -8,6 +8,7 @@ const EmailService = require('../../utils/emailService');
 
 class StudentInvoiceController {
     static async toggleAutoDispatch(req, res) {
+        const connection = await db.getConnection();
         try {
             const result = await InvoiceReminderService.toggleAutoDispatch(
                 req.params.id,
@@ -28,10 +29,13 @@ class StudentInvoiceController {
                 success: false,
                 message: error.message || 'Internal server error'
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async createReminder(req, res) {
+        const connection = await db.getConnection();
         try {
             const result = await InvoiceReminderService.createManualReminder(req.params.id);
             
@@ -48,6 +52,8 @@ class StudentInvoiceController {
                     success: false,
                     message: error.message || 'Internal server error'
                 });
+        } finally {
+            connection.release();
         }
     }
 
@@ -400,6 +406,7 @@ class StudentInvoiceController {
     }
 
     static async getAll(req, res) {
+        const connection = await db.getConnection();
         try {
             const invoices = await StudentInvoice.getAll();
 
@@ -418,6 +425,8 @@ class StudentInvoiceController {
                 message: 'Error retrieving all invoices',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 }

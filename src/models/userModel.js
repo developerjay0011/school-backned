@@ -8,13 +8,14 @@ class User {
     }
 
     static async create(data) {
+        const connection = await db.getConnection();
         try {
             // Add timestamp to email if it already exists
             const timestamp = Date.now();
             const email = data.email;
 
             // Check if email exists
-            const [existingEmail] = await db.execute(
+            const [existingEmail] = await connection.execute(
                 'SELECT id FROM admin_users WHERE email = ?',
                 [email]
             );
@@ -26,7 +27,7 @@ class User {
             }
 
             const hashedPassword = await bcrypt.hash(data.password, 10);
-            const [result] = await db.execute(
+            const [result] = await connection.execute(
                 `INSERT INTO admin_users (
                     first_name, last_name, phone_number, 
                     email, street, pincode, city, country,
@@ -44,10 +45,13 @@ class User {
             return result.insertId;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async createMinimal(data) {
+        const connection = await db.getConnection();
         try {
             if (!data.first_name || !data.last_name || !data.password) {
                 throw new Error('First name, last name, and password are required');
@@ -55,7 +59,7 @@ class User {
 
             // Check if email exists
             if (data.email) {
-                const [existingEmail] = await db.execute(
+                const [existingEmail] = await connection.execute(
                     'SELECT id FROM admin_users WHERE email = ?',
                     [data.email]
                 );
@@ -83,23 +87,26 @@ class User {
                 data.reason_non_participation || null
             ];
 
-            const [result] = await db.query(
+            const [result] = await connection.execute(
                 `INSERT INTO admin_users (
                     first_name, last_name, password,
                     role, status, phone_number, email, street,
                     pincode, city, country, reason_non_participation
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
                 params
             );
             return result.insertId;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getAll() {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(
+            const [rows] = await connection.execute(
                 `SELECT id, first_name, last_name, 
                 phone_number, email, street, pincode, city, 
                 country, role, status, reason_non_participation,
@@ -114,12 +121,15 @@ class User {
             }));
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getById(id) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(
+            const [rows] = await connection.execute(
                 `SELECT id, first_name, last_name, 
                 phone_number, email, street, pincode, city, 
                 country, role, status, created_at, updated_at 
@@ -135,10 +145,13 @@ class User {
             return null;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async update(id, data) {
+        const connection = await db.getConnection();
         try {
             const updates = [];
             const values = [];
@@ -195,31 +208,37 @@ class User {
             }
 
             values.push(id);
-            const [result] = await db.execute(
+            const [result] = await connection.execute(
                 `UPDATE admin_users SET ${updates.join(', ')} WHERE id = ?`,
                 values
             );
             return result.affectedRows > 0;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async delete(id) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.execute(
+            const [result] = await connection.execute(
                 'UPDATE admin_users SET deleted_at = CURRENT_TIMESTAMP WHERE id = ? AND deleted_at IS NULL',
                 [id]
             );
             return result.affectedRows > 0;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async findByEmail(email) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(
+            const [rows] = await connection.execute(
                 'SELECT * FROM admin_users WHERE email = ? AND deleted_at IS NULL',
                 [email]
             );
@@ -232,6 +251,8 @@ class User {
             return null;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

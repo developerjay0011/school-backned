@@ -2,6 +2,7 @@ const db = require('../config/database');
 
 class InterimAssessmentModel {
     static async create(data) {
+        const connection = await db.getConnection();
         try {
             const {
                 student_id,
@@ -19,7 +20,7 @@ class InterimAssessmentModel {
             } = data;
 
             // First verify if the student belongs to this lecturer
-            const [student] = await db.execute(`
+            const [student] = await connection.execute(`
                 SELECT student_id 
                 FROM student s
                 WHERE s.student_id = ?
@@ -32,7 +33,7 @@ class InterimAssessmentModel {
             }
 
             // Check if assessment already exists
-            const [existing] = await db.execute(`
+            const [existing] = await connection.execute(`
                 SELECT id 
                 FROM interim_assessment 
                 WHERE student_id = ? 
@@ -46,7 +47,7 @@ class InterimAssessmentModel {
                 return existing[0].id;
             }
 
-            const [result] = await db.execute(`
+            const [result] = await connection.execute(`
                 INSERT INTO interim_assessment (
                     student_id,
                     lecturer_id,
@@ -80,10 +81,13 @@ class InterimAssessmentModel {
         } catch (error) {
             console.error('Error creating interim assessment:', error);
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async update(id, lecturerId, data) {
+        const connection = await db.getConnection();
         try {
             const {
                 learning_status,
@@ -98,7 +102,7 @@ class InterimAssessmentModel {
                 lecturer_signature
             } = data;
 
-            const [result] = await db.execute(`
+            const [result] = await connection.execute(`
                 UPDATE interim_assessment 
                 SET 
                     learning_status = ?,
@@ -133,14 +137,17 @@ class InterimAssessmentModel {
         } catch (error) {
             console.error('Error updating interim assessment:', error);
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async storePdf(assessmentId, data) {
+        const connection = await db.getConnection();
         try {
             const { student_id, lecturer_id, pdf_url, description } = data;
             
-            const [result] = await db.execute(
+            const [result] = await connection.execute(
                 `INSERT INTO interim_assessment_pdfs (
                     assessment_id,
                     student_id,
@@ -155,12 +162,15 @@ class InterimAssessmentModel {
         } catch (error) {
             console.error('Error storing PDF:', error);
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async getPdfsByAssessmentId(assessmentId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(
+            const [rows] = await connection.execute(
                 `SELECT * FROM interim_assessment_pdfs
                 WHERE assessment_id = ?
                 ORDER BY created_at DESC`,
@@ -171,12 +181,15 @@ class InterimAssessmentModel {
         } catch (error) {
             console.error('Error getting PDFs:', error);
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async getAllPdfsByStudentId(studentId, lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(`
+            const [rows] = await connection.execute(`
                 SELECT 
                     iap.*,
                     ia.student_id,
@@ -197,12 +210,15 @@ class InterimAssessmentModel {
         } catch (error) {
             console.error('Error getting PDFs by student ID:', error);
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async getByStudentId(studentId, lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(`
+            const [rows] = await connection.execute(`
                 SELECT *
                 FROM interim_assessment_pdfs iap
                 WHERE iap.student_id = ?
@@ -215,12 +231,15 @@ class InterimAssessmentModel {
         } catch (error) {
             console.error('Error getting interim assessment:', error);
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async getByLecturerId(lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(`
+            const [rows] = await connection.execute(`
                 SELECT 
                     ia.*,
                     s.first_name,
@@ -238,12 +257,15 @@ class InterimAssessmentModel {
         } catch (error) {
             console.error('Error getting interim assessments:', error);
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async delete(id, lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.execute(`
+            const [result] = await connection.execute(`
                 DELETE FROM interim_assessment_pdfs
                 WHERE id = ? AND lecturer_id = ?
             `, [id, lecturerId]);
@@ -252,6 +274,8 @@ class InterimAssessmentModel {
         } catch (error) {
             console.error('Error deleting interim assessment:', error);
             throw error;
+        }finally {
+            connection.release();
         }
     }
 }

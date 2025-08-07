@@ -2,9 +2,10 @@ const db = require('../config/database');
 
 class DashboardModel {
     static async getTotalCounts() {
+        const connection = await db.getConnection();
         try {
             // Get active and inactive students
-            const [studentRows] = await db.query(`
+            const [studentRows] = await connection.execute(`
                 SELECT
                     COUNT(*) as total,
                     CAST(SUM(CASE
@@ -26,30 +27,33 @@ class DashboardModel {
             `);
             
             // Get total lecturers
-            const [lecturerRows] = await db.query('SELECT COUNT(*) as total FROM lecturers WHERE deleted_at IS NULL');
+            const [lecturerRows] = await connection.execute('SELECT COUNT(*) as total FROM lecturers WHERE deleted_at IS NULL');
 
             // Get total admin users
-                const [adminRows] = await db.query('SELECT COUNT(*) as total FROM admin_users WHERE deleted_at IS NULL');
-                
-                // Get total measurements
-                const [measurementRows] = await db.query('SELECT COUNT(*) as total FROM measurements WHERE deleted_at IS NULL');
+            const [adminRows] = await connection.execute('SELECT COUNT(*) as total FROM admin_users WHERE deleted_at IS NULL');
+            
+            // Get total measurements
+            const [measurementRows] = await connection.execute('SELECT COUNT(*) as total FROM measurements WHERE deleted_at IS NULL');
 
-                return {
-                    totalStudents: studentRows[0].total,
-                    activeStudents: studentRows[0].active,
-                    inactiveStudents: studentRows[0].inactive,
-                    totalLecturers: lecturerRows[0].total,
-                    totalAdmins: adminRows[0].total,
-                    totalMeasurements: measurementRows[0].total
-                };
-            } catch (error) {
-                throw error;
-            }
+            return {
+                totalStudents: studentRows[0].total,
+                activeStudents: studentRows[0].active,
+                inactiveStudents: studentRows[0].inactive,
+                totalLecturers: lecturerRows[0].total,
+                totalAdmins: adminRows[0].total,
+                totalMeasurements: measurementRows[0].total
+            };
+        } catch (error) {
+            throw error;
+        } finally {
+            connection.release();
         }
+    }
 
         static async getStudentsByGender() {
+            const connection = await db.getConnection();
             try {
-                const [rows] = await db.query(`
+                const [rows] = await connection.execute(`
                     SELECT 
                         s.salutation,
                         COUNT(*) as count
@@ -82,6 +86,8 @@ class DashboardModel {
                 return genderData;
             } catch (error) {
                 throw error;
+            } finally {
+                connection.release();
             }
         }
     }

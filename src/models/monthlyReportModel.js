@@ -2,9 +2,10 @@ const db = require('../config/database');
 
 class MonthlyReportModel {
     static async create(data) {
+        const connection = await db.getConnection();
         try {
             console.log('Creating monthly report:', data);
-            const [result] = await db.execute(
+            const [result] = await connection.execute(
                 `INSERT INTO monthly_reports (
                     lecturer_id,
                     description,
@@ -25,13 +26,16 @@ class MonthlyReportModel {
         } catch (error) {
             console.error('Error in create:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getAll(lecturer_id) {
+        const connection = await db.getConnection();
         try {
             console.log('Getting all monthly reports for lecturer_id:', lecturer_id);
-            const [rows] = await db.execute(
+            const [rows] = await connection.execute(
                 'SELECT * FROM monthly_reports WHERE lecturer_id = ? ORDER BY created_at DESC',
                 [lecturer_id]
             );
@@ -40,12 +44,15 @@ class MonthlyReportModel {
         } catch (error) {
             console.error('Error in getAll:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getAllGroupedByLecturer() {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(`
+            const [rows] = await connection.execute(`
                 SELECT 
                     mr.*,
                     l.first_name,
@@ -79,13 +86,16 @@ class MonthlyReportModel {
         } catch (error) {
             console.error('Error in getAllGroupedByLecturer:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async delete(id, lecturer_id) {
+        const connection = await db.getConnection();
         try {
             console.log('Deleting monthly report:', id, 'for lecturer:', lecturer_id);
-            const [result] = await db.execute(
+            const [result] = await connection.execute(
                 'DELETE FROM monthly_reports WHERE id = ? AND lecturer_id = ?',
                 [id, lecturer_id]
             );
@@ -93,6 +103,8 @@ class MonthlyReportModel {
         } catch (error) {
             console.error('Error in delete:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

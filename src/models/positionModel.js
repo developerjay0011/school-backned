@@ -3,19 +3,23 @@ const db = require('../config/database');
 class Position {
     // Helper method to get user details
     static async getUserDetails(userId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.query(
+            const [rows] = await connection.query(
                 `SELECT id, first_name, last_name, role FROM admin_users WHERE id = ?`,
                 [userId]
             );
             return rows[0];
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     // Get all positions with user details
     static async getAllPositionsWithUsers() {
+        const connection = await db.getConnection();
         try {
             console.log('Getting all positions with users...');
             const query = `
@@ -33,11 +37,13 @@ class Position {
                 FROM positions p 
                 LEFT JOIN admin_users u ON CAST(TRIM(LEADING '0' FROM p.user_id) AS UNSIGNED) = u.id`;
             console.log('Executing query:', query);
-            const [rows] = await db.query(query);
+            const [rows] = await connection.query(query);
             console.log('Found positions:', JSON.stringify(rows, null, 2));
             return rows;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
@@ -65,6 +71,7 @@ class Position {
 
     // Build organizational tree
     static async getOrganizationalTree() {
+        const connection = await db.getConnection();
         try {
             const positions = await this.getAllPositionsWithUsers();
            
@@ -182,9 +189,10 @@ class Position {
     }
 
     static async create(userId, positionData) {
+        const connection = await db.getConnection();
         try {
             // First, delete any existing position for this user
-            await db.query('DELETE FROM positions WHERE user_id = ?', [userId]);
+            await connection.query('DELETE FROM positions WHERE user_id = ?', [userId]);
 
             // Prepare data with defaults and null fallbacks
             const insertData = {
@@ -202,7 +210,7 @@ class Position {
             }
 
             // Then create the new position
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 `INSERT INTO positions (
                     user_id,
                     position,
@@ -225,8 +233,9 @@ class Position {
     }
 
     static async getByUserId(userId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.query(
+            const [rows] = await connection.query(
                 `SELECT id, user_id, position, responsibility_authority, 
                 internal_external, hierarchically_assigned_to, created_at, updated_at 
                 FROM positions WHERE user_id = ? LIMIT 1`,
@@ -245,12 +254,15 @@ class Position {
             return position || null;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async update(positionId, positionData) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 `UPDATE positions SET
                     position = ?,
                     responsibility_authority = ?,
@@ -268,18 +280,23 @@ class Position {
             return result.affectedRows > 0;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 
     static async delete(positionId) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.query(
+            const [result] = await connection.query(
                 'DELETE FROM positions WHERE id = ?',
                 [positionId]
             );
             return result.affectedRows > 0;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 }

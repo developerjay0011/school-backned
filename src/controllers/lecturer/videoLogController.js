@@ -2,6 +2,7 @@ const VideoLog = require('../../models/VideoLog');
 const db = require('../../config/database');
 
 async function getStudentVideoLogs(req, res) {
+    const connection = await db.getConnection();
     try {
         const { studentId } = req.query;
         if (!studentId) {
@@ -12,7 +13,7 @@ async function getStudentVideoLogs(req, res) {
         }
 
         // Verify student exists
-        let [students] = await db.execute(
+        let [students] = await connection.execute(
             'SELECT student_id FROM student WHERE student_id = ?',
             [studentId]
         );
@@ -32,10 +33,13 @@ async function getStudentVideoLogs(req, res) {
         });
     } catch (error) {
         console.error('Error getting student video logs:', error);
+        connection.release();
         return res.status(500).json({
             error: 'Internal server error',
             details: error.message
         });
+    } finally {
+        connection.release();
     }
 }
 

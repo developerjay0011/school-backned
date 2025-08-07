@@ -11,9 +11,10 @@ const FILE_CATEGORIES = {
 
 class StudentFile {
   static async getAllDocuments(studentId) {
+    const connection = await db.getConnection();
     try {
       // Get all documents from different sources
-      const [feedbackForms] = await db.execute(
+      const [feedbackForms] = await connection.execute(
         `SELECT 
           'course_feedback' as category,
           fe.id as id,
@@ -29,7 +30,7 @@ class StudentFile {
       );
 
       // TODO: Update this to use certificate_of_absence table once available
-      const [absenceCertificates] = await db.execute(
+      const [absenceCertificates] = await connection.execute(
         `SELECT 
           sl.*
         FROM certificate_of_absence sl
@@ -39,7 +40,7 @@ class StudentFile {
 
       const invoices = await StudentInvoice.getByStudentId(studentId);
 
-      const [resultSheets] = await db.execute(
+      const [resultSheets] = await connection.execute(
         `SELECT 
           'result_sheet' as category,
           rsp.*
@@ -49,7 +50,7 @@ class StudentFile {
       );
 
       // Training reports are stored in student_files with specific type
-      const [trainingReports] = await db.execute(
+      const [trainingReports] = await connection.execute(
         `SELECT 
           'training_report' as category,
           sf.id as id,
@@ -64,7 +65,7 @@ class StudentFile {
       );
 
       // Get additional uploaded files
-      const [uploadedFiles] = await db.execute(
+      const [uploadedFiles] = await connection.execute(
         `SELECT 
           file_type as category,
           sf.id as id,
@@ -80,7 +81,7 @@ class StudentFile {
 
       // Organize documents by category and ensure each category is an array
       // Get student reports
-      const [reports] = await db.execute(
+      const [reports] = await connection.execute(
         `SELECT 
          sr.*,
           CONCAT('/uploads/', COALESCE(sr.pdf_url, '')) as file_path
@@ -106,25 +107,36 @@ class StudentFile {
       return documents;
     } catch (error) {
       throw new Error('Error fetching student documents: ' + error.message);
+    } finally {
+      connection.release();
     }
   }
 
   static async create(data) {
+    const connection = await db.getConnection();
     try {
+      await connection.beginTransaction();
+      
       console.log('Creating student file with data:', data);
-      const [result] = await db.execute(
+      const [result] = await connection.execute(
         'INSERT INTO student_files (student_id, file_name, file_path, file_type, description, uploaded_by, created_at) VALUES (?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP)',
         [data.student_id, data.file_name, data.file_path, data.file_type, data.description || null, data.uploaded_by]
       );
+      
+      await connection.commit();
       return result.insertId;
     } catch (error) {
+      await connection.rollback();
       throw new Error('Error creating student file: ' + error.message);
+    } finally {
+      connection.release();
     }
   }
 
   static async findByStudentId(studentId) {
+    const connection = await db.getConnection();
     try {
-      const [rows] = await db.execute(
+      const [rows] = await connection.execute(
         `SELECT 
           sf.id,
           sf.student_id,
@@ -143,18 +155,28 @@ class StudentFile {
       return rows;
     } catch (error) {
       throw new Error('Error fetching student files: ' + error.message);
+    } finally {
+      connection.release();
     }
   }
 
   static async delete(id) {
+    const connection = await db.getConnection();
     try {
-      const [result] = await db.execute(
+      await connection.beginTransaction();
+      
+      const [result] = await connection.execute(
         'UPDATE student_files SET deleted_at = CURRENT_TIMESTAMP WHERE id = ? AND deleted_at IS NULL',
         [id]
       );
+      
+      await connection.commit();
       return result.affectedRows > 0;
     } catch (error) {
+      await connection.rollback();
       throw new Error('Error deleting student file: ' + error.message);
+    } finally {
+      connection.release();
     }
   }
 }

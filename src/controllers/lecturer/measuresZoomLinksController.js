@@ -3,6 +3,7 @@ const DateTimeUtils = require('../../utils/dateTimeUtils');
 
 class MeasuresZoomLinksController {
     static async create(req, res) {
+        const connection = await require('../../config/database').getConnection();
         try {
             const lecturerId = req.user.lecturer_id;
             const { measures_id, zoom_link, start_date, end_date } = req.body;
@@ -57,10 +58,13 @@ class MeasuresZoomLinksController {
                 message: 'Error creating zoom link',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async update(req, res) {
+        const connection = await require('../../config/database').getConnection();
         try {
             const lecturerId = req.user.lecturer_id;
             const { id } = req.params;
@@ -120,10 +124,13 @@ class MeasuresZoomLinksController {
                 message: 'Error updating zoom link',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async getByLecturer(req, res) {
+        const connection = await require('../../config/database').getConnection();
         try {
             const lecturerId = req.user.lecturer_id;
             const zoomLinks = await MeasuresZoomLinksModel.getByLecturerId(lecturerId);
@@ -139,10 +146,13 @@ class MeasuresZoomLinksController {
                 message: 'Error getting zoom links',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async delete(req, res) {
+        const connection = await require('../../config/database').getConnection();
         try {
             const lecturerId = req.user.lecturer_id;
             const { id } = req.params;
@@ -167,6 +177,8 @@ class MeasuresZoomLinksController {
                 message: 'Error deleting zoom link',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 }

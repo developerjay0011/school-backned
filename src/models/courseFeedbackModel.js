@@ -106,8 +106,9 @@ class CourseFeedback {
     }
 
     static async getByStudentId(studentId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(
+            const [rows] = await connection.execute(
                 'SELECT * FROM course_feedback WHERE student_id = ? ORDER BY feedback_date DESC LIMIT 1',
                 [studentId]
             );
@@ -120,12 +121,15 @@ class CourseFeedback {
             };
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getByCourseId(courseId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(
+            const [rows] = await connection.execute(
                 'SELECT * FROM course_feedback WHERE course_id = ? ORDER BY feedback_date DESC',
                 [courseId]
             );
@@ -137,12 +141,15 @@ class CourseFeedback {
             }));
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getById(id) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(
+            const [rows] = await connection.execute(
                 'SELECT * FROM course_feedback WHERE id = ?',
                 [id]
             );
@@ -155,6 +162,8 @@ class CourseFeedback {
             return feedback;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

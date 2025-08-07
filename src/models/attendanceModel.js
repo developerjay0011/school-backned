@@ -100,8 +100,9 @@ class Attendance {
             ORDER BY summary_row, start_date
         `;
 
+        const connection = await db.getConnection();
         try {
-            const [results] = await db.query(query, [startDate, endDate]);
+            const [results] = await connection.execute(query, [startDate, endDate]);
             if (!results.length) return null;
             // First row contains the summary data
             const summary = results[0];
@@ -134,6 +135,8 @@ class Attendance {
         } catch (error) {
             console.error('Error getting attendance stats:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
     // Default time slots
@@ -258,9 +261,10 @@ class Attendance {
             ORDER BY d.date DESC
         `;
 
+        const connection = await db.getConnection();
         try {
             // We only need studentId once now, for the initial student_check CTE
-            const [results] = await db.query(query, [studentId]);
+            const [results] = await connection.execute(query, [studentId]);
             return results.map(row => ({
                 date: row.date,
                 morning_attendance: row.morning_attendance,
@@ -279,6 +283,8 @@ class Attendance {
         } catch (error) {
             console.error('Error fetching full day absences:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
     static async markAttendance(studentId) {
@@ -351,8 +357,9 @@ class Attendance {
     }
 
     static async getStudentAttendance(studentId, startDate, endDate) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.query(
+            const [rows] = await connection.execute(
                 `SELECT * FROM student_attendance 
                  WHERE student_id = ? 
                  AND attendance_date BETWEEN ? AND ?
@@ -362,20 +369,23 @@ class Attendance {
             return rows;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getAttendanceList(startDate, endDate, studentId = null) {
+        const connection = await db.getConnection();
         try {
             // First, get all bridge days (public holidays)
-            const [bridgeDays] = await db.query(
+            const [bridgeDays] = await connection.execute(
                 'SELECT DATE_FORMAT(date, "%Y-%m-%d") as date FROM bridge_days WHERE date BETWEEN ? AND ?',
                 [startDate, endDate]
             );
             const holidaySet = new Set(bridgeDays.map(day => day.date));
 
             // Get student and attendance data
-            const [rows] = await db.query(
+            const [rows] = await connection.execute(
                 `WITH RECURSIVE dates AS (
                     SELECT ? as date
                     UNION ALL
@@ -515,6 +525,8 @@ class Attendance {
                 : attendanceList;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

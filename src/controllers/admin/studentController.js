@@ -340,6 +340,7 @@ class StudentController {
     }
 
     static async getById(req, res) {
+        const connection = await db.getConnection();
         try {
             const { id } = req.params;
             
@@ -365,12 +366,16 @@ class StudentController {
             console.error('Error getting student details:', error);
             res.status(500).json({
                 success: false,
-                message: 'Error getting student details'
+                message: 'Error getting student details',
+                error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async delete(req, res) {
+        const connection = await db.getConnection();
         try {
             const { id } = req.params;
             
@@ -393,8 +398,11 @@ class StudentController {
             console.error('Error deleting student:', error);
             res.status(500).json({
                 success: false,
-                message: 'Error deleting student'
+                message: 'Error deleting student',
+                error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 }

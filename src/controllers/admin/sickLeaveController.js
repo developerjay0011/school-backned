@@ -5,6 +5,7 @@ const CertificateOfAbsence = require('../../models/certificateOfAbsenceModel');
 
 class SickLeaveController {
     static async getLeavesByMonth(req, res) {
+        const connection = await db.getConnection();
         try {
             const studentId = req.params.studentId;
             const month = parseInt(req.params.month);
@@ -26,7 +27,7 @@ class SickLeaveController {
             }
 
             // Check if student exists
-            const [student] = await db.query(
+            const [student] = await connection.execute(
                 'SELECT student_id FROM student WHERE student_id = ?',
                 [studentId]
             );
@@ -78,6 +79,8 @@ class SickLeaveController {
                 message: 'Error generating certificate of absence pdf',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 

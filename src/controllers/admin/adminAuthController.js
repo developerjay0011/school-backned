@@ -5,6 +5,7 @@ const LecturerModel = require('../../models/lecturerModel');
 
 class AdminAuthController {
     static async login(req, res) {
+        const connection = await require('../../config/database').getConnection();
         try {
             const { email, username, password } = req.body;
             // Support both email and username fields for backward compatibility
@@ -107,6 +108,8 @@ class AdminAuthController {
                 success: false,
                 message: 'Internal server error'
             });
+        } finally {
+            connection.release();
         }
     }
 }

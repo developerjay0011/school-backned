@@ -116,8 +116,9 @@ class Student {
     }
 
     static async delete(id) {
+        const connection = await db.getConnection();
         try {
-            const rows = await db.query(
+            const [rows] = await connection.execute(
                 'UPDATE student SET deleted_at = ? WHERE student_id = ?',
                 [DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime()),id]
             );
@@ -125,6 +126,8 @@ class Student {
             return rows;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
     static async getByStudentIdForAuth(studentId) {
@@ -149,9 +152,10 @@ class Student {
     }
 
     static async updatePassword(studentId, password) {
+        const connection = await db.getConnection();
         try {
             // Password should already be hashed by the controller
-            await db.query(
+            await connection.execute(
                 'UPDATE student SET password = ? WHERE student_id = ?',
                 [password, studentId]
             );
@@ -159,6 +163,8 @@ class Student {
             return true;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
@@ -449,8 +455,9 @@ class Student {
     }
 
     static async generateRecordId() {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.execute(
+            const [result] = await connection.execute(
                 'SELECT MAX(CAST(student_id AS UNSIGNED)) as max_id FROM student'
             );
             const maxId = result[0].max_id || 100000; // Start from 100001 if no records
@@ -458,6 +465,8 @@ class Student {
         } catch (error) {
             console.error('Error generating student ID:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 

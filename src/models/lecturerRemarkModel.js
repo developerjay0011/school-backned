@@ -2,9 +2,12 @@ const db = require('../config/database');
 
 class LecturerRemarkModel {
     static async addRemark(studentId, lecturerId, remark) {
+        const connection = await db.getConnection();
         try {
+            await connection.beginTransaction();
+            
             // First verify if the student belongs to this lecturer
-            const [student] = await db.execute(`
+            const [student] = await connection.execute(`
                 SELECT student_id 
                 FROM student s
                 WHERE s.student_id = ?
@@ -17,23 +20,28 @@ class LecturerRemarkModel {
             }
 
             // Update the remark
-            const [result] = await db.execute(`
+            const [result] = await connection.execute(`
                 UPDATE student 
                 SET lecturer_remark = ?,
                     remark_updated_at = CURRENT_TIMESTAMP
                 WHERE student_id = ?
             `, [remark, studentId]);
-
+            
+            await connection.commit();
             return result.affectedRows > 0;
         } catch (error) {
+            await connection.rollback();
             console.error('Error adding remark:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getRemark(studentId, lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(`
+            const [rows] = await connection.execute(`
                 SELECT 
                     s.student_id,
                     s.first_name,
@@ -53,12 +61,15 @@ class LecturerRemarkModel {
         } catch (error) {
             console.error('Error getting remark:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getRemarksByLecturer(lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(`
+            const [rows] = await connection.execute(`
                 SELECT 
                     s.student_id,
                     s.first_name,
@@ -78,6 +89,8 @@ class LecturerRemarkModel {
         } catch (error) {
             console.error('Error getting remarks:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

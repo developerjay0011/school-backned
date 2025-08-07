@@ -2,9 +2,10 @@ const db = require('../config/database');
 
 class SickLeave {
     static async getLeavesByMonth(studentId, month, year) {
+        const connection = await db.getConnection();
         try {
             // Get current month's leaves
-            const [results] = await db.query(
+            const [results] = await connection.execute(
                 `SELECT 
                     sl.*,
                     s.first_name, s.last_name, s.date_of_entry, s.date_of_exit,
@@ -31,7 +32,7 @@ class SickLeave {
             );
 
             // Get total leaves from start of measurement
-            const [totalLeaves] = await db.query(
+            const [totalLeaves] = await connection.execute(
                 `SELECT 
                     COUNT(*) as total_count,
                     SUM(DATEDIFF(date_until, date_from) + 1) as total_days
@@ -112,6 +113,8 @@ class SickLeave {
             };
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 

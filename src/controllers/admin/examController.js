@@ -11,6 +11,7 @@ const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3000';
 
 class ExamController {
     static async updateDoneOn(req, res) {
+        const connection = await db.getConnection();
         try {
             const examId = req.params.examId;
             const done_on = req.params.done_on;
@@ -48,9 +49,12 @@ class ExamController {
                 message: 'Error updating exam done on',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
     static async uploadCertificate(req, res) {
+        const connection = await db.getConnection();
         try {
             const examId = req.params.examId;
 
@@ -98,9 +102,12 @@ class ExamController {
                 message: 'Error uploading certificate',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
     static async updateExamResult(req, res) {
+        const connection = await db.getConnection();
         try {
             const examId = req.params.examId;
             const exam_result = req.params.exam_result;
@@ -128,14 +135,18 @@ class ExamController {
                 message: 'Error updating exam result',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
     static async create(req, res) {
+
+        const connection = await db.getConnection();
         try {
             const studentId = req.params.studentId;
 
             // Check if student exists
-            const [student] = await db.execute(
+            const [student] = await connection.execute(
                 'SELECT * FROM student WHERE student_id = ?',
                 [studentId]
             );
@@ -157,15 +168,19 @@ class ExamController {
             });
         } catch (error) {
             console.error('Error creating exam:', error);
+            connection.release();
             res.status(500).json({
                 success: false,
                 message: 'Error scheduling exam',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async update(req, res) {
+        const connection = await db.getConnection();
         try {
             const examId = req.params.examId;
             const exam = await Exam.getById(examId);
@@ -192,10 +207,13 @@ class ExamController {
                 message: 'Error updating exam',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async delete(req, res) {
+        const connection = await db.getConnection();
         try {
             const examId = req.params.examId;
             const exam = await Exam.getById(examId);
@@ -220,15 +238,18 @@ class ExamController {
                 message: 'Error deleting exam',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async getByStudent(req, res) {
+        const connection = await db.getConnection();
         try {
             const studentId = req.params.studentId;
 
             // Check if student exists
-            const [student] = await db.execute(
+            const [student] = await connection.execute(
                 'SELECT * FROM student WHERE student_id = ?',
                 [studentId]
             );
@@ -248,15 +269,19 @@ class ExamController {
             });
         } catch (error) {
             console.error('Error fetching exams:', error);
+            connection.release();
             res.status(500).json({
                 success: false,
                 message: 'Error fetching exams',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async sendCompletionEmail(req, res) {
+        const connection = await db.getConnection();
         try {
             const examId = req.params.examId;
             const { completion_date } = req.body;
@@ -321,11 +346,14 @@ class ExamController {
                 message: 'Error sending exam completion email',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
     // Update exam remark
     static async updateRemark(req, res) {
+        const connection = await db.getConnection();
         try {
             const examId = parseInt(req.params.examId, 10);
             const { remark } = req.body;
@@ -357,6 +385,8 @@ class ExamController {
                 message: 'Error updating exam remark',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 }

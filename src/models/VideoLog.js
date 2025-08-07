@@ -9,13 +9,16 @@ class VideoLog {
             ORDER BY course_start_date ASC
             LIMIT 1
         `;
+        const connection = await db.getConnection();
 
         try {
-            const [rows] = await db.execute(query, [student_id]);
+            const [rows] = await connection.execute(query, [student_id]);
             return rows.length > 0 ? rows[0].course_start_date : null;
         } catch (error) {
             console.error('Error getting earliest course start date:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
@@ -32,7 +35,7 @@ class VideoLog {
                 VALUES (?, ?, ?, ?)
             `;
 
-            const [result] = await db.execute(query, [
+            const [result] = await connection.execute(query, [
                 student_id,
                 topic_title,
                 finalStartDate,
@@ -51,13 +54,16 @@ class VideoLog {
             WHERE student_id = ?
             ORDER BY attend_date DESC
         `;
+        const connection = await db.getConnection();
 
         try {
-            const [logs] = await db.execute(query, [studentId]);
+            const [logs] = await connection.execute(query, [studentId]);
             return logs;
         } catch (error) {
             console.error('Error getting video logs:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
@@ -68,13 +74,16 @@ class VideoLog {
             JOIN students s ON vl.student_id = s.id
             ORDER BY vl.attend_date DESC
         `;
+        const connection = await db.getConnection();
 
         try {
-            const [logs] = await db.execute(query);
+            const [logs] = await connection.execute(query);
             return logs;
         } catch (error) {
             console.error('Error getting all video logs:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

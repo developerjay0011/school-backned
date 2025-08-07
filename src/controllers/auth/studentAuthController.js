@@ -4,6 +4,7 @@ const StudentModel = require('../../models/studentModel');
 
 class StudentAuthController {
     static async login(req, res) {
+        const connection = await require('../../config/database').getConnection();
         try {
             const { student_id, password } = req.body;
             console.log('Login attempt for student_id:', student_id);
@@ -60,6 +61,8 @@ class StudentAuthController {
                 success: false,
                 message: 'Internal server error'
             });
+        } finally {
+            connection.release();
         }
     }
 }

@@ -2,11 +2,12 @@ const db = require('../config/database');
 
 class FeedbackModel {
     static async getFeedbacksByDateRangeAndMeasure(dateFrom, dateUntil, courseId) {
+        const connection = await db.getConnection();
         try {
             console.log('Fetching feedbacks with params:', { dateFrom, dateUntil, courseId });
             
             // First find the measurement to verify it exists
-            const [measurements] = await db.query(
+            const [measurements] = await connection.query(
                 'SELECT * FROM measurements WHERE id = ?',
                 [courseId]
             );
@@ -39,11 +40,13 @@ class FeedbackModel {
             console.log('Executing query:', query);
             console.log('Query params:', [courseId, courseId, dateFrom, dateUntil]);
             
-            const [rows] = await db.query(query, [courseId, courseId, dateFrom, dateUntil]);
+            const [rows] = await connection.query(query, [courseId, courseId, dateFrom, dateUntil]);
             console.log('Found feedbacks:', rows.length);
             return rows;
         } catch (error) {
             throw error;
+        }finally {
+            connection.release();
         }
     }
 }

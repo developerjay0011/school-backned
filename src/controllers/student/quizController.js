@@ -4,16 +4,20 @@ const db = require('../../config/database');
 
 class QuizController {
     async getTopics(req, res) {
+        const connection = await db.getConnection();
         try {
             const topics = await quizService.getTopics();
             res.json({ topics });
         } catch (error) {
             console.error('Error getting quiz topics:', error);
             res.status(500).json({ error: 'Internal server error' });
+        } finally {
+            connection.release();
         }
     }
 
     async getQuizByTopic(req, res) {
+        const connection = await db.getConnection();
         try {
             const { topic } = req.params;
             const quiz = await quizService.getQuizByTopic(topic);
@@ -34,10 +38,13 @@ class QuizController {
         } catch (error) {
             console.error('Error getting quiz:', error);
             res.status(500).json({ error: 'Internal server error' });
+        } finally {
+            connection.release();
         }
     }
 
     async getRandomQuestions(req, res) {
+        const connection = await db.getConnection();
         try {
             const { topic } = req.params;
             const { isExam } = req.query;
@@ -62,10 +69,13 @@ class QuizController {
         } catch (error) {
             console.error('Error getting random questions:', error);
             res.status(500).json({ error: 'Internal server error' });
+        } finally {
+            connection.release();
         }
     }
 
     async getResults(req, res) {
+        const connection = await db.getConnection();
         try {
             // Validate student from auth token
             if (!req.user || !req.user.student_id) {
@@ -87,10 +97,13 @@ class QuizController {
                 error: 'Internal server error',
                 details: 'Failed to get quiz results'
             });
+        } finally {
+            connection.release();
         }
     }
 
     async submitAnswers(req, res) {
+        const connection = await db.getConnection();
         try {
             const { topic } = req.params;
             const { answers, isExam = false } = req.body;
@@ -153,7 +166,7 @@ class QuizController {
             // Verify student exists in database
             let students;
             try {
-                [students] = await db.execute(
+                [students] = await connection.execute(
                     'SELECT student_id FROM student WHERE student_id = ?',
                     [studentId]
                 );
@@ -402,6 +415,8 @@ class QuizController {
         } catch (error) {
             console.error('Error submitting answers:', error);
             return res.status(500).json({ error: 'Internal server error' });
+        } finally {
+            connection.release();
         }
     }
 }

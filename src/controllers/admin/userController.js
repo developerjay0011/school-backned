@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 
 class UserController {
     static async changePassword(req, res) {
+        const connection = await db.getConnection();
         try {
             const { id } = req.params;
             const { newPassword } = req.body;
@@ -22,7 +23,7 @@ class UserController {
             const hashedPassword = await bcrypt.hash(newPassword, 10);
 
             // Update the password in the database
-            const [result] = await db.query(
+            const [result] = await connection.execute(
                 'UPDATE admin_users SET password = ? WHERE id = ?',
                 [hashedPassword, id.padStart(6, '0')] // Ensure ID is padded to match ZEROFILL
             );
@@ -45,6 +46,8 @@ class UserController {
                 message: 'Error changing password',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
     static async register(req, res) {
@@ -196,17 +199,19 @@ class UserController {
     }
 
     static async getAll(req, res) {
+        const connection = await db.getConnection();
         try {
             const users = await User.getAll();
-            
+            const usersWithPositions = [];
+
             // Get positions for each user
-            const usersWithPositions = await Promise.all(users.map(async (user) => {
+            for (const user of users) {
                 const position = await Position.getByUserId(user.id);
-                return {
+                usersWithPositions.push({
                     ...user,
-                    positions: position || null
-                };
-            }));
+                    position: position || null
+                });
+            }
 
             res.json({
                 success: true,
@@ -219,10 +224,13 @@ class UserController {
                 message: 'Error getting users',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async getOne(req, res) {
+        const connection = await db.getConnection();
         try {
             const { id } = req.params;
             const user = await User.getById(id);
@@ -251,6 +259,8 @@ class UserController {
                 message: 'Error retrieving user',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
@@ -318,10 +328,13 @@ class UserController {
                 message: 'Error updating user',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async delete(req, res) {
+        const connection = await db.getConnection();
         try {
             const success = await User.delete(req.params.id);
             if (!success) {
@@ -341,6 +354,8 @@ class UserController {
                 message: 'Error deleting user',
                 error: error.message
             });
+        } finally {
+            connection.release();
         }
     }
 }

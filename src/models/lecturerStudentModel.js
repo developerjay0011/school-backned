@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class LecturerStudentModel {
     static async getStudentsByLecturerId(lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(`
+            const [rows] = await connection.execute(`
                 SELECT 
                     s.student_id,
                     s.first_name,
@@ -87,6 +88,8 @@ class LecturerStudentModel {
             return groupedStudents;
         } catch (error) {
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

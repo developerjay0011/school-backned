@@ -2,10 +2,11 @@ const db = require('../config/database');
 
 class MeasuresZoomLinksModel {
     static async create(data) {
+        const connection = await db.getConnection();
         try {
             const { measures_id, lecturer_id, zoom_link, start_date, end_date } = data;
             
-            const [result] = await db.execute(
+            const [result] = await connection.execute(
                 `INSERT INTO measures_zoom_links 
                 (measures_id, lecturer_id, zoom_link, start_date, end_date) 
                 VALUES (?, ?, ?, ?, ?)`,
@@ -16,14 +17,17 @@ class MeasuresZoomLinksModel {
         } catch (error) {
             console.error('Error creating zoom link:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async update(id, data) {
+        const connection = await db.getConnection();
         try {
             const { zoom_link, start_date, end_date } = data;
             
-            const [result] = await db.execute(
+            const [result] = await connection.execute(
                 `UPDATE measures_zoom_links 
                 SET zoom_link = ?, start_date = ?, end_date = ?
                 WHERE id = ? AND deleted_at IS NULL`,
@@ -34,12 +38,15 @@ class MeasuresZoomLinksModel {
         } catch (error) {
             console.error('Error updating zoom link:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getByLecturerId(lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [rows] = await db.execute(
+            const [rows] = await connection.execute(
                 `SELECT mzl.*, m.measures_number, m.measures_title
                 FROM measures_zoom_links mzl
                 INNER JOIN measurements m ON m.id = mzl.measures_id
@@ -53,12 +60,15 @@ class MeasuresZoomLinksModel {
         } catch (error) {
             console.error('Error getting zoom links:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async delete(id, lecturerId) {
+        const connection = await db.getConnection();
         try {
-            const [result] = await db.execute(
+            const [result] = await connection.execute(
                 `UPDATE measures_zoom_links 
                 SET deleted_at = CURRENT_TIMESTAMP
                 WHERE id = ? AND lecturer_id = ?`,
@@ -69,13 +79,16 @@ class MeasuresZoomLinksModel {
         } catch (error) {
             console.error('Error deleting zoom link:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 
     static async getByStudentDetails(studentId) {
+        const connection = await db.getConnection();
         try {
             // First get student details
-            const [studentRows] = await db.execute(
+            const [studentRows] = await connection.execute(
                 `SELECT 
                     s.student_id,
                     s.measures_id,
@@ -100,7 +113,7 @@ class MeasuresZoomLinksModel {
             const student = studentRows[0];
 
             // Then get zoom links based on student details
-            const [rows] = await db.execute(
+            const [rows] = await connection.execute(
                 `SELECT mzl.*, 
                     m.measures_number, m.measures_title,
                     l.first_name as lecturer_first_name, 
@@ -125,6 +138,8 @@ class MeasuresZoomLinksModel {
         } catch (error) {
             console.error('Error getting zoom links for student:', error);
             throw error;
+        } finally {
+            connection.release();
         }
     }
 }

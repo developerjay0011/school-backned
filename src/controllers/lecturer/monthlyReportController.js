@@ -7,6 +7,7 @@ const path = require('path');
 
 class MonthlyReportController {
     static async generate(req, res) {
+        const connection = await db.getConnection();
         try {
             const { month, year } = req.body;
             console.log('Generating monthly report for:', { month, year, lecturer: req.user });
@@ -29,7 +30,7 @@ class MonthlyReportController {
             }
 
             // Get lecturer details
-            const [lecturer] = await db.execute(
+            const [lecturer] = await connection.execute(
                 'SELECT first_name, last_name FROM lecturers WHERE lecturer_id = ? AND deleted_at IS NULL',
                 [req.user.lecturer_id]
             );
@@ -67,15 +68,18 @@ class MonthlyReportController {
             });
         } catch (error) {
             console.error('Error generating monthly report:', error);
+            connection.release();
             res.status(500).json({
                 success: false,
                 message: 'Internal server error'
             });
+        } finally {
+            connection.release();
         }
     }
 
     static async getAll(req, res) {
-        try {
+                try {
             const reports = await MonthlyReportModel.getAll(req.user.lecturer_id);
             res.json({
                 success: true,

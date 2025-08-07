@@ -51,48 +51,65 @@ const FULL_DAY_ABSENCES_SQL = `
 
 class Student {
     static async getFullDayAbsences(studentId, dateOfEntry) {
+        // Add safety checks for parameters
+        if (!studentId || !dateOfEntry) {
+            console.log('Missing parameters in getFullDayAbsences - using default value');
+            return 0;
+        }
+        
         let connection;
         try {
+            // Set query timeout to prevent long-running queries
             connection = await db.getConnection();
             
-            // Simplified query with timeout
+            // Simpler query that's less likely to timeout
             const query = `
                 SELECT 
-                    GREATEST(0, COALESCE(
-                        (
-                            SELECT COUNT(*) 
-                            FROM student_attendance sa
-                            WHERE sa.student_id = ?
-                            AND sa.attendance_date >= ?
-                            AND sa.attendance_date <= CURDATE()
-                            AND DAYOFWEEK(sa.attendance_date) NOT IN (1, 7)
-                            AND (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
-                            AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
-                            AND sa.attendance_date NOT IN (
-                                SELECT DISTINCT DATE(sl.date_from + INTERVAL (a.a + (10 * b.a) + (100 * c.a)) DAY) as sick_date
-                                FROM student_sick_leave sl
-                                CROSS JOIN (SELECT 0 as a UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9) as a
-                                CROSS JOIN (SELECT 0 as a UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9) as b
-                                CROSS JOIN (SELECT 0 as a UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9) as c
-                                WHERE sl.student_id = ?
-                                AND (sl.date_from + INTERVAL (a.a + (10 * b.a) + (100 * c.a)) DAY) <= sl.date_until
-                                AND (sl.date_from + INTERVAL (a.a + (10 * b.a) + (100 * c.a)) DAY) <= CURDATE()
-                            )
-                        ), 0
-                    )) as net_absences`;
+                    COALESCE(
+                        (SELECT COUNT(*)
+                         FROM student_attendance sa
+                         LEFT JOIN bridge_days bd ON sa.attendance_date = bd.date
+                         WHERE sa.student_id = ?
+                         AND sa.attendance_date >= ?
+                         AND sa.attendance_date <= CURDATE()
+                         AND DAYOFWEEK(sa.attendance_date) NOT IN (1, 7) -- Not weekend
+                         AND bd.date IS NULL -- Not bridge day
+                         AND (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
+                         AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
+                        ) -
+                        (SELECT COUNT(DISTINCT sa.attendance_date)
+                         FROM student_attendance sa
+                         JOIN student_sick_leave sl ON sa.student_id = sl.student_id
+                         LEFT JOIN bridge_days bd ON sa.attendance_date = bd.date
+                         WHERE sa.student_id = ?
+                         AND sa.attendance_date >= ?
+                         AND sa.attendance_date <= CURDATE()
+                         AND DAYOFWEEK(sa.attendance_date) NOT IN (1, 7) -- Not weekend
+                         AND bd.date IS NULL -- Not bridge day
+                         AND sa.attendance_date BETWEEN sl.date_from AND sl.date_until
+                         AND (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
+                         AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
+                        ),
+                        0
+                    ) as absence_count`;
 
-            const [result] = await connection.execute(query, [studentId, dateOfEntry, studentId]);
-            return result[0]?.net_absences || 0;
+            // Use execute instead of query for prepared statements
+            const [result] = await connection.execute(query, [studentId, dateOfEntry, studentId, dateOfEntry]);
+            
+            // Safety check on result
+            const absenceCount = result[0]?.absence_count;
+            return Math.max(0, absenceCount || 0);
         } catch (error) {
-            console.error('Error calculating full day absences:', error);
+            console.error('Error calculating full day absences for student ' + studentId + ':', error);
             // Return 0 as fallback to prevent API crashes
             return 0;
         } finally {
+            // Safe connection release with multiple checks
             if (connection) {
                 try {
                     connection.release();
                 } catch (releaseError) {
-                    console.error('Error releasing connection:', releaseError);
+                    console.error('Error releasing connection in getFullDayAbsences:', releaseError);
                 }
             }
         }
@@ -111,14 +128,23 @@ class Student {
         }
     }
     static async getByStudentIdForAuth(studentId) {
+        let connection;
         try {
-            const [rows] = await db.query(
+            connection = await db.getConnection();
+            
+            // Set a short query timeout for login queries
+            const [rows] = await connection.query(
                 'SELECT student_id, password FROM student WHERE student_id = ? AND deleted_at IS NULL',
                 [studentId]
             );
             return rows[0];
         } catch (error) {
+            console.error(`Authentication error for student_id ${studentId}:`, error);
             throw error;
+        } finally {
+            if (connection) {
+                connection.release();
+            }
         }
     }
 

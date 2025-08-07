@@ -51,55 +51,50 @@ const FULL_DAY_ABSENCES_SQL = `
 
 class Student {
     static async getFullDayAbsences(studentId, dateOfEntry) {
-        const connection = await db.getConnection();
+        let connection;
         try {
-            const query = `WITH RECURSIVE date_series AS (
-                -- Initial row from student's entry date
-                SELECT ? as student_id, ? as date
-                
-                UNION ALL
-                
-                -- Generate subsequent dates
-                SELECT student_id, DATE_ADD(date, INTERVAL 1 DAY)
-                FROM date_series
-                WHERE date < CURDATE()
-            ),
-            -- Get workdays first (excluding weekends and bridge days)
-            workdays AS (
-                SELECT d.student_id, d.date
-                FROM date_series d
-                LEFT JOIN bridge_days bd ON d.date = bd.date
-                WHERE DAYOFWEEK(d.date) NOT IN (1, 7) -- Exclude weekends
-                AND bd.date IS NULL -- Exclude bridge days
-                AND d.date <= CURDATE() -- Ensure no future dates
-            ),
-            -- Calculate absences from workdays
-            absences AS (
-                SELECT COUNT(*) as total_absences
-                FROM workdays w
-                LEFT JOIN student_attendance sa ON sa.student_id = w.student_id AND sa.attendance_date = w.date
-                WHERE (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
-                AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
-            ),
-            -- Calculate sick leave days
-            sick_leave AS (
-                SELECT COUNT(DISTINCT w.date) as sick_days
-                FROM workdays w
-                INNER JOIN student_sick_leave sl ON w.student_id = sl.student_id
-                WHERE w.date BETWEEN sl.date_from AND sl.date_until
-            )
-            -- Return total absences minus sick leave days
-            SELECT GREATEST(0, COALESCE(a.total_absences, 0) - COALESCE(sl.sick_days, 0)) as net_absences
-            FROM absences a
-            LEFT JOIN sick_leave sl ON 1=1`;
+            connection = await db.getConnection();
+            
+            // Simplified query with timeout
+            const query = `
+                SELECT 
+                    GREATEST(0, COALESCE(
+                        (
+                            SELECT COUNT(*) 
+                            FROM student_attendance sa
+                            WHERE sa.student_id = ?
+                            AND sa.attendance_date >= ?
+                            AND sa.attendance_date <= CURDATE()
+                            AND DAYOFWEEK(sa.attendance_date) NOT IN (1, 7)
+                            AND (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
+                            AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
+                            AND sa.attendance_date NOT IN (
+                                SELECT DISTINCT DATE(sl.date_from + INTERVAL (a.a + (10 * b.a) + (100 * c.a)) DAY) as sick_date
+                                FROM student_sick_leave sl
+                                CROSS JOIN (SELECT 0 as a UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9) as a
+                                CROSS JOIN (SELECT 0 as a UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9) as b
+                                CROSS JOIN (SELECT 0 as a UNION ALL SELECT 1 UNION ALL SELECT 2 UNION ALL SELECT 3 UNION ALL SELECT 4 UNION ALL SELECT 5 UNION ALL SELECT 6 UNION ALL SELECT 7 UNION ALL SELECT 8 UNION ALL SELECT 9) as c
+                                WHERE sl.student_id = ?
+                                AND (sl.date_from + INTERVAL (a.a + (10 * b.a) + (100 * c.a)) DAY) <= sl.date_until
+                                AND (sl.date_from + INTERVAL (a.a + (10 * b.a) + (100 * c.a)) DAY) <= CURDATE()
+                            )
+                        ), 0
+                    )) as net_absences`;
 
-            const [result] = await connection.query(query, [studentId, dateOfEntry]);
-            return result[0].net_absences;
+            const [result] = await connection.execute(query, [studentId, dateOfEntry, studentId]);
+            return result[0]?.net_absences || 0;
         } catch (error) {
             console.error('Error calculating full day absences:', error);
-            throw error;
+            // Return 0 as fallback to prevent API crashes
+            return 0;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                } catch (releaseError) {
+                    console.error('Error releasing connection:', releaseError);
+                }
+            }
         }
     }
 

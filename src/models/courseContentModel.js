@@ -4,8 +4,9 @@ class CourseContent {
     static SUPPORTED_LANGUAGES = ['Arabic', 'English', 'Russian', 'Turkish', 'Ukrainian', 'German'];
 
     static async getAllContent(language = null) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // Validate language if provided
             if (language && !CourseContent.SUPPORTED_LANGUAGES.includes(language)) {
                 throw new Error('Unsupported language');
@@ -76,7 +77,14 @@ class CourseContent {
                 error: error.message || 'Failed to fetch course content'
             };
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

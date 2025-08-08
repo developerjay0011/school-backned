@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class DashboardModel {
     static async getTotalCounts() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // Get active and inactive students
             const [studentRows] = await connection.execute(`
                 SELECT
@@ -46,7 +47,14 @@ class DashboardModel {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 

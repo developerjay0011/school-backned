@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class FeedbackModel {
     static async getFeedbacksByDateRangeAndMeasure(dateFrom, dateUntil, courseId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Fetching feedbacks with params:', { dateFrom, dateUntil, courseId });
             
             // First find the measurement to verify it exists
@@ -46,7 +47,14 @@ class FeedbackModel {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

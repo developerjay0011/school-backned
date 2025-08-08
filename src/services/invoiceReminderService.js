@@ -5,8 +5,9 @@ const db = require('../config/database');
 
 class InvoiceReminderService {
     static async toggleAutoDispatch(invoiceId, enabled) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
 
             // Check if invoice exists
@@ -37,13 +38,21 @@ class InvoiceReminderService {
             console.error('Error toggling auto-dispatch:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async processReminders() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
 
             // Get all unpaid invoices that have reminder_auto_dispatch=1 and are due
@@ -111,7 +120,14 @@ class InvoiceReminderService {
             console.error('Error processing reminders:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
@@ -120,8 +136,9 @@ class InvoiceReminderService {
             throw new Error('Invoice ID is required');
         }
 
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
 
             // Get invoice details
@@ -199,7 +216,14 @@ class InvoiceReminderService {
             console.error('Error creating manual reminder:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

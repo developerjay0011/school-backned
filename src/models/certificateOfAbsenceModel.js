@@ -24,7 +24,14 @@ class CertificateOfAbsence {
             console.error('Error fetching certificates by student ID:', error);
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
     static async delete(id) {
@@ -38,7 +45,14 @@ class CertificateOfAbsence {
             console.error('Error deleting certificate:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
     static async getAll() {
@@ -63,7 +77,14 @@ class CertificateOfAbsence {
             console.error('Error fetching certificates:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
@@ -83,7 +104,14 @@ class CertificateOfAbsence {
             console.error('Error creating certificate record:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

@@ -8,8 +8,9 @@ const EmailService = require('../../utils/emailService');
 
 class StudentReportController {
     static async createDischargeReport(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { studentId } = req.params;
             
             // Validate student exists
@@ -106,13 +107,21 @@ class StudentReportController {
                 message: 'Error creating discharge report'
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async createTerminationReport(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { studentId } = req.params;
             
             // Validate student exists
@@ -209,13 +218,21 @@ class StudentReportController {
                 message: 'Error creating termination report'
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getStudentReports(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { studentId } = req.params;
             
             // Validate student exists
@@ -240,12 +257,20 @@ class StudentReportController {
                 message: 'Error getting student reports'
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
     static async deleteReport(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { reportId } = req.params;
             
             // Delete report and get the PDF URL
@@ -275,7 +300,14 @@ class StudentReportController {
                 message: 'Error deleting report'
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

@@ -3,8 +3,9 @@ const db = require('../../config/database');
 
 class ContactController {
     static async getByStudent(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const studentId = req.params.studentId;
 
             // Check if student exists
@@ -42,13 +43,21 @@ class ContactController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async update(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const studentId = req.params.studentId;
 
             // Check if student exists
@@ -91,7 +100,14 @@ class ContactController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

@@ -4,8 +4,9 @@ const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class Assessment {
     static async generateLink() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
 
             // Generate a random token
@@ -31,13 +32,21 @@ class Assessment {
             await connection.rollback();
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async validateToken(token) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [links] = await connection.execute(
                 `SELECT * FROM assessment_links 
                  WHERE token = ? AND expiry_date > ? AND is_completed = FALSE`,
@@ -45,13 +54,21 @@ class Assessment {
             );
             return links[0];
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getQuestions() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // Get all questions
             const [questions] = await connection.execute(
                 'SELECT * FROM assessment_questions ORDER BY task_number, id'
@@ -87,13 +104,21 @@ class Assessment {
 
             return taskQuestions;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async submitResponses(assessmentLinkId, firstName, lastName, signatureImage, responses) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
 
             // Update first_name, last_name and signature
@@ -123,13 +148,21 @@ class Assessment {
             await connection.rollback();
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getResults(assessmentLinkId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // Get user information
             const [userInfo] = await connection.execute(
                 'SELECT first_name, last_name, signature_image, comment FROM assessment_links WHERE id = ?',
@@ -199,13 +232,21 @@ class Assessment {
                 score: (correctAnswers / totalQuestions) * 100
             };
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getAllAssessments() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [assessments] = await connection.execute(
                 `SELECT 
                     al.*,
@@ -237,13 +278,21 @@ class Assessment {
                 correct_answers: assessment.correct_responses
             }));
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async addComment(assessmentLinkId, comment) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // First check if the assessment exists
             const [assessments] = await connection.execute(
                 'SELECT id FROM assessment_links WHERE id = ?',
@@ -268,13 +317,21 @@ class Assessment {
 
             return updatedAssessments[0];
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async deleteAssessment(assessmentLinkId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
 
             // First delete all responses for this assessment
@@ -295,19 +352,34 @@ class Assessment {
             await connection.rollback();
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async updatePdfUrl(assessmentId, pdfUrl) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.execute(
                 'UPDATE assessment_responses SET pdf_url = ? WHERE assessment_link_id = ?',
                 [pdfUrl, assessmentId]
             );
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

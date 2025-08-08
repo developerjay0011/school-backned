@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class TrainingReportModel {
     static async create(data) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Creating report with data:', { ...data, signature: 'base64_image_data_hidden' });
             
             // Validate base64 image
@@ -34,13 +35,21 @@ class TrainingReportModel {
             console.error('Error in create:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getAll(lecturer_id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Getting all reports for lecturer_id:', lecturer_id);
             const [rows] = await connection.execute(
                 'SELECT * FROM training_reports WHERE lecturer_id = ? ORDER BY nr ASC',
@@ -52,13 +61,21 @@ class TrainingReportModel {
             console.error('Error in getAll:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getById(id, lecturer_id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Getting report by id:', id, 'for lecturer_id:', lecturer_id);
             const [rows] = await connection.execute(
                 'SELECT * FROM training_reports WHERE id = ? AND lecturer_id = ?',
@@ -70,13 +87,21 @@ class TrainingReportModel {
             console.error('Error in getById:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async update(id, data, lecturer_id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Updating report:', { ...data, signature: 'base64_image_data_hidden' });
             
             // Validate base64 image
@@ -105,13 +130,21 @@ class TrainingReportModel {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(id, lecturer_id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.execute(
                 'DELETE FROM training_reports WHERE id = ? AND lecturer_id = ?',
                 [id, lecturer_id]
@@ -120,13 +153,21 @@ class TrainingReportModel {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getByDateRange(lecturer_id, startDate, endDate) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Getting reports for date range:', { lecturer_id, startDate, endDate });
             const [rows] = await connection.execute(
                 'SELECT * FROM training_reports WHERE lecturer_id = ? AND DATE(created_at) BETWEEN ? AND ? ORDER BY created_at ASC',
@@ -138,7 +179,14 @@ class TrainingReportModel {
             console.error('Error in getByDateRange:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

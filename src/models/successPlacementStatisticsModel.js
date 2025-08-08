@@ -3,8 +3,9 @@ const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class SuccessPlacementStatisticsModel {
     static async getAll() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.query(
                 `SELECT s.*, m.measures_number, m.measures_title 
                 FROM success_placement_statistics s
@@ -15,14 +16,22 @@ class SuccessPlacementStatisticsModel {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
 
     static async create(data) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.query(
                 `INSERT INTO success_placement_statistics 
                 (year, measures_id, pdf_url, description, created_at) 
@@ -33,13 +42,21 @@ class SuccessPlacementStatisticsModel {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getAll() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.query(
                 `SELECT sps.*, m.measures_number, m.measures_title 
                 FROM success_placement_statistics sps 
@@ -50,13 +67,21 @@ class SuccessPlacementStatisticsModel {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getById(id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.query(
                 `SELECT sps.*, m.measures_number, m.measures_title 
                 FROM success_placement_statistics sps 
@@ -68,13 +93,21 @@ class SuccessPlacementStatisticsModel {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async deleteById(id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.query(
                 'DELETE FROM success_placement_statistics WHERE id = ?',
                 [id]
@@ -83,13 +116,21 @@ class SuccessPlacementStatisticsModel {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getStatisticsData(measureId, year) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Getting stats for:', { measureId, year });
 
             // Debug query to check student data

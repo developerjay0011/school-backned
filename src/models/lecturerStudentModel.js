@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class LecturerStudentModel {
     static async getStudentsByLecturerId(lecturerId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(`
                 SELECT 
                     s.student_id,
@@ -89,7 +90,14 @@ class LecturerStudentModel {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

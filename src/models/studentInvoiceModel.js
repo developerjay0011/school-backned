@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class StudentInvoice {
     static async create(studentId, invoiceData) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
 
             const [result] = await connection.execute(
@@ -33,13 +34,21 @@ class StudentInvoice {
             await connection.rollback();
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async update(id, invoiceData) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
 
             const updateFields = [];
@@ -69,13 +78,21 @@ class StudentInvoice {
             await connection.rollback();
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async cancel(id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
 
             // Get the invoice details
@@ -105,13 +122,21 @@ class StudentInvoice {
             await connection.rollback();
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
             await connection.execute('DELETE FROM student_invoices WHERE id = ?', [id]);
             await connection.commit();
@@ -119,13 +144,21 @@ class StudentInvoice {
             await connection.rollback();
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getById(id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [invoices] = await connection.execute(
                 `SELECT i.*, 
                     CASE 
@@ -156,13 +189,21 @@ class StudentInvoice {
 
             return invoice;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getByStudentId(studentId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [invoices] = await connection.execute(
                 `SELECT i.*, 
                     CASE 
@@ -192,13 +233,21 @@ class StudentInvoice {
                     : []
             }));
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getAll() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [invoices] = await connection.execute(
                 `SELECT i.*, 
                     CASE 
@@ -227,7 +276,14 @@ class StudentInvoice {
                     : []
             }));
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

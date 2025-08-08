@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class Intermediary {
     static async create(data) {
-        const connection = await db.getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
             // Convert empty strings to null
             const agent_email = data.agent_email || null;
             const agent_tel = data.agent_tel || null;
@@ -17,37 +18,61 @@ class Intermediary {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in Intermediary.create');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in Intermediary.create:', releaseError);
+                }
+            }
         }
     }
 
     static async getAll() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute('SELECT * FROM intermediaries ORDER BY created_at DESC');
             return rows;
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in Intermediary.getAll');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in Intermediary.getAll:', releaseError);
+                }
+            }
         }
     }
 
     static async getById(id) {
-        const connection = await db.getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute('SELECT * FROM intermediaries WHERE id = ?', [id]);
             return rows[0];
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in Intermediary.getById');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in Intermediary.getById:', releaseError);
+                }
+            }
         }
     }
 
     static async update(id, data) {
-        const connection = await db.getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
             // Convert empty strings to null
             const agent_email = data.agent_email || null;
             const agent_tel = data.agent_tel || null;
@@ -61,19 +86,34 @@ class Intermediary {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in Intermediary.update');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in Intermediary.update:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(id) {
-        const connection = await db.getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.execute('DELETE FROM intermediaries WHERE id = ?', [id]);
             return result.affectedRows > 0;
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in Intermediary.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in Intermediary.delete:', releaseError);
+                }
+            }
         }
     }
 }

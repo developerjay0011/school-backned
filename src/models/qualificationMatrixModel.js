@@ -4,8 +4,9 @@ const fs = require('fs');
 
 class QualificationMatrix {
     static async create(description, pdfUrl) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.query(
                 'INSERT INTO qualification_matrix (description, pdf_url) VALUES (?, ?)',
                 [description, pdfUrl]
@@ -14,13 +15,21 @@ class QualificationMatrix {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getAll() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [matrices] = await connection.query(
                 'SELECT * FROM qualification_matrix ORDER BY created_at DESC'
             );
@@ -28,13 +37,21 @@ class QualificationMatrix {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getById(id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [matrices] = await connection.query(
                 'SELECT * FROM qualification_matrix WHERE id = ?',
                 [id]
@@ -43,13 +60,21 @@ class QualificationMatrix {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const matrix = await this.getById(id);
             if (!matrix) {
                 return { success: false, message: 'Matrix not found' };
@@ -71,7 +96,14 @@ class QualificationMatrix {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

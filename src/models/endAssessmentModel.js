@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class EndAssessmentModel {
     static async create(data) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const {
                 student_id,
                 lecturer_id,
@@ -85,13 +86,21 @@ class EndAssessmentModel {
             console.error('Error creating end assessment:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async update(id, lecturerId, data) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const {
                 greatest_success_experience,
                 personal_development,
@@ -148,8 +157,9 @@ class EndAssessmentModel {
     }
 
     static async storePdf(assessmentId, data) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { student_id, lecturer_id, pdf_url, description } = data;
             
             const [result] = await connection.execute(
@@ -168,13 +178,21 @@ class EndAssessmentModel {
             console.error('Error storing PDF:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getPdfsByAssessmentId(assessmentId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(
                 `SELECT * FROM end_assessment_pdfs
                 WHERE assessment_id = ?
@@ -188,13 +206,21 @@ class EndAssessmentModel {
             console.error('Error getting PDFs:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getByStudentId(studentId, lecturerId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(`
                 SELECT 
                     ea.*,
@@ -215,13 +241,21 @@ class EndAssessmentModel {
             console.error('Error getting end assessment:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getByLecturerId(lecturerId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(`
                 SELECT 
                     ea.*,
@@ -245,8 +279,9 @@ class EndAssessmentModel {
     }
 
     static async getAllPdfsByStudentId(studentId, lecturerId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(`
                 SELECT 
                     eap.*,
@@ -271,13 +306,21 @@ class EndAssessmentModel {
             console.error('Error getting PDFs by student ID:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(id, lecturerId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.execute(`
                 UPDATE end_assessment 
                 SET deleted_at = CURRENT_TIMESTAMP
@@ -289,7 +332,14 @@ class EndAssessmentModel {
             console.error('Error deleting end assessment:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

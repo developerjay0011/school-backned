@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class MonthlyReportModel {
     static async create(data) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Creating monthly report:', data);
             const [result] = await connection.execute(
                 `INSERT INTO monthly_reports (
@@ -27,13 +28,21 @@ class MonthlyReportModel {
             console.error('Error in create:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getAll(lecturer_id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Getting all monthly reports for lecturer_id:', lecturer_id);
             const [rows] = await connection.execute(
                 'SELECT * FROM monthly_reports WHERE lecturer_id = ? ORDER BY created_at DESC',
@@ -45,13 +54,21 @@ class MonthlyReportModel {
             console.error('Error in getAll:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getAllGroupedByLecturer() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(`
                 SELECT 
                     mr.*,
@@ -87,13 +104,21 @@ class MonthlyReportModel {
             console.error('Error in getAllGroupedByLecturer:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(id, lecturer_id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Deleting monthly report:', id, 'for lecturer:', lecturer_id);
             const [result] = await connection.execute(
                 'DELETE FROM monthly_reports WHERE id = ? AND lecturer_id = ?',
@@ -104,7 +129,14 @@ class MonthlyReportModel {
             console.error('Error in delete:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

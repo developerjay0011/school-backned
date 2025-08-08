@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class MeasuresZoomLinksModel {
     static async create(data) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { measures_id, lecturer_id, zoom_link, start_date, end_date } = data;
             
             const [result] = await connection.execute(
@@ -18,13 +19,21 @@ class MeasuresZoomLinksModel {
             console.error('Error creating zoom link:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async update(id, data) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { zoom_link, start_date, end_date } = data;
             
             const [result] = await connection.execute(
@@ -39,13 +48,21 @@ class MeasuresZoomLinksModel {
             console.error('Error updating zoom link:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getByLecturerId(lecturerId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(
                 `SELECT mzl.*, m.measures_number, m.measures_title
                 FROM measures_zoom_links mzl
@@ -61,13 +78,21 @@ class MeasuresZoomLinksModel {
             console.error('Error getting zoom links:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(id, lecturerId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.execute(
                 `UPDATE measures_zoom_links 
                 SET deleted_at = CURRENT_TIMESTAMP
@@ -80,13 +105,21 @@ class MeasuresZoomLinksModel {
             console.error('Error deleting zoom link:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getByStudentDetails(studentId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // First get student details
             const [studentRows] = await connection.execute(
                 `SELECT 
@@ -139,7 +172,14 @@ class MeasuresZoomLinksModel {
             console.error('Error getting zoom links for student:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

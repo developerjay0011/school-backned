@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class Training {
     static async create(userId, trainingData) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.query(
                 `INSERT INTO trainings (
                     user_id,
@@ -30,13 +31,21 @@ class Training {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getByUserId(userId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.query(
                 'SELECT * FROM trainings WHERE user_id = ? ORDER BY actual_date DESC',
                 [userId]
@@ -45,13 +54,21 @@ class Training {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getTrainingsByDateRange(startYear, endYear) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // Convert years to full dates (Jan 1st to Dec 31st)
             const startDate = new Date(parseInt(startYear), 0, 1);
             const endDate = new Date(parseInt(endYear), 11, 31);
@@ -82,13 +99,21 @@ class Training {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async update(trainingId, trainingData) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.query(
                 `UPDATE trainings SET
                     topic = ?,
@@ -114,13 +139,21 @@ class Training {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(trainingId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.query(
                 'DELETE FROM trainings WHERE id = ?',
                 [trainingId]
@@ -129,7 +162,14 @@ class Training {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

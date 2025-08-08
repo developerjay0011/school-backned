@@ -156,8 +156,9 @@ class Student {
     }
 
     static async delete(id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(
                 'UPDATE student SET deleted_at = ? WHERE student_id = ?',
                 [DateTimeUtils.formatToSQLDateTime(DateTimeUtils.getBerlinDateTime()),id]
@@ -167,7 +168,14 @@ class Student {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
     static async getByStudentIdForAuth(studentId) {
@@ -192,8 +200,9 @@ class Student {
     }
 
     static async updatePassword(studentId, password) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // Password should already be hashed by the controller
             await connection.execute(
                 'UPDATE student SET password = ? WHERE student_id = ?',
@@ -204,13 +213,21 @@ class Student {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getByStudentId(studentId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // Get student basic info with contact details, authority, and settings in a single query
             const [rows] = await connection.query(
                 `SELECT 
@@ -378,8 +395,9 @@ class Student {
     }
 
     static async create(studentData, settingsData, authorityData) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // Check if student already exists with the same email
          
             await connection.beginTransaction();
@@ -490,13 +508,21 @@ class Student {
             await connection.rollback();
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async generateRecordId() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.execute(
                 'SELECT MAX(CAST(student_id AS UNSIGNED)) as max_id FROM student'
             );
@@ -506,13 +532,21 @@ class Student {
             console.error('Error generating student ID:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async update(studentId, studentData, settingsData, authorityData, invoiceRecipientData) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
 
             // Update student data if provided
@@ -676,13 +710,21 @@ class Student {
             await connection.rollback();
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getAll(page = 1, limit = 10) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const offset = (page - 1) * limit;
 
             // Get total count
@@ -835,7 +877,14 @@ class Student {
                 }
             };
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

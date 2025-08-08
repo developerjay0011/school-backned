@@ -3,8 +3,9 @@ const DateTimeUtils = require('../utils/dateTimeUtils');
 
 class FeedbackEvaluationModel {
     static async create(data) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.query(
                 `INSERT INTO feedback_evaluations 
                 (date_from, date_until, measures_id, pdf_url, description, created_at) 
@@ -15,13 +16,21 @@ class FeedbackEvaluationModel {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getAll() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.query(
                 `SELECT fe.*, m.measures_number, m.measures_title 
                 FROM feedback_evaluations fe 
@@ -32,13 +41,21 @@ class FeedbackEvaluationModel {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getById(id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.query(
                 `SELECT fe.*, m.measures_number, m.measures_title 
                 FROM feedback_evaluations fe 
@@ -50,13 +67,21 @@ class FeedbackEvaluationModel {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async deleteById(id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.query(
                 'DELETE FROM feedback_evaluations WHERE id = ?',
                 [id]
@@ -65,7 +90,14 @@ class FeedbackEvaluationModel {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

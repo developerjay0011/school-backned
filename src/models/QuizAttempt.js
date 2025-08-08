@@ -103,8 +103,9 @@ class QuizAttempt {
     }
 
     static async getStudentAttempts(studentId, quizTopic) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const query = `
                 SELECT * FROM quiz_attempts
                 WHERE student_id = ? AND quiz_topic = ?
@@ -113,13 +114,21 @@ class QuizAttempt {
             const [attempts] = await connection.execute(query, [studentId, quizTopic]);
             return attempts;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async hasExamAttempt(studentId, quizTopic) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const query = `
                 SELECT COUNT(*) as count FROM quiz_attempts
                 WHERE student_id = ? AND quiz_topic = ? AND is_exam = TRUE
@@ -127,13 +136,21 @@ class QuizAttempt {
             const [[result]] = await connection.execute(query, [studentId, quizTopic]);
             return result.count > 0;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getBestScore(studentId, quizTopic) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const query = `
                 SELECT score, total_questions FROM quiz_attempts
                 WHERE student_id = ? AND quiz_topic = ?
@@ -143,13 +160,21 @@ class QuizAttempt {
             const [[result]] = await connection.execute(query, [studentId, quizTopic]);
             return result;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getStudentResults(studentId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const query = `
                 SELECT
                     qa.*,
@@ -202,7 +227,14 @@ class QuizAttempt {
             console.error('Error getting student results:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

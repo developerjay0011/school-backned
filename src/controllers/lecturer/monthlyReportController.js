@@ -7,8 +7,9 @@ const path = require('path');
 
 class MonthlyReportController {
     static async generate(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { month, year } = req.body;
             console.log('Generating monthly report for:', { month, year, lecturer: req.user });
 
@@ -74,7 +75,14 @@ class MonthlyReportController {
                 message: 'Internal server error'
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 

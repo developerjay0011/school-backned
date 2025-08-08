@@ -100,8 +100,9 @@ class Attendance {
             ORDER BY summary_row, start_date
         `;
 
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [results] = await connection.execute(query, [startDate, endDate]);
             if (!results.length) return null;
             // First row contains the summary data
@@ -136,7 +137,14 @@ class Attendance {
             console.error('Error getting attendance stats:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
     // Default time slots
@@ -148,8 +156,9 @@ class Attendance {
     static AFTERNOON_END = '16:30:00';
 
     static async markAdminAttendance(studentId, date, slots) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
 
             // Check if attendance record exists for the date
@@ -210,7 +219,14 @@ class Attendance {
             console.error('Error marking admin attendance:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
     static async getFullDayAbsences(studentId) {
@@ -261,8 +277,9 @@ class Attendance {
             ORDER BY d.date DESC
         `;
 
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // We only need studentId once now, for the initial student_check CTE
             const [results] = await connection.execute(query, [studentId]);
             return results.map(row => ({
@@ -284,7 +301,14 @@ class Attendance {
             console.error('Error fetching full day absences:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
     static async markAttendance(studentId) {
@@ -310,8 +334,9 @@ class Attendance {
             throw new Error('Attendance can only be marked between 08:00-12:30 or 13:00-16:30');
         }
 
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
 
             const today = DateTimeUtils.formatToSQLDate(berlinTime);
@@ -352,13 +377,21 @@ class Attendance {
             await connection.rollback();
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getStudentAttendance(studentId, startDate, endDate) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(
                 `SELECT * FROM student_attendance 
                  WHERE student_id = ? 
@@ -370,13 +403,21 @@ class Attendance {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getAttendanceList(startDate, endDate, studentId = null) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // First, get all bridge days (public holidays)
             const [bridgeDays] = await connection.execute(
                 'SELECT DATE_FORMAT(date, "%Y-%m-%d") as date FROM bridge_days WHERE date BETWEEN ? AND ?',
@@ -526,7 +567,14 @@ class Attendance {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

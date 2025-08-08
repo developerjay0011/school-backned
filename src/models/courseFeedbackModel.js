@@ -106,8 +106,9 @@ class CourseFeedback {
     }
 
     static async getByStudentId(studentId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(
                 'SELECT * FROM course_feedback WHERE student_id = ? ORDER BY feedback_date DESC LIMIT 1',
                 [studentId]
@@ -122,13 +123,21 @@ class CourseFeedback {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getByCourseId(courseId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(
                 'SELECT * FROM course_feedback WHERE course_id = ? ORDER BY feedback_date DESC',
                 [courseId]
@@ -142,13 +151,21 @@ class CourseFeedback {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getById(id) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(
                 'SELECT * FROM course_feedback WHERE id = ?',
                 [id]
@@ -163,7 +180,14 @@ class CourseFeedback {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

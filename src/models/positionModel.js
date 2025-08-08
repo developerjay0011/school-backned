@@ -3,8 +3,9 @@ const db = require('../config/database');
 class Position {
     // Helper method to get user details
     static async getUserDetails(userId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.query(
                 `SELECT id, first_name, last_name, role FROM admin_users WHERE id = ?`,
                 [userId]
@@ -13,14 +14,22 @@ class Position {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     // Get all positions with user details
     static async getAllPositionsWithUsers() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Getting all positions with users...');
             const query = `
                 SELECT 
@@ -43,7 +52,14 @@ class Position {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
@@ -71,8 +87,9 @@ class Position {
 
     // Build organizational tree
     static async getOrganizationalTree() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const positions = await this.getAllPositionsWithUsers();
            
             if (!positions || positions.length === 0) {
@@ -189,8 +206,9 @@ class Position {
     }
 
     static async create(userId, positionData) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // First, delete any existing position for this user
             await connection.query('DELETE FROM positions WHERE user_id = ?', [userId]);
 
@@ -233,8 +251,9 @@ class Position {
     }
 
     static async getByUserId(userId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.query(
                 `SELECT id, user_id, position, responsibility_authority, 
                 internal_external, hierarchically_assigned_to, created_at, updated_at 
@@ -255,13 +274,21 @@ class Position {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async update(positionId, positionData) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.query(
                 `UPDATE positions SET
                     position = ?,
@@ -281,13 +308,21 @@ class Position {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(positionId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.query(
                 'DELETE FROM positions WHERE id = ?',
                 [positionId]
@@ -296,7 +331,14 @@ class Position {
         } catch (error) {
             throw error;
         }finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

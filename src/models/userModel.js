@@ -8,8 +8,10 @@ class User {
     }
 
     static async create(data) {
-        const connection = await db.getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
+      
             // Add timestamp to email if it already exists
             const timestamp = Date.now();
             const email = data.email;
@@ -46,13 +48,21 @@ class User {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.create');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.create:', releaseError);
+                }
+            }
         }
     }
 
     static async createMinimal(data) {
-        const connection = await db.getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
             if (!data.first_name || !data.last_name || !data.password) {
                 throw new Error('First name, last name, and password are required');
             }
@@ -99,13 +109,22 @@ class User {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.createMinimal');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.createMinimal:', releaseError);
+                }
+            }
         }
     }
 
     static async getAll() {
-        const connection = await db.getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
+     
             const [rows] = await connection.execute(
                 `SELECT id, first_name, last_name, 
                 phone_number, email, street, pincode, city, 
@@ -122,13 +141,21 @@ class User {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.getAll');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.getAll:', releaseError);
+                }
+            }
         }
     }
 
     static async getById(id) {
-        const connection = await db.getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(
                 `SELECT id, first_name, last_name, 
                 phone_number, email, street, pincode, city, 
@@ -146,13 +173,21 @@ class User {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.getById');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.getById:', releaseError);
+                }
+            }
         }
     }
 
     static async update(id, data) {
-        const connection = await db.getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
             const updates = [];
             const values = [];
             
@@ -216,13 +251,21 @@ class User {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.update');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.update:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(id) {
-        const connection = await db.getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
             const [result] = await connection.execute(
                 'UPDATE admin_users SET deleted_at = CURRENT_TIMESTAMP WHERE id = ? AND deleted_at IS NULL',
                 [id]
@@ -231,13 +274,21 @@ class User {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async findByEmail(email) {
-        const connection = await db.getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(
                 'SELECT * FROM admin_users WHERE email = ? AND deleted_at IS NULL',
                 [email]
@@ -252,7 +303,14 @@ class User {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

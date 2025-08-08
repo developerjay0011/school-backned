@@ -3,8 +3,9 @@ const db = require('../../config/database');
 
 class AdminQuizController {
     async getStudentResults(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { studentId } = req.params;
             
             // Verify student exists
@@ -36,13 +37,21 @@ class AdminQuizController {
                 details: 'Failed to get quiz results'
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     async getAllResults(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // Optional query parameters for filtering
             const { topic, isExam, startDate, endDate } = req.query;
             const page = parseInt(req.query.page) || 1;
@@ -139,7 +148,14 @@ class AdminQuizController {
                 details: 'Failed to get quiz results'
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

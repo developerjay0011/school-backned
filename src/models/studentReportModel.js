@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class StudentReport {
     static async createDischargeReport(studentId, reportData, pdfUrl) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Creating discharge report with:', { studentId, reportData, pdfUrl });
             
             // Validate required parameters
@@ -42,13 +43,21 @@ class StudentReport {
             console.error('Error creating discharge report:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async createTerminationReport(studentId, reportData, pdfUrl) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             console.log('Creating termination report with:', { studentId, reportData, pdfUrl });
             
             // Validate required parameters
@@ -90,13 +99,21 @@ class StudentReport {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getStudentReports(studentId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(
                 `SELECT 
                     sr.*,
@@ -113,13 +130,21 @@ class StudentReport {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getReportById(reportId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(
                 'SELECT * FROM student_reports WHERE id = ?',
                 [reportId]
@@ -128,13 +153,21 @@ class StudentReport {
         } catch (error) {
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getById(reportId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(
                 'SELECT * FROM student_reports WHERE id = ?',
                 [reportId]
@@ -145,12 +178,20 @@ class StudentReport {
             console.error('Error getting report:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
     static async deleteReport(reportId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // First get the report to check if it exists and get the pdf_url
             const [reports] = await connection.execute(
                 'SELECT * FROM student_reports WHERE id = ?',
@@ -175,7 +216,14 @@ class StudentReport {
             console.error('Error deleting report:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

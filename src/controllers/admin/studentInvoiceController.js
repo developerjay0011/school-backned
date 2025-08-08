@@ -8,8 +8,9 @@ const EmailService = require('../../utils/emailService');
 
 class StudentInvoiceController {
     static async toggleAutoDispatch(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const result = await InvoiceReminderService.toggleAutoDispatch(
                 req.params.id,
                 req.body.enabled
@@ -30,13 +31,21 @@ class StudentInvoiceController {
                 message: error.message || 'Internal server error'
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async createReminder(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const result = await InvoiceReminderService.createManualReminder(req.params.id);
             
             res.status(200).json({
@@ -53,13 +62,21 @@ class StudentInvoiceController {
                     message: error.message || 'Internal server error'
                 });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async create(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const studentId = req.params.studentId;
 
             // Check if student exists
@@ -141,13 +158,21 @@ class StudentInvoiceController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async update(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { id } = req.params;
 
             const invoice = await StudentInvoice.getById(id);
@@ -198,12 +223,20 @@ class StudentInvoiceController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
     static async mahnungPDF(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { id } = req.params;
 
             const invoice = await StudentInvoice.getById(id);
@@ -274,13 +307,21 @@ class StudentInvoiceController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { id } = req.params;
 
             const invoice = await StudentInvoice.getById(id);
@@ -305,13 +346,21 @@ class StudentInvoiceController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async cancel(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { id } = req.params;
 
             // Cancel the invoice
@@ -360,13 +409,21 @@ class StudentInvoiceController {
                 message: error.message || 'Error cancelling invoice'
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getByStudentId(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { studentId } = req.params;
 
             // Check if student exists
@@ -401,13 +458,21 @@ class StudentInvoiceController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getAll(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const invoices = await StudentInvoice.getAll();
 
             res.json({
@@ -426,7 +491,14 @@ class StudentInvoiceController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

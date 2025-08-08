@@ -5,8 +5,9 @@ const CertificateOfAbsence = require('../../models/certificateOfAbsenceModel');
 
 class SickLeaveController {
     static async getLeavesByMonth(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const studentId = req.params.studentId;
             const month = parseInt(req.params.month);
             const year = parseInt(req.params.year);
@@ -80,13 +81,21 @@ class SickLeaveController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async create(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const studentId = req.params.studentId;
 
             // Format dates to MySQL format (YYYY-MM-DD)
@@ -131,13 +140,21 @@ class SickLeaveController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async update(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { id } = req.params;
 
             // Format dates to MySQL format (YYYY-MM-DD)
@@ -184,13 +201,21 @@ class SickLeaveController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { id } = req.params;
 
             const sickLeave = await SickLeave.getById(id);
@@ -215,13 +240,21 @@ class SickLeaveController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getByStudentId(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { studentId } = req.params;
 
             // Check if student exists
@@ -252,7 +285,14 @@ class SickLeaveController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

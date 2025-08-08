@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class MissingSignaturesModel {
     static async getMissingSignatures() {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(`
                 WITH StudentMeasures AS (
                     SELECT DISTINCT
@@ -93,7 +94,14 @@ class MissingSignaturesModel {
 
             return rows;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

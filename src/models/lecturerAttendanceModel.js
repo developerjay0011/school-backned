@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class LecturerAttendanceModel {
     static async getAttendanceList(lecturerId, date) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(`
                 SELECT 
                     s.student_id,
@@ -33,14 +34,22 @@ class LecturerAttendanceModel {
             console.error('Error getting attendance list:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async markAttendance(data) {
         const { student_id, date, slot, is_present } = data;
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
             
             // First check if attendance record exists
@@ -80,7 +89,14 @@ class LecturerAttendanceModel {
             console.error('Error marking attendance:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

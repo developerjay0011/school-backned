@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class Measurement {
   static async create(data) {
-    const connection = await db.getConnection();
+    let connection;
     try {
+      connection = await db.getConnection();
       await connection.beginTransaction();
       
       const [result] = await connection.execute(
@@ -17,49 +18,81 @@ class Measurement {
       await connection.rollback();
       throw new Error('Error creating measurement: ' + error.message);
     } finally {
-      connection.release();
+      if (connection) {
+        try {
+            connection.release();
+            console.log('Connection released in Measurement.create');
+        } catch (releaseError) {
+            console.error('Error releasing connection in Measurement.create:', releaseError);
+        }
+    }
     }
   }
 
   static async findAll() {
-    const connection = await db.getConnection();
+    let connection;
     try {
+      connection = await db.getConnection();
       const [rows] = await connection.execute('SELECT * FROM measurements WHERE deleted_at IS NULL ORDER BY measures_number');
       return rows;
     } catch (error) {
       throw new Error('Error fetching measurements: ' + error.message);
     } finally {
-      connection.release();
+      if (connection) {
+        try {
+            connection.release();
+            console.log('Connection released in Measurement.findAll');
+        } catch (releaseError) {
+            console.error('Error releasing connection in Measurement.findAll:', releaseError);
+        }
+    }
     }
   }
 
   static async findById(id) {
-    const connection = await db.getConnection();
+    let connection;
     try {
+      connection = await db.getConnection();
       const [rows] = await connection.execute('SELECT * FROM measurements WHERE id = ? AND deleted_at IS NULL', [id]);
       return rows[0];
     } catch (error) {
       throw new Error('Error fetching measurement: ' + error.message);
     } finally {
-      connection.release();
+      if (connection) {
+        try {
+            connection.release();
+            console.log('Connection released in Measurement.findById');
+        } catch (releaseError) {
+            console.error('Error releasing connection in Measurement.findById:', releaseError);
+        }
+    }
     }
   }
 
   static async findByMeasureNumber(measureNumber) {
-    const connection = await db.getConnection();
+    let connection;
     try {
+      connection = await db.getConnection();
       const [rows] = await connection.execute('SELECT * FROM measurements WHERE measures_number = ? AND deleted_at IS NULL', [measureNumber]);
       return rows[0];
     } catch (error) {
       throw new Error('Error fetching measurement by number: ' + error.message);
     } finally {
-      connection.release();
+      if (connection) {
+        try {
+            connection.release();
+            console.log('Connection released in Measurement.findByMeasureNumber');
+        } catch (releaseError) {
+            console.error('Error releasing connection in Measurement.findByMeasureNumber:', releaseError);
+        }
+    }
     }
   }
 
   static async getById(id) {
-    const connection = await db.getConnection();
+    let connection;
     try {
+      connection = await db.getConnection();
       const [rows] = await connection.execute(
         'SELECT * FROM measurements WHERE id = ?',
         [id]
@@ -68,13 +101,21 @@ class Measurement {
     } catch (error) {
       throw error;
     } finally {
-      connection.release();
+      if (connection) {
+        try {
+            connection.release();
+            console.log('Connection released in Measurement.getById');
+        } catch (releaseError) {
+            console.error('Error releasing connection in Measurement.getById:', releaseError);
+        }
+    }
     }
   }
 
   static async update(id, data) {
-    const connection = await db.getConnection();
+    let connection;
     try {
+      connection = await db.getConnection();
       await connection.beginTransaction();
       
       const [result] = await connection.execute(
@@ -88,13 +129,21 @@ class Measurement {
       await connection.rollback();
       throw new Error('Error updating measurement: ' + error.message);
     } finally {
-      connection.release();
+      if (connection) {
+        try {
+            connection.release();
+            console.log('Connection released in Measurement.update');
+        } catch (releaseError) {
+            console.error('Error releasing connection in Measurement.update:', releaseError);
+        }
+    }
     }
   }
 
   static async delete(id) {
-    const connection = await db.getConnection();
+    let connection;
     try {
+      connection = await db.getConnection();
       await connection.beginTransaction();
 
       // Soft delete the measurement
@@ -109,13 +158,21 @@ class Measurement {
       await connection.rollback();
       throw new Error('Error deleting measurement: ' + error.message);
     } finally {
-      connection.release();
+      if (connection) {
+        try {
+            connection.release();
+            console.log('Connection released in Measurement.delete');
+        } catch (releaseError) {
+            console.error('Error releasing connection in Measurement.delete:', releaseError);
+        }
+    }
     }
   }
 
   static async toggleShowInDocuments(id) {
-    const connection = await db.getConnection();
+    let connection;
     try {
+      connection = await db.getConnection();
       await connection.beginTransaction();
       
       const [result] = await connection.execute(
@@ -129,7 +186,14 @@ class Measurement {
       await connection.rollback();
       throw error;
     } finally {
-      connection.release();
+        if (connection) {
+        try {
+            connection.release();
+            console.log('Connection released in Measurement.toggleShowInDocuments');
+        } catch (releaseError) {
+            console.error('Error releasing connection in Measurement.toggleShowInDocuments:', releaseError);
+        }
+    }
     }
   }
 }

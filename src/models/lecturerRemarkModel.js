@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class LecturerRemarkModel {
     static async addRemark(studentId, lecturerId, remark) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             await connection.beginTransaction();
             
             // First verify if the student belongs to this lecturer
@@ -34,13 +35,21 @@ class LecturerRemarkModel {
             console.error('Error adding remark:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getRemark(studentId, lecturerId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(`
                 SELECT 
                     s.student_id,
@@ -62,13 +71,21 @@ class LecturerRemarkModel {
             console.error('Error getting remark:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getRemarksByLecturer(lecturerId) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(`
                 SELECT 
                     s.student_id,
@@ -90,7 +107,14 @@ class LecturerRemarkModel {
             console.error('Error getting remarks:', error);
             throw error;
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

@@ -4,21 +4,30 @@ const db = require('../../config/database');
 
 class QuizController {
     async getTopics(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const topics = await quizService.getTopics();
             res.json({ topics });
         } catch (error) {
             console.error('Error getting quiz topics:', error);
             res.status(500).json({ error: 'Internal server error' });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     async getQuizByTopic(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { topic } = req.params;
             const quiz = await quizService.getQuizByTopic(topic);
             
@@ -39,13 +48,21 @@ class QuizController {
             console.error('Error getting quiz:', error);
             res.status(500).json({ error: 'Internal server error' });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     async getRandomQuestions(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { topic } = req.params;
             const { isExam } = req.query;
             const count = parseInt(req.query.count) || 10;
@@ -70,13 +87,21 @@ class QuizController {
             console.error('Error getting random questions:', error);
             res.status(500).json({ error: 'Internal server error' });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     async getResults(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // Validate student from auth token
             if (!req.user || !req.user.student_id) {
                 return res.status(401).json({ error: 'No student ID found in auth token' });
@@ -98,13 +123,21 @@ class QuizController {
                 details: 'Failed to get quiz results'
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     async submitAnswers(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { topic } = req.params;
             const { answers, isExam = false } = req.body;
             
@@ -416,7 +449,14 @@ class QuizController {
             console.error('Error submitting answers:', error);
             return res.status(500).json({ error: 'Internal server error' });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

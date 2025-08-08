@@ -11,8 +11,9 @@ const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:3000';
 
 class ExamController {
     static async updateDoneOn(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const examId = req.params.examId;
             const done_on = req.params.done_on;
 
@@ -50,12 +51,20 @@ class ExamController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
     static async uploadCertificate(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const examId = req.params.examId;
 
             // Check if file was uploaded
@@ -103,12 +112,20 @@ class ExamController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
     static async updateExamResult(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const examId = req.params.examId;
             const exam_result = req.params.exam_result;
             const exam = await Exam.getById(examId);
@@ -136,13 +153,21 @@ class ExamController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
     static async create(req, res) {
 
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const studentId = req.params.studentId;
 
             // Check if student exists
@@ -175,13 +200,21 @@ class ExamController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async update(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const examId = req.params.examId;
             const exam = await Exam.getById(examId);
 
@@ -208,13 +241,21 @@ class ExamController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const examId = req.params.examId;
             const exam = await Exam.getById(examId);
 
@@ -239,13 +280,21 @@ class ExamController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async getByStudent(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const studentId = req.params.studentId;
 
             // Check if student exists
@@ -276,13 +325,21 @@ class ExamController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async sendCompletionEmail(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const examId = req.params.examId;
             const { completion_date } = req.body;
 
@@ -347,14 +404,22 @@ class ExamController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     // Update exam remark
     static async updateRemark(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const examId = parseInt(req.params.examId, 10);
             const { remark } = req.body;
 
@@ -386,7 +451,14 @@ class ExamController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

@@ -3,8 +3,9 @@ const db = require('../../config/database');
 
 class StudentController {
     static async create(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             // Format dates to MySQL format (YYYY-MM-DD)
             const formatDate = (date) => {
                 if (!date) return null;
@@ -88,8 +89,9 @@ class StudentController {
     }
 
     static async update(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const studentId = req.params.id;
 
             // Check if student exists
@@ -255,8 +257,9 @@ class StudentController {
     }
 
     static async getAll(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const page = parseInt(req.query.page) || 1;
             const limit = parseInt(req.query.limit) || 10;
 
@@ -340,8 +343,9 @@ class StudentController {
     }
 
     static async getById(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { id } = req.params;
             
             // Get student details
@@ -370,13 +374,21 @@ class StudentController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
     static async delete(req, res) {
-        const connection = await db.getConnection();
+     let connection;
         try {
+            connection = await db.getConnection();
             const { id } = req.params;
             
             // Delete student
@@ -402,7 +414,14 @@ class StudentController {
                 error: error.message
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 }

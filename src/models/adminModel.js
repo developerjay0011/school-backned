@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class AdminModel {
     static async getByEmail(email) {
+        const connection = await db.getConnection();
         try {
-            const connection = await db.getConnection();
+            
             const [rows] = await connection.execute(
                 'SELECT * FROM admin_users WHERE email = ?',
                 [email]

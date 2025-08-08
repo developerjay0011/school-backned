@@ -54,51 +54,91 @@ class Student {
         // Add safety checks for parameters
         if (!studentId || !dateOfEntry) {
             console.log('Missing parameters in getFullDayAbsences - using default value');
+            console.log('studentId:', studentId, 'dateOfEntry:', dateOfEntry);
             return 0;
         }
         
+        console.log('getFullDayAbsences called with studentId:', studentId, 'dateOfEntry:', dateOfEntry);
+        
         let connection;
         try {
-            // Set query timeout to prevent long-running queries
             connection = await db.getConnection();
             
-            // Simpler query that's less likely to timeout
+            // First, check if there are any attendance records for this student
+            const [attendanceCheck] = await connection.execute(
+                'SELECT COUNT(*) as count FROM student_attendance WHERE student_id = ?',
+                [studentId]
+            );
+            console.log('Attendance records found:', attendanceCheck[0].count);
+            
+            // If no attendance records, return 0 early
+            if (attendanceCheck[0].count === 0) {
+                return 0;
+            }
+            
+            // Improved query that correctly calculates absences and excludes sick leave days
             const query = `
+                WITH workdays AS (
+                    -- Get all workdays since student entry date
+                    SELECT sa.attendance_date
+                    FROM student_attendance sa
+                    LEFT JOIN bridge_days bd ON sa.attendance_date = bd.date
+                    WHERE sa.student_id = ?
+                    AND sa.attendance_date >= ?
+                    AND sa.attendance_date <= CURDATE()
+                    AND DAYOFWEEK(sa.attendance_date) NOT IN (1, 7) -- Not weekend
+                    AND bd.date IS NULL -- Not bridge day
+                ),
+                absences AS (
+                    -- Count days where student was absent for both morning and afternoon
+                    SELECT COUNT(DISTINCT sa.attendance_date) as total_absences
+                    FROM student_attendance sa
+                    JOIN workdays w ON sa.attendance_date = w.attendance_date
+                    WHERE sa.student_id = ?
+                    AND (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
+                    AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
+                ),
+                sick_leave_days AS (
+                    -- Count days that fall within sick leave periods
+                    SELECT COUNT(DISTINCT sa.attendance_date) as total_sick_days
+                    FROM student_attendance sa
+                    JOIN student_sick_leave sl ON sa.student_id = sl.student_id
+                    JOIN workdays w ON sa.attendance_date = w.attendance_date
+                    WHERE sa.student_id = ?
+                    AND sa.attendance_date BETWEEN sl.date_from AND sl.date_until
+                    AND (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
+                    AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
+                )
                 SELECT 
-                    COALESCE(
-                        (SELECT COUNT(*)
-                         FROM student_attendance sa
-                         LEFT JOIN bridge_days bd ON sa.attendance_date = bd.date
-                         WHERE sa.student_id = ?
-                         AND sa.attendance_date >= ?
-                         AND sa.attendance_date <= CURDATE()
-                         AND DAYOFWEEK(sa.attendance_date) NOT IN (1, 7) -- Not weekend
-                         AND bd.date IS NULL -- Not bridge day
-                         AND (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
-                         AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
-                        ) -
-                        (SELECT COUNT(DISTINCT sa.attendance_date)
-                         FROM student_attendance sa
-                         JOIN student_sick_leave sl ON sa.student_id = sl.student_id
-                         LEFT JOIN bridge_days bd ON sa.attendance_date = bd.date
-                         WHERE sa.student_id = ?
-                         AND sa.attendance_date >= ?
-                         AND sa.attendance_date <= CURDATE()
-                         AND DAYOFWEEK(sa.attendance_date) NOT IN (1, 7) -- Not weekend
-                         AND bd.date IS NULL -- Not bridge day
-                         AND sa.attendance_date BETWEEN sl.date_from AND sl.date_until
-                         AND (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
-                         AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)
-                        ),
-                        0
-                    ) as absence_count`;
+                    GREATEST(0, (SELECT total_absences FROM absences) - 
+                               (SELECT COALESCE(total_sick_days, 0) FROM sick_leave_days)) 
+                    as absence_count
+            `;
 
             // Use execute instead of query for prepared statements
-            const [result] = await connection.execute(query, [studentId, dateOfEntry, studentId, dateOfEntry]);
+            const [result] = await connection.execute(query, [studentId, dateOfEntry, studentId, studentId]);
             
             // Safety check on result
-            const absenceCount = result[0]?.absence_count;
-            return Math.max(0, absenceCount || 0);
+            const absenceCount = result[0]?.absence_count || 0;
+            console.log('Calculated absence count:', absenceCount);
+            
+            // Let's also check the raw absences without sick leave subtraction
+            const [absenceQuery] = await connection.execute(
+                `SELECT COUNT(DISTINCT sa.attendance_date) as count
+                 FROM student_attendance sa
+                 LEFT JOIN bridge_days bd ON sa.attendance_date = bd.date
+                 WHERE sa.student_id = ?
+                 AND sa.attendance_date >= ?
+                 AND sa.attendance_date <= CURDATE()
+                 AND DAYOFWEEK(sa.attendance_date) NOT IN (1, 7)
+                 AND bd.date IS NULL
+                 AND (sa.morning_attendance = 0 OR sa.morning_attendance IS NULL)
+                 AND (sa.afternoon_attendance = 0 OR sa.afternoon_attendance IS NULL)`,
+                [studentId, dateOfEntry]
+            );
+            console.log('Raw absence count (before sick leave subtraction):', absenceQuery[0].count);
+            
+            return absenceCount;
         } catch (error) {
             console.error('Error calculating full day absences for student ' + studentId + ':', error);
             // Return 0 as fallback to prevent API crashes

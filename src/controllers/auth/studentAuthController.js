@@ -1,11 +1,13 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const StudentModel = require('../../models/studentModel');
+const db = require('../../config/database');
 
 class StudentAuthController {
     static async login(req, res) {
-        const connection = await require('../../config/database').getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
             const { student_id, password } = req.body;
             console.log('Login attempt for student_id:', student_id);
 
@@ -62,7 +64,14 @@ class StudentAuthController {
                 message: 'Internal server error'
             });
         } finally {
-            connection.release();
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in student login');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in student login:', releaseError);
+                }
+            }
         }
     }
 }

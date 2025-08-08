@@ -9,9 +9,9 @@ class VideoLog {
             ORDER BY course_start_date ASC
             LIMIT 1
         `;
-        const connection = await db.getConnection();
-
+        let connection;
         try {
+            connection = await db.getConnection();
             const [rows] = await connection.execute(query, [student_id]);
             return rows.length > 0 ? rows[0].course_start_date : null;
         } catch (error) {
@@ -30,7 +30,9 @@ class VideoLog {
     }
 
     static async create({ student_id, topic_title, course_start_date, attend_date }) {
+        let connection;
         try {
+            connection = await db.getConnection();
             // Get earliest course start date for this student
             const earliestDate = await this.getEarliestCourseStartDate(student_id);
             
@@ -52,6 +54,15 @@ class VideoLog {
         } catch (error) {
             console.error('Error creating video log:', error);
             throw error;
+        } finally {
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in User.delete');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in User.delete:', releaseError);
+                }
+            }
         }
     }
 
@@ -61,9 +72,9 @@ class VideoLog {
             WHERE student_id = ?
             ORDER BY attend_date DESC
         `;
-        const connection = await db.getConnection();
-
+        let connection;
         try {
+            connection = await db.getConnection();
             const [logs] = await connection.execute(query, [studentId]);
             return logs;
         } catch (error) {
@@ -88,9 +99,9 @@ class VideoLog {
             JOIN students s ON vl.student_id = s.id
             ORDER BY vl.attend_date DESC
         `;
-        const connection = await db.getConnection();
-
+        let connection;
         try {
+            connection = await db.getConnection();
             const [logs] = await connection.execute(query);
             return logs;
         } catch (error) {

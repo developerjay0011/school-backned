@@ -13,9 +13,7 @@ const pool = mysql.createPool({
   enableKeepAlive: true,
   keepAliveInitialDelay: 0,
   // Add connection timeout to prevent hanging connections
-  connectTimeout: 10000, // 10 seconds
-  // Add query timeout to prevent long-running queries
-  acquireTimeout: 10000 // 10 seconds
+  connectTimeout: 10000 // 10 seconds
 });
 
 // Add event listeners for connection pool

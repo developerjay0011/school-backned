@@ -2,8 +2,9 @@ const db = require('../config/database');
 
 class AdminModel {
     static async getByEmail(email) {
-        const connection = await db.getConnection();
+        let connection;
         try {
+            connection = await db.getConnection();
             
             const [rows] = await connection.execute(
                 'SELECT * FROM admin_users WHERE email = ?',
@@ -11,10 +12,17 @@ class AdminModel {
             );
             return rows[0];
         } catch (error) {
-            connection.release();
+            console.error('Error in AdminModel.getByEmail:', error);
             throw error;
-        }finally {
-            connection.release();
+        } finally {
+            if (connection) {
+                try {
+                    connection.release();
+                    console.log('Connection released in AdminModel.getByEmail');
+                } catch (releaseError) {
+                    console.error('Error releasing connection in AdminModel.getByEmail:', releaseError);
+                }
+            }
         }
     }
 }
